@@ -51,8 +51,8 @@ ControlP5 cp5;
 boolean buttonFlag=false;
 
 // String variables
-String theGCode = "G91 G1 X100 F100\n"; // Whatever you want to have as default text in the textbox
-String jPath;                           // the path where the JSON file is
+String theGCode = "G91 G1 X100 F100\n";     // Whatever you want to have as default text in the textbox
+String jPath = "init.json";                 // the path where the JSON file is
 
 // The Init.JSON file to be loaded
 JSONObject initFile;      // This will receive the JSON file as an object
@@ -68,8 +68,9 @@ int tfh = 50;           // textfield height
 int taw;                // textArea width
 int tah;                // textArea height
 int bw = 100;           // width of Bang
+int sbh = 30;           // side button height
 int theWidth = 600;     // applet width
-int theHeight = 800;    // applet height
+int theHeight = 600;    // applet height
 int pad = 20;           // padding between fields
 Textarea myTerminal;    // CP5 control for the text area
 PFont font;             // the font for the script
@@ -84,40 +85,16 @@ public void setup()
 {
   // Start the serial
   // List all the available serial ports, check the terminal window and select find the port# for the tinyG
-  // printArray(Serial.list());
+  printArray(Serial.list());
   // Open whichever port the tinyG uses in your computer (8 in mine):
   // myPort = new Serial(this, Serial.list()[8], 9600);
 
 
   font = createFont("arial", 20); // big arial font
   startGUI();
-
-  myTerminal.append("Loading JSON... \n");
-  delay(2500);
-  // Load the inti file (JSON in /data folder)
-  initFile = loadJSONObject(dataPath("init.json"));
-  // Get the "Commands" array from the init file
-  initCommands = initFile.getJSONArray("commands");
-
-  myTerminal.append("JSON Loaded... \n");
-  delay(1000);
-  myTerminal.append("Dumping init file... \n");
-
-  for(int i=0; i<initCommands.size(); i++){
-    JSONObject jsonObject = initCommands.getJSONObject(i);
-    String sCommand = jsonObject.toString();
-    sCommand = sCommand.replaceAll("\\s+", "");
-    println("Init Command # " + i + "> " + jsonObject + "\t | to String > " + sCommand);
-    // Send the command to the tinyG
-    // myPort.write(sCommand + "\n");
-    // Display the command on the terminal
-    myTerminal.append(sCommand + "\n");
-    delay(20); // Let it process.
-  }
-  // Init Dumped. Terminal ready
-  myTerminal.append("TinyG Ready... \n");
-  myTerminal.append("\n");
-  myTerminal.update();
+cp5.get(Bang.class,"loadFile").setTriggerEvent(Bang.RELEASE);
+  // Gui Loaded. Terminal ready
+  myTerminal.append("Terminal ready... \n");
   myTerminal.scroll(1);
 
   textFont(font);
@@ -175,7 +152,7 @@ public void Send(){
   // myTerminal.update();
   myTerminal.scroll(1);
   // Send command to the tinyG
-  myPort.write(theGCode);
+  // myPort.write(theGCode);
   // Clear the text field to be ready for the next
   cp5.get(Textfield.class,"input").clear();
 }
@@ -188,13 +165,36 @@ public void clear() {
 
 
 
+// When the load file bang is released, open a file explorer window
+public void loadFile(){
+  myTerminal.append("Loading file...\n");
+  selectInput("Select script file to load", "fileLoaded");
+}
+
+// See what the user selected as a file
+public void fileLoaded(File selection){
+  // If no file, print on screen.
+  if(selection == null){
+    // println("No file selected");
+    myTerminal.append("No file selected\n");
+  } else {
+    // If file, say it and send the file to the dumpFile function
+    // println("File to load: " + selection.getAbsolutePath());
+    myTerminal.append("File to load: " + selection.getAbsolutePath() + "\n");
+    dumpFile(selection.getAbsolutePath());
+  }
+  // remove the callback from the Bang or else it never lets us go
+  cp5.get(Bang.class,"loadFile").removeCallback();
+}
+
+
 // Let's work on the GUI
 public void startGUI(){
   // Construct a CP5
   cp5 = new ControlP5(this);            // start the cp5 GUI
 
   // Define the size of the text area
-  taw = width - (2*x);
+  taw = width - (2*x) - bw - pad;
   tah = height - y-(2*pad)-tfh;
 
   // Add a textArea to capture the incoming serial
@@ -235,6 +235,63 @@ public void startGUI(){
   .setColorActive(color(180,40,50))
   .getCaptionLabel().align(ControlP5.CENTER, ControlP5.CENTER)
   ;
+
+  // create a new button to quickly dump the init file to the tinyG
+  cp5.addBang("loadFile")
+  .setCaptionLabel("Load File")
+  .setPosition(x+taw+pad, y)
+  .setSize(bw, sbh)
+  .setColorBackground(color(180,40,50))
+  .setColorActive(color(180,40,50))
+  .getCaptionLabel().align(ControlP5.CENTER, ControlP5.CENTER)
+  ;
+
+}
+
+
+// We'll first check what's the file type by checking the extension
+// we just need to see if it's a JSON or not.
+// If it's a JSON, treat it accordingly, if it's not, treat it as text and
+// dump it.
+public void dumpFile(String theFile){
+  myTerminal.append("Loading File... \n");
+  theFile = theFile.toLowerCase(); // so there's no confustion between JSON and json
+
+  // If it's a json let's check if it's the init file to properly send it to the tinyG
+  if(theFile.endsWith("json") && theFile.contains("init")){
+    initFile = loadJSONObject(dataPath(theFile));
+    // Get the "Commands" array from the init file
+    initCommands = initFile.getJSONArray("commands");
+    delay(500);
+    myTerminal.append("JSON Loaded... \n");
+    delay(250);
+    myTerminal.append("Dumping init file... \n");
+    // The tinyG doesn't accept JSONArrays as input, so we need to brake it.
+    // So lets extract each command as a JSONObject, and
+    // then convert it into a String to be sent via Serial to the tinyG
+    for(int i=0; i<initCommands.size(); i++){
+      JSONObject jsonObject = initCommands.getJSONObject(i);    // Get the command
+      String sCommand = jsonObject.toString();                  // Make it a String
+      sCommand = sCommand.replaceAll("\\s+", "");               // Clean the string
+      // println("Init Command # " + i + "> " + jsonObject + "\t | to String > " + sCommand);
+      // myPort.write(sCommand + "\n");                            // Send it to the tinyG
+      myTerminal.append(sCommand + "\n");                       // Display the command on the terminal
+      delay(50);                                                // Let it process.
+    }
+  } else {
+    // If it's not the init file, then let's just dump whatever is in the file.
+    // if it's a JSON but not the init, it will be dumped and the tinyG might complaint
+    String fileLines[] = loadStrings(theFile);
+    println("There are " + fileLines.length + " lines in this file");
+    for (int i=0 ; i<fileLines.length ; i++){
+      println(fileLines[i]);
+      myTerminal.append(fileLines[i] + "\n");
+      delay(50);
+    }
+  }
+  myTerminal.append("File dumped to the tinyG\n");
+  myTerminal.append("Ready...\n");
+  myTerminal.scroll(1);
 }
   static public void main(String[] passedArgs) {
     String[] appletArgs = new String[] { "TinyTerm" };
