@@ -6,13 +6,15 @@ __TinyTerm__, a quick script to create a terminal-like interface that allows the
 
 TinyTerm starts by loading an init.json file from the /data folder. This JSON file contains all the desired init settings for the tinyG. For a complete list of commands and settings, please take a look at the [tinyG Wiki](https://github.com/synthetos/TinyG/wiki/TinyG-Configuration-for-Firmware-Version-0.97). The JSON file needs to have a JSONArray named _"commands"_ contained in a JSONObject:
 
-{<br>
-    "commands":[<br>
-    {"command":value},<br>
-    {"command":value},<br>
-    {"command":value}<br>
-    ]<br>
+```css
+{
+  "commands":[
+    { "command": value },
+    { "command": value },
+    { "command": value }
+  ]
 }
+```
 
 You can have as many commands as necessary. Some of our init files have dozens of commands. It all depends on how many axes and inputs you want to initialize with this file.
 
