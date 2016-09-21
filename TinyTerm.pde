@@ -63,6 +63,7 @@ void settings(){
 
 void setup()
 {
+  size(600,600);      //Just if you have a really old version of Processing. Like this laptop.
   // Start the serial
   // List all the available serial ports, check the terminal window and select find the port# for the tinyG
   printArray(Serial.list());
@@ -74,14 +75,14 @@ void setup()
   startGUI();
 
   myTerminal.append("Loading JSON... \n");
-  delay(2500);
+  delay(50);
   // Load the inti file (JSON in /data folder)
   initFile = loadJSONObject(dataPath("init.json"));
   // Get the "Commands" array from the init file
   initCommands = initFile.getJSONArray("commands");
 
   myTerminal.append("JSON Loaded... \n");
-  delay(1000);
+  delay(50);
   myTerminal.append("Dumping init file... \n");
 
   // The tinyG doesn't accept JSONArrays as input, so we need to brake it.
@@ -96,10 +97,20 @@ void setup()
     myTerminal.append(sCommand + "\n");                       // Display the command on the terminal
     delay(20);                                                // Let it process.
   }
+  myTerminal.append("Init dumped...\n");
+  myTerminal.append("Listening for the report... \n");
   // Init Dumped. Terminal ready
-  myTerminal.append("TinyG Ready... \n");
-  myTerminal.append(".\n");
-  myTerminal.update();
+  while (myPort.available () > 0) {
+    String inBuffer = myPort.readString();
+    if (inBuffer != null) {
+      println(inBuffer);
+      myTerminal.append(inBuffer);
+      // myTerminal.update();
+      myTerminal.scroll(1);
+    }
+  }
+  myTerminal.append("TinyG Ready... \n\n");
+  //myTerminal.update();
   myTerminal.scroll(1);
 
   textFont(font);
