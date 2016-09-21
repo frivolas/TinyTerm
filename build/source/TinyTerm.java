@@ -58,6 +58,9 @@ String jPath = "init.json";                 // the path where the JSON file is
 JSONObject initFile;      // This will receive the JSON file as an object
 JSONArray initCommands;   // we will extract the "commands" array of JSONObjects here
 
+// file for the logfile
+PrintWriter logFile;
+
 // The serial port:
 Serial myPort;  // Create object from Serial class
 
@@ -72,6 +75,7 @@ int sbh = 30;           // side button height
 int theWidth = 600;     // applet width
 int theHeight = 600;    // applet height
 int pad = 20;           // padding between fields
+
 Textarea myTerminal;    // CP5 control for the text area
 PFont font;             // the font for the script
 
@@ -88,7 +92,7 @@ public void setup()
   // List all the available serial ports, check the terminal window and select find the port# for the tinyG
   printArray(Serial.list());
   // Open whichever port the tinyG uses in your computer (8 in mine):
-  // myPort = new Serial(this, Serial.list()[8], 9600);
+  myPort = new Serial(this, Serial.list()[0], 9600);
 
 
   font = createFont("arial", 20); // big arial font
@@ -105,15 +109,14 @@ public void setup()
 public void draw() {
   background(0);  //black BG
   //read response from tinyG
-  // while (myPort.available () > 0) {
-  //   String inBuffer = myPort.readString();
-  //   if (inBuffer != null) {
-  //     println(inBuffer);
-  //     myTerminal.append(inBuffer);
-  //     // myTerminal.update();
-  //     myTerminal.scroll(1);
-  //   }
-  // }
+  while (myPort.available () > 0) {
+    String inBuffer = myPort.readString();
+    if (inBuffer != null) {
+      println(inBuffer);
+      myTerminal.append(inBuffer);
+      myTerminal.scroll(1);         // scroll to the bottom of the terminal
+    }
+  }
   fill(255);
   stroke(255);
   text("TinyTerm:", x, y-pad);
@@ -134,7 +137,6 @@ public void controlEvent(ControlEvent theEvent) {
       // Send command to the tinyG
       myPort.write(theGCode);
       myTerminal.append(theGCode);
-      // myTerminal.update();
       myTerminal.scroll(1);
     }
   }
@@ -149,10 +151,9 @@ public void Send(){
   println("Command sent: " + theGCode);
   // Put the command on the terminal
   myTerminal.append(theGCode);
-  // myTerminal.update();
   myTerminal.scroll(1);
   // Send command to the tinyG
-  // myPort.write(theGCode);
+  myPort.write(theGCode);
   // Clear the text field to be ready for the next
   cp5.get(Textfield.class,"input").clear();
 }
@@ -246,7 +247,34 @@ public void startGUI(){
   .getCaptionLabel().align(ControlP5.CENTER, ControlP5.CENTER)
   ;
 
+
+  // create a new button to save the log
+  cp5.addBang("saveLog")
+  .setCaptionLabel("Save Log")
+  .setPosition(x+taw+pad, y+sbh+pad)
+  .setSize(bw, sbh)
+  .setColorBackground(color(180,40,50))
+  .setColorActive(color(180,40,50))
+  .getCaptionLabel().align(ControlP5.CENTER, ControlP5.CENTER)
+  ;
+
 }
+
+
+public void saveLog(){
+String content=myTerminal.getText();
+String dateAppend = theDate();
+String theLogLocation = "/logs/data" + theDate() + ".log";
+logFile = createWriter(dataPath(theLogLocation));
+logFile.println("Starting Log file for session: " + dateAppend + "\n");
+logFile.println(content);
+logFile.flush();
+logFile.close();
+myTerminal.clear();
+myTerminal.append("Log File: " + theLogLocation + " created...\n");
+myTerminal.append("Terminal ready...\n");
+}
+
 
 
 // We'll first check what's the file type by checking the extension
@@ -274,7 +302,7 @@ public void dumpFile(String theFile){
       String sCommand = jsonObject.toString();                  // Make it a String
       sCommand = sCommand.replaceAll("\\s+", "");               // Clean the string
       // println("Init Command # " + i + "> " + jsonObject + "\t | to String > " + sCommand);
-      // myPort.write(sCommand + "\n");                            // Send it to the tinyG
+      myPort.write(sCommand + "\n");                            // Send it to the tinyG
       myTerminal.append(sCommand + "\n");                       // Display the command on the terminal
       delay(50);                                                // Let it process.
     }
@@ -285,7 +313,7 @@ public void dumpFile(String theFile){
     println("There are " + fileLines.length + " lines in this file");
     for (int i=0 ; i<fileLines.length ; i++){
       // println(fileLines[i]);
-      // myPort.write(fileLines[i] + "\n");                      // Send the line to the tinyG
+      myPort.write(fileLines[i] + "\n");                      // Send the line to the tinyG
       myTerminal.append(fileLines[i] + "\n");                 // Put the line on the terminal
       delay(50);
     }
@@ -293,6 +321,22 @@ public void dumpFile(String theFile){
   myTerminal.append("File dumped to the tinyG\n");
   myTerminal.append("Ready...\n");
   myTerminal.scroll(1);
+}
+
+
+
+// This function returns a timestamp to be used as filename for the log file
+public String theDate(){
+  int y = year();
+  int mo = month();
+  int d = day();
+  int h = hour();
+  int mi = minute();
+  int s = second();
+
+  String dateString = y + "" + mo + "" + d + "-" + h + mi + s;
+
+  return dateString;
 }
   static public void main(String[] passedArgs) {
     String[] appletArgs = new String[] { "TinyTerm" };

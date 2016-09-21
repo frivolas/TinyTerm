@@ -39,6 +39,9 @@ String jPath = "init.json";                 // the path where the JSON file is
 JSONObject initFile;      // This will receive the JSON file as an object
 JSONArray initCommands;   // we will extract the "commands" array of JSONObjects here
 
+// file for the logfile
+PrintWriter logFile;
+
 // The serial port:
 Serial myPort;  // Create object from Serial class
 
@@ -53,6 +56,7 @@ int sbh = 30;           // side button height
 int theWidth = 600;     // applet width
 int theHeight = 600;    // applet height
 int pad = 20;           // padding between fields
+
 Textarea myTerminal;    // CP5 control for the text area
 PFont font;             // the font for the script
 
@@ -69,7 +73,7 @@ void setup()
   // List all the available serial ports, check the terminal window and select find the port# for the tinyG
   printArray(Serial.list());
   // Open whichever port the tinyG uses in your computer (8 in mine):
-  myPort = new Serial(this, Serial.list()[8], 9600);
+  myPort = new Serial(this, Serial.list()[0], 9600);
 
 
   font = createFont("arial", 20); // big arial font
@@ -224,7 +228,34 @@ void startGUI(){
   .getCaptionLabel().align(ControlP5.CENTER, ControlP5.CENTER)
   ;
 
+
+  // create a new button to save the log
+  cp5.addBang("saveLog")
+  .setCaptionLabel("Save Log")
+  .setPosition(x+taw+pad, y+sbh+pad)
+  .setSize(bw, sbh)
+  .setColorBackground(color(180,40,50))
+  .setColorActive(color(180,40,50))
+  .getCaptionLabel().align(ControlP5.CENTER, ControlP5.CENTER)
+  ;
+
 }
+
+
+void saveLog(){
+String content=myTerminal.getText();
+String dateAppend = theDate();
+String theLogLocation = "/logs/data" + theDate() + ".log";
+logFile = createWriter(dataPath(theLogLocation));
+logFile.println("Starting Log file for session: " + dateAppend + "\n");
+logFile.println(content);
+logFile.flush();
+logFile.close();
+myTerminal.clear();
+myTerminal.append("Log File: " + theLogLocation + " created...\n");
+myTerminal.append("Terminal ready...\n");
+}
+
 
 
 // We'll first check what's the file type by checking the extension
@@ -271,4 +302,20 @@ void dumpFile(String theFile){
   myTerminal.append("File dumped to the tinyG\n");
   myTerminal.append("Ready...\n");
   myTerminal.scroll(1);
+}
+
+
+
+// This function returns a timestamp to be used as filename for the log file
+String theDate(){
+  int y = year();
+  int mo = month();
+  int d = day();
+  int h = hour();
+  int mi = minute();
+  int s = second();
+
+  String dateString = y + "" + mo + "" + d + "-" + h + mi + s;
+
+  return dateString;
 }
