@@ -64,6 +64,7 @@ void settings(){
 
 void setup()
 {
+  size(600,600);      //Just if you have a really old version of Processing. Like this laptop.
   // Start the serial
   // List all the available serial ports, check the terminal window and select find the port# for the tinyG
   printArray(Serial.list());
@@ -90,8 +91,7 @@ void draw() {
     if (inBuffer != null) {
       println(inBuffer);
       myTerminal.append(inBuffer);
-      // myTerminal.update();
-      myTerminal.scroll(1);
+      myTerminal.scroll(1);         // scroll to the bottom of the terminal
     }
   }
   fill(255);
@@ -114,7 +114,6 @@ void controlEvent(ControlEvent theEvent) {
       // Send command to the tinyG
       myPort.write(theGCode);
       myTerminal.append(theGCode);
-      // myTerminal.update();
       myTerminal.scroll(1);
     }
   }
@@ -129,7 +128,6 @@ public void Send(){
   println("Command sent: " + theGCode);
   // Put the command on the terminal
   myTerminal.append(theGCode);
-  // myTerminal.update();
   myTerminal.scroll(1);
   // Send command to the tinyG
   myPort.write(theGCode);

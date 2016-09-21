@@ -83,6 +83,7 @@ public void settings(){
 
 public void setup()
 {
+        //Just if you have a really old version of Processing. Like this laptop.
   // Start the serial
   // List all the available serial ports, check the terminal window and select find the port# for the tinyG
   printArray(Serial.list());
@@ -92,11 +93,10 @@ public void setup()
 
   font = createFont("arial", 20); // big arial font
   startGUI();
-cp5.get(Bang.class,"loadFile").setTriggerEvent(Bang.RELEASE);
+  cp5.get(Bang.class,"loadFile").setTriggerEvent(Bang.RELEASE); // make the bang react at release
   // Gui Loaded. Terminal ready
   myTerminal.append("Terminal ready... \n");
   myTerminal.scroll(1);
-
   textFont(font);
 }
 
@@ -132,7 +132,7 @@ public void controlEvent(ControlEvent theEvent) {
       theGCode = theGCode + "\n";
       println("Command sent: " + theGCode);
       // Send command to the tinyG
-      // myPort.write(theGCode);
+      myPort.write(theGCode);
       myTerminal.append(theGCode);
       // myTerminal.update();
       myTerminal.scroll(1);
@@ -284,8 +284,9 @@ public void dumpFile(String theFile){
     String fileLines[] = loadStrings(theFile);
     println("There are " + fileLines.length + " lines in this file");
     for (int i=0 ; i<fileLines.length ; i++){
-      println(fileLines[i]);
-      myTerminal.append(fileLines[i] + "\n");
+      // println(fileLines[i]);
+      // myPort.write(fileLines[i] + "\n");                      // Send the line to the tinyG
+      myTerminal.append(fileLines[i] + "\n");                 // Put the line on the terminal
       delay(50);
     }
   }
