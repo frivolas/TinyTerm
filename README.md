@@ -16,7 +16,7 @@ TinyTerm starts by loading an init.json file from the /data folder. This JSON fi
 }
 ```
 
-You can have as many commands as necessary. Some of our init files have dozens of commands. It all depends on how many axes and inputs you want to initialize with this file. Just make sure the JSON file is clean, and valid. Make liberal use of the [JSON lint](jsonlint.com).
+You can have as many commands as necessary. Some of our init files have dozens of commands. It all depends on how many axes and inputs you want to initialize with this file. Just make sure the JSON file is clean, and valid. Make liberal use of the [JSON lint](http://jsonlint.com).
 
 The GUI is created with the [ControlP5](http://www.sojamo.de/libraries/controlP5/) library by [Sojamo](https://github.com/sojamo), so make sure you have this library installed before running this script.
 
