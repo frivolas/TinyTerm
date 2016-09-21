@@ -1,6 +1,6 @@
 # TinyTerm
 By Oscar Frias - September 2016
-www.oscarfrias.commands
+www.oscarfrias.com
 
 __TinyTerm__, a quick script to create a terminal-like interface that allows the user to control a [tinyG](http://synthetos.myshopify.com/products/tinyg) connected via Serial to the computer. It provides a textArea to show the history of the communication between the tinyG and the computer, and a textfield to allow the user to inject GCode commands or tinyG commands to the tinyG on the fly.
 
