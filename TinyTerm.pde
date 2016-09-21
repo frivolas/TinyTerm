@@ -50,7 +50,7 @@ int taw;                // textArea width
 int tah;                // textArea height
 int bw = 100;           // width of Bang
 int theWidth = 600;     // applet width
-int theHeight = 800;    // applet height
+int theHeight = 600;    // applet height
 int pad = 20;           // padding between fields
 Textarea myTerminal;    // CP5 control for the text area
 PFont font;             // the font for the script
@@ -65,32 +65,42 @@ void setup()
 {
   // Start the serial
   // List all the available serial ports, check the terminal window and select find the port# for the tinyG
-  // printArray(Serial.list());
+  printArray(Serial.list());
   // Open whichever port the tinyG uses in your computer (8 in mine):
-  // myPort = new Serial(this, Serial.list()[8], 9600);
-  // Dump the init commands to the tinyG via serial port
+  myPort = new Serial(this, Serial.list()[8], 9600);
+
 
   font = createFont("arial", 20); // big arial font
   startGUI();
 
+  myTerminal.append("Loading JSON... \n");
+  delay(2500);
   // Load the inti file (JSON in /data folder)
   initFile = loadJSONObject(dataPath("init.json"));
-
   // Get the "Commands" array from the init file
   initCommands = initFile.getJSONArray("commands");
-  // Convert the array of commands to a string
-  String comm = initCommands.toString();
-  println("commands to send: \n" + comm);
-  // Send it to the terminal
-  myTerminal.append(comm);
+
+  myTerminal.append("JSON Loaded... \n");
+  delay(1000);
+  myTerminal.append("Dumping init file... \n");
+
+  // The tinyG doesn't accept JSONArrays as input, so we need to brake it.
+  // So lets extract each command as a JSONObject, and
+  // then convert it into a String to be sent via Serial to the tinyG
+  for(int i=0; i<initCommands.size(); i++){
+    JSONObject jsonObject = initCommands.getJSONObject(i);    // Get the command
+    String sCommand = jsonObject.toString();                  // Make it a String
+    sCommand = sCommand.replaceAll("\\s+", "");               // Clean the string
+    println("Init Command # " + i + "> " + jsonObject + "\t | to String > " + sCommand);
+    myPort.write(sCommand + "\n");                            // Send it to the tinyG
+    myTerminal.append(sCommand + "\n");                       // Display the command on the terminal
+    delay(20);                                                // Let it process.
+  }
+  // Init Dumped. Terminal ready
+  myTerminal.append("TinyG Ready... \n");
+  myTerminal.append(".\n");
   myTerminal.update();
   myTerminal.scroll(1);
-  myTerminal.append("\n");
-
-  delay(20);
-  // Dump the commands to the tinyG via serial and show it in the terminal
-  myPort.write(comm);
-
 
   textFont(font);
 }
@@ -105,7 +115,7 @@ void draw() {
     if (inBuffer != null) {
       println(inBuffer);
       myTerminal.append(inBuffer);
-      myTerminal.update();
+      // myTerminal.update();
       myTerminal.scroll(1);
     }
   }
@@ -127,9 +137,9 @@ void controlEvent(ControlEvent theEvent) {
       theGCode = theGCode + "\n";
       println("Command sent: " + theGCode);
       // Send command to the tinyG
-      // myPort.write(theGCode);
+      myPort.write(theGCode);
       myTerminal.append(theGCode);
-      myTerminal.update();
+      // myTerminal.update();
       myTerminal.scroll(1);
     }
   }
@@ -144,7 +154,7 @@ public void Send(){
   println("Command sent: " + theGCode);
   // Put the command on the terminal
   myTerminal.append(theGCode);
-  myTerminal.update();
+  // myTerminal.update();
   myTerminal.scroll(1);
   // Send command to the tinyG
   myPort.write(theGCode);

@@ -26,29 +26,21 @@ public class TinyTerm extends PApplet {
 // while at the same time have a quick and easy way to dump the init settings
 // to the board without having to type them every time.
 //
-// It opens a serial connection and searches for the tinyG,
-// Then dumps the "Commands" string to the tinyG
+// TinyTerm loads a JSON file called "init.json" from the /data folder containing
+// the init settings that we want to dump on the tinyG, and extracts the array of
+// json objects called "commands" as a long string. See the JSON file to learn how to
+// properly format this init file.
+//
+// Then it opens a serial connection, searches for the tinyG, and
+// then dumps the JSON-turned-into-strings into the tinyG
+//
+// The complete list of tinyG commands and settings can be found @
+// https://github.com/synthetos/TinyG/wiki/TinyG-Configuration-for-Firmware-Version-0.97
+//
+// The GUI gives you a textArea to show the history of what has been sent and received
+// and a text box to type and inject GCode or tinyG Commands on the fly into the tinyG
 // The interface is created using the controlP5 library.
-//
-//  The complete list of tinyG commands and settings can be found @
-//  https://github.com/synthetos/TinyG/wiki/TinyG-Configuration-for-Firmware-Version-0.97
-//
-//  The commands being dumped by this script are:
-//  $gun=1 : set units = mm
-//  $2ma=0 : MOTOR2 mapped to axis X (Motor 2 is being used, change to your motor)
-//  $2po=0 : polarity 0 = normal, 1 = inverted
-//  $2pl=1 : power level = 100%
-//  $2pm=2 : power mode = ON While In Cycle
-//  $2mi=10 : Microsteps = 10usteps (per your driver/application)
-//  $2sa=1.8 : Step Angle = 1.8 deg/step (per your motor)
-//  $xtr=7.10059 : Travel per rev = 7.10059mm/motor rev (13:1 gearbox x 3.9:1 pulley)
-//  $xvm=10000 : X Vel max = 10,000mm/min
-//  $xjm=20000 : X Jerk max = 20,000xE6 mm/s3
-//  $xfr=10000 : X feed max = 10,000mm/min
-//
-//  Add any other needed settings to the "Commands" string, separating them by '\n'
-//
-//  The GUI then gives you a text box to type your desired GCode or tinyG Commands
+
 
 // Imports
 
@@ -59,13 +51,12 @@ ControlP5 cp5;
 boolean buttonFlag=false;
 
 // String variables
-String commands = "$gun=1\n$3ma=0\n$3po=0\n$3pl=1.0\n$3pm=2\n$3mi=10\n$3sa=1.8\n$3tr=7.10059\n$xvm=10000\n$xjm=500\n$xfr=10000\n$1ma=4\n$gpa=1";
 String theGCode = "G91 G1 X100 F100\n"; // Whatever you want to have as default text in the textbox
+String jPath;                           // the path where the JSON file is
 
 // The Init.JSON file to be loaded
-JSONObject initFile;
-JSONArray initCommands;
-String jPath;
+JSONObject initFile;      // This will receive the JSON file as an object
+JSONArray initCommands;   // we will extract the "commands" array of JSONObjects here
 
 // The serial port:
 Serial myPort;  // Create object from Serial class
@@ -96,29 +87,38 @@ public void setup()
   // printArray(Serial.list());
   // Open whichever port the tinyG uses in your computer (8 in mine):
   // myPort = new Serial(this, Serial.list()[8], 9600);
-  // Dump the init commands to the tinyG via serial port
+
 
   font = createFont("arial", 20); // big arial font
   startGUI();
 
+  myTerminal.append("Loading JSON... \n");
+  delay(2500);
   // Load the inti file (JSON in /data folder)
   initFile = loadJSONObject(dataPath("init.json"));
-
   // Get the "Commands" array from the init file
   initCommands = initFile.getJSONArray("commands");
-  // Convert the array of commands to a string
-  String comm = initCommands.toString();
-  println("commands to send: \n" + comm);
-  // Send it to the terminal
-  myTerminal.append(comm);
+
+  myTerminal.append("JSON Loaded... \n");
+  delay(1000);
+  myTerminal.append("Dumping init file... \n");
+
+  for(int i=0; i<initCommands.size(); i++){
+    JSONObject jsonObject = initCommands.getJSONObject(i);
+    String sCommand = jsonObject.toString();
+    sCommand = sCommand.replaceAll("\\s+", "");
+    println("Init Command # " + i + "> " + jsonObject + "\t | to String > " + sCommand);
+    // Send the command to the tinyG
+    // myPort.write(sCommand + "\n");
+    // Display the command on the terminal
+    myTerminal.append(sCommand + "\n");
+    delay(20); // Let it process.
+  }
+  // Init Dumped. Terminal ready
+  myTerminal.append("TinyG Ready... \n");
+  myTerminal.append("\n");
   myTerminal.update();
   myTerminal.scroll(1);
-  myTerminal.append("\n");
-
-  delay(20);
-  // Dump the commands to the tinyG via serial and show it in the terminal
-  myPort.write(comm);
-
 
   textFont(font);
 }
@@ -128,15 +128,15 @@ public void setup()
 public void draw() {
   background(0);  //black BG
   //read response from tinyG
-  while (myPort.available () > 0) {
-    String inBuffer = myPort.readString();
-    if (inBuffer != null) {
-      println(inBuffer);
-      myTerminal.append(inBuffer);
-      myTerminal.update();
-      myTerminal.scroll(1);
-    }
-  }
+  // while (myPort.available () > 0) {
+  //   String inBuffer = myPort.readString();
+  //   if (inBuffer != null) {
+  //     println(inBuffer);
+  //     myTerminal.append(inBuffer);
+  //     // myTerminal.update();
+  //     myTerminal.scroll(1);
+  //   }
+  // }
   fill(255);
   stroke(255);
   text("TinyTerm:", x, y-pad);
@@ -157,7 +157,7 @@ public void controlEvent(ControlEvent theEvent) {
       // Send command to the tinyG
       // myPort.write(theGCode);
       myTerminal.append(theGCode);
-      myTerminal.update();
+      // myTerminal.update();
       myTerminal.scroll(1);
     }
   }
@@ -172,7 +172,7 @@ public void Send(){
   println("Command sent: " + theGCode);
   // Put the command on the terminal
   myTerminal.append(theGCode);
-  myTerminal.update();
+  // myTerminal.update();
   myTerminal.scroll(1);
   // Send command to the tinyG
   myPort.write(theGCode);
