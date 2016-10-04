@@ -93,7 +93,7 @@ public void setup()
   // List all the available serial ports, check the terminal window and select find the port# for the tinyG
   printArray(Serial.list());
   // Open whichever port the tinyG uses in your computer (8 in mine):
-  myPort = new Serial(this, Serial.list()[2], 115200);
+  myPort = new Serial(this, Serial.list()[2], 9600);
   myPort.clear();
 
   font = createFont("arial", 20); // big arial font
@@ -113,8 +113,19 @@ public void draw() {
   while (myPort.available () > 0) {
     String inBuffer = myPort.readString();
     if (inBuffer != null) {
-      print("Incoming: " + inBuffer);
-      myTerminal.append(theTime() + inBuffer);
+      print("Incoming: " + inBuffer + "\n");
+      if(theGCode.equals("$$\n")) {
+        // If the command sent is '$$' (report config)
+        // Remove the timestamp on the terminal to the incoming string
+        // to have a cleaner display
+        myTerminal.append(inBuffer);
+        delay(10);
+      }
+      else {
+        // For every other command,
+        // Add the timestamp to the incoming string
+        myTerminal.append(theTime() + inBuffer);
+      }
       myTerminal.scroll(1);         // scroll to the bottom of the terminal
     }
   }
@@ -137,9 +148,15 @@ public void controlEvent(ControlEvent theEvent) {
       theGCode = theGCode + "\n";
       println("Command sent: " + theGCode);
       // Send command to the tinyG
+      if(theGCode.toLowerCase().equals("cls\n")) {
+        myTerminal.clear();
+        myTerminal.append(theTime() + "Terminal ready...\n");
+      }
+      else{
       myPort.write(theGCode);
       myTerminal.append(theTime() + theGCode);
       myTerminal.scroll(1);
+    }
     }
   }
 }
@@ -152,10 +169,16 @@ public void Send(){
   // Print for debug
   println("Command sent: " + theGCode);
   // Put the command on the terminal
-  myTerminal.append(theTime() + theGCode);
-  myTerminal.scroll(1);
+  if(theGCode.toLowerCase().equals("cls\n")) {
+    myTerminal.clear();
+    myTerminal.append(theTime() + "Terminal ready...\n");
+  }
+  else{
   // Send command to the tinyG
   myPort.write(theGCode);
+  myTerminal.append(theTime() + theGCode);
+  myTerminal.scroll(1);
+}
   // Clear the text field to be ready for the next
   cp5.get(Textfield.class,"input").clear();
 }
@@ -252,8 +275,20 @@ public void startGUI(){
 
   // create a new button to save the log
   cp5.addBang("saveLog")
+  .setTriggerEvent(Bang.RELEASE)
   .setCaptionLabel("Save Log")
   .setPosition(x+taw+pad, y+sbh+pad)
+  .setSize(bw, sbh)
+  .setColorBackground(color(180,40,50))
+  .setColorActive(color(180,40,50))
+  .getCaptionLabel().align(ControlP5.CENTER, ControlP5.CENTER)
+  ;
+
+  // create a new button to make the logFile human readable
+  cp5.addBang("cleanMyFile")
+  .setTriggerEvent(Bang.RELEASE)
+  .setCaptionLabel("Make Log Readable")
+  .setPosition(x+taw+pad, y+(2*sbh)+(2*pad))
   .setSize(bw, sbh)
   .setColorBackground(color(180,40,50))
   .setColorActive(color(180,40,50))
@@ -263,18 +298,20 @@ public void startGUI(){
 }
 
 
+
 public void saveLog(){
-String content=myTerminal.getText();
-String dateAppend = theDate();
-String theLogLocation = "/logs/data" + theDate() + ".log";
-logFile = createWriter(dataPath(theLogLocation));
-logFile.println(theTime() + "Starting Log file for session: " + dateAppend + "\n");
-logFile.println(content);
-logFile.flush();
-logFile.close();
-myTerminal.clear();
-myTerminal.append(theTime() + "Log File: " + theLogLocation + " created...\n");
-myTerminal.append(theTime() + "Terminal ready...\n");
+  String content=myTerminal.getText();
+  String dateAppend = theDate();
+  String theLogLocation = "/logs/data" + theDate() + ".log";
+  logFile = createWriter(dataPath(theLogLocation));
+  logFile.println(theTime() + "Starting Log file for session: " + dateAppend + "\n");
+  logFile.println(content + "\n");
+  logFile.flush();
+  logFile.close();
+  myTerminal.clear();
+  myTerminal.append(theTime() + "Log File: " + theLogLocation + " created...\n");
+  myTerminal.append(theTime() + "Terminal ready...\n");
+  cp5.get(Bang.class,"saveLog").removeCallback();
 }
 
 
@@ -303,9 +340,10 @@ public void dumpFile(String theFile){
       JSONObject jsonObject = initCommands.getJSONObject(i);    // Get the command
       String sCommand = jsonObject.toString();                  // Make it a String
       sCommand = sCommand.replaceAll("\\s+", "");               // Clean the string
-      // println("Init Command # " + i + "> " + jsonObject + "\t | to String > " + sCommand);
+      println("Init Command # " + i + "> " + jsonObject + "\t | to String > " + sCommand);
       myPort.write(sCommand + "\n");                            // Send it to the tinyG
       myTerminal.append(theTime() + sCommand + "\n");                       // Display the command on the terminal
+      delay(50);
     }
     } else {
       // If it's not the init file, then let's just dump whatever is in the file.
@@ -318,7 +356,7 @@ public void dumpFile(String theFile){
         println("Going in...");
         myPort.write(fileLines[i] + "\n");                      // Send the line to the tinyG
         myTerminal.append(theTime() + fileLines[i] + "\n");                 // Put the line on the terminal
-        delay(150);
+        delay(100);
       }
     }
   myTerminal.append(theTime() + "File dumped to the tinyG. \n");
@@ -349,9 +387,56 @@ public String theTime(){
   if(mi<10) theMinute = "0" + mi;
   else theMinute = "" + mi;
 
-  String timeString = "[" + h + ":" + mi + "] ";
-
+  String timeString = "[" + h + ":" + theMinute + "] ";
   return timeString;
+}
+PrintWriter output;
+String loadFile, saveFile;
+
+public void cleanMyFile(){
+  cp5.get(Bang.class,"cleanMyFile").removeCallback();
+  myTerminal.append(theTime() + "Choose file to clean...\n");
+  selectInput("Select a Log file to clean...", "theSelection");
+}
+
+
+public void theSelection(File theFile){
+  cp5.get(Bang.class,"cleanMyFile").removeCallback();
+  if(theFile == null){
+    println("NO FILE...");
+  } else {
+    loadFile = theFile.getAbsolutePath();
+    myTerminal.append(theTime() + "Choose where to save the clean file...\n");
+    selectOutput("Where do you want to save your spanky new logFile?","theSaves");
+  }
+
+}
+
+
+public void theSaves(File theSFile){
+  cp5.get(Bang.class,"cleanMyFile").removeCallback();
+  if(theSFile == null){
+    println("Don't dare fuck with me again...");
+  } else {
+    output = createWriter(theSFile.getAbsolutePath());
+    String lines[] = loadStrings(loadFile);
+    println(lines.length);
+    for(int i=0;i<lines.length;i++){
+      // println(lines[i]);
+      if(i==0){
+        println(i + ": " + lines[i]);
+        output.println("# " + lines[i]);
+      }
+      else {
+        println(i + ": " + lines[i]);
+        output.println(i + ": " + lines[i]);
+      }
+      delay(10);
+    }
+    output.flush();
+    output.close();
+    myTerminal.append(theTime() + "Logfile " + loadFile + " is now human-readable\n");
+  }
 }
   static public void main(String[] passedArgs) {
     String[] appletArgs = new String[] { "TinyTerm" };
