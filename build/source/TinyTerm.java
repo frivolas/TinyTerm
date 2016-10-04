@@ -72,9 +72,10 @@ int taw;                // textArea width
 int tah;                // textArea height
 int bw = 100;           // width of Bang
 int sbh = 30;           // side button height
-int theWidth = 600;     // applet width
+int theWidth = 800;     // applet width
 int theHeight = 600;    // applet height
 int pad = 20;           // padding between fields
+int lineCounter = 0;    // linefeed char coming from the serial
 
 Textarea myTerminal;    // CP5 control for the text area
 PFont font;             // the font for the script
@@ -87,13 +88,13 @@ public void settings(){
 
 public void setup()
 {
-        //Just if you have a really old version of Processing. Like this laptop.
+  // size(600,600);      //Just if you have a really old version of Processing. Like this laptop.
   // Start the serial
   // List all the available serial ports, check the terminal window and select find the port# for the tinyG
   printArray(Serial.list());
   // Open whichever port the tinyG uses in your computer (8 in mine):
-  myPort = new Serial(this, Serial.list()[0], 9600);
-
+  myPort = new Serial(this, Serial.list()[2], 115200);
+  myPort.clear();
 
   font = createFont("arial", 20); // big arial font
   startGUI();
@@ -112,7 +113,7 @@ public void draw() {
   while (myPort.available () > 0) {
     String inBuffer = myPort.readString();
     if (inBuffer != null) {
-      println(inBuffer);
+      print("Incoming: " + inBuffer);
       myTerminal.append(theTime() + inBuffer);
       myTerminal.scroll(1);         // scroll to the bottom of the terminal
     }
@@ -120,6 +121,7 @@ public void draw() {
   fill(255);
   stroke(255);
   text("TinyTerm:", x, y-pad);
+  myPort.clear();
 }
 
 
@@ -304,22 +306,22 @@ public void dumpFile(String theFile){
       // println("Init Command # " + i + "> " + jsonObject + "\t | to String > " + sCommand);
       myPort.write(sCommand + "\n");                            // Send it to the tinyG
       myTerminal.append(theTime() + sCommand + "\n");                       // Display the command on the terminal
-      delay(50);                                                // Let it process.
     }
-  } else {
-    // If it's not the init file, then let's just dump whatever is in the file.
-    // if it's a JSON but not the init, it will be dumped and the tinyG might complain
-    String fileLines[] = loadStrings(theFile);
-    println("There are " + fileLines.length + " lines in this file");
-    for (int i=0 ; i<fileLines.length ; i++){
-      // println(fileLines[i]);
-      myPort.write(fileLines[i] + "\n");                      // Send the line to the tinyG
-      myTerminal.append(theTime() + fileLines[i] + "\n");                 // Put the line on the terminal
-      delay(50);
+    } else {
+      // If it's not the init file, then let's just dump whatever is in the file.
+      // if it's a JSON but not the init, it will be dumped and the tinyG might complain
+      String fileLines[] = loadStrings(theFile);
+      println("There are " + fileLines.length + " lines in this file");
+      myTerminal.append(theTime() + "Sending " + fileLines.length + " lines of code... \n");
+
+      for (int i=0 ; i<fileLines.length ; i++){
+        println("Going in...");
+        myPort.write(fileLines[i] + "\n");                      // Send the line to the tinyG
+        myTerminal.append(theTime() + fileLines[i] + "\n");                 // Put the line on the terminal
+        delay(150);
+      }
     }
-  }
-  myTerminal.append(theTime() + "File dumped to the tinyG\n");
-  myTerminal.append(theTime() + "Ready...\n");
+  myTerminal.append(theTime() + "File dumped to the tinyG. \n");
   myTerminal.scroll(1);
 }
 
@@ -340,8 +342,13 @@ public String theDate(){
 }
 
 public String theTime(){
+  String theMinute;
   int h=hour();
   int mi=minute();
+
+  if(mi<10) theMinute = "0" + mi;
+  else theMinute = "" + mi;
+
   String timeString = "[" + h + ":" + mi + "] ";
 
   return timeString;
