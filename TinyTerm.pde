@@ -80,7 +80,7 @@ void setup()
   startGUI();
   cp5.get(Bang.class,"loadFile").setTriggerEvent(Bang.RELEASE); // make the bang react at release
   // Gui Loaded. Terminal ready
-  myTerminal.append("Terminal ready... \n");
+  myTerminal.append(theTime() + "Terminal ready... \n");
   myTerminal.scroll(1);
   textFont(font);
 }
@@ -94,7 +94,7 @@ void draw() {
     String inBuffer = myPort.readString();
     if (inBuffer != null) {
       println(inBuffer);
-      myTerminal.append(inBuffer);
+      myTerminal.append(theTime() + inBuffer);
       myTerminal.scroll(1);         // scroll to the bottom of the terminal
     }
   }
@@ -117,7 +117,7 @@ void controlEvent(ControlEvent theEvent) {
       println("Command sent: " + theGCode);
       // Send command to the tinyG
       myPort.write(theGCode);
-      myTerminal.append(theGCode);
+      myTerminal.append(theTime() + theGCode);
       myTerminal.scroll(1);
     }
   }
@@ -131,7 +131,7 @@ public void Send(){
   // Print for debug
   println("Command sent: " + theGCode);
   // Put the command on the terminal
-  myTerminal.append(theGCode);
+  myTerminal.append(theTime() + theGCode);
   myTerminal.scroll(1);
   // Send command to the tinyG
   myPort.write(theGCode);
@@ -149,7 +149,7 @@ public void clear() {
 
 // When the load file bang is released, open a file explorer window
 void loadFile(){
-  myTerminal.append("Loading file...\n");
+  myTerminal.append(theTime() + "Loading file...\n");
   selectInput("Select script file to load", "fileLoaded");
 }
 
@@ -158,11 +158,11 @@ void fileLoaded(File selection){
   // If no file, print on screen.
   if(selection == null){
     // println("No file selected");
-    myTerminal.append("No file selected\n");
+    myTerminal.append(theTime() + "No file selected\n");
   } else {
     // If file, say it and send the file to the dumpFile function
     // println("File to load: " + selection.getAbsolutePath());
-    myTerminal.append("File to load: " + selection.getAbsolutePath() + "\n");
+    myTerminal.append(theTime() + "File to load: " + selection.getAbsolutePath() + "\n");
     dumpFile(selection.getAbsolutePath());
   }
   // remove the callback from the Bang or else it never lets us go
@@ -247,13 +247,13 @@ String content=myTerminal.getText();
 String dateAppend = theDate();
 String theLogLocation = "/logs/data" + theDate() + ".log";
 logFile = createWriter(dataPath(theLogLocation));
-logFile.println("Starting Log file for session: " + dateAppend + "\n");
+logFile.println(theTime() + "Starting Log file for session: " + dateAppend + "\n");
 logFile.println(content);
 logFile.flush();
 logFile.close();
 myTerminal.clear();
-myTerminal.append("Log File: " + theLogLocation + " created...\n");
-myTerminal.append("Terminal ready...\n");
+myTerminal.append(theTime() + "Log File: " + theLogLocation + " created...\n");
+myTerminal.append(theTime() + "Terminal ready...\n");
 }
 
 
@@ -263,18 +263,18 @@ myTerminal.append("Terminal ready...\n");
 // If it's a JSON, treat it accordingly, if it's not, treat it as text and
 // dump it.
 void dumpFile(String theFile){
-  myTerminal.append("Loading File... \n");
-  theFile = theFile.toLowerCase(); // so there's no confustion between JSON and json
+  myTerminal.append(theTime() + "Loading File... \n");
+  String theLCFile = theFile.toLowerCase(); // so there's no confustion between JSON and json
 
   // If it's a json let's check if it's the init file to properly send it to the tinyG
-  if(theFile.endsWith("json") && theFile.contains("init")){
+  if(theLCFile.endsWith("json") && theLCFile.contains("init")){
     initFile = loadJSONObject(dataPath(theFile));
     // Get the "Commands" array from the init file
     initCommands = initFile.getJSONArray("commands");
     delay(500);
-    myTerminal.append("JSON Loaded... \n");
+    myTerminal.append(theTime() + "JSON Loaded... \n");
     delay(250);
-    myTerminal.append("Dumping init file... \n");
+    myTerminal.append(theTime() + "Dumping init file... \n");
     // The tinyG doesn't accept JSONArrays as input, so we need to brake it.
     // So lets extract each command as a JSONObject, and
     // then convert it into a String to be sent via Serial to the tinyG
@@ -284,23 +284,23 @@ void dumpFile(String theFile){
       sCommand = sCommand.replaceAll("\\s+", "");               // Clean the string
       // println("Init Command # " + i + "> " + jsonObject + "\t | to String > " + sCommand);
       myPort.write(sCommand + "\n");                            // Send it to the tinyG
-      myTerminal.append(sCommand + "\n");                       // Display the command on the terminal
+      myTerminal.append(theTime() + sCommand + "\n");                       // Display the command on the terminal
       delay(50);                                                // Let it process.
     }
   } else {
     // If it's not the init file, then let's just dump whatever is in the file.
-    // if it's a JSON but not the init, it will be dumped and the tinyG might complaint
+    // if it's a JSON but not the init, it will be dumped and the tinyG might complain
     String fileLines[] = loadStrings(theFile);
     println("There are " + fileLines.length + " lines in this file");
     for (int i=0 ; i<fileLines.length ; i++){
       // println(fileLines[i]);
       myPort.write(fileLines[i] + "\n");                      // Send the line to the tinyG
-      myTerminal.append(fileLines[i] + "\n");                 // Put the line on the terminal
+      myTerminal.append(theTime() + fileLines[i] + "\n");                 // Put the line on the terminal
       delay(50);
     }
   }
-  myTerminal.append("File dumped to the tinyG\n");
-  myTerminal.append("Ready...\n");
+  myTerminal.append(theTime() + "File dumped to the tinyG\n");
+  myTerminal.append(theTime() + "Ready...\n");
   myTerminal.scroll(1);
 }
 
@@ -318,4 +318,12 @@ String theDate(){
   String dateString = y + "" + mo + "" + d + "-" + h + mi + s;
 
   return dateString;
+}
+
+String theTime(){
+  int h=hour();
+  int mi=minute();
+  String timeString = "[" + h + ":" + mi + "] ";
+
+  return timeString;
 }
