@@ -1,0 +1,150 @@
+{
+	"notes": [{
+		"ID": "FullMerge Init File 07 October 2016",
+		"A-axis motor (bend)": "Motor4",
+		"X-axis motor (feed)": "Motor3",
+		"Y-axis motor (none)": "Not Mapped (use yAM:0 to disable the axis)",
+		"Z-axis motor (duck)": "Motor2",
+		"Bend Motor brand and model": "Moons PL23HSAP4300 - outboarded",
+    "Feed Motor brand and model": "Moons PL23HSAP4300 - outboarded",
+    "Duck Motor brand and model": "Moons ML23HSAP4200 - driven straight from tinyG",
+		"Bend Driver brand and model": "GECKO G201X",
+    "Feed Driver brand and model": "Orientals CVD245BR-K",
+		"Bend Driver config": "4.5A peak (3.18A RMS)",
+    "Feed Driver config": "70% power (3.15A RMS) (STEP SW #9), 1/10th microstep (STEP SW #5), 2Phase (R2), Smooth (SD) OFF, Filter ON",
+		"Config gearbox ratio": "10:1",
+		"TR for bend": "9.2",
+		"TR for feed": "19.440175 (for 61.88mm wheel. Measure the wheels.)",
+		"TR for duck": "39.8971",
+    "Other notes": "Turn power level to 0 if outboarding the driver for that motor. Validate this file with JSONLint before dumping to tinyG"
+	}
+],
+
+"commands": [
+    {"tinyG modal settings": ""},
+    {"baud": 5},
+    {"js": 1},
+    {"gpa": 1},
+    {"gun": 1},
+    {"ja": 0.2},
+    {"si": 200},
+    {"jv": 5},
+    {"mt": 0.2},
+    {"st": 1},
+
+    {"Motor mapping": ""},
+    {"1ma": 1},
+    {"2ma": 2},
+    {"3ma": 0},
+    {"4ma": 3},
+
+    {"Polarities": ""},
+    {"1po": 0},
+    {"2po": 1},
+    {"3po": 1},
+    {"4po": 0},
+
+    {"TR values": ""},
+    {"1tr": 0},
+    {"2tr": 39.8971},
+    {"3tr": 19.440175},
+    {"4tr": 9.2},
+
+    {"Power Settings": ""},
+    {"1pl": 0},
+    {"2pl": 1},
+    {"3pl": 0},
+    {"4pl": 0},
+
+    {"1pm": 0},
+    {"2pm": 1},
+    {"3pm": 1},
+    {"4pm": 1},
+
+    {"Motor settings": ""},
+    {"1sa": 0},
+    {"2sa": 1.8},
+    {"3sa": 1.8},
+    {"4sa": 1.8},
+
+    {"1mi": 0},
+    {"2mi": 16},
+    {"3mi": 10},
+    {"4mi": 10},
+
+    {"Axes settings": ""},
+    {"xam": 1},
+    {"xvm": 15000},
+    {"xfr": 15000},
+    {"xjm": 10000},
+
+    {"yam": 0},
+    {"yvm": 0},
+    {"yjm": 0},
+    {"yfr": 0},
+
+    {"zam": 1},
+    {"zvm": 5000},
+    {"zfr": 5000},
+    {"zjm": 5000},
+
+    {"aam": 1},
+    {"avm": 10000},
+    {"afr": 10000},
+    {"ajm": 10000},
+
+    {"Switches and limits": ""},
+		{"di1mo": -1},
+		{"di1ac": 0},
+		{"di1fn": 0},
+
+		{"di2mo": -1},
+		{"di2ac": 0},
+		{"di2fn": 0},
+
+		{"di3mo": -1},
+		{"di3ac": 0},
+		{"di3fn": 0},
+
+		{"di4mo": -1},
+		{"di4ac": 0},
+		{"di4fn": 0},
+
+		{"di5mo": -1},
+		{"di5ac": 0},
+		{"di5fn": 0},
+
+		{"di6mo": -1},
+		{"di6ac": 0},
+		{"di6fn": 0},
+
+		{"di7mo": -1},
+		{"di7ac": 0},
+		{"di7fn": 0},
+
+		{"di8mo": 0},
+		{"di8ac": 0},
+		{"di8fn": 0},
+
+		{"di9mo": -1},
+		{"di9ac": 0},
+		{"di9fn": 0},
+
+    {"sl": 1},
+    {"atm": 360},
+    {"atn": -360},
+    {"xtm": 90000},
+    {"xtn": -90000},
+    {"ztm": 0},
+    {"ztn": -12.7},
+
+    {"Homing Settings": ""},
+    {"ahi": 8},
+    {"ahd": 1},
+    {"asv": 2000},
+		{"alv": 500},
+		{"alb": 20},
+		{"azb": 80.5},
+    {"ajh": 10000}
+    ]
+  }
