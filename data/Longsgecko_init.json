@@ -1,0 +1,114 @@
+{
+  "notes": [{
+    "ID": "INIT file for LONG-GECKO machine with 3/16 (61.88mm) feed wheels ",
+    "A-axis motor (bend)": "Motor4",
+    "X-axis motor (feed)": "Motor3",
+    "Y-axis motor (none)": "Not Mapped (use yAM:0 to disable the axis)",
+    "Z-axis motor (duck)": "Motor2",
+    "Bend Motor brand and model": "Longs HS238430AG13 - outboarded",
+    "Feed Motor brand and model": "Longs HS238430AG13 - outboarded",
+    "Duck Motor brand and model": "Longs short stack - driven straight from tinyG",
+    "Bend Driver brand and model": "GECKO G201X",
+    "Feed Driver brand and model": "GECKO G201X",
+    "Bend Driver config": "4.5A peak (3.18A RMS)",
+    "Feed Driver config": "4.5A peak (3.18A RMS)",
+    "Config gearbox ratio": "13:1",
+    "TR for bend": "7.07692307",
+    "TR for feed": "14.9539810 (for 61.88mm wheel. Measure the wheels.)",
+    "TR for duck": "39.8971",
+    "Other notes": "Turn power level to 0 if outboarding the driver for that motor. Validate this file with JSONLint before dumping to tinyG"
+  }
+  ],
+
+"commands": [
+    {"tinyG modal settings": ""},
+    {"baud": 5},
+    {"js": 1},
+    {"gpa": 1},
+    {"gun": 1},
+    {"ja": 0.20},
+    {"si": 200},
+    {"jv": 5},
+    {"mt": 0.25},
+    {"st": 1},
+
+    {"Motor mapping": ""},
+    {"1ma": 1},
+    {"2ma": 2},
+    {"3ma": 0},
+    {"4ma": 3},
+
+    {"Polarities": ""},
+    {"1po": 0},
+    {"2po": 1},
+    {"3po": 1},
+    {"4po": 0},
+
+    {"TR values": ""},
+    {"2tr": 39.89822},
+    {"3tr": 14.9539810},
+    {"4tr": 7.07692307},
+
+    {"Power Settings": ""},
+    {"1pl": 0},
+    {"2pl": 1},
+    {"3pl": 0},
+    {"4pl": 0},
+
+    {"1pm": 0},
+    {"2pm": 1},
+    {"3pm": 1},
+    {"4pm": 1},
+
+    {"Motor settings": ""},
+    {"2sa": 1.8},
+    {"3sa": 1.8},
+    {"4sa": 1.8},
+
+    {"2mi": 16},
+    {"3mi": 10},
+    {"4mi": 10},
+
+    {"Axes settings": ""},
+    {"xam": 1},
+    {"xvm": 10000},
+    {"xfr": 10000},
+    {"xjm": 20000},
+
+    {"yam": 0},
+
+    {"zam": 1},
+    {"zvm": 5000},
+    {"zfr": 5000},
+    {"zjm": 5000},
+
+    {"aam": 1},
+    {"avm": 10000},
+    {"afr": 10000},
+    {"ajm": 10000},
+
+    {"Switches and limits": ""},
+    {"di2mo": 0},
+    {"di8mo": 0},
+    {"di8ac":0},
+    {"di8fn":0},
+
+    {"sl": 1},
+    {"atm": 90000},
+    {"atn": -90000},
+    {"xtm": 90000},
+    {"xtn": -90000},
+    {"ztm": 0},
+    {"ztn": -12}
+
+    {"Homing Settings": ""},
+    {"ahi": 8},
+    {"ahd": 1},
+    {"asv": 2000},
+    {"alv": 400},
+    {"alb": 20},
+    {"azb": 81.5},
+    {"ajh": 10000}
+
+    ]
+  }
