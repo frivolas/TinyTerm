@@ -44,7 +44,8 @@ public class TinyTerm extends PApplet {
 //
 // Thanks to http://stackoverflow.com/questions/29107544/serial-com-port-selection-by-dropdownlist-in-processing
 // for the help with adding the Serial port dropdown list
-//
+// and to http://startingelectronics.org/software/processing/find-arduino-port/
+// for detecting new serial connections on the fly
 
 
 // Imports
@@ -72,6 +73,10 @@ PrintWriter logFile;
 Serial myPort;  // Create object from Serial class
 int BAUD_RATE = 9600;
 Boolean serialConnected = false;
+Boolean deviceDetected = false;
+String[] portNames;
+int numberofPorts = 0;
+String detectedPort = "";
 
 //misc variables
 int x = 50;             // Position on the X axis
@@ -105,14 +110,15 @@ public void setup(){
   // Gui Loaded. Terminal ready
 
   // List all the available serial ports, check the terminal window and select find the port# for the tinyG
-  String[] portNames = Serial.list();
+  portNames = Serial.list();
   printArray(portNames);
+  numberofPorts = portNames.length;
   // Open whichever port the tinyG uses in your computer (8 in mine):
-  for(int i=0;i<portNames.length;i++){
+  for(int i=0;i<numberofPorts;i++){
     serialPortsList.addItem(portNames[i], i);
   }
 
-
+  // Hide the gui until the serial is connected.
   guiHide();
 
   myTerminal.append(theTime() + "Terminal ready... \n");
@@ -126,6 +132,7 @@ public void setup(){
 public void draw() {
   background(0);  //black BG
   //read response from tinyG
+  refreshSerial();
   if(myPort != null){
   while (myPort.available () > 0) {
     String inBuffer = myPort.readString();
@@ -200,7 +207,7 @@ public void serialports(int n){
     }
     if(serialConnected) {
       println("Yay Serial!");
-      myTerminal.append(theTime() + "Connected to Serial on port COM" + n + "\n");
+      myTerminal.append(theTime() + "Connected to Serial on port " + portNames[n] + "\n");
       guiShow();
   } else {
     println("Boo no Serial");
@@ -501,6 +508,37 @@ public void guiShow(){
   // cp5.get(Bang.class,"againFile").show();                        // hide the "re-dump" bang
   cp5.get(Bang.class,"saveLog").show();                        // hide the "re-dump" bang
   cp5.get(Bang.class,"cleanMyFile").show();                        // hide the "re-dump" bang
+}
+
+
+
+public void refreshSerial(){
+  // Let's check how many ports are there, if there are more than the original setup,
+  // then there's a new device. If there are less, then we lost one.
+  if((Serial.list().length > numberofPorts) && !deviceDetected){
+    // there's a new connection
+    deviceDetected = true;
+    // determine which one was it
+    boolean str_match = false;
+    if(numberofPorts == 0){
+      detectedPort = Serial.list()[0];
+    } else {
+      // compare the current list with the original list.
+      for(int i=0;i<Serial.list().length;i++){
+        for(int j=0;j<numberofPorts;j++){
+          if(Serial.list()[i].equals(portNames[j])){
+            detectedPort=Serial.list()[i];
+            break;
+          }
+        }
+      }
+    }
+    println("Adding port "+ detectedPort + " to the list");
+    serialPortsList.addItem(detectedPort, numberofPorts);
+  } else if(Serial.list().length < numberofPorts){
+    println("Lost a port, refresh list");
+  }
+
 }
 PrintWriter output;
 String loadFile, saveFile;
