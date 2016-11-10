@@ -535,8 +535,22 @@ public void refreshSerial(){
     }
     println("Adding port "+ detectedPort + " to the list");
     serialPortsList.addItem(detectedPort, numberofPorts);
-  } else if(Serial.list().length < numberofPorts){
+    myTerminal.append(theTime() + "Added port: " + detectedPort + " to the list of connections... \n");
+  } else if((Serial.list().length < numberofPorts) && deviceDetected){
+    // We lost the connection
     println("Lost a port, refresh list");
+    deviceDetected = false;
+    // compare the current Serial list with the original list
+    for(int i=0;i<numberofPorts;i++){
+      for(int j=0;j<Serial.list().length;j++){
+        if(Serial.list()[j].equals(portNames[i])){
+          detectedPort=portNames[i];  // we lost this port
+          break;
+        }
+      }
+    }
+    println("Need to remove " + detectedPort + " from the list");
+    myTerminal.append(theTime() + "Lost connection on port: " + detectedPort + "\n");
   }
 
 }
