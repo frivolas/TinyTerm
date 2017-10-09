@@ -551,6 +551,8 @@ public void refreshSerial(){
     }
     println("Need to remove " + detectedPort + " from the list");
     myTerminal.append(theTime() + "Lost connection on port: " + detectedPort + "\n");
+    myTerminal.append(theTime() + "Please connect a device to continue ... \n");
+    myTerminal.scroll(1);
   }
 
 }

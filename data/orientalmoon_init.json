@@ -1,22 +1,9 @@
 {
 
-  "notes": [{
-    "name": "Oriental Moon Init Sequence",
-    "target": "v9",
-    "type": "gcode",
-    "A-axis motor (bend)": "Motor4",
-    "X-axis motor (feed)": "Motor2",
-    "Y-axis motor (none)": "Not Mapped (use yAM:0 to disable the axis)",
-    "Z-axis motor (duck)": "Motor3",
-    "Motor brand and model": "Moons PL23HSAP4300",
-    "Driver brand and model": "Oriental Motor CVD245BR-K",
-    "Driver config": "70% power (3.5A RMS), 1/10th microstep",
-    "Config gearbox ratio": "10:1",
-    "Bend Pulley ratio": "3.91:1 (90/23)",
-    "TR for bend": "9.20",
-    "TR for feed": "39.8971",
-    "TR for duck": "2.25"
-    }],
+"notes": [
+{"name": "Oriental Moon Init Sequence"},
+{"target": "v9"},
+{"type": "gcode"}],
 
 "commands": [
 
@@ -29,61 +16,61 @@
     {"jv": 5},
     {"mt": 0.2},
     {"st": 1},
-
-
+    
+    
     {"1ma": 1},
     {"2ma": 2},
     {"3ma": 0},
     {"4ma": 3},
-
-
+    
+    
     {"yam": 0},
-
-
+    
+  
     {"1po": 0},
     {"2po": 1},
-    {"3po": 1},
+    {"3po": 0},
     {"4po": 0},
-
-
+    
+    
     {"2tr": 39.8971},
-    {"3tr": 2.25},
+    {"3tr": 36},
     {"4tr": 9.2},
-
-
-    {"2pl": 1},
-    {"3pl": 1},
-    {"4pl": 1},
-
-
+    
+    {"1pl": 0},
+    {"2pl": 0.5},
+    {"3pl": 0},
+    {"4pl": 0},
+    
+   
     {"1pm": 0},
     {"2pm": 1},
     {"3pm": 1},
     {"4pm": 1},
-
-
+    
+   
     {"2sa": 1.8},
     {"3sa": 1.8},
     {"4sa": 1.8},
-
+    
     {"2mi": 16},
-    {"3mi": 16},
+    {"3mi": 10},
     {"4mi": 10},
-
-
-    {"xvm": 2000},
-    {"xfr": 2000},
+    
+    
+    {"xvm": 40000},
+    {"xfr": 40000},
     {"xjm": 10000},
-
+    
     {"zvm": 5000},
     {"zfr": 5000},
     {"zjm": 5000},
-
+    
     {"avm": 10000},
     {"afr": 10000},
     {"ajm": 10000},
-
-
+    
+   
     {"di2mo": 0},
     {"di8mo": 0},
     {"di8ac":0},
@@ -96,7 +83,7 @@
     {"azb": 180},
     {"ajh": 10000},
     {"ahi": 8},
-
+    
     {"sl": 1},
     {"atm": 90000},
     {"atn": -90000},
@@ -104,5 +91,5 @@
     {"xtn": -90000},
     {"ztm": 0},
     {"ztn": -12.7}
-
+    
     ]}

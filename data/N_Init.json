@@ -1,0 +1,48 @@
+{
+	"notes": [{
+		"What is this for?": "This is for Nanit's fixture"
+	}
+],
+
+	"commands": [
+		{"tinyG modal settings": ""},
+		{"baud": 1},
+		{"js": 0},
+		{"gpa": 0},
+		{"gun": 1},
+		{"ja": 0},
+		{"si": 250},
+		{"jv": 5},
+		{"mt": 0.2},
+		{"st": 1},
+
+		{"Motor mapping": ""},
+		{"1ma": 0},
+
+		{"Polarities": ""},
+		{"1po": 0},
+
+		{"TR values": ""},
+		{"1tr": 1},
+
+		{"Power Settings": ""},
+		{"1pl": 1},
+
+		{"1pm": 2},
+
+		{"Motor settings": ""},
+		{"1mi": 8},
+
+		{"1sa": 1.8},
+
+		{"Axes settings": ""},
+		{"xAM": 1},
+		{"xvm": 100},
+		{"xjm": 5},
+		{"xfr": 100},
+
+		{"Homing switches and limits": ""},
+		{"sl": 0},
+
+	]
+}
