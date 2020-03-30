@@ -145,7 +145,17 @@ void logic()
       //logger.println("Previous angle: " + previousAngle + "\n");
       //logger.flush();
       println("This is a Angle command with a angle of: " + previousAngle + "\n");
-    } else if (dataQueue.peek().toLowerCase().indexOf("end")> -1) {
+    } else if (dataQueue.peek().toLowerCase().indexOf("cls") > -1) {
+      // Command to clear the screen (and liberate some RAM)
+      myTerminal.clear();
+      myTerminal.append(theTime() + "Terminal ready...\n");
+    } else if (dataQueue.peek().indexOf('(') > -1 || dataQueue.peek().indexOf(';') > -1) {
+      // This is a comment. Print on terminal but don't send to tinyG
+      println("This is a comment: " + dataQueue.peek());      
+      myTerminal.append(theTime() + dataQueue.peek());
+      myTerminal.scroll(1);
+      dataQueue.remove();      
+    } else if (dataQueue.peek().toLowerCase().indexOf("eof")> -1) {
       println("////////////////////////////////////////////////////");
       println("Reached end of file");
       println("\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\");
@@ -163,7 +173,7 @@ void logic()
         dataQueue.addFirst("!%~");
       }
     } 
-    
+
     sendDataFromQ();
   }//end while
   theGCode = "";
@@ -173,7 +183,7 @@ void logic()
 
 void sendDataFromQ()
 {
-  try{
+  try {
     //if (! keyWord(dataQueue.peek())) {
     myPort.write( dataQueue.peek() + "\n");
     //if (debug == true) myTerminal.append(theTime() + dataQueue.peek());
@@ -195,7 +205,9 @@ void sendDataFromQ()
     //    dataQueue.remove();
     //  }
     //}
-  } catch(Exception e) {}
+  } 
+  catch(Exception e) {
+  }
 }
 
 
