@@ -13,167 +13,54 @@ float previousFeed = 0;
 
 void logic()
 {
-  //delay(0);
-  //println("theGCode: " + theGCode + " | and QueuePeek: " + dataQueue.peek() + " | and QueueSize: " + dataQueue.size() + " | and canSend: " + canSend + "| and tinyGBuffer:" + tinyGBuffer);
-  //println("Is it valid: " + (theGCode.equals("!\n") || theGCode.equals("!%")));
-  //myTerminal.append(theTime() + "Qline:Start" );
-  //myTerminal.scroll(1);
-  //for (Iterator itr = dataQueue.iterator(); itr.hasNext(); ) {
-  //  myTerminal.append(itr.next().toString());
-  //  myTerminal.scroll(1);
-  //}
-  //myTerminal.append(theTime() + "Qline:End" + "| tinygbuffer : " + tinyGBuffer);
-  //myTerminal.scroll(2);
-
-  if (theGCode.equals("!\n") || theGCode.equals("!%\n") || theGCode.equals("%\n")) {
-    if (!theGCode.equals("!\n")) { 
-      dataQueue.clear(); 
-      println("Q is clear");
-      if (debug == true) myTerminal.append(theTime() + "Flush queue: " + theGCode);
-      println("Flush, this gcod:" + theGCode);
-      if (debug == true) myTerminal.scroll(1);
-      measure = 0;
-    }
+  if (theGCode.equals("!\n")) {
+    // this is a feedhold!
+    // can resume script (queue) when a '~' is sent
     myPort.write(theGCode);
-    myPort.write("~\n");
+    reportEvent("Feedhold!" + theGCode);
+    reportEvent("Send '~' to resume... " + theGCode);
     canSend = false;
-    if (debug == true) myTerminal.append(theTime() + "Feedhold: " + theGCode);
-    println("Eeeee stop, this gcod:" + theGCode);
-    if (debug == true) myTerminal.scroll(1);
-  } else if (theGCode.equals("~\n") ) {
-    //myPort.write(theGCode);
-    canSend = true;
-    if (debug == true) myTerminal.append(theTime() + "Resuming script: " + theGCode);
-    println("Resume, this gcod:" + theGCode);
-    if (debug == true) myTerminal.scroll(1);
-  }
-
-
-
-  if (measure == 1) {
-    //GPIO.interrupts();
-    delay(10);
-    canSend = false;
-    theGCode = "G91 G1 A90 F200 \n";
-    myPort.write(theGCode);
-    if (debug == true) myTerminal.append(theTime() + theGCode);
-    if (debug == true) myTerminal.scroll(1);
-    measure = 2;
-  }
-  if (measure == 4) {
-    //GPIO.interrupts();
-    delay(10);
-    canSend = false;
-    theGCode = "G91 G1 A-90 F200 \n";
-    myPort.write(theGCode);
-    if (debug == true) myTerminal.append(theTime() + theGCode);
-    if (debug == true) myTerminal.scroll(1);
-    measure = 2;
-  }
-  if (measure == 2)
-  {
-    //Wait for pin
-  }
-  if (measure == 3)
-  {
-    tinyGBuffer =0;
-    canSend = true;
+  } else if (theGCode.equals("!%\n") || theGCode.equals("%\n")) {
+    // feedhold and flush (full stop)
+    // script / queue is flushed both @ tinyG and tinyTerm
+    // cannot be resumed by sending '~'
+    myPort.write(theGCode);      // first we push the code
+    dataQueue.clear();           // then we clear the queue
+    tinyGBuffer=0;               // then reset the buffer
+    println("Q is clear");
+    reportEvent("Halt and flush: " + theGCode);    // then we get chatty
     measure = 0;
-    //myPort.write("$posa \n");
-    //delay(100);
-    //myPort.write("g90 g0 a-30.0 \n"); //back off code
-  }
-
-
+    //canSend = false;    // do we need to stop the sending if the queue is clear? meaning: nothing to send?
+  } else if (theGCode.equals("~\n") ) {
+    myPort.write(theGCode);
+    canSend = true;
+    reportEvent("Resuming script: " + theGCode);
+  } 
 
   //println("Is Q empty? :" + dataQueue.isEmpty() + "Buffer size:" +  tinyGBuffer);
   while (tinyGBuffer < 2 && dataQueue.size() > 0 && canSend)
   {
-    if (dataQueue.peek().toLowerCase().equals("start_measure")) {
-      canSend = false;
-      measure = 1;
+    if (dataQueue.peek().indexOf('(') >= 0 || dataQueue.peek().indexOf(';') >= 0) {
+      // This is a comment. Print on terminal but don't send to tinyG (tinyG doesn't send responses to comments)
+      print("Removing a comment: ");
+      reportEvent("||" + dataQueue.peek());
       dataQueue.remove();
-      break;
-    } else if (dataQueue.peek().toLowerCase().equals("neg_start_measure")) {
-      canSend = false;
-      measure = 4;
-      dataQueue.remove();
-      break;
-    } else if (dataQueue.peek().toLowerCase().equals("$posa\n")) {
-    } else if (dataQueue.peek().toLowerCase().equals("comp\n")) {
-      dataQueue.remove();
-      float tempAngle = smartPinWireAngle + float(dataQueue.peek().replaceAll("[^\\d.-]", ""));
-
-      println("New Angle to goto : " + tempAngle);
-      //material profie comes here
-      //logger.println("Comp new angle to go to is: " + tempAngle +" :Current wire angle is: " + smartPinWireAngle +" :Desired Wire angle is: "+ float(dataQueue.peek().replaceAll("[^\\d.-]", "")) + "\n");
-      //logger.flush();
-
-      tempAngle = -0.00000000001339184*pow(tempAngle, 6) + 0.000000006227119*pow(tempAngle, 5) - 0.000001067801*pow(tempAngle, 4) + 0.00009016468*pow(tempAngle, 3) - 0.005157139*pow(tempAngle, 2) + 0.9794736*tempAngle - 11.62875;
-      //logger.println("Pin position that will bend the new desired wire angle is : " + tempAngle + "\n\n");
-      //logger.flush();
-
-      previousAngle =float(dataQueue.peek().replaceAll("[^\\d.-]", ""));
-      String temp = "G90 G0 A"+tempAngle;
-      println("Comp added gcode : " + dataQueue.peek());
-      dataQueue.remove();
-      dataQueue.addFirst(temp);
-    } else if  (dataQueue.peek().toLowerCase().indexOf("x") > -1)
-    {
-      String temp[] = split(dataQueue.peek().toLowerCase(), ' ');
-      for (int i =0; i < temp.length; i++)
-      {
-        if (temp[i].indexOf("x") > -1)
-        {
-          previousFeed = float(temp[i].replaceAll("[^\\d.-]", ""));
-        }
-      }
-      //logger.println("Previous Feed: " + previousFeed + "\n");
-      //logger.flush();
-      println("This is a feed command with a feed of: " + previousFeed + "\n");
-    } else if  (dataQueue.peek().toLowerCase().indexOf("a") > -1)
-    {
-      String temp[] = split(dataQueue.peek().toLowerCase(), ' ');
-      for (int i =0; i < temp.length; i++)
-      {
-        if (temp[i].indexOf("a") > -1)
-        {
-          //previousFeed = 0;
-          previousAngle = float(temp[i].replaceAll("[^\\d.-]", ""));
-        }
-      }
-      //logger.println("Previous angle: " + previousAngle + "\n");
-      //logger.flush();
-      println("This is a Angle command with a angle of: " + previousAngle + "\n");
-    } else if (dataQueue.peek().toLowerCase().indexOf("cls") > -1) {
-      // Command to clear the screen (and liberate some RAM)
-      myTerminal.clear();
-      myTerminal.append(theTime() + "Terminal ready...\n");
-    } else if (dataQueue.peek().indexOf('(') > -1 || dataQueue.peek().indexOf(';') > -1) {
-      // This is a comment. Print on terminal but don't send to tinyG
-      println("This is a comment: " + dataQueue.peek());      
-      myTerminal.append(theTime() + dataQueue.peek());
-      myTerminal.scroll(1);
-      dataQueue.remove();      
     } else if (dataQueue.peek().toLowerCase().indexOf("eof")> -1) {
       println("////////////////////////////////////////////////////");
-      println("Reached end of file");
+      reportEvent("Reached end of file\n");
       println("\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\");
       dataQueue.remove();
-      myTerminal.append(theTime() + "Reached end of file\n");
-      myTerminal.scroll(1);
+
       if ((repeatLoops-loopsLeft)>0) {
         loopsLeft++;
-        myTerminal.append(theTime() + "Sending the file " + (repeatLoops-loopsLeft) + " more times!!!\n");
-        myTerminal.scroll(1);
+        reportEvent("Sending the file " + (repeatLoops-loopsLeft) + " more times!!!\n");
         cp5.get(Textlabel.class, "counter").setText(str(loopsLeft));
       } else {
-        myTerminal.append(theTime() + "Done sending the file.\n");
-        myTerminal.scroll(1);
+        reportEvent("Done sending the file.\n");
         dataQueue.addFirst("!%~");
       }
-    } 
-
+    }// if eof 
+    //println("can I send? " + canSend); //debug
     sendDataFromQ();
   }//end while
   theGCode = "";
@@ -184,29 +71,29 @@ void logic()
 void sendDataFromQ()
 {
   try {
-    //if (! keyWord(dataQueue.peek())) {
-    myPort.write( dataQueue.peek() + "\n");
-    //if (debug == true) myTerminal.append(theTime() + dataQueue.peek());
-    //if (debug == true) myTerminal.scroll(1);
-    if (debug == true) myTerminal.append(theTime() + dataQueue.peek());
-    println("Queue sending: " + dataQueue.peek());
-    logger.println("Sent to TinyG: " + theTime() + dataQueue.peek());
+    myPort.write(dataQueue.peek());
+    if (dataQueue.peek().indexOf("$di1fn=0")>0) {
+      statusInterlock=false;
+      reportEvent("Removing interlock");
+    }
+    print("SendQueue ");
+    reportEvent("> " + dataQueue.peek());
+    logger.println("Out > " + theTime() + dataQueue.peek());
     logger.flush();
-    if (debug == true) myTerminal.scroll(1);
-    tinyGBuffer ++;
+
+    // we only add one to the buffer if it's a "move" command
+    // not a tinyG command (start with '$')
+    if (dataQueue.peek().indexOf('$')<0) {
+      tinyGBuffer ++;
+    } else {
+      reportEvent("TinyG Command received \n");
+    }
+    println("tinyGBuffer: " + tinyGBuffer);
     dataQueue.remove();
-    //}
-    // else {
-    //  if (dataQueue.peek().toLowerCase().equals("start_measure"))
-    //  {
-    //    measure = 1; 
-    //    myTerminal.append(theTime() + dataQueue.peek());
-    //    myTerminal.scroll(1);
-    //    dataQueue.remove();
-    //  }
-    //}
   } 
   catch(Exception e) {
+    tinyGBuffer=0;
+    println("Error while writing data to tinyG: " + e);
   }
 }
 
@@ -228,8 +115,7 @@ void dumpFile(String theFile) {
   loopsLeft = 0;
   cp5.get(Textlabel.class, "counter").setText(str(loopsLeft));
 
-  myTerminal.append(theTime() + "Loading File... \n");
-  myTerminal.scroll(1);
+  reportEvent("Loading File... \n");
   String theLCFile = theFile.toLowerCase(); // so there's no confustion between JSON and json
 
   // If it's a json let's check if it's the init file to properly send it to the tinyG
@@ -240,10 +126,9 @@ void dumpFile(String theFile) {
     // Get the "Commands" array from the init file
     initCommands = initFile.getJSONArray("commands");
     delay(500);
-    myTerminal.append(theTime() + "JSON Loaded... \n");
+    reportEvent("JSON Loaded... \n");
     delay(250);
-    myTerminal.append(theTime() + "Dumping init file... \n");
-    myTerminal.scroll(1);
+    reportEvent("Dumping init file... \n");
     // The tinyG doesn't accept JSONArrays as input, so we need to brake it.
     // So lets extract each command as a JSONObject, and
     // then convert it into a String to be sent via Serial to the tinyG
@@ -258,86 +143,127 @@ void dumpFile(String theFile) {
       //myTerminal.scroll(1);
       //delay(50);
     }
+    myPort.write("$ej:0\n");                                  // make sure the last command is in text form
   } else {
     // If it's not the init file, then let's just dump whatever is in the file.
     // if it's a JSON but not the init, it will be dumped and the tinyG might complain
     // Rando files will be sent repeatLoops number of times.
     String fileLines[] = loadStrings(theFile);
-    println("There are " + fileLines.length + " lines in this file");
-    myTerminal.append(theTime() + "Adding " + fileLines.length + " lines to the queue... \n");
-    myTerminal.append(theTime() + "Sending the file " + repeatLoops + " time(s)... \n");
-    myTerminal.scroll(1);
+    reportEvent("Adding " + fileLines.length + " lines to the queue... \n");
+    reportEvent("Sending the file " + repeatLoops + " time(s)... \n");
 
     for (int n=0; n<repeatLoops; n++) {
       // send the file the number of times the user has indicated in the text field (default 1)
       for (int i=0; i<fileLines.length; i++) {
-        if (fileLines[i].toLowerCase().equals("measure")) {
-          dataQueue.add("G91 G1 A-7 F10000\n");
-          dataQueue.add("G91 G1 X0.0\n");
-          dataQueue.add("G91 G1 X0.0\n");
-          dataQueue.add("G91 G1 X0.0\n");
-          dataQueue.add("start_measure");
-          dataQueue.add("$posa\n");
-          dataQueue.add("G91 G1 X0.0\n");
-          dataQueue.add("G91 G1 X0.0\n");
-          dataQueue.add("G91 G1 X0.0\n");
-          //dataQueue.add("G90 G0 A-30\n");
-        } else if (fileLines[i].toLowerCase().equals("neg_measure")) {
-          dataQueue.add("G91 G1 A7 F10000\n");
-          dataQueue.add("G91 G1 X0.0\n");
-          dataQueue.add("G91 G1 X0.0\n");
-          dataQueue.add("G91 G1 X0.0\n");
-          dataQueue.add("neg_start_measure");
-          dataQueue.add("$posa\n");
-          dataQueue.add("G91 G1 X0.0\n");
-          dataQueue.add("G91 G1 X0.0\n");
-          dataQueue.add("G91 G1 X0.0\n");
-          //dataQueue.add("G90 G0 A-30\n");
-        } else if (fileLines[i].toLowerCase().equals("home")) {
-          println("Dinesh is sad");
+        if (fileLines[i].equals("")) {
+          println("Empty line, skip");
+        } else if(fileLines[i].indexOf('(')>=0){
+          println("Comment line, skip");
         } else {
           dataQueue.add(fileLines[i] + "\n");
+          delay(1);
         }
-        //q_adder(fileLines[i]);       
-        //myTerminal.append(theTime() + fileLines[i] + "\n");                 // Put the line on the terminal
-        //myTerminal.scroll(1);
+        //reportEvent(fileLines[i] + "\n");                 // Put the line on the terminal
       }
-      myTerminal.append(theTime() + "File added to the queue. \n");
-      myTerminal.scroll(1);
-      myTerminal.append(theTime() + "Sending the file " + (repeatLoops-n) + " more times...\n"); 
-      myTerminal.scroll(1);
+      reportEvent("File added to the queue. \n");
+      reportEvent("Sending the file " + (repeatLoops-n) + " more times...\n");
     }//end for repeats
   }
+}//end func
+
+
+
+
+
+
+void compensateAngle() {
+  float tempAngle = smartPinWireAngle + float(dataQueue.peek().replaceAll("[^\\d.-]", ""));
+
+  println("New Angle to goto : " + tempAngle);
+  //material profie comes here
+  //logger.println("Comp new angle to go to is: " + tempAngle +" :Current wire angle is: " + smartPinWireAngle +" :Desired Wire angle is: "+ float(dataQueue.peek().replaceAll("[^\\d.-]", "")) + "\n");
+  //logger.flush();
+
+  tempAngle = -0.00000000001339184*pow(tempAngle, 6) + 0.000000006227119*pow(tempAngle, 5) - 0.000001067801*pow(tempAngle, 4) + 0.00009016468*pow(tempAngle, 3) - 0.005157139*pow(tempAngle, 2) + 0.9794736*tempAngle - 11.62875;
+  //logger.println("Pin position that will bend the new desired wire angle is : " + tempAngle + "\n\n");
+  //logger.flush();
+
+  previousAngle =float(dataQueue.peek().replaceAll("[^\\d.-]", ""));
+  String temp = "G90 G0 A"+tempAngle;
+  println("Comp added gcode : " + dataQueue.peek());
+  dataQueue.remove();
+  dataQueue.addFirst(temp);
 }
 
-Boolean keyWord(String cmd)
-{
-  if (cmd.toLowerCase().equals("measure\n") || cmd.toLowerCase().equals("home\n") || cmd.toLowerCase().equals("start_measure")) {
-    switch (cmd)
-    {
-      case("measure\n"): //measure the wire angle on its right 
-      dataQueue.add("G90 G0 A5");
-      dataQueue.add("start_measure");
-      dataQueue.add("$posa");
-      dataQueue.add("G91 G0 A-30");
-      break;
-      case("home\n"): 
 
-      break;
-      //case("S"): break;
-      //case("S"): break;
-
-
-
-
-
-      //case("S"): break;
-      //case("S"): break;
-      //case("S"): break;
-    default: 
-      break;
-    }
-    return true;
-  }
-  return false;
+// Handy function to publish events both on the terminal
+// and on the serial console. This will save us some lines
+// of code
+void reportEvent(String theEvent) {
+  myTerminal.append(theTime() + theEvent);
+  myTerminal.scroll(1);
+  theEvent =theEvent.replaceAll("\n", "");
+  println(theEvent);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+  if (measure>0) {
+ switch (measure) {
+ case 1:
+ //GPIO.interrupts();
+ delay(10);
+ canSend = false;
+ theGCode = "G91 G1 A90 F200 \n";
+ myPort.write(theGCode);
+ if (debug == true) myTerminal.append(theTime() + theGCode);
+ if (debug == true) myTerminal.scroll(1);
+ measure = 2;
+ break;
+ 
+ case 2:
+ // wait for pin
+ break;
+ 
+ case 3:
+ tinyGBuffer = 0;
+ canSend = true;
+ measure = 0;
+ //myPort.write("$posa \n");
+ //delay(100);
+ //myPort.write("g90 g0 a-30.0 \n"); //back off code
+ break;
+ 
+ case 4:
+ //GPIO.interrupts();
+ delay(10);
+ canSend = false;
+ theGCode = "G91 G1 A-90 F200 \n";
+ myPort.write(theGCode);
+ if (debug == true) myTerminal.append(theTime() + theGCode);
+ if (debug == true) myTerminal.scroll(1);
+ measure = 2;
+ break;
+ 
+ default:
+ break;
+ }//end switch
+ }//end if measure
+ */

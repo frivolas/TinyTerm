@@ -1,78 +1,64 @@
 String[] homingSequencePT1 = {
-  "G90\n", 
-  "G0 Z-9\n", 
+  "G90 G0 Z-12.5\n", 
   "G28.2 A0\n", 
-  "G1 A30 F5000\n", 
+  "G91 G0 A30\n", 
   "$di1fn=2\n", 
-  "G1 A-30 F500\n",
-  "$posa\n"
+  "G91 G0 A1\n", 
+  "G91 G1 A-30 F250\n", 
 };
 
 String[] homingSequencePT2 = {
-  "%\n", 
-  "g90 g0 a", 
+  "~\n",
+  "G91 G0 A0\n",
+  "G90 G0 A", 
   "G28.3 A0\n", 
-  "G0 Z0\n", 
-  "$di1fn=0\n"
+  "G90 G0 Z0 A20\n"
 };
 
 
-
-
-void letsHome() {
+void letsHome(char theAxis) {
   isHoming = true;
-
-  for (int k=0; k<homingSequencePT1.length; k++) {
-    //myPort.write(homingSequencePT1[k]);
-    dataQueue.add(homingSequencePT1[k]);
-    //delay(100);
-  }
-
-  logic();
-
- // while (homingEdgePos == 0) {
-    //logic();
-    //println("Loop of doom");
-    
-    while (myPort.available () > 0) {
-      String inBuffer = myPort.readStringUntil(10);  //10 = LF
-      if (inBuffer != null) {
-        if (inBuffer.indexOf("stat:3")>0 || inBuffer.indexOf("\"stat\":3")>0)         // catch if the tinyG is done (reports stat:3) 
-        {
-          println("Buffer Reset");
-          println("dataQueue.size() = "+ dataQueue.size() );
-          tinyGBuffer = 0;
-          println("DONE!");
-        }
-        print("Incoming: " + inBuffer + "\n");
-        if (inBuffer.indexOf("position:")>0) {
-          println("GOT POS!");
-          // here is where you catch the position from the string
-          String testingThis = inBuffer.substring(inBuffer.indexOf("position")+9);
-          println(testingThis);
-          myTerminal.append(testingThis);
-          myTerminal.scroll(1);
-          //homingEdgePos = float(name_of_the_string_where_you_got_posa);
-          //
-        }
-      }
-   // }
+  isHomed = false;
+  switch (theAxis) {
+  case 'a':
+    // home A (bend) axis only
+    // assumes all other axes are homed
+    for (int k=0; k<homingSequencePT1.length; k++) {
+      dataQueue.add(homingSequencePT1[k]);
+    }
+    break;
+  case 'x':
+    // home X (feed) axis only
+    dataQueue.add("G28.2 X0\n");
+    break;
+  case 'z':
+    // home Z (duck) axis only
+    dataQueue.add("G28.2 Z0\n");    
+    break;
+  case '*':
+    // home all axes
+    // Add the first chunk of the homing sequence to the queue
+    dataQueue.add("G28.2 Z0 X0\n");
+    for (int k=0; k<homingSequencePT1.length; k++) {
+      dataQueue.add(homingSequencePT1[k]);
+    }
+    break;
+  default:
+    break;
   }
 }
 
-  // add something here to make sure we caught posA
 
-void homeAlone(){
-  println(homingSequencePT2[0]+ str(homingEdgePos));
-  dataQueue.add(homingSequencePT2[0]+ str(homingEdgePos/2));
-  delay(50);
-  for (int l=1; l<homingSequencePT2.length; l++) {
-    //myPort.write(homingSequencePT2[l]);
-    dataQueue.add(homingSequencePT2[l]);
-    //delay(50);
+void homePT2(float posA) {
+  // isHoming=true;
+  // append the result of $posA to the second line
+  homingSequencePT2[2] += str(posA/2);
+  homingSequencePT2[2] += "\n";
+  println("GOT THIS POS: " + homingSequencePT2[2]);
+  // add the chunk to the queue
+  for (int i=1; i<homingSequencePT2.length; i++) {
+    dataQueue.add(homingSequencePT2[i]);
   }
-  homingEdgePos = 0;
-  isHoming = false;
 }
 
 

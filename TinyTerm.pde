@@ -1,5 +1,5 @@
-// TinyTerm for DIWire
-// By Oscar Frias (@_frix_) and Dinesh Durai 2019
+// TinyTerm V2.0.0 for DIWire
+// By Oscar Frias (@_frix_) and Dinesh Durai 2020
 // www.oscarfrias.com
 //
 // TinyTerm is a simple interface for a serial terminal to control the TinyG board.
@@ -28,12 +28,13 @@
 // and to http://startingelectronics.org/software/processing/find-arduino-port/
 // for detecting new serial connections on the fly
 //
-// 10/17/19:
+// 07/27/20:
 // As of today, tinyTerm allows to dump a file repeatedly, up to the number of times
 // indicated by the user. It also keeps a counter of the number of times the file has been 
 // dumped into the tinyG, as means for the user to know what has happened. This ends up being 
-// super helpful. For this to work in this version of tinyTerm, the file needs to have the word "END" 
+// super helpful. For this to work in this version of tinyTerm, the file needs to have the word "EOF" 
 // as the last line. 
+// Homing sequence works. Status reads also work
 // 
 
 
@@ -67,7 +68,7 @@ boolean buttonFlag=false;
 ScrollableList serialPortsList;
 
 // String variables
-String theGCode = "$ej:0\n";                // Whatever you want to have as default text in the textbox (currently sets the tinyG to textmode)
+String theGCode = "home";                // Whatever you want to have as default text in the textbox (currently sets the tinyG to textmode)
 String jPath = "init.json";                 // the path where the JSON file is
 String fileToDump;                          // String to store filename with absolute path of last dumped file (to quickly re-dump)
 
@@ -86,6 +87,8 @@ Boolean deviceDetected = false;
 String[] portNames;
 int numberofPorts = 0;
 String detectedPort = "";
+int lineCounter = 0;    // linefeed char coming from the serial
+String inBuffer = null;        // to receive the comms from tinyG
 
 //misc variables
 int x = 50;             // Position on the X axis
@@ -96,14 +99,18 @@ int tah;                // textArea height
 int bw = 100;           // width of Bang
 int sbh = 30;           // side button height
 int theWidth = 800;     // applet width
-int theHeight = 450;    // applet height
+int theHeight = 600;    // applet height
 int pad = 20;           // padding between fields
-int lineCounter = 0;    // linefeed char coming from the serial
+boolean aboutToExit = false;  
+
 boolean tinyGconnected = true;
 boolean canSend = true;    // can I send stuff to the tinyG?
 boolean isHoming = false;
+boolean isHomed = false;
+boolean statusInterlock = false;
 float homingEdgePos = 0;
 PrintWriter logger;
+String posAReq = "$posa\n";
 
 int repeatLoops = 0;    // variables to store how many times to repeat sending a file
 int loopsLeft = 0;
@@ -112,7 +119,10 @@ Textarea myTerminal;    // CP5 control for the text area
 PFont font;             // the font for the script
 PFont inputFont;        // the font for the small input field
 
-//Queue queue = new Queue();
+// list of tinyG status codes
+StringList statCodes;
+
+
 // Use "Settings" to assign the size of the applet with variables.
 void settings() {
   size(theWidth, theHeight);
@@ -120,160 +130,125 @@ void settings() {
 
 
 void setup() {
-  // size(600,600);      //Just if you have a really old version of Processing. Like this laptop.
+  // Configure the window
+  surface.setTitle("Tiny Term V2");    // Add a nice title
+  //surface.setResizable(true);          // Allow it to be resizable
+  surface.setLocation(100, 100);       // Position it up-left
   // Start the serial
+  // List all the available serial ports, check the terminal window and select find the port# for the tinyG
+  portNames = Serial.list();
+  println("Available COM ports:");
+  printArray(portNames);
+  numberofPorts = portNames.length;
+
+  // Build GUI
   font = createFont("arial", 20); // big arial font
   inputFont = createFont("arial", 12); // big arial font
   startGUI();
   cp5.get(Bang.class, "loadFile").setTriggerEvent(Bang.RELEASE); // make the bang react at release
   cp5.get(Textlabel.class, "counter").setText("1");
-  // Gui Loaded. Terminal ready
-
-  // List all the available serial ports, check the terminal window and select find the port# for the tinyG
-  portNames = Serial.list();
-  printArray(portNames);
-  numberofPorts = portNames.length;
-  // Open whichever port the tinyG uses in your computer (8 in mine):
+  // Add all the available serial ports to the drop-down list
   for (int i=0; i<numberofPorts; i++) {
     serialPortsList.addItem(portNames[i], i);
   }
 
-  
-
   // Hide the gui until the serial is connected.
   guiHide();
 
-  myTerminal.append(theTime() + "Terminal ready... \n");
-  myTerminal.append(theTime() + "Please choose a Serial port to connect to... \n");
-  myTerminal.scroll(1);
-  textFont(font);
-  //GPIO.pinMode(s_Pin, GPIO.INPUT_PULLUP);
-  //GPIO.attachInterrupt(s_Pin, this, "pinEvent", GPIO.FALLING);
 
-  // Create a new file in the sketch directory
-  //logger = createWriter("positions.txt"); 
-
-  //String content=myTerminal.getText();
+  // Gui Loaded. Terminal ready
+  reportEvent("Terminal ready... \n");
   String dateAppend = theDate();
   String theLogLocation = "logs/" + "AutoLogger_" + dateAppend + ".log";
   logger = createWriter(dataPath(theLogLocation));
   logger.println(theTime() + "Starting Log file for session: " + dateAppend + "\n");
   //logFile.println(content + "\n");
   logger.flush();
-  //logger.close();
-  //logger.println(theTime() + "1Starting Log file for session: " + dateAppend + "\n");
-  //.println("Some data" + "\n");
-  //logger.flush();
-  //logger.close();
+  reportEvent("Log file started \n");  
+  reportEvent("Please choose a Serial port to connect to... \n");
+  textFont(font);
+
+  // Uncomment if running this in the Raspberry PI:
+  //GPIO.pinMode(s_Pin, GPIO.INPUT_PULLUP);
+  //GPIO.attachInterrupt(s_Pin, this, "pinEvent", GPIO.FALLING);
+  // Create a new file in the sketch directory
+  //logger = createWriter("positions.txt"); 
+  //String content=myTerminal.getText();
+
+  //  prepareExitHandler();  // so we can run code on exit
+
+  statCodes = new StringList();
+  tinyGStatus(statCodes);
 }
 
-void pinEvent(int pin)
-{
-  //disable interrupts. Cheat to over come Debounce
-  //GPIO.noInterrupts();
-  println("In ISR");
-  if (measure == 2)
-  {
-    myPort.write("!%");
-    println("Received interrupt on pin" + pin);
-    if (debug) myTerminal.append(theTime() + "Received interrupt on pin" + pin + "\n");
-    if (debug) myTerminal.scroll(1);
-    canSend = false;
-    measure = 3;
-  }
-  delay(30);
-  //enable interrupts. 
-  //GPIO.interrupts();
-}
+
 
 void draw() {
   background(0);  //black BG
-  //read response from tinyG
+
   refreshSerial();
   logic();
+
   if (myPort != null) {
+
     while (myPort.available () > 0) {
-      //println("Buffer");
-      String inBuffer = myPort.readStringUntil(10);  //10 = LF
+      inBuffer = myPort.readStringUntil(10);  //10 = LF
       if (inBuffer != null) {
-        print("Incoming: " + inBuffer + "\n");
+        reportEvent("< " + inBuffer);
         logger.println("From tinyG: " + theTime() + inBuffer);
         logger.flush();
-        myTerminal.append(theTime() + inBuffer);
-        myTerminal.scroll(1);
-        if (isHoming) {
-          print("In homing");
-          if (inBuffer.indexOf("position")>0 || true) {
-            String testingThis = inBuffer.substring(inBuffer.indexOf("position")+9).replaceAll("[^\\d.-]", "");
-            println("hihihi"+testingThis);
-            myTerminal.append(testingThis);
-            myTerminal.scroll(1);
-            homingEdgePos = float(testingThis);
-            homeAlone();
-            // here is where you catch the position from the string
-            // homingEdgePos = float(name_of_the_string_where_you_got_posa);
-            //
-          }
-        }
 
-        if (inBuffer.indexOf("stat:3")>0 || inBuffer.indexOf("\"stat\":3")>0)         // catch if the tinyG is done (reports stat:3) 
-        {
-          print("Buffer Reset");
+        // we listen for a response from the tinyG.
+        if (inBuffer.indexOf("r:")>-1 || inBuffer.indexOf("sr:")>-1) {          // can be a received (r:) a status report (sr:) 
+          tinyGBuffer--;                                                        // or some status codes. Reduce the buffer since it's been used
+        }
+        if (inBuffer.indexOf("stat:3")>-1 || inBuffer.indexOf("\"stat:3\"")>-1 && isHoming && !statusInterlock) {                 // getting a status 3: Program STOP (machine done)
+          //if (isHoming && isHomed) {
+          reportEvent("Machine is homed. \n");
+          //isHoming = false;
+          //} 
           tinyGBuffer = 0;
-          println("DONE!");
-        }
-        if (theGCode.equals("$$\n")) {
-          // If the command sent is '$$' (report config)
-          // Remove the timestamp on the terminal to the incoming string
-          // to have a cleaner display
-          myTerminal.append(inBuffer);
-          delay(500);
-        } else {
-          // For every other command,
-          // Add the timestamp to the incoming string
-          if (inBuffer.indexOf("position") > 0) { // this is used to only write the angle pos from tinyg
-            myTerminal.append(theTime() + inBuffer);
-            tinyGBuffer--;
-            String f = inBuffer.replaceAll("[^\\d.-]", "");
-            smartPinWireAngle = float(f);
+        } //else if (inBuffer.indexOf("stat:3")>0) {
+        //reportEvent("S:3 - Ready. \n");
+        //tinyGBuffer = 0;
+        //} 
+        if (inBuffer.indexOf("stat:6")>0 || inBuffer.indexOf("\"stat\":6")>0) {  // status 6: Machine on HOLD (interlock!)
+          println("INTERLOCK!");
+          statusInterlock=true;
+          myPort.write("%\n");      //  first push the GCode
+          dataQueue.clear();         //  then clear the queue
+          tinyGBuffer=0;             //  then reset the buffer
+          reportEvent("Interlock hit. Stop. Flush queue...\n");    // then we get chatty
 
-            //logger.println("SmartPin touched the wire at pin angle of: " + smartPinWireAngle + "\n");
-            //logger.flush();
-
-            //pin to wire transform comes here -0.000000486582384898182*L30^4 + 0.0000649959719515962*L30^3 + 0.000340808169464137*L30^2 + 1.15404831926069*L30^1 + 17.0014870577853
-            smartPinWireAngle = -0.000000486582384898182*pow(smartPinWireAngle, 4)+ 0.0000649959719515962*pow(smartPinWireAngle, 3) + 0.000340808169464137*pow(smartPinWireAngle, 2) + 1.15404831926069*smartPinWireAngle + 17.0014870577853;
-            //logger.println("Smartpin Pin position to Wire Angle: " + smartPinWireAngle + "\n");
-            //logger.flush();
-            print("This is the wire angle right now: " + smartPinWireAngle + "\n\n");
+          if (isHoming) {
+            reportEvent("WE'RE HOMING, ASK FOR $POSA \n");    // then we get chatty
+            //dataQueue.clear();
+            //tinyGBuffer=0;
+            myPort.write("%\n");
+            delay(50);
+            myPort.write("$di1fn=0\n");
+            delay(50);
+            reportEvent("Asking for directions\n");
+            dataQueue.add(posAReq);
           }
+        } 
+        if (inBuffer.indexOf("position") > 0 && isHoming) { // if we're homing and receive a position, pass it on
+          reportEvent("< " + inBuffer);
+          String f = inBuffer.replaceAll("[^\\d.-]", "");
+          float currentAngle = float(f);
+          homePT2(currentAngle);
         }
-        myTerminal.scroll(1);         // scroll to the bottom of the terminal
-      }
-      //println("InBuffer NULL");      // just debugging
-    }
+        // make sure we're not going negative sizes
+        if (tinyGBuffer<0) tinyGBuffer=0;
+      }//end if inbuffer null
+    }//end while myport
     myPort.clear();
-  }
+  }//end if !myport
+
+  // write a nice title block
   fill(255);
   stroke(255);
   text("TinyTerm:", x, y-pad);
-
-  //for (int frame = 1; frame <100; frame++) {
-  //  //read data from arduino
-  //  String[] words = { "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "1one", "1two", "1three", "1four", "1five", "1six", "1seven", "1eight", "1nine", "1ten" };
-  //  int index = int(random(words.length));  // Same as int(random(4))
-  //  String str =   words[(frame -1)%20];
-  //  //println(num);
-  //  if (frame < bufferSize) {
-  //    queue.push(str);
-  //    queue.display();
-  //  } else {
-  //    queue.display();
-  //    queue.pop();
-  //    queue.push(str);
-  //    queue.display();
-  //  }
-  //}
-  //exit();
 }
 
 
@@ -286,7 +261,7 @@ void controlEvent(ControlEvent theEvent) {
   // Get text from the command line and send it
   if (theEvent.isAssignableFrom(Textfield.class)) {
     println("texfield event!");
-    Send();
+    SendCommand();
   }
 }
 
@@ -300,21 +275,22 @@ void serialports(int n) {
   // open the selected port
   try {
     myPort = new Serial(this, Serial.list()[n], BAUD_RATE);
+    //myPort.bufferUntil(10);
     serialConnected = true;
   } 
   catch (Exception e) {
     System.err.println("Error opening serial port " + myPort);
-    myTerminal.append(theTime() + "Error opening the selected serial port... \n");
+    reportEvent("Error opening the selected serial port... \n");
     serialConnected = false;
     e.printStackTrace();
   }
   if (serialConnected) {
+    myPort.write("$ej:0\n");                                              // Comms must be in TEXT format for tinyterm to catch the STATs
     println("Yay Serial!");
-    myTerminal.append(theTime() + "Connected to Serial on port " + portNames[n] + "\n");
+    reportEvent("Connected to Serial on port " + portNames[n] + "\n");
     guiShow();
   } else {
-    println("Boo no Serial");
-    myTerminal.append(theTime() + "No Serial connection" + "\n");
+    reportEvent("No Serial connection available on that port... \n");
     guiHide();
   }
 }
@@ -322,28 +298,44 @@ void serialports(int n) {
 
 public void Send() {
   // Get the command from the text field
-  theGCode = cp5.get(Textfield.class, "input").getText();
-
-  if (theGCode.toLowerCase().equals("home")) {
-    letsHome();
-    isHoming = true;
-  } else {
-    theGCode = theGCode + "\n";
-    // Print for debug
-    println("Command sent: " + theGCode);
-    // Put the command on the terminal
-    if (theGCode.toLowerCase().equals("cls\n")) {
-      myTerminal.clear();
-      myTerminal.append(theTime() + "Terminal ready...\n");
-    } else {
-      // Send command to the tinyG
-      dataQueue.add(theGCode);
-    }
-  }
-  // Clear the text field to be ready for the next
-  cp5.get(Textfield.class, "input").clear();
+  SendCommand();
+  clear();
 }
 
+
+void SendCommand() {
+  theGCode = cp5.get(Textfield.class, "input").getText().toLowerCase();   // to lower case to prevent conflicts of interest
+
+  if (theGCode.indexOf("home")>-1) {                                      // first check for commands and keywords:
+    if (theGCode.equals("home")) {                                        // if the command is -exactly- "HOME", then home the whole machine
+      reportEvent("Homing all axes. \n");
+      letsHome('*');
+    } else {                                                              // if it's home plus something else, let's check what's incoming
+      char theAxis = theGCode.charAt(theGCode.indexOf("home")+4);         // check one character after "home" to determine axis to home
+      if (theAxis == 'a' || theAxis == 'x' || theAxis == 'z') {           // check for valid axes
+        reportEvent("Homing axis: " + theAxis + "\n");
+        letsHome(theAxis);
+      } else {                                                            // it's not an axis or just gibberish
+        reportEvent("Axis " + theAxis + " cannot be homed");
+      }
+    } //end equals
+  } else if (theGCode.equals("cls")) {                                    // clear the terminal
+    saveLog();
+    myTerminal.clear();
+    reportEvent("Terminal cleared and ready...\n");
+    myTerminal.scroll(1);
+  } else if (theGCode.equals("exit")) {                                   // close app
+    reportEvent("Preparing to quit...\n");
+    saveLog();
+    reportEvent("Log file saved...\n");
+    delay(500);
+    exit();
+  } else {                                                                 // anything else is a Sendable command, or rando text, so send it
+    theGCode = theGCode + "\n";                                            // Add a newline so the tinyG doesn't freak out (it's expected)
+    dataQueue.add(theGCode);                                               // Add command to the queue
+    //println("Command added: " + theGCode);
+  }
+}
 
 // This Bang clears the textfield
 public void clear() {
@@ -352,23 +344,21 @@ public void clear() {
 
 // When the load file bang is released, open a file explorer window
 void loadFile() {
-  myTerminal.append(theTime() + "Loading file...\n");
+  reportEvent("Loading file...\n");
   selectInput("Select script file to load", "fileLoaded");
 }
+
 
 // See what the user selected as a file
 void fileLoaded(File selection) {
   // If no file, print on screen.
   if (selection == null) {
-    // println("No file selected");
-    myTerminal.append(theTime() + "No file selected\n");
-    myTerminal.scroll(1);
+    reportEvent("No file selected\n");
   } else {
     // If file, say it and send the file to the dumpFile function
     // println("File to load: " + selection.getAbsolutePath());
     fileToDump = selection.getAbsolutePath();   // Save the filename to the global variable
-    myTerminal.append(theTime() + "File to load: " + selection.getAbsolutePath() + "\n");
-    myTerminal.scroll(1);
+    reportEvent("File to load: " + selection.getAbsolutePath() + "\n");
     dumpFile(selection.getAbsolutePath());
     cp5.get(Bang.class, "againFile").show();
   }
@@ -380,12 +370,11 @@ void fileLoaded(File selection) {
 void againFile() {
   if (fileToDump.equals("")) {
     // If there's no value in the variable, no file has been dumped
-    myTerminal.append(theTime() + "No file to re-dump\n");
+    reportEvent("No file to re-dump. \n");
   } else {
     // We have a file, re-dump it.
     println("REDUMPING!!");
-    myTerminal.append(theTime() + "Re-Dumping file " + fileToDump + " ...\n");
-    myTerminal.scroll(1);
+    reportEvent("Re-Dumping file " + fileToDump + " ...\n");
     dumpFile(fileToDump);
   }
   // cp5.get(Bang.class,"aganFile").removeCallback();
@@ -403,8 +392,8 @@ void saveLog() {
   logFile.flush();
   logFile.close();
   myTerminal.clear();
-  myTerminal.append(theTime() + "Log File: " + theLogLocation + " created...\n");
-  myTerminal.append(theTime() + "Terminal ready...\n");
+  reportEvent("Log File: " + theLogLocation + " created...\n");
+  reportEvent("Terminal ready...\n");
   cp5.get(Bang.class, "saveLog").removeCallback();
 }
 
@@ -477,9 +466,8 @@ void refreshSerial() {
         }
       }
     }
-    println("Adding port "+ detectedPort + " to the list");
     serialPortsList.addItem(detectedPort, numberofPorts);
-    myTerminal.append(theTime() + "Added port: " + detectedPort + " to the list of connections... \n");
+    reportEvent("Added port: " + detectedPort + " to the list of connections... \n");
   } else if ((Serial.list().length < numberofPorts) && deviceDetected) {
     // We lost the connection
     println("Lost a port, refresh list");
@@ -494,8 +482,98 @@ void refreshSerial() {
       }
     }
     println("Need to remove " + detectedPort + " from the list");
-    myTerminal.append(theTime() + "Lost connection on port: " + detectedPort + "\n");
-    myTerminal.append(theTime() + "Please connect a device to continue ... \n");
-    myTerminal.scroll(1);
+    reportEvent("Lost connection on port: " + detectedPort + "\n");
+    reportEvent("Please connect a device to continue ... \n");
   }
 }
+
+
+public void keyPressed() { 
+  switch(key) { 
+  case ESC: 
+    key = 0; 
+    reportEvent("ESC pressed, do you want to exit Y/N? \n");
+    aboutToExit=true;
+    break;
+
+  case 'y':
+    //key=0;
+    if (aboutToExit) {
+      saveLog();
+      println("log saved");
+      println("leaving");
+      exit();
+    }
+    break;
+
+  case 'n':
+    if (aboutToExit) {
+      reportEvent("N: OK clearing textfield. \n");
+      cp5.get(Textfield.class, "input").setText("");
+      println("here to stay");
+      aboutToExit=false;
+      break;
+    }
+  }
+}
+
+
+
+void tinyGStatus(StringList theList) {
+  // fill the list with the potential tinyG status codes
+  theList.append("stat:0");
+  theList.append("stat:1");
+  theList.append("stat:2");
+  theList.append("stat:3");
+  theList.append("stat:4");
+  theList.append("stat:5");
+  theList.append("stat:6");
+  theList.append("stat:7");
+  theList.append("stat:8");
+  theList.append("stat:9");
+  theList.append("stat:10");
+  theList.append("stat:11");
+  theList.append("stat:12");
+  theList.append("stat:13");
+}
+
+
+
+
+
+
+
+
+
+
+/* Uncomment if running in the raspberry pi
+ void pinEvent(int pin)
+ {
+ //disable interrupts. Cheat to over come Debounce
+ //GPIO.noInterrupts();
+ println("In ISR");
+ if (measure == 2)
+ {
+ myPort.write("!%");
+ println("Received interrupt on pin" + pin);
+ if (debug) myTerminal.append(theTime() + "Received interrupt on pin" + pin + "\n");
+ if (debug) myTerminal.scroll(1);
+ canSend = false;
+ measure = 3;
+ }
+ delay(30);
+ //enable interrupts. 
+ //GPIO.interrupts();
+ }
+ */
+
+
+
+
+
+
+
+
+
+/*
+             String testingThis = inBuffer.substring(inBuffer.indexOf("position")+9).replaceAll("[^\\d.-]", "");*/

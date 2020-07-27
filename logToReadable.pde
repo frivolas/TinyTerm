@@ -3,7 +3,7 @@ String loadFile, saveFile;
 
 void cleanMyFile(){
   cp5.get(Bang.class,"cleanMyFile").removeCallback();
-  myTerminal.append(theTime() + "Choose file to clean...\n");
+  reportEvent("Choose file to clean...\n");
   selectInput("Select a Log file to clean...", "theSelection");
 }
 
@@ -14,7 +14,7 @@ void theSelection(File theFile){
     println("NO FILE...");
   } else {
     loadFile = theFile.getAbsolutePath();
-    myTerminal.append(theTime() + "Choose where to save the clean file...\n");
+    reportEvent("Choose where to save the clean file...\n");
     selectOutput("Where do you want to save your spanky new logFile?","theSaves");
   }
 
@@ -24,7 +24,7 @@ void theSelection(File theFile){
 void theSaves(File theSFile){
   cp5.get(Bang.class,"cleanMyFile").removeCallback();
   if(theSFile == null){
-    println("Don't dare fuck with me again...");
+    reportEvent("Don't dare fuck with me again...\n");
   } else {
     output = createWriter(theSFile.getAbsolutePath());
     String lines[] = loadStrings(loadFile);
@@ -43,6 +43,6 @@ void theSaves(File theSFile){
     }
     output.flush();
     output.close();
-    myTerminal.append(theTime() + "Logfile " + loadFile + " is now human-readable\n");
+    reportEvent("Logfile " + loadFile + " is now human-readable\n");
   }
 }

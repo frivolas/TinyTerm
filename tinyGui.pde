@@ -5,7 +5,7 @@ void startGUI() {
 
   // Define the size of the text area
   taw = width - (2*x) - bw - pad;
-  tah = height - y-(2*pad)-tfh;
+  tah = height - y-(3*pad)-tfh;
 
   // Add a textArea to capture the incoming serial
   myTerminal = cp5.addTextarea("serialText")
@@ -26,7 +26,8 @@ void startGUI() {
   // Add a textfield to allow code injection to the tinyG
   cp5.addTextfield("input")
     .setPosition(x, y + tah + pad)     // up and to the left
-    .setSize(taw-bw-pad, tfh)         // make it big
+    //.setSize(taw-bw-pad, tfh)         // make it big
+    .setSize(taw, tfh)         // make as big as the textarea
     .setFont(font)
     .setFocus(false)
     .setText(theGCode)
@@ -38,13 +39,15 @@ void startGUI() {
     ;
 
   // create a new button with name 'Send' to shoot the command to the tinyG
+  /*
   cp5.addBang("Send")
-    .setPosition(x+taw-bw, y+tah+pad)
-    .setSize(bw, tfh)
-    .setColorBackground(color(180, 40, 50))
-    .setColorActive(color(180, 40, 50))
-    .getCaptionLabel().align(ControlP5.CENTER, ControlP5.CENTER)
-    ;
+   .setPosition(x+taw-bw, y+tah+pad)
+   .setSize(bw, tfh)
+   .setColorBackground(color(180, 40, 50))
+   .setColorActive(color(180, 40, 50))
+   .getCaptionLabel().align(ControlP5.CENTER, ControlP5.CENTER)
+   ;
+   */
 
   // create a new button to quickly dump the init file to the tinyG
   cp5.addBang("loadFile")
@@ -66,17 +69,20 @@ void startGUI() {
     .getCaptionLabel().align(ControlP5.CENTER, ControlP5.CENTER)
     ;
 
-  cp5.addTextlabel("Repeat")
-    .setText("Send")
-    .setPosition(x+taw+pad-10, y/2+tah-tah/3+tfh/8)
-    .setFont(createFont("Arial", 12))
+  cp5.addBang("Repeat")
+    .setCaptionLabel("Send")
+    .setPosition(x+taw+pad, y+ 4*sbh + 4*pad)
+    .setSize(bw/3, tfh/2)
+    .setColorForeground(color(10, 10, 50))
+    .setColorActive(color(0,0,0))
+    .getCaptionLabel().align(ControlP5.LEFT, ControlP5.CENTER)
     ;
 
   cp5.addTextfield("numTimes")
     .setFocus(true)
     .setSize(x, tfh/2)
-    .setPosition(x+taw+2*pad+bw/4, y/2+tah-tah/3)
-    .setSize(bw/2, tfh/2)
+    .setPosition(x+taw+1.5*pad+(bw/3), y+ 4*sbh + 4*pad)
+    .setSize(bw/3, tfh/2)
     .setText("1")
     .setColor(color(255))
     .setColorBackground(color(200, 100))
@@ -87,14 +93,21 @@ void startGUI() {
     .setFont(createFont("Arial", 12))
     ;
 
-  cp5.addTextlabel("times")
-    .setText(" times")
-    .setPosition(x+taw+pad+bw, y/2+tah-tah/3+tfh/8)
-    .setFont(createFont("Arial", 12))
+  cp5.addBang("times")
+    .setCaptionLabel(" times")
+    .setPosition(x+taw+2*pad+(2*bw/3), y+ 4*sbh + 4*pad)
+    .setSize(bw/2, tfh/2)
+    .setColorForeground(color(0, 0, 0))
+    .setColorActive(color(0,0,0))
+    .getCaptionLabel().align(ControlP5.LEFT, ControlP5.CENTER)
     ;
 
   cp5.addTextlabel("counter")
     .setPosition(x+taw+2*pad+bw/4, y+tah-tah/4)
+    .setSize(bw,tfh)
+    .setColorValue(0xffffffff)
+    .setColorActive(color(50,50,50))
+    .setColorForeground(color(50,50,50))
     .setFont(createFont("Arial", 40))
     ;
 
@@ -122,35 +135,38 @@ void startGUI() {
 
   serialPortsList = cp5.addScrollableList("serialports")
     .setPosition(x+taw+pad, y+(3*sbh)+(3*pad))
-    .setSize(bw, 200)
+    .setSize(bw, 50)
     .setType(ScrollableList.LIST)
     ;
 }
 
-
 void guiHide() {
   // Hide all controls until the Serial has been established
-  cp5.get(Bang.class, "Send").hide();                        // hide the "re-dump" bang
+  //cp5.get(Bang.class, "Send").hide();                        // hide the "re-dump" bang
   cp5.get(Bang.class, "loadFile").hide();                        // hide the "re-dump" bang
   cp5.get(Bang.class, "againFile").hide();                        // hide the "re-dump" bang
   cp5.get(Bang.class, "saveLog").hide();                        // hide the "re-dump" bang
   cp5.get(Bang.class, "cleanMyFile").hide();                        // hide the "re-dump" bang
   cp5.get(Textfield.class, "input").hide();                    // hide the text field
-  cp5.get(Textlabel.class, "Repeat").hide();                    // hide the text field
+  //cp5.get(Textlabel.class, "Repeat").hide();                    // hide the text field
+  cp5.get(Bang.class, "Repeat").hide();                    // hide the text field
   cp5.get(Textfield.class, "numTimes").hide();                    // hide the text field
-  cp5.get(Textlabel.class, "times").hide();                    // hide the text field
+  cp5.get(Bang.class, "times").hide();                    // hide the text field
+  cp5.get(Textlabel.class, "counter").hide();
 }
 
 void guiShow() {
   // Hide all controls until the Serial has been established
-  cp5.get(Bang.class, "Send").show();                        // hide the "re-dump" bang
+  //  cp5.get(Bang.class, "Send").show();                        // hide the "re-dump" bang
   cp5.get(Bang.class, "loadFile").show();                        // hide the "re-dump" bang
   // cp5.get(Bang.class,"againFile").show();                        // hide the "re-dump" bang
   cp5.get(Bang.class, "saveLog").show();                        // hide the "re-dump" bang
   cp5.get(Bang.class, "cleanMyFile").show();                        // hide the "re-dump" bang
+  cp5.get(Textfield.class, "input").setCaptionLabel("");
   cp5.get(Textfield.class, "input").show();                    // hide the text field
-  cp5.get(Textlabel.class, "Repeat").show();                    // hide the text field
+  //cp5.get(Textlabel.class, "Repeat").show();                    // hide the text field
+  cp5.get(Bang.class, "Repeat").show();                    // hide the text field
   cp5.get(Textfield.class, "numTimes").show();                    // hide the text field
-  cp5.get(Textlabel.class, "times").show();                    // hide the text field
+  cp5.get(Bang.class, "times").show();                    // hide the text field
   cp5.get(Textlabel.class, "counter").show();
 }
