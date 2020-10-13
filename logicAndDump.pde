@@ -45,7 +45,18 @@ void logic()
       print("Removing a comment: ");
       reportEvent("||" + dataQueue.peek());
       dataQueue.remove();
-    } else if (dataQueue.peek().toLowerCase().indexOf("eof")> -1) {
+    } 
+    //println("can I send? " + canSend); //debug
+    sendDataFromQ();
+  }//end while
+  theGCode = "";
+}
+
+
+
+void sendDataFromQ()
+{
+  if (dataQueue.peek().toLowerCase().indexOf("eof")> -1) {
       println("////////////////////////////////////////////////////");
       reportEvent("Reached end of file\n");
       println("\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\");
@@ -59,17 +70,8 @@ void logic()
         reportEvent("Done sending the file.\n");
         dataQueue.addFirst("!%~");
       }
-    }// if eof 
-    //println("can I send? " + canSend); //debug
-    sendDataFromQ();
-  }//end while
-  theGCode = "";
-}
-
-
-
-void sendDataFromQ()
-{
+    }// if eof
+  
   try {
     myPort.write(dataQueue.peek());
     if (dataQueue.peek().indexOf("$di1fn=0")>0) {
