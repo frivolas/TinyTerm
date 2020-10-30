@@ -138,8 +138,8 @@ void settings() {
 
 void setup() {
   // Configure the window
-  surface.setTitle("Tiny Term V2");    // Add a nice title
-  //surface.setResizable(true);          // Allow it to be resizable
+  surface.setTitle("Tiny Term V3");    // Add a nice title
+  //surface.setResizable(true);        // Allow it to be resizable
   surface.setLocation(100, 100);       // Position it up-left
   // Start the serial
   // List all the available serial ports, check the terminal window and select find the port# for the tinyG
@@ -286,7 +286,7 @@ void draw() {
   // write a nice title block
   fill(255);
   stroke(255);
-  text("TinyTerm:", x, y-pad);
+  text("TinyTerm V3:", x, y-pad);
 }
 
 
