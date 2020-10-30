@@ -1,0 +1,28 @@
+[10:53:09] Starting Log file for session: 20201028-10539
+
+[10:52:11] Terminal ready... 
+[10:52:11] Log file started 
+[10:52:11] Please choose a Serial port to connect to... 
+[10:52:13] Connected to Serial on port COM6
+[10:52:13] < {"r":{"fv":0.98,"fb":86.03,"hp":3,"hv":0,"id":"0213-0215-0515","msg":"SYSTEM READY"},"f":[1,0,1]}
+[10:52:13] < [ej]  enable json mode            0 [0=text,1=JSON]
+[10:52:13] < tinyg [mm] ok> 
+[10:52:21] > g90 g0 a-20
+[10:52:21] < tinyg [mm] ok> 
+[10:52:21] < posa:-11.432,vel:9783.57,dist:0,momo:0,stat:5
+[10:52:22] < posa:-20.000,vel:0.00,stat:3
+[10:52:22] Machine is homed. 
+[10:52:27] > $di1fn
+[10:52:27] TinyG Command received 
+[10:52:27] < [di1fn] input function          2 [0=none,1=limit,2=interlock,3=shutdown]
+[10:52:27] < tinyg [mm] ok> 
+[10:52:34] > $di1mo
+[10:52:34] TinyG Command received 
+[10:52:34] < [di1mo] input mode              1 [-1=disabled, 0=NO,1=NC]
+[10:52:34] < tinyg [mm] ok> 
+[10:52:58] > $di1mo=1
+[10:52:58] TinyG Command received 
+[10:52:58] < [di1mo] input mode              1 [-1=disabled, 0=NO,1=NC]
+[10:52:58] < tinyg [mm] ok> 
+
+

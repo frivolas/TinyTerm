@@ -1,0 +1,46 @@
+[17:47:30] Starting Log file for session: 2020724-174730
+
+From tinyG: [17:47:32] {r:{fv:0.98,fb:86.03,hp:3,hv:0,id:"0213-0215-0515",msg:"SYSTEM READY"},f:[1,0,1]}
+
+From tinyG: [17:47:32] tinyg [mm] ok> 
+
+From tinyG: [17:47:32] [ej]  enable json mode            0 [0=text,1=JSON]
+
+From tinyG: [17:47:32] tinyg [mm] ok> 
+
+Out > [17:47:34] G28.2 X0
+
+From tinyG: [17:47:34] tinyg [mm] ok> 
+
+From tinyG: [17:47:34] posx:2.408,feed:1000.00,vel:42.04,momo:1,stat:9
+
+From tinyG: [17:47:34] posx:-1.512,vel:1000.00
+
+From tinyG: [17:47:35] posx:-2.418,feed:100.00,vel:100.00
+
+From tinyG: [17:47:35] posx:-2.001
+
+From tinyG: [17:47:35] posx:-1.583
+
+From tinyG: [17:47:35] posx:-1.166
+
+From tinyG: [17:47:36] posx:-0.751
+
+From tinyG: [17:47:36] posx:-0.331
+
+From tinyG: [17:47:36] posx:0.086
+
+From tinyG: [17:47:36] posx:0.503
+
+From tinyG: [17:47:37] posx:0.921
+
+From tinyG: [17:47:37] posx:1.336
+
+From tinyG: [17:47:37] posx:1.755
+
+From tinyG: [17:47:37] posx:1.645,feed:1000.00,vel:998.95
+
+From tinyG: [17:47:38] posx:0.000,feed:250.00,vel:0.00,momo:4,stat:3
+
+Out > [17:47:59] 
+

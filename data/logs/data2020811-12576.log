@@ -1,0 +1,202 @@
+[12:57:06] Starting Log file for session: 2020811-12576
+
+[12:55:26] Terminal cleared and ready...
+[12:55:34] > g91 g1 z5 f100
+[12:55:34] < tinyg [mm] ok> 
+[12:55:34] < posz:0.402,feed:100.00,vel:100.00,dist:1,momo:1,stat:5
+[12:55:34] < posz:0.817
+[12:55:35] < posz:1.237
+[12:55:35] < posz:1.654
+[12:55:35] < posz:2.071
+[12:55:35] < posz:2.489
+[12:55:36] < posz:2.906
+[12:55:36] < posz:3.324
+[12:55:36] < posz:3.741
+[12:55:36] < posz:4.158
+[12:55:37] < posz:4.576
+[12:55:37] < posz:4.992,vel:89.65
+[12:55:37] < posz:5.000,vel:0.00,stat:3
+[12:55:37] Machine is homed. 
+[12:55:42] > g91 g1 z5 f500
+[12:55:42] < tinyg [mm] ok> 
+[12:55:42] < posz:6.901,feed:500.00,vel:500.00,stat:5
+[12:55:42] < posz:8.998
+[12:55:43] < posz:10.000,vel:0.00,stat:3
+[12:55:43] Machine is homed. 
+[12:55:46] > g91 g1 z-5 f500
+[12:55:46] < tinyg [mm] ok> 
+[12:55:46] < posz:8.099,vel:500.00,stat:5
+[12:55:46] < posz:6.002
+[12:55:47] < posz:5.000,vel:0.00,stat:3
+[12:55:47] Machine is homed. 
+[12:55:53] > g91 g1 z5 f1000
+[12:55:53] < tinyg [mm] ok> 
+[12:55:53] < posz:8.643,feed:1000.00,vel:1000.00,stat:5
+[12:55:54] < posz:10.000,vel:0.00,stat:3
+[12:55:54] Machine is homed. 
+[12:55:56] > g91 g1 z15 f1000
+[12:55:56] < tinyg [mm] ok> 
+[12:55:56] < posz:13.657,vel:1000.00,stat:5
+[12:55:57] < posz:17.824
+[12:55:57] < posz:21.992
+[12:55:57] < posz:25.000,vel:0.00,stat:3
+[12:55:57] Machine is homed. 
+[12:56:01] > g91 g1 z-5 f1000
+[12:56:01] < tinyg [mm] ok> 
+[12:56:02] < posz:21.357,vel:1000.00,stat:5
+[12:56:02] < posz:20.000,vel:0.00,stat:3
+[12:56:02] Machine is homed. 
+[12:56:03] > g91 g1 z-5 f1000
+[12:56:03] < tinyg [mm] ok> 
+[12:56:03] < posz:16.357,vel:1000.00,stat:5
+[12:56:03] < posz:15.000,vel:0.00,stat:3
+[12:56:03] Machine is homed. 
+[12:56:08] > g91 g1 z-1 f1000
+[12:56:08] < tinyg [mm] ok> 
+[12:56:08] < posz:14.000,stat:3
+[12:56:08] Machine is homed. 
+[12:56:09] > g91 g1 z-1 f1000
+[12:56:09] < tinyg [mm] ok> 
+[12:56:09] < posz:13.000,stat:3
+[12:56:09] Machine is homed. 
+[12:56:10] > g91 g1 z-1 f1000
+[12:56:10] < tinyg [mm] ok> 
+[12:56:10] < posz:12.000,stat:3
+[12:56:10] Machine is homed. 
+[12:56:15] > g91 g1 z10 f1000
+[12:56:15] < tinyg [mm] ok> 
+[12:56:16] < posz:15.654,vel:1000.00,stat:5
+[12:56:16] < posz:19.817
+[12:56:16] < posz:22.000,vel:0.00,stat:3
+[12:56:16] Machine is homed. 
+[12:56:18] > g91 g1 z-1 f1000
+[12:56:18] < tinyg [mm] ok> 
+[12:56:18] < posz:21.000,stat:3
+[12:56:18] Machine is homed. 
+[12:56:18] > g91 g1 z-1 f1000
+[12:56:18] < tinyg [mm] ok> 
+[12:56:19] < posz:20.000,stat:3
+[12:56:19] Machine is homed. 
+[12:56:19] > g91 g1 z-1 f1000
+[12:56:19] < tinyg [mm] ok> 
+[12:56:19] < posz:19.000,stat:3
+[12:56:19] Machine is homed. 
+[12:56:20] > g91 g1 z-1 f1000
+[12:56:20] < tinyg [mm] ok> 
+[12:56:20] < posz:18.000,stat:3
+[12:56:20] Machine is homed. 
+[12:56:23] > g91 g1 z5 f1000
+[12:56:23] < tinyg [mm] ok> 
+[12:56:24] < posz:21.643,vel:1000.00,stat:5
+[12:56:24] < posz:23.000,vel:0.00,stat:3
+[12:56:24] Machine is homed. 
+[12:56:27] > g91 g1 z-5 f1000
+[12:56:27] < tinyg [mm] ok> 
+[12:56:28] < posz:19.357,vel:1000.00,stat:5
+[12:56:28] < posz:18.000,vel:0.00,stat:3
+[12:56:28] Machine is homed. 
+[12:56:29] > g91 g1 z5 f1000
+[12:56:29] < tinyg [mm] ok> 
+[12:56:29] < posz:21.643,vel:1000.00,stat:5
+[12:56:30] < posz:23.000,vel:0.00,stat:3
+[12:56:30] Machine is homed. 
+[12:56:32] > g91 g1 z-1 f1000
+[12:56:32] < tinyg [mm] ok> 
+[12:56:33] < posz:22.000,stat:3
+[12:56:33] Machine is homed. 
+[12:56:33] > g91 g1 z-1 f1000
+[12:56:33] < tinyg [mm] ok> 
+[12:56:33] < posz:21.000,stat:3
+[12:56:33] Machine is homed. 
+[12:56:33] > g91 g1 z-1 f1000
+[12:56:33] < tinyg [mm] ok> 
+[12:56:33] < posz:20.000,stat:3
+[12:56:33] Machine is homed. 
+[12:56:36] > g91 g1 z1 f1000
+[12:56:37] < tinyg [mm] ok> 
+[12:56:37] < posz:21.000,stat:3
+[12:56:37] Machine is homed. 
+[12:56:37] > g91 g1 z1 f1000
+[12:56:37] < tinyg [mm] ok> 
+[12:56:37] < posz:22.000,stat:3
+[12:56:37] Machine is homed. 
+[12:56:38] > g91 g1 z1 f1000
+[12:56:38] < tinyg [mm] ok> 
+[12:56:38] < posz:23.000,stat:3
+[12:56:38] Machine is homed. 
+[12:56:38] > g91 g1 z1 f1000
+[12:56:38] < tinyg [mm] ok> 
+[12:56:39] < posz:24.000,stat:3
+[12:56:39] Machine is homed. 
+[12:56:39] > g91 g1 z1 f1000
+[12:56:39] < tinyg [mm] ok> 
+[12:56:39] < posz:25.000,stat:3
+[12:56:39] Machine is homed. 
+[12:56:39] > g91 g1 z1 f1000
+[12:56:39] < tinyg [mm] ok> 
+[12:56:40] < posz:26.000,stat:3
+[12:56:40] Machine is homed. 
+[12:56:40] > g91 g1 z1 f1000
+[12:56:40] < tinyg [mm] ok> 
+[12:56:40] < posz:27.000,stat:3
+[12:56:40] Machine is homed. 
+[12:56:40] > g91 g1 z1 f1000
+[12:56:40] < tinyg [mm] ok> 
+[12:56:41] < posz:28.000,stat:3
+[12:56:41] Machine is homed. 
+[12:56:41] > g91 g1 z1 f1000
+[12:56:41] < tinyg [mm] ok> 
+[12:56:41] < posz:29.000,stat:3
+[12:56:41] Machine is homed. 
+[12:56:41] > g91 g1 z1 f1000
+[12:56:41] < tinyg [mm] ok> 
+[12:56:42] < posz:30.000,stat:3
+[12:56:42] Machine is homed. 
+[12:56:42] > g91 g1 z1 f1000
+[12:56:42] < tinyg [mm] ok> 
+[12:56:42] < posz:31.000,stat:3
+[12:56:42] Machine is homed. 
+[12:56:42] > g91 g1 z1 f1000
+[12:56:42] < tinyg [mm] ok> 
+[12:56:43] < posz:32.000,stat:3
+[12:56:43] Machine is homed. 
+[12:56:43] > g91 g1 z1 f1000
+[12:56:43] < tinyg [mm] ok> 
+[12:56:43] < posz:33.000,stat:3
+[12:56:43] Machine is homed. 
+[12:56:44] > g91 g1 z1 f1000
+[12:56:44] < tinyg [mm] ok> 
+[12:56:44] < posz:34.000,stat:3
+[12:56:44] Machine is homed. 
+[12:56:44] > g91 g1 z1 f1000
+[12:56:44] < tinyg [mm] ok> 
+[12:56:44] < posz:35.000,stat:3
+[12:56:44] Machine is homed. 
+[12:56:45] > g91 g1 z1 f1000
+[12:56:45] < tinyg [mm] ok> 
+[12:56:45] < posz:36.000,stat:3
+[12:56:45] Machine is homed. 
+[12:56:45] > g91 g1 z1 f1000
+[12:56:45] < tinyg [mm] ok> 
+[12:56:46] < posz:37.000,stat:3
+[12:56:46] Machine is homed. 
+[12:56:46] > g91 g1 z1 f1000
+[12:56:46] < tinyg [mm] ok> 
+[12:56:46] < posz:38.000,stat:3
+[12:56:46] Machine is homed. 
+[12:56:46] > g91 g1 z1 f1000
+[12:56:46] < tinyg [mm] ok> 
+[12:56:47] < posz:39.000,stat:3
+[12:56:47] Machine is homed. 
+[12:56:47] > g91 g1 z1 f1000
+[12:56:47] < tinyg [mm] ok> 
+[12:56:47] < posz:40.000,stat:3
+[12:56:47] Machine is homed. 
+[12:56:49] > g91 g1 z1 f1000
+[12:56:49] < tinyg [mm] ok> 
+[12:56:49] < posz:41.000,stat:3
+[12:56:49] Machine is homed. 
+[12:57:04] > g28.3 z0
+[12:57:04] < tinyg [mm] ok> 
+
+

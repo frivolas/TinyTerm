@@ -1,0 +1,14 @@
+[16:56:32] Starting Log file for session: 20201021-165632
+
+From tinyG: [16:56:33] {"r":{"fv":0.98,"fb":86.03,"hp":3,"hv":0,"id":"0213-0215-0515","msg":"SYSTEM READY"},"f":[1,0,1]}
+
+From tinyG: [16:56:33] [ej]  enable json mode            0 [0=text,1=JSON]
+
+From tinyG: [16:56:33] tinyg [mm] ok> 
+
+Out > [16:56:40] $posa
+
+From tinyG: [16:56:40] A position:         -0.500 deg
+
+From tinyG: [16:56:40] tinyg [mm] ok> 
+

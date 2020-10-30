@@ -1,0 +1,321 @@
+[10:57:38] Starting Log file for session: 20201028-105738
+
+[10:53:32] Terminal cleared and ready...
+[10:53:40] > $posa
+[10:53:40] TinyG Command received 
+[10:53:40] < A position:        -20.000 deg
+[10:53:40] < tinyg [mm] ok> 
+[10:53:50] > g91 g1 a30 f250
+[10:53:50] < tinyg [mm] ok> 
+[10:53:50] < posa:-19.209,vel:250.00,dist:1,momo:1,stat:5
+[10:53:50] < posa:-18.371
+[10:53:50] < posa:-17.540
+[10:53:50] < posa:-16.702
+[10:53:51] < posa:-15.871
+[10:53:51] < posa:-15.034
+[10:53:51] < posa:-14.202
+[10:53:51] < posa:-13.365
+[10:53:51] < posa:-12.534
+[10:53:52] < posa:-11.696
+[10:53:52] < posa:-10.865
+[10:53:52] < posa:-10.028
+[10:53:52] < posa:-9.197
+[10:53:52] < posa:-8.353
+[10:53:53] < posa:-7.516
+[10:53:53] < posa:-6.684
+[10:53:53] < posa:-5.847
+[10:53:53] < posa:-5.003
+[10:53:53] < posa:-4.166
+[10:53:54] < posa:-3.334
+[10:53:54] < posa:-2.497
+[10:53:54] < posa:-1.653
+[10:53:54] < posa:-0.816
+[10:53:55] < posa:0.016
+[10:53:55] < posa:0.094,vel:0.00,stat:6
+[10:53:55] Interlock hit. Stop. Flush queue...
+[10:53:55] < stat:3
+[10:53:55] Machine is homed. 
+[10:54:00] < stat:3
+[10:54:00] Machine is homed. 
+[10:54:01] < stat:3
+[10:54:01] Machine is homed. 
+[10:54:12] > $posa
+[10:54:12] TinyG Command received 
+[10:54:12] < A position:          0.094 deg
+[10:54:12] < tinyg [mm] ok> 
+[10:54:33] > g90 g0 a-20
+[10:54:33] < tinyg [mm] ok> 
+[10:54:33] < posa:-18.260,vel:4803.49,dist:0,momo:0,stat:5
+[10:54:34] < posa:-20.000,vel:0.00,stat:3
+[10:54:34] Machine is homed. 
+[10:54:37] > g91 g1 a-30
+[10:54:37] < tinyg [mm] ok> 
+[10:54:37] < posa:-20.791,vel:250.00,dist:1,momo:1,stat:5
+[10:54:37] < posa:-21.629
+[10:54:37] < posa:-22.460
+[10:54:38] < posa:-23.298
+[10:54:38] < posa:-24.129
+[10:54:38] < posa:-24.967
+[10:54:38] < posa:-25.798
+[10:54:38] < posa:-26.635
+[10:54:39] < posa:-27.467
+[10:54:39] Halt and flush: !%
+[10:54:39] < posa:-27.702,vel:0.00,stat:3
+[10:54:39] Machine is homed. 
+[10:54:42] > g90 g0 a-20
+[10:54:42] < tinyg [mm] ok> 
+[10:54:43] < posa:-20.000,dist:0,momo:0,stat:3
+[10:54:43] Machine is homed. 
+[10:54:47] > g91 g1 a30
+[10:54:47] < tinyg [mm] ok> 
+[10:54:47] < posa:-19.209,vel:250.00,dist:1,momo:1,stat:5
+[10:54:48] < posa:-18.371
+[10:54:48] < posa:-17.540
+[10:54:48] < posa:-16.702
+[10:54:48] < posa:-15.871
+[10:54:48] < posa:-15.034
+[10:54:49] < posa:-14.202
+[10:54:49] < posa:-13.365
+[10:54:49] < posa:-12.534
+[10:54:49] < posa:-11.696
+[10:54:49] < posa:-10.865
+[10:54:50] < posa:-10.028
+[10:54:50] < posa:-9.197
+[10:54:50] < posa:-8.359
+[10:54:50] < posa:-7.528
+[10:54:50] < posa:-6.684
+[10:54:51] < posa:-5.847
+[10:54:51] < posa:-5.016
+[10:54:51] < posa:-4.178
+[10:54:51] < posa:-3.334
+[10:54:51] < posa:-2.497
+[10:54:52] < posa:-1.666
+[10:54:52] < posa:-0.828
+[10:54:52] < posa:0.016
+[10:54:52] < posa:0.163,vel:0.00,stat:6
+[10:54:52] Interlock hit. Stop. Flush queue...
+[10:54:52] < stat:3
+[10:54:52] Machine is homed. 
+[10:54:55] > $posa
+[10:54:55] TinyG Command received 
+[10:54:55] < A position:          0.163 deg
+[10:54:55] < tinyg [mm] ok> 
+[10:55:03] < stat:3
+[10:55:03] Machine is homed. 
+[10:55:03] < stat:3
+[10:55:03] Machine is homed. 
+[10:55:03] < stat:3
+[10:55:03] Machine is homed. 
+[10:55:03] < stat:3
+[10:55:03] Machine is homed. 
+[10:55:50] Loading file...
+[10:55:53] File to load: C:\Users\Oscar\Desktop\M5.2 QA scripts\homingFlagTest.cnc
+[10:55:53] Loading File... 
+[10:55:53] Adding 4 lines to the queue... 
+[10:55:53] Sending the file 1 time(s)... 
+[10:55:53] > g90 g0 a-20
+[10:55:53] > g91 g1 a30 f250
+[10:55:53] < tinyg [mm] ok> 
+[10:55:53] File added to the queue. 
+[10:55:53] Sending the file 1 more times...
+[10:55:53] < tinyg [mm] ok> 
+[10:55:54] < posa:-18.037,vel:4885.77,dist:0,momo:0,stat:5
+[10:55:54] < posa:-19.450,vel:250.00,dist:1,momo:1
+[10:55:54] < posa:-18.619
+[10:55:54] < posa:-17.776
+[10:55:54] < posa:-16.938
+[10:55:55] < posa:-16.107
+[10:55:55] < posa:-15.270
+[10:55:55] < posa:-14.426
+[10:55:55] < posa:-13.589
+[10:55:55] < posa:-12.758
+[10:55:56] < posa:-11.920
+[10:55:56] < posa:-11.076
+[10:55:56] < posa:-10.239
+[10:55:56] < posa:-9.408
+[10:55:57] < posa:-8.570
+[10:55:57] < posa:-7.739
+[10:55:57] < posa:-6.902
+[10:55:57] < posa:-6.071
+[10:55:57] < posa:-5.233
+[10:55:58] < posa:-4.402
+[10:55:58] < posa:-3.565
+[10:55:58] < posa:-2.733
+[10:55:58] < posa:-1.896
+[10:55:58] < posa:-1.065
+[10:55:59] < posa:-0.228
+[10:55:59] < posa:0.276,vel:0.00,stat:6
+[10:55:59] Interlock hit. Stop. Flush queue...
+[10:55:59] < stat:3
+[10:55:59] Machine is homed. 
+[10:56:30] Re-Dumping file C:\Users\Oscar\Desktop\M5.2 QA scripts\homingFlagTest.cnc ...
+[10:56:30] Loading File... 
+[10:56:30] Adding 4 lines to the queue... 
+[10:56:30] Sending the file 1 time(s)... 
+[10:56:30] File added to the queue. 
+[10:56:30] Sending the file 1 more times...
+[10:56:30] > g90 g0 a-20
+[10:56:30] > g91 g1 a30 f250
+[10:56:30] < tinyg [mm] ok> 
+[10:56:30] < tinyg [mm] ok> 
+[10:56:30] < posa:-18.026,vel:4903.75,dist:0,momo:0,stat:5
+[10:56:31] < posa:-19.463,vel:250.00,dist:1,momo:1
+[10:56:31] < posa:-18.625
+[10:56:31] < posa:-17.782
+[10:56:31] < posa:-16.944
+[10:56:31] < posa:-16.113
+[10:56:32] < posa:-15.276
+[10:56:32] < posa:-14.432
+[10:56:32] < posa:-13.595
+[10:56:32] < posa:-12.764
+[10:56:32] < posa:-11.926
+[10:56:33] < posa:-11.083
+[10:56:33] < posa:-10.245
+[10:56:33] < posa:-9.414
+[10:56:33] < posa:-8.577
+[10:56:33] < posa:-7.745
+[10:56:34] < posa:-6.908
+[10:56:34] < posa:-6.077
+[10:56:34] < posa:-5.239
+[10:56:34] < posa:-4.408
+[10:56:34] < posa:-3.571
+[10:56:35] < posa:-2.740
+[10:56:35] < posa:-1.902
+[10:56:35] < posa:-1.059
+[10:56:35] < posa:-0.221
+[10:56:35] < posa:0.517
+[10:56:36] < posa:1.355
+[10:56:36] < posa:2.186
+[10:56:36] < posa:3.023
+[10:56:36] < posa:3.866
+[10:56:36] < posa:4.704
+[10:56:37] < posa:5.535
+[10:56:37] < posa:6.372
+[10:56:37] < posa:7.216
+[10:56:37] < posa:8.053
+[10:56:37] < posa:8.884
+[10:56:38] < posa:9.721
+[10:56:38] < posa:10.000,vel:0.00,stat:3
+[10:56:38] Machine is homed. 
+[10:56:38] > $posa
+[10:56:38] TinyG Command received 
+[10:56:38] Reached end of file
+[10:56:38] Sending the file 0 more times!!!
+[10:56:38] < A position:         10.000 deg
+[10:56:38] < tinyg [mm] ok> 
+[10:56:49] Re-Dumping file C:\Users\Oscar\Desktop\M5.2 QA scripts\homingFlagTest.cnc ...
+[10:56:49] Loading File... 
+[10:56:49] Adding 4 lines to the queue... 
+[10:56:49] Sending the file 1 time(s)... 
+[10:56:49] File added to the queue. 
+[10:56:49] Sending the file 1 more times...
+[10:56:49] > g90 g0 a-20
+[10:56:49] > g91 g1 a30 f250
+[10:56:49] < tinyg [mm] ok> 
+[10:56:49] < tinyg [mm] ok> 
+[10:56:49] < posa:-11.557,vel:9727.84,dist:0,momo:0,stat:5
+[10:56:49] < posa:-19.663,vel:250.00,dist:1,momo:1
+[10:56:50] < posa:-18.832
+[10:56:50] < posa:-17.994
+[10:56:50] < posa:-17.151
+[10:56:50] < posa:-16.313
+[10:56:50] < posa:-15.482
+[10:56:51] < posa:-14.645
+[10:56:51] < posa:-13.801
+[10:56:51] < posa:-12.964
+[10:56:51] < posa:-12.133
+[10:56:51] < posa:-11.295
+[10:56:52] < posa:-10.464
+[10:56:52] < posa:-9.627
+[10:56:52] < posa:-8.795
+[10:56:52] < posa:-7.958
+[10:56:52] < posa:-7.127
+[10:56:53] < posa:-6.289
+[10:56:53] < posa:-5.458
+[10:56:53] < posa:-4.621
+[10:56:53] < posa:-3.790
+[10:56:53] < posa:-2.952
+[10:56:54] < posa:-2.121
+[10:56:54] < posa:-1.284
+[10:56:54] < posa:-0.453
+[10:56:54] < posa:0.292
+[10:56:54] < posa:1.123
+[10:56:55] < posa:1.961
+[10:56:55] < posa:2.792
+[10:56:55] < posa:3.629
+[10:56:55] < posa:4.460
+[10:56:55] < posa:5.297
+[10:56:56] < posa:6.128
+[10:56:56] < posa:6.966
+[10:56:56] < posa:7.797
+[10:56:56] < posa:8.634
+[10:56:56] < posa:9.465
+[10:56:57] < posa:10.000,vel:0.00,stat:3
+[10:56:57] Machine is homed. 
+[10:56:57] > $posa
+[10:56:57] TinyG Command received 
+[10:56:57] Reached end of file
+[10:56:57] Sending the file 0 more times!!!
+[10:56:57] < A position:         10.000 deg
+[10:56:57] < tinyg [mm] ok> 
+[10:57:08] Re-Dumping file C:\Users\Oscar\Desktop\M5.2 QA scripts\homingFlagTest.cnc ...
+[10:57:08] Loading File... 
+[10:57:08] Adding 4 lines to the queue... 
+[10:57:08] Sending the file 1 time(s)... 
+[10:57:08] File added to the queue. 
+[10:57:08] Sending the file 1 more times...
+[10:57:08] > g90 g0 a-20
+[10:57:08] > g91 g1 a30 f250
+[10:57:08] < tinyg [mm] ok> 
+[10:57:08] < tinyg [mm] ok> 
+[10:57:08] < posa:-11.557,vel:9727.84,dist:0,momo:0,stat:5
+[10:57:09] < posa:-19.663,vel:250.00,dist:1,momo:1
+[10:57:09] < posa:-18.832
+[10:57:09] < posa:-17.994
+[10:57:09] < posa:-17.163
+[10:57:09] < posa:-16.326
+[10:57:10] < posa:-15.482
+[10:57:10] < posa:-14.645
+[10:57:10] < posa:-13.814
+[10:57:10] < posa:-12.976
+[10:57:10] < posa:-12.145
+[10:57:11] < posa:-11.308
+[10:57:11] < posa:-10.476
+[10:57:11] < posa:-9.639
+[10:57:11] < posa:-8.795
+[10:57:11] < posa:-7.958
+[10:57:12] < posa:-7.127
+[10:57:12] < posa:-6.289
+[10:57:12] < posa:-5.458
+[10:57:12] < posa:-4.621
+[10:57:12] < posa:-3.790
+[10:57:13] < posa:-2.952
+[10:57:13] < posa:-2.121
+[10:57:13] < posa:-1.284
+[10:57:13] < posa:-0.453
+[10:57:13] < posa:0.292
+[10:57:14] < posa:1.123
+[10:57:14] < posa:1.961
+[10:57:14] < posa:2.804
+[10:57:14] < posa:3.642
+[10:57:14] < posa:4.473
+[10:57:15] < posa:5.310
+[10:57:15] < posa:6.141
+[10:57:15] < posa:6.978
+[10:57:15] < posa:7.809
+[10:57:15] < posa:8.647
+[10:57:16] < posa:9.478
+[10:57:16] < posa:10.000,vel:0.00,stat:3
+[10:57:16] Machine is homed. 
+[10:57:16] > $posa
+[10:57:16] TinyG Command received 
+[10:57:16] Reached end of file
+[10:57:16] Sending the file 0 more times!!!
+[10:57:16] < A position:         10.000 deg
+[10:57:16] < tinyg [mm] ok> 
+[10:57:23] > $di1fn
+[10:57:23] TinyG Command received 
+[10:57:23] < [di1fn] input function          2 [0=none,1=limit,2=interlock,3=shutdown]
+[10:57:23] < tinyg [mm] ok> 
+
+

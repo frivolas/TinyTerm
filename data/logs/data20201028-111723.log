@@ -1,0 +1,61 @@
+[11:17:23] Starting Log file for session: 20201028-111723
+
+[11:17:10] Terminal cleared and ready...
+[11:17:12] Re-Dumping file C:\Users\Oscar\Desktop\M5.2 QA scripts\homingFlagTest.cnc ...
+[11:17:12] Loading File... 
+[11:17:12] Adding 5 lines to the queue... 
+[11:17:12] Sending the file 1 time(s)... 
+[11:17:12] File added to the queue. 
+[11:17:12] Sending the file 1 more times...
+[11:17:12] > g90 g0 a-10
+[11:17:12] > g4p1
+[11:17:12] < tinyg [mm] ok> 
+[11:17:12] < tinyg [mm] ok> 
+[11:17:12] < posa:-1.432,vel:9783.57,dist:0,momo:0,stat:5
+[11:17:12] < posa:-10.000,vel:0.00,stat:3
+[11:17:12] Machine is homed. 
+[11:17:12] > g91 g1 a30 f250
+[11:17:12] Reached end of file
+[11:17:12] Sending the file 0 more times!!!
+[11:17:12] < tinyg [mm] ok> 
+[11:17:13] < vel:0.07,dist:1,momo:1,stat:5
+[11:17:13] < posa:-9.209,vel:250.00
+[11:17:14] < posa:-8.378
+[11:17:14] < posa:-7.534
+[11:17:14] < posa:-6.696
+[11:17:14] < posa:-5.865
+[11:17:14] < posa:-5.028
+[11:17:15] < posa:-4.184
+[11:17:15] < posa:-3.347
+[11:17:15] < posa:-2.515
+[11:17:15] < posa:-1.678
+[11:17:15] < posa:-0.834
+[11:17:16] < posa:-0.095
+[11:17:16] < posa:0.742
+[11:17:16] < posa:1.579
+[11:17:16] < posa:2.411
+[11:17:16] < posa:3.248
+[11:17:17] < posa:4.092
+[11:17:17] < posa:4.929
+[11:17:17] < posa:5.760
+[11:17:17] < posa:6.598
+[11:17:17] < posa:7.441
+[11:17:18] < posa:8.279
+[11:17:18] < posa:9.110
+[11:17:18] < posa:9.947
+[11:17:18] < posa:10.779
+[11:17:18] < posa:11.616
+[11:17:19] < posa:12.447
+[11:17:19] < posa:13.285
+[11:17:19] < posa:14.128
+[11:17:19] < posa:14.966
+[11:17:19] < posa:15.797
+[11:17:20] < posa:16.634
+[11:17:20] < posa:17.465
+[11:17:20] < posa:18.302
+[11:17:20] < posa:19.134
+[11:17:20] < posa:19.970,vel:242.56
+[11:17:21] < posa:20.000,vel:0.00,stat:3
+[11:17:21] Machine is homed. 
+
+

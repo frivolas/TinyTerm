@@ -1,0 +1,46 @@
+[12:36:04] Starting Log file for session: 20201029-12364
+
+From tinyG: [12:36:05] {"r":{"fv":0.98,"fb":86.03,"hp":3,"hv":0,"id":"0213-0215-0515","msg":"SYSTEM READY"},"f":[1,0,1]}
+
+From tinyG: [12:36:05] tinyg [mm] ok> 
+
+From tinyG: [12:36:05] {"er":{"fb":86.03,"st":9,"msg":"File not open - write_persistent"}}
+
+From tinyG: [12:36:05] [ej]  enable json mode            0 [0=text,1=JSON]
+
+From tinyG: [12:36:05] tinyg [mm] ok> 
+
+Out > [12:36:11] !%
+
+Out > [12:36:11] $di1fn=2
+
+Out > [12:36:11] g90 g0 a-25
+
+From tinyG: [12:36:11] {"er":{"fb":86.03,"st":9,"msg":"File not open - write_persistent"}}
+
+From tinyG: [12:36:11] [di1fn] input function          2 [0=none,1=limit,2=interlock,3=shutdown]
+
+From tinyG: [12:36:11] tinyg [mm] ok> 
+
+From tinyG: [12:36:11] tinyg [mm] ok> 
+
+From tinyG: [12:36:11] line:0,posx:0.000,posy:0.000,posz:0.000,posa:-25.000,feed:250.00,vel:0.00,unit:1,coor:1,dist:0,admo:1,frmo:1,momo:0,stat:3
+
+Out > [12:36:11] g90 g0 a-20
+
+Out > [12:36:11] g90 g0 a-25
+
+From tinyG: [12:36:11] tinyg [mm] ok> 
+
+From tinyG: [12:36:11] tinyg [mm] ok> 
+
+From tinyG: [12:36:11] posa:-21.115,vel:2609.07,stat:5
+
+From tinyG: [12:36:12] posa:-25.000,vel:0.00,stat:3
+
+Out > [12:36:12] g91 g1 a30 f250
+
+Out > [12:36:12] !%
+
+From tinyG: [12:36:12] tinyg [mm] ok> 
+

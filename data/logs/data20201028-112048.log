@@ -1,0 +1,392 @@
+[11:20:48] Starting Log file for session: 20201028-112048
+
+[11:17:23] Terminal cleared and ready...
+[11:17:33] > g90 g0 a-10
+[11:17:33] < tinyg [mm] ok> 
+[11:17:33] < posa:-1.432,vel:9783.57,dist:0,momo:0,stat:5
+[11:17:33] < posa:-10.000,vel:0.00,stat:3
+[11:17:33] Machine is homed. 
+[11:17:39] > g91 g1 a30 f250
+[11:17:39] < tinyg [mm] ok> 
+[11:17:39] < posa:-9.209,vel:250.00,dist:1,momo:1,stat:5
+[11:17:39] < posa:-8.371
+[11:17:39] < posa:-7.540
+[11:17:39] < posa:-6.703
+[11:17:40] < posa:-5.871
+[11:17:40] < posa:-5.034
+[11:17:40] < posa:-4.203
+[11:17:40] < posa:-3.365
+[11:17:40] < posa:-2.534
+[11:17:41] < posa:-1.697
+[11:17:41] < posa:-0.865
+[11:17:41] < posa:-0.155,vel:0.00,stat:6
+[11:17:41] Interlock hit. Stop. Flush queue...
+[11:17:41] < stat:3
+[11:17:41] Machine is homed. 
+[11:17:46] < stat:3
+[11:17:46] Machine is homed. 
+[11:17:46] < stat:3
+[11:17:46] Machine is homed. 
+[11:18:15] Re-Dumping file C:\Users\Oscar\Desktop\M5.2 QA scripts\homingFlagTest.cnc ...
+[11:18:15] Loading File... 
+[11:18:15] Adding 5 lines to the queue... 
+[11:18:15] Sending the file 1 time(s)... 
+[11:18:15] File added to the queue. 
+[11:18:15] Sending the file 1 more times...
+[11:18:15] > g90 g0 a-10\n
+[11:18:15] > g4p1\n
+[11:18:15] < tinyg [mm] err[102]: Bad number format: g90 g0 a-10\n 
+[11:18:15] < tinyg [mm] err[102]: Bad number format: g4p1\n 
+[11:18:36] Re-Dumping file C:\Users\Oscar\Desktop\M5.2 QA scripts\homingFlagTest.cnc ...
+[11:18:36] Loading File... 
+[11:18:36] Adding 5 lines to the queue... 
+[11:18:36] Sending the file 1 time(s)... 
+[11:18:36] File added to the queue. 
+[11:18:36] Sending the file 1 more times...
+[11:18:37] Re-Dumping file C:\Users\Oscar\Desktop\M5.2 QA scripts\homingFlagTest.cnc ...
+[11:18:37] Loading File... 
+[11:18:37] Adding 5 lines to the queue... 
+[11:18:37] Sending the file 1 time(s)... 
+[11:18:37] File added to the queue. 
+[11:18:37] Sending the file 1 more times...
+[11:18:41] Halt and flush: !%
+[11:18:41] < tinyg [mm] ok> 
+[11:18:45] Re-Dumping file C:\Users\Oscar\Desktop\M5.2 QA scripts\homingFlagTest.cnc ...
+[11:18:45] Loading File... 
+[11:18:45] Adding 5 lines to the queue... 
+[11:18:45] Sending the file 1 time(s)... 
+[11:18:45] File added to the queue. 
+[11:18:45] Sending the file 1 more times...
+[11:18:45] > g90 g0 a-10
+[11:18:45] > g91 g1 a30 f250
+[11:18:45] < tinyg [mm] ok> 
+[11:18:45] < tinyg [mm] ok> 
+[11:18:45] < posa:-9.955,vel:301.88,dist:0,momo:0,stat:5
+[11:18:46] < posa:-9.213,vel:250.00,dist:1,momo:1
+[11:18:46] < posa:-8.375
+[11:18:46] < posa:-7.531
+[11:18:46] < posa:-6.694
+[11:18:46] < posa:-5.863
+[11:18:47] < posa:-5.025
+[11:18:47] < posa:-4.182
+[11:18:47] < posa:-3.344
+[11:18:47] < posa:-2.513
+[11:18:47] < posa:-1.676
+[11:18:48] < posa:-0.832
+[11:18:48] < posa:-0.018,vel:56.39,stat:6
+[11:18:48] Interlock hit. Stop. Flush queue...
+[11:18:48] < posa:-0.016,vel:0.00,stat:3
+[11:18:48] Machine is homed. 
+[11:18:56] Re-Dumping file C:\Users\Oscar\Desktop\M5.2 QA scripts\homingFlagTest.cnc ...
+[11:18:56] Loading File... 
+[11:18:56] Adding 5 lines to the queue... 
+[11:18:56] Sending the file 1 time(s)... 
+[11:18:56] File added to the queue. 
+[11:18:56] Sending the file 1 more times...
+[11:18:56] > g90 g0 a-10
+[11:18:56] > g91 g1 a30 f250
+[11:18:56] < tinyg [mm] ok> 
+[11:18:56] < tinyg [mm] ok> 
+[11:18:57] < posa:-9.948,vel:321.67,dist:0,momo:0,stat:5
+[11:18:57] < posa:-9.213,vel:250.00,dist:1,momo:1
+[11:18:57] < posa:-8.375
+[11:18:57] < posa:-7.538
+[11:18:57] < posa:-6.707
+[11:18:58] < posa:-5.869
+[11:18:58] < posa:-5.025
+[11:18:58] < posa:-4.188
+[11:18:58] < posa:-3.357
+[11:18:58] < posa:-2.519
+[11:18:59] < posa:-1.688
+[11:18:59] < posa:-0.851
+[11:18:59] < posa:-0.017,vel:215.21,stat:6
+[11:18:59] Interlock hit. Stop. Flush queue...
+[11:18:59] < posa:0.003,vel:0.00,stat:3
+[11:18:59] Machine is homed. 
+[11:19:08] Re-Dumping file C:\Users\Oscar\Desktop\M5.2 QA scripts\homingFlagTest.cnc ...
+[11:19:08] Loading File... 
+[11:19:08] Adding 7 lines to the queue... 
+[11:19:08] Sending the file 1 time(s)... 
+[11:19:08] File added to the queue. 
+[11:19:08] Sending the file 1 more times...
+[11:19:08] > g90 g0 a-10
+[11:19:08] > g91 g1 a30 f250
+[11:19:08] < tinyg [mm] ok> 
+[11:19:08] < tinyg [mm] ok> 
+[11:19:09] < posa:-9.948,vel:321.78,dist:0,momo:0,stat:5
+[11:19:09] < posa:-9.213,vel:250.00,dist:1,momo:1
+[11:19:09] < posa:-8.375
+[11:19:09] < posa:-7.544
+[11:19:09] < posa:-6.707
+[11:19:10] < posa:-5.875
+[11:19:10] < posa:-5.038
+[11:19:10] < posa:-4.207
+[11:19:10] < posa:-3.369
+[11:19:10] < posa:-2.538
+[11:19:11] < posa:-1.695
+[11:19:11] < posa:-0.857
+[11:19:11] < posa:-0.022,vel:231.67,stat:6
+[11:19:11] Interlock hit. Stop. Flush queue...
+[11:19:11] < posa:0.003,vel:0.00,stat:3
+[11:19:11] Machine is homed. 
+[11:19:17] Re-Dumping file C:\Users\Oscar\Desktop\M5.2 QA scripts\homingFlagTest.cnc ...
+[11:19:17] Loading File... 
+[11:19:17] Adding 7 lines to the queue... 
+[11:19:17] Sending the file 1 time(s)... 
+[11:19:17] File added to the queue. 
+[11:19:17] Sending the file 1 more times...
+[11:19:17] > g90 g0 a-10
+[11:19:17] > g91 g1 a30 f250
+[11:19:17] < tinyg [mm] ok> 
+[11:19:17] < tinyg [mm] ok> 
+[11:19:17] < posa:-9.948,vel:321.78,dist:0,momo:0,stat:5
+[11:19:17] < posa:-9.213,vel:250.00,dist:1,momo:1
+[11:19:17] < posa:-8.375
+[11:19:17] < posa:-7.544
+[11:19:18] < posa:-6.707
+[11:19:18] < posa:-5.875
+[11:19:18] < posa:-5.032
+[11:19:18] < posa:-4.194
+[11:19:18] < posa:-3.357
+[11:19:19] < posa:-2.526
+[11:19:19] < posa:-1.682
+[11:19:19] < posa:-0.845
+[11:19:19] < posa:-0.014,vel:167.93,stat:6
+[11:19:19] Interlock hit. Stop. Flush queue...
+[11:19:19] < posa:-0.004,vel:0.00,stat:3
+[11:19:19] Machine is homed. 
+[11:19:29] Re-Dumping file C:\Users\Oscar\Desktop\M5.2 QA scripts\homingFlagTest.cnc ...
+[11:19:29] Loading File... 
+[11:19:29] Adding 7 lines to the queue... 
+[11:19:29] Sending the file 1 time(s)... 
+[11:19:29] File added to the queue. 
+[11:19:29] Sending the file 1 more times...
+[11:19:29] > g90 g0 a-10
+[11:19:29] > g91 g1 a30 f250
+[11:19:29] < tinyg [mm] ok> 
+[11:19:29] < tinyg [mm] ok> 
+[11:19:29] < posa:-9.948,vel:321.73,dist:0,momo:0,stat:5
+[11:19:29] < posa:-9.213,vel:250.00,dist:1,momo:1
+[11:19:30] < posa:-8.381
+[11:19:30] < posa:-7.544
+[11:19:30] < posa:-6.707
+[11:19:30] < posa:-5.875
+[11:19:30] < posa:-5.032
+[11:19:31] < posa:-4.194
+[11:19:31] < posa:-3.357
+[11:19:31] < posa:-2.526
+[11:19:31] < posa:-1.682
+[11:19:31] < posa:-0.845
+[11:19:32] < posa:-0.012,vel:193.61,stat:6
+[11:19:32] Interlock hit. Stop. Flush queue...
+[11:19:32] < posa:0.003,vel:0.00,stat:3
+[11:19:32] Machine is homed. 
+[11:19:43] Re-Dumping file C:\Users\Oscar\Desktop\M5.2 QA scripts\homingFlagTest.cnc ...
+[11:19:43] Loading File... 
+[11:19:43] Adding 7 lines to the queue... 
+[11:19:43] Sending the file 1 time(s)... 
+[11:19:43] File added to the queue. 
+[11:19:43] Sending the file 1 more times...
+[11:19:43] > g90 g0 a-10
+[11:19:43] > g91 g1 a30 f250
+[11:19:43] < tinyg [mm] ok> 
+[11:19:43] < tinyg [mm] ok> 
+[11:19:43] < posa:-9.948,vel:321.78,dist:0,momo:0,stat:5
+[11:19:44] < posa:-9.213,vel:250.00,dist:1,momo:1
+[11:19:44] < posa:-8.375
+[11:19:44] < posa:-7.544
+[11:19:44] < posa:-6.700
+[11:19:44] < posa:-5.863
+[11:19:45] < posa:-5.032
+[11:19:45] < posa:-4.194
+[11:19:45] < posa:-3.351
+[11:19:45] < posa:-2.513
+[11:19:45] < posa:-1.682
+[11:19:46] < posa:-0.845
+[11:19:46] < posa:-0.004,vel:215.21,stat:6
+[11:19:46] Interlock hit. Stop. Flush queue...
+[11:19:46] < posa:0.015,vel:0.00,stat:3
+[11:19:46] Machine is homed. 
+[11:20:21] Re-Dumping file C:\Users\Oscar\Desktop\M5.2 QA scripts\homingFlagTest.cnc ...
+[11:20:21] Loading File... 
+[11:20:21] Adding 7 lines to the queue... 
+[11:20:21] Sending the file 10 time(s)... 
+[11:20:21] File added to the queue. 
+[11:20:21] Sending the file 10 more times...
+[11:20:21] File added to the queue. 
+[11:20:21] Sending the file 9 more times...
+[11:20:21] File added to the queue. 
+[11:20:21] Sending the file 8 more times...
+[11:20:21] File added to the queue. 
+[11:20:21] Sending the file 7 more times...
+[11:20:21] File added to the queue. 
+[11:20:21] Sending the file 6 more times...
+[11:20:21] File added to the queue. 
+[11:20:21] Sending the file 5 more times...
+[11:20:21] File added to the queue. 
+[11:20:21] Sending the file 4 more times...
+[11:20:21] File added to the queue. 
+[11:20:21] Sending the file 3 more times...
+[11:20:21] File added to the queue. 
+[11:20:21] Sending the file 2 more times...
+[11:20:21] File added to the queue. 
+[11:20:21] Sending the file 1 more times...
+[11:20:21] > g90 g0 a-10
+[11:20:21] > g91 g1 a30 f250
+[11:20:21] < tinyg [mm] ok> 
+[11:20:21] < tinyg [mm] ok> 
+[11:20:21] < posa:-9.948,vel:321.82,dist:0,momo:0,stat:5
+[11:20:22] < posa:-9.219,vel:250.00,dist:1,momo:1
+[11:20:22] < posa:-8.381
+[11:20:22] < posa:-7.538
+[11:20:22] < posa:-6.700
+[11:20:22] < posa:-5.869
+[11:20:23] < posa:-5.032
+[11:20:23] < posa:-4.201
+[11:20:23] < posa:-3.363
+[11:20:23] < posa:-2.519
+[11:20:23] < posa:-1.682
+[11:20:24] < posa:-0.851
+[11:20:24] < posa:-0.014
+[11:20:24] < posa:0.731
+[11:20:24] < posa:1.562
+[11:20:25] < posa:2.406
+[11:20:25] < posa:3.243
+[11:20:25] < posa:4.074
+[11:20:25] < posa:4.912
+[11:20:25] < posa:5.755
+[11:20:26] < posa:6.593
+[11:20:26] < posa:7.424
+[11:20:26] < posa:8.261
+[11:20:26] < posa:9.092
+[11:20:26] < posa:9.929
+[11:20:27] < posa:10.773
+[11:20:27] < posa:11.610
+[11:20:27] < posa:12.441
+[11:20:27] < posa:13.279
+[11:20:27] < posa:14.110
+[11:20:28] < posa:14.947
+[11:20:28] < posa:15.778
+[11:20:28] < posa:16.615
+[11:20:28] < posa:17.446
+[11:20:28] < posa:18.284
+[11:20:29] < posa:19.115
+[11:20:29] < posa:19.953
+[11:20:29] < posa:20.000,vel:0.00,stat:3
+[11:20:29] Machine is homed. 
+[11:20:29] > $posa
+[11:20:29] TinyG Command received 
+[11:20:29] Reached end of file
+[11:20:29] Sending the file 9 more times!!!
+[11:20:29] > g90 g0 a-10
+[11:20:29] > g91 g1 a30 f250
+[11:20:29] < A position:         20.000 deg
+[11:20:29] < tinyg [mm] ok> 
+[11:20:29] < tinyg [mm] ok> 
+[11:20:29] < tinyg [mm] ok> 
+[11:20:29] < posa:-1.557,vel:9727.84,dist:0,momo:0,stat:5
+[11:20:29] < posa:-9.663,vel:250.00,dist:1,momo:1
+[11:20:30] < posa:-8.831
+[11:20:30] < posa:-7.994
+[11:20:30] < posa:-7.150
+[11:20:30] < posa:-6.313
+[11:20:30] < posa:-5.482
+[11:20:31] < posa:-4.644
+[11:20:31] < posa:-3.813
+[11:20:31] < posa:-2.976
+[11:20:31] < posa:-2.145
+[11:20:31] < posa:-1.307
+[11:20:32] < posa:-0.476
+[11:20:32] < osa:0.269
+[11:20:32] < posa:1.100
+[11:20:32] < posa:1.937
+[11:20:32] < posa:2.781
+[11:20:33] < posa:3.618
+[11:20:33] < posa:4.449
+[11:20:33] < posa:5.287
+[11:20:33] < posa:6.130
+[11:20:33] < posa:6.968
+[11:20:34] < posa:7.799
+[11:20:34] < posa:8.636
+[11:20:34] < posa:9.480
+[11:20:34] < posa:10.317
+[11:20:34] < posa:11.148
+[11:20:35] < sa:11.985
+[11:20:35] < posa:12.816
+[11:20:35] < posa:13.654
+[11:20:35] < posa:14.497
+[11:20:35] < posa:15.334
+[11:20:36] < posa:16.165
+[11:20:36] < posa:17.003
+[11:20:36] < posa:17.834
+[11:20:36] < posa:18.671
+[11:20:36] < posa:19.502
+[11:20:37] < posa:20.000,vel:0.00,stat:3
+[11:20:37] Machine is homed. 
+[11:20:37] > $posa
+[11:20:37] TinyG Command received 
+[11:20:37] Reached end of file
+[11:20:37] Sending the file 8 more times!!!
+[11:20:37] > g90 g0 a-10
+[11:20:37] > g91 g1 a30 f250
+[11:20:37] < A position:         20.000 deg
+[11:20:37] < tinyg [mm] ok> 
+[11:20:37] < tinyg [mm] ok> 
+[11:20:37] < tinyg [mm] ok> 
+[11:20:37] < posa:-1.557,vel:9727.84,dist:0,momo:0,stat:5
+[11:20:37] < posa:-9.663,vel:250.00,dist:1,momo:1
+[11:20:37] < posa:-8.831
+[11:20:38] < posa:-7.994
+[11:20:38] < posa:-7.150
+[11:20:38] < posa:-6.313
+[11:20:38] < posa:-5.482
+[11:20:38] < posa:-4.644
+[11:20:39] < posa:-3.801
+[11:20:39] < posa:-2.963
+[11:20:39] < posa:-2.132
+[11:20:39] < posa:-1.295
+[11:20:39] < posa:-0.464
+[11:20:40] < posa:0.281
+[11:20:40] < posa:1.112
+[11:20:40] < posa:1.950
+[11:20:40] < posa:2.793
+[11:20:40] < posa:3.631
+[11:20:41] < posa:4.462
+[11:20:41] < posa:5.299
+[11:20:41] < posa:6.143
+[11:20:41] < posa:6.980
+[11:20:41] < posa:7.811
+[11:20:42] < posa:8.649
+[11:20:42] < posa:9.480
+[11:20:42] < posa:10.317
+[11:20:42] < posa:11.148
+[11:20:42] < posa:11.985
+[11:20:43] < posa:12.816
+[11:20:43] < posa:13.654
+[11:20:43] < posa:14.485
+[11:20:43] < posa:15.322
+[11:20:43] < posa:16.153
+[11:20:44] < posa:16.990
+[11:20:44] < posa:17.821
+[11:20:44] < posa:18.659
+[11:20:44] < posa:19.490
+[11:20:44] < posa:20.000,vel:0.00,stat:3
+[11:20:44] Machine is homed. 
+[11:20:44] > $posa
+[11:20:44] TinyG Command received 
+[11:20:44] Reached end of file
+[11:20:44] Sending the file 7 more times!!!
+[11:20:44] > g90 g0 a-10
+[11:20:44] > g91 g1 a30 f250
+[11:20:44] < A position:         20.000 deg
+[11:20:44] < tinyg [mm] ok> 
+[11:20:44] < tinyg [mm] ok> 
+[11:20:44] < tinyg [mm] ok> 
+[11:20:45] < posa:-1.557,vel:9727.84,dist:0,momo:0,stat:5
+[11:20:45] Halt and flush: !%
+[11:20:45] < posa:-9.953,vel:0.00,dist:1,momo:1,stat:3
+[11:20:45] Machine is homed. 
+[11:20:47] Halt and flush: !%
+[11:20:47] < tinyg [mm] ok> 
+
+

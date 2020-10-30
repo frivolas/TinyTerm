@@ -1,0 +1,44 @@
+[18:29:21] Starting Log file for session: 2020724-182921
+
+From tinyG: [18:29:23] {r:{fv:0.98,fb:86.03,hp:3,hv:0,id:"0213-0215-0515",msg:"SYSTEM READY"},f:[1,0,1]}
+
+From tinyG: [18:29:23] tinyg [mm] ok> 
+
+From tinyG: [18:29:23] [ej]  enable json mode            0 [0=text,1=JSON]
+
+From tinyG: [18:29:23] tinyg [mm] ok> 
+
+Out > [18:29:25] G28.2 X0
+
+From tinyG: [18:29:25] tinyg [mm] ok> 
+
+From tinyG: [18:29:25] line:0,posx:2.408,posy:0.000,posz:0.000,posa:0.000,feed:1000.00,vel:42.04,unit:1,coor:0,dist:1,admo:1,frmo:1,momo:1,stat:9
+
+From tinyG: [18:29:25] line:0,posx:-1.562,posy:0.000,posz:0.000,posa:0.000,feed:1000.00,vel:1000.00,unit:1,coor:0,dist:1,admo:1,frmo:1,momo:1,stat:9
+
+From tinyG: [18:29:26] line:0,posx:-2.413,posy:0.000,posz:0.000,posa:0.000,feed:100.00,vel:100.00,unit:1,coor:0,dist:1,admo:1,frmo:1,momo:1,stat:9
+
+From tinyG: [18:29:26] line:0,posx:-1.996,posy:0.000,posz:0.000,posa:0.000,feed:100.00,vel:100.00,unit:1,coor:0,dist:1,admo:1,frmo:1,momo:1,stat:9
+
+From tinyG: [18:29:26] line:0,posx:-1.578,posy:0.000,posz:0.000,posa:0.000,feed:100.00,vel:100.00,unit:1,coor:0,dist:1,admo:1,frmo:1,momo:1,stat:9
+
+From tinyG: [18:29:26] line:0,posx:-1.161,posy:0.000,posz:0.000,posa:0.000,feed:100.00,vel:100.00,unit:1,coor:0,dist:1,admo:1,frmo:1,momo:1,stat:9
+
+From tinyG: [18:29:27] line:0,posx:-0.744,posy:0.000,posz:0.000,posa:0.000,feed:100.00,vel:100.00,unit:1,coor:0,dist:1,admo:1,frmo:1,momo:1,stat:9
+
+From tinyG: [18:29:27] line:0,posx:-0.326,posy:0.000,posz:0.000,posa:0.000,feed:100.00,vel:100.00,unit:1,coor:0,dist:1,admo:1,frmo:1,momo:1,stat:9
+
+From tinyG: [18:29:27] line:0,posx:0.091,posy:0.000,posz:0.000,posa:0.000,feed:100.00,vel:100.00,unit:1,coor:0,dist:1,admo:1,frmo:1,momo:1,stat:9
+
+From tinyG: [18:29:27] line:0,posx:0.508,posy:0.000,posz:0.000,posa:0.000,feed:100.00,vel:100.00,unit:1,coor:0,dist:1,admo:1,frmo:1,momo:1,stat:9
+
+From tinyG: [18:29:28] line:0,posx:0.926,posy:0.000,posz:0.000,posa:0.000,feed:100.00,vel:100.00,unit:1,coor:0,dist:1,admo:1,frmo:1,momo:1,stat:9
+
+From tinyG: [18:29:28] line:0,posx:1.343,posy:0.000,posz:0.000,posa:0.000,feed:100.00,vel:100.00,unit:1,coor:0,dist:1,admo:1,frmo:1,momo:1,stat:9
+
+From tinyG: [18:29:28] line:0,posx:1.760,posy:0.000,posz:0.000,posa:0.000,feed:100.00,vel:100.00,unit:1,coor:0,dist:1,admo:1,frmo:1,momo:1,stat:9
+
+From tinyG: [18:29:28] line:0,posx:1.595,posy:0.000,posz:0.000,posa:0.000,feed:1000.00,vel:1000.00,unit:1,coor:0,dist:1,admo:1,frmo:1,momo:1,stat:9
+
+From tinyG: [18:29:29] line:0,posx:0.000,posy:0.000,posz:0.000,posa:0.000,feed:0.00,vel:0.00,unit:1,coor:1,dist:1,admo:1,frmo:1,momo:4,stat:3
+

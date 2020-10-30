@@ -1,0 +1,157 @@
+[16:43:49] Starting Log file for session: 2020724-164349
+
+From tinyG: [16:43:50] {r:{fv:0.98,fb:86.03,hp:3,hv:0,id:"0213-0215-0515",msg:"SYSTEM READY"},f:[1,0,1]}
+
+From tinyG: [16:43:50] tinyg [mm] ok> 
+
+From tinyG: [16:43:50] [ej]  enable json mode            0 [0=text,1=JSON]
+
+From tinyG: [16:43:50] tinyg [mm] ok> 
+
+Out > [16:43:52] G90 G0 Z-12
+
+Out > [16:43:52] G28.2 A0
+
+From tinyG: [16:43:52] tinyg [mm] ok> 
+
+From tinyG: [16:43:52] tinyg [mm] ok> 
+
+From tinyG: [16:43:52] line:0,posx:0.000,posy:0.000,posz:-12.000,posa:-11.289,feed:5000.00,vel:5000.00,unit:1,coor:0,dist:1,admo:1,frmo:1,momo:1,stat:9
+
+Out > [16:43:52] G91 G0 A30
+
+From tinyG: [16:43:53] posa:-18.134,feed:5000.00,vel:2843.43,stat:9
+
+From tinyG: [16:43:53] posa:2.224,vel:4768.76
+
+From tinyG: [16:43:53] posa:-0.491,vel:5000.00
+
+From tinyG: [16:43:53] posa:-15.130,vel:0.01
+
+From tinyG: [16:43:54] posa:-13.171,feed:500.00,vel:500.00
+
+From tinyG: [16:43:54] posa:-11.072
+
+From tinyG: [16:43:54] posa:-8.985
+
+From tinyG: [16:43:54] posa:-6.898
+
+From tinyG: [16:43:55] posa:-4.811
+
+From tinyG: [16:43:55] posa:-2.725
+
+From tinyG: [16:43:55] posa:-0.638
+
+From tinyG: [16:43:55] tinyg [mm] ok> 
+
+From tinyG: [16:43:55] posa:3.850,feed:250.00,vel:7542.93,momo:0,stat:5
+
+From tinyG: [16:43:56] posa:30.000,vel:0.00,stat:3
+
+Out > [16:43:56] $di1fn=2
+
+Out > [16:43:56] G91 G0 A1
+
+Out > [16:43:56] $di1ac=2
+
+Out > [16:43:56] G91 G1 A-30 F250
+
+From tinyG: [16:43:56] [di1fn] input function          2 [0=none,1=limit,2=interlock,3=shutdown]
+
+From tinyG: [16:43:56] tinyg [mm] ok> 
+
+From tinyG: [16:43:56] tinyg [mm] ok> 
+
+From tinyG: [16:43:56] {er:{fb:86.03,st:9,msg:"File not open - write_persistent"}}
+
+From tinyG: [16:43:56] [di1ac] input action            2 [0=none,1=stop,2=halt,3=stop_steps,4=panic,5=reset]
+
+From tinyG: [16:43:56] tinyg [mm] ok> 
+
+From tinyG: [16:43:56] tinyg [mm] ok> 
+
+From tinyG: [16:43:56] posa:30.415,vel:250.00,momo:1,stat:5
+
+From tinyG: [16:43:56] posa:29.371
+
+From tinyG: [16:43:57] posa:28.334
+
+From tinyG: [16:43:57] posa:27.284
+
+From tinyG: [16:43:57] posa:26.240
+
+From tinyG: [16:43:57] posa:25.196
+
+From tinyG: [16:43:58] posa:24.152
+
+From tinyG: [16:43:58] posa:23.108
+
+From tinyG: [16:43:58] posa:22.064
+
+From tinyG: [16:43:58] posa:21.021
+
+From tinyG: [16:43:59] posa:19.977
+
+From tinyG: [16:43:59] posa:18.933
+
+From tinyG: [16:43:59] posa:17.889
+
+From tinyG: [16:43:59] posa:16.852
+
+From tinyG: [16:44:00] posa:15.802
+
+From tinyG: [16:44:00] posa:14.758
+
+From tinyG: [16:44:00] posa:13.714
+
+From tinyG: [16:44:00] posa:12.671
+
+From tinyG: [16:44:01] posa:12.367,vel:0.00,stat:6
+
+Out > [16:44:01] $posa
+
+From tinyG: [16:44:01] tinyg [mm] ok> 
+
+From tinyG: [16:44:01] stat:3
+
+From tinyG: [16:44:01] A position:         12.367 deg
+
+From tinyG: [16:44:01] tinyg [mm] ok> 
+
+Out > [16:44:01] $di1fn=0
+0.0
+Out > [16:44:01] $di1fn=0
+
+Out > [16:44:01] G90 G0 A0
+
+Out > [16:44:01] $di1ac=0
+
+Out > [16:44:01] g90 g0 a6.1835
+From tinyG: [16:44:01] [di1fn] input function          0 [0=none,1=limit,2=interlock,3=shutdown]
+
+From tinyG: [16:44:01] tinyg [mm] ok> 
+
+From tinyG: [16:44:01] tinyg [mm] err[101]: Malformed command: 0.0$di1fn=0 
+
+From tinyG: [16:44:01] tinyg [mm] ok> 
+
+From tinyG: [16:44:01] {er:{fb:86.03,st:9,msg:"File not open - write_persistent"}}
+
+From tinyG: [16:44:01] [di1ac] input action            0 [0=none,1=stop,2=halt,3=stop_steps,4=panic,5=reset]
+
+From tinyG: [16:44:01] tinyg [mm] ok> 
+
+Out > [16:44:01] G28.3 A0
+
+From tinyG: [16:44:01] tinyg [mm] ok> 
+
+From tinyG: [16:44:01] posa:0.000,dist:0,momo:0,stat:3
+
+Out > [16:44:01] G0 Z0
+
+From tinyG: [16:44:01] tinyg [mm] ok> 
+
+From tinyG: [16:44:01] posz:-0.707,vel:2083.77,stat:5
+
+From tinyG: [16:44:02] posz:0.000,vel:0.00,stat:3
+

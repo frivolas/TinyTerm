@@ -1,0 +1,191 @@
+[17:50:34] Starting Log file for session: 2020722-175034
+
+From tinyG: [17:50:36] {r:{fv:0.98,fb:86.03,hp:3,hv:0,id:"0213-0215-0515",msg:"SYSTEM READY"},f:[1,0,1]}
+
+From tinyG: [17:50:36] tinyg [mm] ok> 
+
+Sent to TinyG: [17:50:40] $ej:0
+cls
+
+From tinyG: [17:50:40] [ej]  enable json mode            0 [0=text,1=JSON]
+
+From tinyG: [17:50:40] tinyg [mm] ok> 
+
+From tinyG: [17:50:40] tinyg [mm] err[102]: Bad number format: cls 
+
+Sent to TinyG: [17:52:57] G28.2 Z0 X0
+
+From tinyG: [17:52:57] tinyg [mm] ok> 
+
+From tinyG: [17:52:57] posz:-15.805,vel:1000.00,momo:1,stat:9
+
+From tinyG: [17:52:58] posz:-20.004
+
+From tinyG: [17:52:58] posz:-24.179
+
+From tinyG: [17:52:58] posz:-28.353
+
+From tinyG: [17:52:58] posz:-32.528
+
+From tinyG: [17:52:59] posz:-36.703
+
+From tinyG: [17:52:59] posz:-40.852
+
+From tinyG: [17:52:59] posz:-45.052
+
+From tinyG: [17:52:59] posz:-49.227
+
+From tinyG: [17:53:00] posz:-49.803
+
+From tinyG: [17:53:00] posz:-45.795,vel:217.90
+
+From tinyG: [17:53:00] posz:-46.073,feed:100.00,vel:100.00
+
+From tinyG: [17:53:00] posz:-46.493
+
+From tinyG: [17:53:01] posz:-46.910
+
+From tinyG: [17:53:01] posz:-47.328
+
+From tinyG: [17:53:01] posz:-47.745
+
+From tinyG: [17:53:01] posz:-48.162
+
+From tinyG: [17:53:02] posz:-48.579
+
+From tinyG: [17:53:02] posz:-48.994
+
+From tinyG: [17:53:02] posz:-49.414
+
+From tinyG: [17:53:02] posz:-49.831
+
+From tinyG: [17:53:03] posz:-50.248
+
+From tinyG: [17:53:03] posz:-48.241,feed:1000.00,vel:1000.00
+
+From tinyG: [17:53:03] posz:-44.066
+
+From tinyG: [17:53:03] posz:-39.891
+
+From tinyG: [17:53:04] posz:-35.717
+
+From tinyG: [17:53:04] posz:-31.542
+
+From tinyG: [17:53:04] posz:-27.393
+
+From tinyG: [17:53:04] posz:-23.193
+
+From tinyG: [17:53:05] posz:-19.018
+
+From tinyG: [17:53:05] posz:-14.844
+
+From tinyG: [17:53:05] posz:-10.669
+
+From tinyG: [17:53:05] posz:-6.494
+
+From tinyG: [17:53:06] posz:-2.320
+
+From tinyG: [17:53:06] posx:0.235,posz:0.000,vel:934.38
+
+From tinyG: [17:53:06] posx:2.054,vel:998.95
+
+From tinyG: [17:53:06] posx:-2.111,vel:1000.00
+
+From tinyG: [17:53:07] posx:-2.358,feed:100.00,vel:100.00
+
+From tinyG: [17:53:07] posx:-1.941
+
+From tinyG: [17:53:07] posx:-1.523
+
+From tinyG: [17:53:07] posx:-1.106
+
+From tinyG: [17:53:08] posx:-0.691
+
+From tinyG: [17:53:08] posx:-0.271
+
+From tinyG: [17:53:08] posx:0.146
+
+From tinyG: [17:53:08] posx:0.563
+
+From tinyG: [17:53:09] posx:0.981
+
+From tinyG: [17:53:09] posx:1.396
+
+From tinyG: [17:53:09] posx:1.815
+
+From tinyG: [17:53:09] posx:1.077,feed:1000.00,vel:1000.00
+
+From tinyG: [17:53:10] posx:0.000,vel:0.00,momo:4,stat:3
+
+Sent to TinyG: [17:53:10] G90
+
+Sent to TinyG: [17:53:10] G0 Z-12
+
+From tinyG: [17:53:10] tinyg [mm] ok> 
+
+From tinyG: [17:53:10] tinyg [mm] ok> 
+
+From tinyG: [17:53:10] posz:-11.293,vel:2083.77,dist:0,momo:0,stat:5
+
+From tinyG: [17:53:10] posz:-12.000,vel:0.00,stat:3
+
+Sent to TinyG: [17:53:10] G28.2 A0
+
+Sent to TinyG: [17:53:10] G91 G0 A30
+
+From tinyG: [17:53:10] tinyg [mm] ok> 
+
+From tinyG: [17:53:11] posa:-7.307,feed:2000.00,vel:2000.00,dist:1,momo:1,stat:9
+
+From tinyG: [17:53:11] posa:-15.635
+
+From tinyG: [17:53:11] posa:-19.792,vel:1087.08
+
+From tinyG: [17:53:11] posa:-11.526,vel:2000.00
+
+From tinyG: [17:53:12] posa:-3.176
+
+From tinyG: [17:53:12] posa:1.143,vel:912.92
+
+From tinyG: [17:53:12] posa:-7.006,vel:2000.00
+
+From tinyG: [17:53:12] posa:-15.333
+
+From tinyG: [17:53:13] posa:-18.292,feed:500.00,vel:500.00
+
+From tinyG: [17:53:13] posa:-16.205
+
+From tinyG: [17:53:13] posa:-14.118
+
+From tinyG: [17:53:13] posa:-12.044
+
+From tinyG: [17:53:14] posa:-9.944
+
+From tinyG: [17:53:14] posa:-7.857
+
+From tinyG: [17:53:14] posa:-5.771
+
+From tinyG: [17:53:14] posa:-3.684
+
+From tinyG: [17:53:15] posa:-1.597
+
+From tinyG: [17:53:15] tinyg [mm] ok> 
+
+From tinyG: [17:53:15] posa:0.000,vel:0.00,stat:5
+
+From tinyG: [17:53:15] posa:29.019,feed:1000.00,vel:3470.70,momo:0
+
+From tinyG: [17:53:15] posa:30.000,vel:0.00,stat:3
+
+Sent to TinyG: [17:53:15] $di1fn=2
+
+Sent to TinyG: [17:53:15] $di1ac=2
+
+From tinyG: [17:53:15] [di1fn] input function          2 [0=none,1=limit,2=interlock,3=shutdown]
+
+From tinyG: [17:53:15] tinyg [mm] ok> 
+
+From tinyG: [17:53:15] [di1ac] input action            2 [0=none,1=stop,2=halt,3=stop_steps,4=panic,5=reset]
+
+From tinyG: [17:53:15] tinyg [mm] ok> 
+

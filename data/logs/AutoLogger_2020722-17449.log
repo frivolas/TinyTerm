@@ -1,0 +1,20 @@
+[17:04:49] Starting Log file for session: 2020722-17449
+
+From tinyG: [17:04:51] {r:{fv:0.98,fb:86.03,hp:3,hv:0,id:"0213-0215-0515",msg:"SYSTEM READY"},f:[1,0,1]}
+
+From tinyG: [17:04:51] tinyg [mm] ok> 
+
+Sent to TinyG: [17:04:53] $ej:0
+
+
+From tinyG: [17:04:53] [ej]  enable json mode            0 [0=text,1=JSON]
+
+From tinyG: [17:04:53] tinyg [mm] ok> 
+
+Sent to TinyG: [17:04:55] $ej:0
+
+
+From tinyG: [17:04:55] [ej]  enable json mode            0 [0=text,1=JSON]
+
+From tinyG: [17:04:55] tinyg [mm] ok> 
+

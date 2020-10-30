@@ -1,0 +1,128 @@
+[16:12:06] Starting Log file for session: 2020724-16126
+
+From tinyG: [16:12:07] {"r":{"fv":0.98,"fb":86.03,"hp":3,"hv":0,"id":"0213-0215-0515","msg":"SYSTEM READY"},"f":[1,0,1]}
+
+From tinyG: [16:12:07] tinyg [mm] ok> 
+
+From tinyG: [16:12:07] [ej]  enable json mode            0 [0=text,1=JSON]
+
+From tinyG: [16:12:07] tinyg [mm] ok> 
+
+Out > [16:12:11] G28.2 X0
+
+From tinyG: [16:12:11] tinyg [mm] ok> 
+
+From tinyG: [16:12:12] line:0,posx:10.635,posy:0.000,posz:0.000,posa:0.000,feed:3000.00,vel:3000.00,unit:1,coor:0,dist:1,admo:1,frmo:1,momo:1,stat:9
+
+From tinyG: [16:12:12] posx:20.000,vel:0.03
+
+From tinyG: [16:12:12] posx:8.780,vel:3000.00
+
+From tinyG: [16:12:12] posx:-3.744
+
+From tinyG: [16:12:13] posx:-16.268
+
+From tinyG: [16:12:13] posx:-28.791
+
+From tinyG: [16:12:13] posx:-41.240
+
+From tinyG: [16:12:13] posx:-53.839
+
+From tinyG: [16:12:14] posx:-66.363
+
+From tinyG: [16:12:14] posx:-78.886
+
+From tinyG: [16:12:14] posx:-91.409
+
+From tinyG: [16:12:14] posx:-103.858
+
+From tinyG: [16:12:15] posx:-116.456
+
+From tinyG: [16:12:15] posx:-128.979
+
+From tinyG: [16:12:15] posx:-141.504
+
+From tinyG: [16:12:15] posx:-154.028
+
+From tinyG: [16:12:16] posx:-166.478
+
+From tinyG: [16:12:16] posx:-179.077
+
+From tinyG: [16:12:16] posx:-191.271,vel:1278.88
+
+From tinyG: [16:12:16] posx:-184.266,vel:3000.00
+
+From tinyG: [16:12:17] posx:-171.816,vel:2141.63
+
+From tinyG: [16:12:17] posx:-171.689,feed:100.00,vel:100.00
+
+From tinyG: [16:12:17] posx:-172.107
+
+From tinyG: [16:12:17] posx:-172.525
+
+From tinyG: [16:12:18] posx:-172.942
+
+From tinyG: [16:12:18] posx:-173.360
+
+From tinyG: [16:12:18] posx:-173.776
+
+From tinyG: [16:12:18] posx:-174.196
+
+From tinyG: [16:12:19] posx:-174.614
+
+From tinyG: [16:12:19] posx:-175.032
+
+From tinyG: [16:12:19] posx:-175.450
+
+From tinyG: [16:12:19] posx:-175.865
+
+From tinyG: [16:12:20] posx:-176.286
+
+From tinyG: [16:12:20] posx:-176.704
+
+From tinyG: [16:12:20] posx:-177.122
+
+Out > [16:12:25] !%\
+
+From tinyG: [16:12:25] posx:-177.539
+
+From tinyG: [16:12:25] posx:-177.955
+
+From tinyG: [16:12:25] posx:-178.375
+
+From tinyG: [16:12:25] posx:-178.793
+
+From tinyG: [16:12:25] posx:-179.211
+
+From tinyG: [16:12:25] posx:-179.629
+
+From tinyG: [16:12:25] posx:-180.044
+
+From tinyG: [16:12:25] posx:-180.465
+
+From tinyG: [16:12:25] posx:-180.883
+
+From tinyG: [16:12:25] posx:-181.301
+
+From tinyG: [16:12:25] posx:-181.719
+
+From tinyG: [16:12:25] posx:-182.134
+
+From tinyG: [16:12:25] posx:-182.554
+
+From tinyG: [16:12:25] posx:-182.972
+
+From tinyG: [16:12:25] posx:-183.390
+
+From tinyG: [16:12:25] posx:-183.808
+
+From tinyG: [16:12:25] posx:-184.223
+
+From tinyG: [16:12:25] posx:-184.644
+
+From tinyG: [16:12:25] posx:-185.062
+
+From tinyG: [16:12:25] posx:-185.480
+
+Out > [16:12:25] !%!%
+

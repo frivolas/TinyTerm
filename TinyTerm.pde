@@ -47,6 +47,7 @@ import java.util.ArrayDeque;
 import java.util.Iterator;
 import java.util.LinkedList;
 
+
 static final int bufferSize = 5;
 
 final Deque<String> dataQueue = new LinkedList<String>();
@@ -66,11 +67,13 @@ int measure=0;
 ControlP5 cp5;
 boolean buttonFlag=false;
 ScrollableList serialPortsList;
+CheckBox checkbox;
 
 // String variables
 String theGCode = "home";                // Whatever you want to have as default text in the textbox (currently sets the tinyG to textmode)
 String jPath = "init.json";                 // the path where the JSON file is
 String fileToDump;                          // String to store filename with absolute path of last dumped file (to quickly re-dump)
+String theSaveFile; 
 
 // The Init.JSON file to be loaded
 JSONObject initFile;                        // This will receive the JSON file as an object
@@ -99,7 +102,7 @@ int tah;                // textArea height
 int bw = 100;           // width of Bang
 int sbh = 30;           // side button height
 int theWidth = 800;     // applet width
-int theHeight = 600;    // applet height
+int theHeight = 700;    // applet height
 int pad = 20;           // padding between fields
 boolean aboutToExit = false;  
 
@@ -107,9 +110,13 @@ boolean tinyGconnected = true;
 boolean canSend = true;    // can I send stuff to the tinyG?
 boolean isHoming = false;
 boolean isHomed = false;
+boolean isTesting = false;
 boolean statusInterlock = false;
+boolean canAddToQ = true;
+boolean dumpingFiles = false;
 float homingEdgePos = 0;
 PrintWriter logger;
+PrintWriter posAout;
 String posAReq = "$posa\n";
 
 int repeatLoops = 0;    // variables to store how many times to repeat sending a file
@@ -179,6 +186,8 @@ void setup() {
 
   statCodes = new StringList();
   tinyGStatus(statCodes);
+
+  theSaveFile = thePath();
 }
 
 
@@ -189,6 +198,22 @@ void draw() {
   refreshSerial();
   logic();
 
+  if (dumpingFiles) {
+    if (debug) {
+      println("Gonna dump a file!");
+      println("repeats - loops: " + (repeatLoops-loopsLeft));
+    }
+    println("Cann add: " + canAddToQ);
+    if ((repeatLoops-loopsLeft) > 0 && canAddToQ) {
+      dumpFile(fileToDump);
+    } else if (repeatLoops-loopsLeft == 0) { 
+      dumpingFiles = false;
+    }
+  } else if (!dumpingFiles) {
+    if (debug) println("no dupadoo");
+  }
+
+
   if (myPort != null) {
 
     while (myPort.available () > 0) {
@@ -198,6 +223,11 @@ void draw() {
         logger.println("From tinyG: " + theTime() + inBuffer);
         logger.flush();
 
+        if (debug) {
+          println("Test? : Home? : Add to Q? : Repeats? : Loops left? : TinyGBuffer ");
+          println(isTesting + " : " + isHoming + " : " + canAddToQ + " : " + repeatLoops + " : " + loopsLeft + " : " + tinyGBuffer);
+        }
+
         // we listen for a response from the tinyG.
         if (inBuffer.indexOf("r:")>-1 || inBuffer.indexOf("sr:")>-1) {          // can be a received (r:) a status report (sr:) 
           tinyGBuffer--;                                                        // or some status codes. Reduce the buffer since it's been used
@@ -205,7 +235,7 @@ void draw() {
         if (inBuffer.indexOf("stat:3")>-1 || inBuffer.indexOf("\"stat:3\"")>-1 && isHoming && !statusInterlock) {                 // getting a status 3: Program STOP (machine done)
           //if (isHoming && isHomed) {
           reportEvent("Machine is homed. \n");
-          //isHoming = false;
+          isHoming = false;
           //} 
           tinyGBuffer = 0;
         } //else if (inBuffer.indexOf("stat:3")>0) {
@@ -216,27 +246,35 @@ void draw() {
           println("INTERLOCK!");
           statusInterlock=true;
           myPort.write("%\n");      //  first push the GCode
-          dataQueue.clear();         //  then clear the queue
+          //dataQueue.clear();         //  then clear the queue
           tinyGBuffer=0;             //  then reset the buffer
+          //myPort.write("$posa\n");
+          //reportEvent("Ask for posa... \n");
           reportEvent("Interlock hit. Stop. Flush queue...\n");    // then we get chatty
 
-          if (isHoming) {
+          if (isHoming || isTesting) {
             reportEvent("WE'RE HOMING, ASK FOR $POSA \n");    // then we get chatty
             //dataQueue.clear();
-            //tinyGBuffer=0;
+            tinyGBuffer=0;
             myPort.write("%\n");
             delay(50);
             myPort.write("$di1fn=0\n");
             delay(50);
             reportEvent("Asking for directions\n");
-            dataQueue.add(posAReq);
+            //dataQueue.add(posAReq);
+            myPort.write("$posa\n");
           }
         } 
-        if (inBuffer.indexOf("position") > 0 && isHoming) { // if we're homing and receive a position, pass it on
+        if (inBuffer.indexOf("position") > 0) {
           reportEvent("< " + inBuffer);
           String f = inBuffer.replaceAll("[^\\d.-]", "");
           float currentAngle = float(f);
-          homePT2(currentAngle);
+          if (isHoming) { // if we're homing and receive a position, pass it on
+            homePT2(currentAngle);
+          }
+          if (isTesting) {
+            aPosToFile(theSaveFile, currentAngle);
+          }
         }
         // make sure we're not going negative sizes
         if (tinyGBuffer<0) tinyGBuffer=0;
@@ -262,6 +300,16 @@ void controlEvent(ControlEvent theEvent) {
   if (theEvent.isAssignableFrom(Textfield.class)) {
     println("texfield event!");
     SendCommand();
+  } else if (theEvent.isFrom(checkbox)) {
+    println("Checkbox event!");
+    for (int i=0; i<checkbox.getArrayValue().length; i++) {
+      boolean n = boolean((int)checkbox.getArrayValue()[i]);
+      print(n);
+      if (i==0) {
+        debug = n;
+        reportEvent("Debug mode is: " + debug + "\n");
+      }
+    }
   }
 }
 
@@ -354,12 +402,13 @@ void fileLoaded(File selection) {
   // If no file, print on screen.
   if (selection == null) {
     reportEvent("No file selected\n");
+    dumpingFiles = false;
   } else {
     // If file, say it and send the file to the dumpFile function
-    // println("File to load: " + selection.getAbsolutePath());
     fileToDump = selection.getAbsolutePath();   // Save the filename to the global variable
-    reportEvent("File to load: " + selection.getAbsolutePath() + "\n");
-    dumpFile(selection.getAbsolutePath());
+    reportEvent("File to load: " + fileToDump + "\n");
+    getLoops();
+    dumpingFiles = true;
     cp5.get(Bang.class, "againFile").show();
   }
   // remove the callback from the Bang or else it never lets us go
@@ -371,14 +420,33 @@ void againFile() {
   if (fileToDump.equals("")) {
     // If there's no value in the variable, no file has been dumped
     reportEvent("No file to re-dump. \n");
+    dumpingFiles=false;
   } else {
     // We have a file, re-dump it.
     println("REDUMPING!!");
+    getLoops();
     reportEvent("Re-Dumping file " + fileToDump + " ...\n");
-    dumpFile(fileToDump);
+    reportEvent("Sending the file " + repeatLoops + " time(s)... \n");
+    dumpingFiles=true;
   }
-  // cp5.get(Bang.class,"aganFile").removeCallback();
+  //cp5.get(Bang.class, "aganFile").removeCallback();
 }
+
+
+void getLoops() {
+  // reset the loop counter:
+  loopsLeft = 0;
+  cp5.get(Textlabel.class, "counter").setText(str(loopsLeft));
+
+  // get how many times we need to repeat the dump
+  if (cp5.get(Textfield.class, "numTimes").getText().equals("")) {
+    repeatLoops = 1;
+  } else {
+    repeatLoops = int(cp5.get(Textfield.class, "numTimes").getText());
+    println("Got this repeatLoops: "+ repeatLoops);
+  }
+}
+
 
 
 
@@ -488,6 +556,10 @@ void refreshSerial() {
 }
 
 
+
+
+
+
 public void keyPressed() { 
   switch(key) { 
   case ESC: 
@@ -566,14 +638,3 @@ void tinyGStatus(StringList theList) {
  //GPIO.interrupts();
  }
  */
-
-
-
-
-
-
-
-
-
-/*
-             String testingThis = inBuffer.substring(inBuffer.indexOf("position")+9).replaceAll("[^\\d.-]", "");*/

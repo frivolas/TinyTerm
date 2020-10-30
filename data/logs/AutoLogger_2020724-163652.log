@@ -1,0 +1,173 @@
+[16:36:52] Starting Log file for session: 2020724-163652
+
+From tinyG: [16:36:55] {r:{fv:0.98,fb:86.03,hp:3,hv:0,id:"0213-0215-0515",msg:"SYSTEM READY"},f:[1,0,1]}
+
+From tinyG: [16:36:55] tinyg [mm] ok> 
+
+From tinyG: [16:36:55] [ej]  enable json mode            0 [0=text,1=JSON]
+
+From tinyG: [16:36:55] tinyg [mm] ok> 
+
+Out > [16:36:57] G90 G0 Z-12
+
+Out > [16:36:57] G28.2 A0
+
+From tinyG: [16:36:57] tinyg [mm] ok> 
+
+From tinyG: [16:36:57] tinyg [mm] ok> 
+
+From tinyG: [16:36:57] line:0,posx:0.000,posy:0.000,posz:-12.000,posa:24.389,feed:5000.00,vel:5000.00,unit:1,coor:0,dist:1,admo:1,frmo:1,momo:1,stat:9
+
+Out > [16:36:57] G91 G0 A30
+
+From tinyG: [16:36:57] posa:45.264,feed:5000.00,vel:5000.00,stat:9
+
+From tinyG: [16:36:57] posa:66.013
+
+From tinyG: [16:36:58] posa:87.013
+
+From tinyG: [16:36:58] posa:107.888
+
+From tinyG: [16:36:58] posa:128.763
+
+From tinyG: [16:36:58] posa:149.638
+
+From tinyG: [16:36:59] posa:170.513
+
+From tinyG: [16:36:59] posa:191.388
+
+From tinyG: [16:36:59] posa:212.263
+
+From tinyG: [16:36:59] posa:233.138
+
+From tinyG: [16:37:00] posa:254.013
+
+From tinyG: [16:37:00] posa:274.888
+
+From tinyG: [16:37:00] posa:295.638
+
+From tinyG: [16:37:00] posa:316.638
+
+From tinyG: [16:37:01] posa:337.513
+
+From tinyG: [16:37:01] posa:358.388
+
+From tinyG: [16:37:01] posa:363.008,vel:4074.35
+
+From tinyG: [16:37:01] posa:344.790,vel:342.95
+
+From tinyG: [16:37:02] posa:346.119,feed:500.00,vel:500.00
+
+From tinyG: [16:37:02] posa:348.203
+
+From tinyG: [16:37:02] posa:350.287
+
+From tinyG: [16:37:02] posa:352.372
+
+From tinyG: [16:37:03] posa:354.456
+
+From tinyG: [16:37:03] posa:356.541
+
+From tinyG: [16:37:03] posa:358.625
+
+From tinyG: [16:37:03] tinyg [mm] ok> 
+
+From tinyG: [16:37:03] posa:0.001,feed:250.00,vel:25.72,momo:0,stat:5
+
+From tinyG: [16:37:04] posa:29.443,vel:2406.04
+
+From tinyG: [16:37:04] posa:30.000,vel:0.00,stat:3
+
+Out > [16:37:04] $di1fn=2
+
+Out > [16:37:04] G91 G0 A1
+
+Out > [16:37:04] $di1ac=2
+
+Out > [16:37:04] G91 G1 A-30 F250
+
+From tinyG: [16:37:04] [di1fn] input function          2 [0=none,1=limit,2=interlock,3=shutdown]
+
+From tinyG: [16:37:04] tinyg [mm] ok> 
+
+From tinyG: [16:37:04] tinyg [mm] ok> 
+
+From tinyG: [16:37:04] {er:{fb:86.03,st:9,msg:"File not open - write_persistent"}}
+
+From tinyG: [16:37:04] [di1ac] input action            2 [0=none,1=stop,2=halt,3=stop_steps,4=panic,5=reset]
+
+From tinyG: [16:37:04] tinyg [mm] ok> 
+
+From tinyG: [16:37:04] tinyg [mm] ok> 
+
+From tinyG: [16:37:04] posa:30.415,vel:250.00,momo:1,stat:5
+
+From tinyG: [16:37:05] posa:29.371
+
+From tinyG: [16:37:05] posa:28.334
+
+From tinyG: [16:37:05] posa:27.284
+
+From tinyG: [16:37:05] posa:26.240
+
+From tinyG: [16:37:06] posa:25.196
+
+From tinyG: [16:37:06] posa:24.152
+
+From tinyG: [16:37:06] posa:23.108
+
+From tinyG: [16:37:06] posa:22.064
+
+From tinyG: [16:37:07] posa:21.021
+
+From tinyG: [16:37:07] posa:19.977
+
+From tinyG: [16:37:07] posa:18.933
+
+From tinyG: [16:37:07] posa:17.889
+
+From tinyG: [16:37:08] posa:16.852
+
+From tinyG: [16:37:08] posa:15.802
+
+From tinyG: [16:37:08] posa:14.758
+
+From tinyG: [16:37:08] posa:13.714
+
+From tinyG: [16:37:09] posa:12.671
+
+From tinyG: [16:37:09] posa:12.123,vel:0.00,stat:6
+
+Out > [16:37:09] $posa
+
+From tinyG: [16:37:09] tinyg [mm] ok> 
+
+From tinyG: [16:37:09] stat:3
+
+From tinyG: [16:37:09] A position:         12.123 deg
+
+From tinyG: [16:37:09] tinyg [mm] ok> 
+
+Out > [16:37:09] $di1fn=2
+0.0
+Out > [16:37:09] $di1fn=2
+
+Out > [16:37:09] $di1ac=0
+
+Out > [16:37:09] g90 g0 a
+Out > [16:37:09] G28.3 A0
+
+From tinyG: [16:37:09] [di1fn] input function          2 [0=none,1=limit,2=interlock,3=shutdown]
+
+From tinyG: [16:37:09] tinyg [mm] ok> 
+
+From tinyG: [16:37:09] tinyg [mm] err[101]: Malformed command: 0.0$di1fn=2 
+
+From tinyG: [16:37:09] [di1ac] input action            0 [0=none,1=stop,2=halt,3=stop_steps,4=panic,5=reset]
+
+From tinyG: [16:37:09] tinyg [mm] ok> 
+
+From tinyG: [16:37:09] tinyg [mm] err[102]: Bad number format: g90 g0 aG28.3 A0 
+
+From tinyG: [16:37:12] stat:3
+

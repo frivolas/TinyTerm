@@ -1,0 +1,102 @@
+[16:49:54] Starting Log file for session: 2020724-164954
+
+[16:44:16] Terminal ready... 
+[16:44:16] Log file started 
+[16:44:16] Please choose a Serial port to connect to... 
+[16:44:17] Connected to Serial on port COM6
+[16:44:17] < {r:{fv:0.98,fb:86.03,hp:3,hv:0,id:"0213-0215-0515",msg:"SYSTEM READY"},f:[1,0,1]}
+[16:44:17] Homing: false | Homed: false[16:44:17] < tinyg [mm] ok> 
+[16:44:17] < [ej]  enable json mode            0 [0=text,1=JSON]
+[16:44:17] < tinyg [mm] ok> 
+[16:44:19] Homing axis: x
+[16:44:19] > G28.2 X0
+[16:44:19] < tinyg [mm] ok> 
+[16:44:20] < posx:2.408,feed:1000.00,vel:42.04,dist:1,momo:1,stat:9
+[16:44:20] < posx:-1.512,vel:1000.00
+[16:44:20] < posx:-2.418,feed:100.00,vel:100.00
+[16:44:20] < posx:-2.001
+[16:44:21] < posx:-1.583
+[16:44:21] < posx:-1.166
+[16:44:21] < posx:-0.751
+[16:44:21] < posx:-0.331
+[16:44:22] < posx:0.086
+[16:44:22] < posx:0.503
+[16:44:22] < posx:0.921
+[16:44:22] < posx:1.336
+[16:44:23] < posx:1.755
+[16:44:23] < posx:1.645,feed:1000.00,vel:998.95
+[16:44:23] < posx:0.000,feed:250.00,vel:0.00,dist:0,momo:4,stat:3
+[16:44:23] S:3 - Ready. 
+[16:44:25] Homing axis: a
+[16:44:25] > G90 G0 Z-12
+[16:44:25] > G28.2 A0
+[16:44:25] < tinyg [mm] ok> 
+[16:44:25] < tinyg [mm] ok> 
+[16:44:26] < posz:-11.293,vel:2083.77,momo:0,stat:9
+[16:44:26] < posz:-12.000,posa:-6.845,feed:5000.00,vel:5000.00,dist:1,momo:1
+[16:44:26] < posa:-20.000,vel:0.01
+[16:44:26] < posa:-3.253,vel:5000.00
+[16:44:27] < posa:3.892,vel:2568.92
+[16:44:27] < posa:-15.108,vel:1499.04
+[16:44:27] < posa:-14.171,feed:500.00,vel:500.00
+[16:44:27] < posa:-12.084
+[16:44:28] < posa:-9.997
+[16:44:28] < posa:-7.911
+[16:44:28] < posa:-5.824
+[16:44:28] < posa:-3.737
+[16:44:29] < posa:-1.650
+[16:44:29] < posa:0.000,feed:1000.00,vel:0.00,momo:4,stat:3
+[16:44:29] S:3 - Ready. 
+[16:44:29] > G91 G0 A30
+[16:44:29] > $di1fn=2
+[16:44:29] TinyG Command received 
+[16:44:29] > G91 G0 A1
+[16:44:29] < tinyg [mm] ok> 
+[16:44:29] < {er:{fb:86.03,st:9,msg:"File not open - write_persistent"}}
+[16:44:29] Homing: false | Homed: false[16:44:29] < [di1fn] input function          2 [0=none,1=limit,2=interlock,3=shutdown]
+[16:44:29] < tinyg [mm] ok> 
+[16:44:29] < tinyg [mm] ok> 
+[16:44:29] > $di1ac=2
+[16:44:29] TinyG Command received 
+[16:44:29] > G91 G1 A-30 F250
+[16:44:29] < {er:{fb:86.03,st:9,msg:"File not open - write_persistent"}}
+[16:44:29] Homing: false | Homed: false[16:44:29] < [di1ac] input action            2 [0=none,1=stop,2=halt,3=stop_steps,4=panic,5=reset]
+[16:44:29] < tinyg [mm] ok> 
+[16:44:29] < tinyg [mm] ok> 
+[16:44:29] < posa:28.059,vel:3814.62,momo:0,stat:5
+[16:44:29] < posa:30.396,feed:250.00,vel:250.00,momo:1
+[16:44:30] < posa:29.346
+[16:44:30] < posa:28.302
+[16:44:30] < posa:27.259
+[16:44:30] < posa:26.215
+[16:44:31] < posa:25.171
+[16:44:31] < posa:24.127
+[16:44:31] < posa:23.083
+[16:44:31] < posa:22.039
+[16:44:32] < posa:20.996
+[16:44:32] < posa:19.952
+[16:44:32] < posa:18.908
+[16:44:32] < posa:17.870
+[16:44:33] < posa:16.820
+[16:44:33] < posa:15.777
+[16:44:33] < posa:14.733
+[16:44:33] < posa:13.689
+[16:44:34] < posa:12.646
+[16:44:34] < posa:11.701
+[16:44:34] < posa:10.657
+[16:44:35] < posa:9.614
+[16:44:35] < posa:8.570
+[16:44:35] < posa:7.527
+[16:44:35] < posa:6.483
+[16:44:36] < posa:5.440
+[16:44:36] < posa:4.403
+[16:44:36] < posa:3.353
+[16:44:36] < posa:2.309
+[16:44:37] < posa:1.266
+[16:44:37] < posa:1.000,vel:0.00,stat:3
+[16:44:37] S:3 - Ready. 
+[16:49:46] > g90 g0 z-100
+[16:49:52] Resuming script: ~
+[16:49:52] > ~
+
+

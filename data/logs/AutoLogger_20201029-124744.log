@@ -1,0 +1,102 @@
+[12:47:44] Starting Log file for session: 20201029-124744
+
+From tinyG: [12:47:45] {"r":{"fv":0.98,"fb":86.03,"hp":3,"hv":0,"id":"0213-0215-0515","msg":"SYSTEM READY"},"f":[1,0,1]}
+
+From tinyG: [12:47:45] tinyg [mm] ok> 
+
+From tinyG: [12:47:45] [ej]  enable json mode            0 [0=text,1=JSON]
+
+From tinyG: [12:47:45] tinyg [mm] ok> 
+
+Out > [12:47:50] $di1fn=2
+
+Out > [12:47:50] g90 g0 a-25
+
+Out > [12:47:50] g90 g0 a-20
+
+From tinyG: [12:47:50] [di1fn] input function          2 [0=none,1=limit,2=interlock,3=shutdown]
+
+From tinyG: [12:47:50] tinyg [mm] ok> 
+
+From tinyG: [12:47:50] tinyg [mm] ok> 
+
+From tinyG: [12:47:50] tinyg [mm] ok> 
+
+From tinyG: [12:47:50] posa:-20.671,vel:7360.10,dist:0,momo:0,stat:5
+
+From tinyG: [12:47:50] posa:-20.296,vel:1456.54
+
+From tinyG: [12:47:50] posa:-20.000,vel:0.00,stat:3
+
+Out > [12:47:50] g90 g0 a-25
+
+Out > [12:47:50] g91 g1 a30 f250
+
+From tinyG: [12:47:50] tinyg [mm] ok> 
+
+From tinyG: [12:47:50] tinyg [mm] ok> 
+
+From tinyG: [12:47:51] posa:-24.863,vel:250.00,dist:1,momo:1,stat:5
+
+From tinyG: [12:47:51] posa:-24.025
+
+From tinyG: [12:47:51] posa:-23.188
+
+From tinyG: [12:47:51] posa:-22.351
+
+From tinyG: [12:47:51] posa:-21.520
+
+From tinyG: [12:47:52] posa:-20.676
+
+From tinyG: [12:47:52] posa:-19.839
+
+From tinyG: [12:47:52] posa:-19.008
+
+From tinyG: [12:47:52] posa:-18.170
+
+From tinyG: [12:47:52] posa:-17.327
+
+From tinyG: [12:47:53] posa:-16.490
+
+From tinyG: [12:47:53] posa:-15.658
+
+From tinyG: [12:47:53] posa:-14.821
+
+From tinyG: [12:47:53] posa:-13.977
+
+From tinyG: [12:47:53] posa:-13.140
+
+From tinyG: [12:47:54] posa:-12.309
+
+From tinyG: [12:47:54] posa:-11.471
+
+From tinyG: [12:47:54] posa:-10.628
+
+From tinyG: [12:47:54] posa:-9.790
+
+From tinyG: [12:47:54] posa:-8.959
+
+From tinyG: [12:47:55] posa:-8.122
+
+From tinyG: [12:47:55] posa:-7.290
+
+From tinyG: [12:47:55] posa:-6.453
+
+From tinyG: [12:47:55] posa:-5.609
+
+From tinyG: [12:47:55] posa:-4.772
+
+From tinyG: [12:47:56] posa:-3.941
+
+From tinyG: [12:47:56] posa:-3.103
+
+From tinyG: [12:47:56] posa:-2.272
+
+From tinyG: [12:47:56] posa:-1.435
+
+From tinyG: [12:47:56] posa:-0.604
+
+From tinyG: [12:47:57] posa:0.031,vel:0.00,stat:6
+
+From tinyG: [12:47:57] stat:3
+

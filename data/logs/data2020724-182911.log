@@ -1,0 +1,17 @@
+[18:29:11] Starting Log file for session: 2020724-182911
+
+[18:28:59] Terminal cleared and ready...
+[18:29:00] Resuming script: ~
+[18:29:00] < tinyg [mm] err[101]: Malformed command: G90 G0 A0.00.0 
+[18:29:03] Resuming script: ~
+[18:29:05] Halt and flush: %
+[18:29:05] < tinyg [mm] ok> 
+[18:29:08] Halt and flush: !%
+[18:29:08] < tinyg [mm] ok> 
+[18:29:09] Feedhold!!
+[18:29:09] Send '~' to resume... !
+[18:29:10] Resuming script: ~
+[18:29:10] > !
+[18:29:10] > ~
+
+

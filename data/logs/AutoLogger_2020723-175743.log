@@ -1,0 +1,486 @@
+[17:57:43] Starting Log file for session: 2020723-175743
+
+From tinyG: [17:57:44] {r:{fv:0.98,fb:86.03,hp:3,hv:0,id:"0213-0215-0515",msg:"SYSTEM READY"},f:[1,0,1]}
+
+From tinyG: [17:57:44] tinyg [mm] ok> 
+
+Out > [17:57:47] $$
+
+From tinyG: [17:57:47] [fb]  firmware build             86.03
+
+From tinyG: [17:57:47] [fv]  firmware version            0.98
+
+From tinyG: [17:57:47] [cv]  configuration version       7.00
+
+From tinyG: [17:57:47] [hp]  hardware platform           3.00
+
+From tinyG: [17:57:47] [hv]  hardware version            0.00
+
+From tinyG: [17:57:47] [id]  TinyG ID       0213-0215-0515
+
+From tinyG: [17:57:47] [ja]  junction aggression         0.00
+
+From tinyG: [17:57:47] [ct]  chordal tolerance           0.0100 mm
+
+From tinyG: [17:57:47] [sl]  soft limit enable           1 [0=disable,1=enable]
+
+From tinyG: [17:57:47] [lim] limit switch enable         1 [0=disable,1=enable]
+
+From tinyG: [17:57:47] [saf] safety interlock enable     1 [0=disable,1=enable]
+
+From tinyG: [17:57:47] [mt]  motor idle timeout          0.20 seconds
+
+From tinyG: [17:57:47] [spep] spindle enable polarity    1 [0=active_low,1=active_high]
+
+From tinyG: [17:57:47] [spdp] spindle direction polarity 0 [0=CW_low,1=CW_high]
+
+From tinyG: [17:57:47] [spph] spindle pause on hold      1 [0=no,1=pause_on_hold]
+
+From tinyG: [17:57:47] [spdw] spindle dwell time         1.0 seconds
+
+From tinyG: [17:57:47] [cofp] coolant flood polarity     1 [0=low is ON,1=high is ON]
+
+From tinyG: [17:57:47] [comp] coolant mist polarity      1 [0=low is ON,1=high is ON]
+
+From tinyG: [17:57:47] [coph] coolant pause on hold      0 [0=no,1=pause_on_hold]
+
+From tinyG: [17:57:47] [tv]  text verbosity              1 [0=silent,1=verbose]
+
+From tinyG: [17:57:47] [ej]  enable json mode            0 [0=text,1=JSON]
+
+From tinyG: [17:57:47] [jv]  json verbosity              5 [0=silent,1=footer,2=messages,3=configs,4=linenum,5=verbose]
+
+From tinyG: [17:57:47] [js]  json serialize style        0 [0=relaxed,1=strict]
+
+From tinyG: [17:57:47] [qv]  queue report verbosity      0 [0=off,1=single,2=triple]
+
+From tinyG: [17:57:47] [sv]  status report verbosity     1 [0=off,1=filtered,2=verbose]
+
+From tinyG: [17:57:47] [si]  status interval           250 ms
+
+From tinyG: [17:57:47] [gpl] default gcode plane         0 [0=G17,1=G18,2=G19]
+
+From tinyG: [17:57:47] [gun] default gcode units mode    1 [0=G20,1=G21]
+
+From tinyG: [17:57:47] [gco] default gcode coord system  1 [1-6 (G54-G59)]
+
+From tinyG: [17:57:47] [gpa] default gcode path control  0 [0=G61,1=G61.1,2=G64]
+
+From tinyG: [17:57:47] [gdi] default gcode distance mode 0 [0=G90,1=G91]
+
+From tinyG: [17:57:47] [1ma] m1 map to axis              5 [0=X,1=Y,2=Z...]
+
+From tinyG: [17:57:47] [1sa] m1 step angle               1.800 deg
+
+From tinyG: [17:57:47] [1tr] m1 travel per revolution   60.0000 mm
+
+From tinyG: [17:57:47] [1mi] m1 microsteps              16 [1,2,4,8,16,32]
+
+From tinyG: [17:57:47] [1po] m1 polarity                 1 [0=normal,1=reverse]
+
+From tinyG: [17:57:47] [1pm] m1 power management         2 [0=disabled,1=always on,2=in cycle,3=when moving]
+
+From tinyG: [17:57:47] [1pl] m1 motor power level        1.000 [0.000=minimum, 1.000=maximum]
+
+From tinyG: [17:57:47] [2ma] m2 map to axis              0 [0=X,1=Y,2=Z...]
+
+From tinyG: [17:57:47] [2sa] m2 step angle               1.800 deg
+
+From tinyG: [17:57:47] [2tr] m2 travel per revolution    6.3500 mm
+
+From tinyG: [17:57:47] [2mi] m2 microsteps              32 [1,2,4,8,16,32]
+
+From tinyG: [17:57:47] [2po] m2 polarity                 0 [0=normal,1=reverse]
+
+From tinyG: [17:57:47] [2pm] m2 power management         2 [0=disabled,1=always on,2=in cycle,3=when moving]
+
+From tinyG: [17:57:47] [2pl] m2 motor power level        1.000 [0.000=minimum, 1.000=maximum]
+
+From tinyG: [17:57:47] [3ma] m3 map to axis              2 [0=X,1=Y,2=Z...]
+
+From tinyG: [17:57:47] [3sa] m3 step angle               1.800 deg
+
+From tinyG: [17:57:47] [3tr] m3 travel per revolution    5.0000 mm
+
+From tinyG: [17:57:47] [3mi] m3 microsteps              10 [1,2,4,8,16,32]
+
+From tinyG: [17:57:47] [3po] m3 polarity                 1 [0=normal,1=reverse]
+
+From tinyG: [17:57:47] [3pm] m3 power management         2 [0=disabled,1=always on,2=in cycle,3=when moving]
+
+From tinyG: [17:57:47] [3pl] m3 motor power level        0.000 [0.000=minimum, 1.000=maximum]
+
+From tinyG: [17:57:47] [4ma] m4 map to axis              3 [0=X,1=Y,2=Z...]
+
+From tinyG: [17:57:47] [4sa] m4 step angle               1.800 deg
+
+From tinyG: [17:57:47] [4tr] m4 travel per revolution   60.0000 mm
+
+From tinyG: [17:57:47] [4mi] m4 microsteps              10 [1,2,4,8,16,32]
+
+From tinyG: [17:57:47] [4po] m4 polarity                 0 [0=normal,1=reverse]
+
+From tinyG: [17:57:47] [4pm] m4 power management         2 [0=disabled,1=always on,2=in cycle,3=when moving]
+
+From tinyG: [17:57:47] [4pl] m4 motor power level        0.000 [0.000=minimum, 1.000=maximum]
+
+From tinyG: [17:57:47] [5ma] m5 map to axis              4 [0=X,1=Y,2=Z...]
+
+From tinyG: [17:57:47] [5sa] m5 step angle               1.800 deg
+
+From tinyG: [17:57:47] [5tr] m5 travel per revolution  360.0000 mm
+
+From tinyG: [17:57:47] [5mi] m5 microsteps               8 [1,2,4,8,16,32]
+
+From tinyG: [17:57:47] [5po] m5 polarity                 0 [0=normal,1=reverse]
+
+From tinyG: [17:57:47] [5pm] m5 power management         2 [0=disabled,1=always on,2=in cycle,3=when moving]
+
+From tinyG: [17:57:47] [5pl] m5 motor power level        0.000 [0.000=minimum, 1.000=maximum]
+
+From tinyG: [17:57:47] [6ma] m6 map to axis              5 [0=X,1=Y,2=Z...]
+
+From tinyG: [17:57:47] [6sa] m6 step angle               1.800 deg
+
+From tinyG: [17:57:47] [6tr] m6 travel per revolution  360.0000 mm
+
+From tinyG: [17:57:47] [6mi] m6 microsteps               8 [1,2,4,8,16,32]
+
+From tinyG: [17:57:47] [6po] m6 polarity                 0 [0=normal,1=reverse]
+
+From tinyG: [17:57:47] [6pm] m6 power management         2 [0=disabled,1=always on,2=in cycle,3=when moving]
+
+From tinyG: [17:57:47] [6pl] m6 motor power level        0.000 [0.000=minimum, 1.000=maximum]
+
+From tinyG: [17:57:47] [xam] x axis mode                 1 [standard]
+
+From tinyG: [17:57:47] [xvm] x velocity maximum       1500 mm/min
+
+From tinyG: [17:57:47] [xfr] x feedrate maximum       5000 mm/min
+
+From tinyG: [17:57:47] [xtn] x travel minimum         -500.000 mm
+
+From tinyG: [17:57:47] [xtm] x travel maximum            0.000 mm
+
+From tinyG: [17:57:47] [xjm] x jerk maximum           5000 mm/min^3 * 1 million
+
+From tinyG: [17:57:47] [xjh] x jerk homing           10000 mm/min^3 * 1 million
+
+From tinyG: [17:57:47] [xjd] x junction deviation        0.0000 mm (larger is faster)
+
+From tinyG: [17:57:47] [xhi] x homing input              2 [input 1-N or 0 to disable homing this axis]
+
+From tinyG: [17:57:47] [xhd] x homing direction          1 [0=search-to-negative, 1=search-to-positive]
+
+From tinyG: [17:57:47] [xsv] x search velocity        1000 mm/min
+
+From tinyG: [17:57:47] [xlv] x latch velocity       100.00 mm/min
+
+From tinyG: [17:57:47] [xlb] x latch backoff             5.000 mm
+
+From tinyG: [17:57:47] [xzb] x zero backoff              2.000 mm
+
+From tinyG: [17:57:47] [yam] y axis mode                 0 [disabled]
+
+From tinyG: [17:57:47] [yvm] y velocity maximum          0 mm/min
+
+From tinyG: [17:57:47] [yfr] y feedrate maximum          0 mm/min
+
+From tinyG: [17:57:47] [ytn] y travel minimum            0.000 mm
+
+From tinyG: [17:57:47] [ytm] y travel maximum          420.000 mm
+
+From tinyG: [17:57:47] [yjm] y jerk maximum              0 mm/min^3 * 1 million
+
+From tinyG: [17:57:47] [yjh] y jerk homing           20000 mm/min^3 * 1 million
+
+From tinyG: [17:57:47] [yjd] y junction deviation        0.0000 mm (larger is faster)
+
+From tinyG: [17:57:47] [yhi] y homing input              0 [input 1-N or 0 to disable homing this axis]
+
+From tinyG: [17:57:47] [yhd] y homing direction          0 [0=search-to-negative, 1=search-to-positive]
+
+From tinyG: [17:57:47] [ysv] y search velocity        3000 mm/min
+
+From tinyG: [17:57:47] [ylv] y latch velocity       100.00 mm/min
+
+From tinyG: [17:57:47] [ylb] y latch backoff            20.000 mm
+
+From tinyG: [17:57:47] [yzb] y zero backoff              3.000 mm
+
+From tinyG: [17:57:47] [zam] z axis mode                 1 [standard]
+
+From tinyG: [17:57:47] [zvm] z velocity maximum       3750 mm/min
+
+From tinyG: [17:57:47] [zfr] z feedrate maximum       3750 mm/min
+
+From tinyG: [17:57:47] [ztn] z travel minimum         -100.000 mm
+
+From tinyG: [17:57:47] [ztm] z travel maximum            2.000 mm
+
+From tinyG: [17:57:47] [zjm] z jerk maximum           5000 mm/min^3 * 1 million
+
+From tinyG: [17:57:47] [zjh] z jerk homing           10000 mm/min^3 * 1 million
+
+From tinyG: [17:57:47] [zjd] z junction deviation        0.0000 mm (larger is faster)
+
+From tinyG: [17:57:47] [zhi] z homing input              5 [input 1-N or 0 to disable homing this axis]
+
+From tinyG: [17:57:47] [zhd] z homing direction          0 [0=search-to-negative, 1=search-to-positive]
+
+From tinyG: [17:57:47] [zsv] z search velocity        1000 mm/min
+
+From tinyG: [17:57:47] [zlv] z latch velocity       100.00 mm/min
+
+From tinyG: [17:57:47] [zlb] z latch backoff             5.000 mm
+
+From tinyG: [17:57:47] [zzb] z zero backoff             50.305 mm
+
+From tinyG: [17:57:47] [aam] a axis mode                 1 [standard]
+
+From tinyG: [17:57:47] [avm] a velocity maximum      20000 deg/min
+
+From tinyG: [17:57:47] [afr] a feedrate maximum      15000 deg/min
+
+From tinyG: [17:57:47] [atn] a travel minimum        -3600.000 deg
+
+From tinyG: [17:57:47] [atm] a travel maximum         3600.000 deg
+
+From tinyG: [17:57:47] [ajm] a jerk maximum          10000 deg/min^3 * 1 million
+
+From tinyG: [17:57:47] [ajh] a jerk homing           10000 deg/min^3 * 1 million
+
+From tinyG: [17:57:47] [ajd] a junction deviation        0.0000 deg (larger is faster)
+
+From tinyG: [17:57:47] [ara] a radius value              1.0000 deg
+
+From tinyG: [17:57:47] [ahi] a homing input              1 [input 1-N or 0 to disable homing this axis]
+
+From tinyG: [17:57:47] [ahd] a homing direction          1 [0=search-to-negative, 1=search-to-positive]
+
+From tinyG: [17:57:47] [asv] a search velocity        2000 deg/min
+
+From tinyG: [17:57:47] [alv] a latch velocity       500.00 deg/min
+
+From tinyG: [17:57:47] [alb] a latch backoff            20.000 deg
+
+From tinyG: [17:57:47] [azb] a zero backoff              0.000 deg
+
+From tinyG: [17:57:47] [bam] b axis mode                 0 [disabled]
+
+From tinyG: [17:57:47] [bvm] b velocity maximum       3600 deg/min
+
+From tinyG: [17:57:47] [bfr] b feedrate maximum       3600 deg/min
+
+From tinyG: [17:57:47] [btn] b travel minimum           -1.000 deg
+
+From tinyG: [17:57:47] [btm] b travel maximum           -1.000 deg
+
+From tinyG: [17:57:47] [bjm] b jerk maximum             20 deg/min^3 * 1 million
+
+From tinyG: [17:57:47] [bjh] b jerk homing              20 deg/min^3 * 1 million
+
+From tinyG: [17:57:47] [bjd] b junction deviation        0.0000 deg (larger is faster)
+
+From tinyG: [17:57:47] [bra] b radius value              1.0000 deg
+
+From tinyG: [17:57:47] [bhi] b homing input              0 [input 1-N or 0 to disable homing this axis]
+
+From tinyG: [17:57:47] [bhd] b homing direction          0 [0=search-to-negative, 1=search-to-positive]
+
+From tinyG: [17:57:47] [bsv] b search velocity        6000 deg/min
+
+From tinyG: [17:57:47] [blv] b latch velocity      1000.00 deg/min
+
+From tinyG: [17:57:47] [blb] b latch backoff             5.000 deg
+
+From tinyG: [17:57:47] [bzb] b zero backoff              2.000 deg
+
+From tinyG: [17:57:47] [cam] c axis mode                 1 [standard]
+
+From tinyG: [17:57:47] [cvm] c velocity maximum      10000 deg/min
+
+From tinyG: [17:57:47] [cfr] c feedrate maximum      10000 deg/min
+
+From tinyG: [17:57:47] [ctn] c travel minimum        -3600.000 deg
+
+From tinyG: [17:57:47] [ctm] c travel maximum         3600.000 deg
+
+From tinyG: [17:57:47] [cjm] c jerk maximum           5000 deg/min^3 * 1 million
+
+From tinyG: [17:57:47] [cjh] c jerk homing              20 deg/min^3 * 1 million
+
+From tinyG: [17:57:47] [cjd] c junction deviation        0.0000 deg (larger is faster)
+
+From tinyG: [17:57:47] [cra] c radius value              1.0000 deg
+
+From tinyG: [17:57:47] [chi] c homing input              0 [input 1-N or 0 to disable homing this axis]
+
+From tinyG: [17:57:47] [chd] c homing direction          0 [0=search-to-negative, 1=search-to-positive]
+
+From tinyG: [17:57:47] [csv] c search velocity        6000 deg/min
+
+From tinyG: [17:57:47] [clv] c latch velocity      1000.00 deg/min
+
+From tinyG: [17:57:47] [clb] c latch backoff             5.000 deg
+
+From tinyG: [17:57:47] [czb] c zero backoff              2.000 deg
+
+From tinyG: [17:57:47] [p1frq] pwm frequency               100 Hz
+
+From tinyG: [17:57:47] [p1csl] pwm cw speed lo            7900 RPM
+
+From tinyG: [17:57:47] [p1csh] pwm cw speed hi           12800 RPM
+
+From tinyG: [17:57:47] [p1cpl] pwm cw phase lo           0.130 [0..1]
+
+From tinyG: [17:57:47] [p1cph] pwm cw phase hi           0.170 [0..1]
+
+From tinyG: [17:57:47] [p1wsl] pwm ccw speed lo              0 RPM
+
+From tinyG: [17:57:47] [p1wsh] pwm ccw speed hi              0 RPM
+
+From tinyG: [17:57:47] [p1wpl] pwm ccw phase lo          0.100 [0..1]
+
+From tinyG: [17:57:47] [p1wph] pwm ccw phase hi          0.100 [0..1]
+
+From tinyG: [17:57:47] [p1pof] pwm phase off             0.100 [0..1]
+
+From tinyG: [17:57:47] [chd] c homing direction          0 [0=search-to-negative, 1=search-to-positive]
+
+From tinyG: [17:57:47] [csv] c search velocity        6000 deg/min
+
+From tinyG: [17:57:47] [clv] c latch velocity      1000.00 deg/min
+
+From tinyG: [17:57:47] [clb] c latch backoff             5.000 deg
+
+From tinyG: [17:57:47] [czb] c zero backoff              2.000 deg
+
+From tinyG: [17:57:47] [g54x] g54 x offset               0.000 mm
+
+From tinyG: [17:57:47] [g54y] g54 y offset               0.000 mm
+
+From tinyG: [17:57:47] [g54z] g54 z offset               0.000 mm
+
+From tinyG: [17:57:47] [g54a] g54 a offset               0.000 deg
+
+From tinyG: [17:57:47] [g54b] g54 b offset               0.000 deg
+
+From tinyG: [17:57:47] [g54c] g54 c offset               0.000 deg
+
+From tinyG: [17:57:47] [g55x] g55 x offset               0.000 mm
+
+From tinyG: [17:57:47] [g55y] g55 y offset               0.000 mm
+
+From tinyG: [17:57:47] [g55z] g55 z offset               0.000 mm
+
+From tinyG: [17:57:47] [g55a] g55 a offset               0.000 deg
+
+From tinyG: [17:57:47] [g55b] g55 b offset               0.000 deg
+
+From tinyG: [17:57:47] [g55c] g55 c offset               0.000 deg
+
+From tinyG: [17:57:48] [g56x] g56 x offset               0.000 mm
+
+From tinyG: [17:57:48] [g56y] g56 y offset               0.000 mm
+
+From tinyG: [17:57:48] [g56z] g56 z offset               0.000 mm
+
+From tinyG: [17:57:48] [g56a] g56 a offset               0.000 deg
+
+From tinyG: [17:57:48] [g56b] g56 b offset               0.000 deg
+
+From tinyG: [17:57:48] [g56c] g56 c offset               0.000 deg
+
+From tinyG: [17:57:48] [g57x] g57 x offset               0.000 mm
+
+From tinyG: [17:57:48] [g57y] g57 y offset               0.000 mm
+
+From tinyG: [17:57:48] [g57z] g57 z offset               0.000 mm
+
+From tinyG: [17:57:48] [g57a] g57 a offset               0.000 deg
+
+From tinyG: [17:57:48] [g57b] g57 b offset               0.000 deg
+
+From tinyG: [17:57:48] [g57c] g57 c offset               0.000 deg
+
+From tinyG: [17:57:48] [g58x] g58 x offset               0.000 mm
+
+From tinyG: [17:57:48] [g58y] g58 y offset               0.000 mm
+
+From tinyG: [17:57:48] [g58z] g58 z offset               0.000 mm
+
+From tinyG: [17:57:48] [g58a] g58 a offset               0.000 deg
+
+From tinyG: [17:57:48] [g58b] g58 b offset               0.000 deg
+
+From tinyG: [17:57:48] [g58c] g58 c offset               0.000 deg
+
+From tinyG: [17:57:48] [g59x] g59 x offset               0.000 mm
+
+From tinyG: [17:57:48] [g59y] g59 y offset               0.000 mm
+
+From tinyG: [17:57:48] [g59z] g59 z offset               0.000 mm
+
+From tinyG: [17:57:48] [g59a] g59 a offset               0.000 deg
+
+From tinyG: [17:57:48] [g59b] g59 b offset               0.000 deg
+
+From tinyG: [17:57:48] [g59c] g59 c offset               0.000 deg
+
+From tinyG: [17:57:48] [g92x] g92 x offset               0.000 mm
+
+From tinyG: [17:57:48] [g92y] g92 y offset               0.000 mm
+
+From tinyG: [17:57:48] [g92z] g92 z offset               0.000 mm
+
+From tinyG: [17:57:48] [g92a] g92 a offset               0.000 deg
+
+From tinyG: [17:57:48] [g92b] g92 b offset               0.000 deg
+
+From tinyG: [17:57:48] [g92c] g92 c offset               0.000 deg
+
+From tinyG: [17:57:48] [g28x] g28 x position             0.000 mm
+
+From tinyG: [17:57:48] [g28y] g28 y position             0.000 mm
+
+From tinyG: [17:57:48] [g28z] g28 z position             0.000 mm
+
+From tinyG: [17:57:48] [g28a] g28 a position             0.000 deg
+
+From tinyG: [17:57:48] [g28b] g28 b position             0.000 deg
+
+From tinyG: [17:57:48] [g28c] g28 c position             0.000 deg
+
+From tinyG: [17:57:48] [g30x] g30 x position             0.000 mm
+
+From tinyG: [17:57:48] [g30y] g30 y position             0.000 mm
+
+From tinyG: [17:57:48] [g30z] g30 z position             0.000 mm
+
+From tinyG: [17:57:48] [g30a] g30 a position             0.000 deg
+
+From tinyG: [17:57:48] [g30b] g30 b position             0.000 deg
+
+From tinyG: [17:57:48] [g30c] g30 c position             0.000 deg
+
+From tinyG: [17:57:48] tinyg [mm] ok> 
+
+Out > [18:04:14] {$$:}
+
+From tinyG: [18:04:14] {r:{err:"{$$:}"},f:[1,108,6]}
+
+From tinyG: [18:04:14] {sr:{stat:3}}
+
+Out > [18:04:28] {g91 g0 a90}
+
+From tinyG: [18:04:28] {r:{err:"{g91 g0 a90}"},f:[1,108,13]}
+
+From tinyG: [18:04:28] {sr:{stat:3}}
+
+Out > [18:04:36] {g:g91 g0 a90}
+
+From tinyG: [18:04:36] {r:{err:"{g:g91 g0 a90}"},f:[1,108,15]}
+
+From tinyG: [18:04:36] {sr:{stat:3}}
+

@@ -1,0 +1,234 @@
+[18:49:39] Starting Log file for session: 20201029-184939
+
+From tinyG: [18:49:40] {"r":{"fv":0.98,"fb":86.03,"hp":3,"hv":0,"id":"0213-0215-0515","msg":"SYSTEM READY"},"f":[1,0,1]}
+
+From tinyG: [18:49:40] tinyg [mm] ok> 
+
+From tinyG: [18:49:40] [ej]  enable json mode            0 [0=text,1=JSON]
+
+From tinyG: [18:49:40] tinyg [mm] ok> 
+
+Out > [18:49:43] g28.2a0
+
+Out > [18:49:43] $di1fn=0
+
+Out > [18:49:46] g90 g0 a30
+
+From tinyG: [18:49:46] tinyg [mm] ok> 
+
+From tinyG: [18:49:46] posa:-5.672,feed:2000.00,vel:2000.00,coor:0,dist:1,momo:1,stat:9
+
+From tinyG: [18:49:46] posa:-10.026,vel:0.03
+
+From tinyG: [18:49:46] posa:-4.351,vel:2000.00
+
+From tinyG: [18:49:46] posa:1.273,vel:0.81
+
+From tinyG: [18:49:46] vel:0.00
+
+From tinyG: [18:49:46] posa:-4.373,vel:2000.00
+
+From tinyG: [18:49:46] posa:-8.727,vel:0.03
+
+From tinyG: [18:49:46] posa:-7.779,feed:300.00,vel:300.00
+
+From tinyG: [18:49:46] posa:-6.775
+
+From tinyG: [18:49:46] posa:-5.770
+
+From tinyG: [18:49:46] posa:-4.773
+
+From tinyG: [18:49:46] posa:-3.768
+
+From tinyG: [18:49:46] posa:-2.771
+
+From tinyG: [18:49:46] posa:-1.766
+
+From tinyG: [18:49:46] posa:-0.769
+
+From tinyG: [18:49:46] [di1fn] input function          0 [0=none,1=limit,2=interlock,3=shutdown]
+
+From tinyG: [18:49:46] tinyg [mm] ok> 
+
+From tinyG: [18:49:46] tinyg [mm] ok> 
+
+Out > [18:49:46] g90 g0 a-20 z-9
+
+From tinyG: [18:49:47] tinyg [mm] ok> 
+
+From tinyG: [18:49:47] posa:0.000,vel:0.00,stat:5
+
+From tinyG: [18:49:47] posa:21.384,feed:250.00,vel:9671.33,coor:1,dist:0,momo:0
+
+Out > [18:49:47] g90 g0 a30
+
+From tinyG: [18:49:47] tinyg [mm] ok> 
+
+From tinyG: [18:49:47] posz:-0.593,posa:26.704,vel:4221.90
+
+From tinyG: [18:49:47] posz:-3.245,posa:11.974,vel:4515.87
+
+From tinyG: [18:49:47] posz:-5.922,posa:-2.902
+
+From tinyG: [18:49:48] posz:-8.567,posa:-17.594,vel:4048.41
+
+From tinyG: [18:49:48] posz:-9.000,posa:-14.207,vel:8705.25
+
+From tinyG: [18:49:48] posa:18.977,vel:9995.55
+
+From tinyG: [18:49:48] posa:30.000,vel:0.00,stat:3
+
+Out > [18:49:48] g90 g0 z0
+
+Out > [18:49:48] g90 g0 a-30
+
+From tinyG: [18:49:48] tinyg [mm] ok> 
+
+From tinyG: [18:49:48] tinyg [mm] ok> 
+
+From tinyG: [18:49:48] posz:-7.182,vel:800.00,stat:5
+
+From tinyG: [18:49:49] posz:-4.506
+
+From tinyG: [18:49:49] posz:-1.829
+
+From tinyG: [18:49:49] posz:0.000,posa:29.909,vel:418.28
+
+From tinyG: [18:49:49] posa:4.921,vel:10000.00
+
+From tinyG: [18:49:49] posa:-27.370,vel:6148.01
+
+From tinyG: [18:49:50] posa:-30.000,vel:0.00,stat:3
+
+Out > [18:49:50] g90 g0 a20 z-9
+
+Out > [18:49:50] g90 g0 a-30
+
+From tinyG: [18:49:50] tinyg [mm] ok> 
+
+From tinyG: [18:49:50] tinyg [mm] ok> 
+
+From tinyG: [18:49:50] posz:-1.819,posa:-19.896,vel:4515.87,stat:5
+
+From tinyG: [18:49:50] posz:-4.496,posa:-5.020
+
+From tinyG: [18:49:50] posz:-7.154,posa:9.745
+
+From tinyG: [18:49:51] posz:-9.000,posa:19.658,vel:1190.04
+
+From tinyG: [18:49:51] posa:-6.261,vel:10000.00
+
+From tinyG: [18:49:51] posa:-29.994,vel:107.13
+
+From tinyG: [18:49:51] posa:-30.000,vel:0.00,stat:3
+
+Out > [18:49:51] g90 g0 z0
+
+Out > [18:49:51] $di1fn=2
+
+Out > [18:49:51] g90 g0 a-15
+
+From tinyG: [18:49:51] tinyg [mm] ok> 
+
+From tinyG: [18:49:51] {"er":{"fb":86.03,"st":9,"msg":"File not open - write_persistent"}}
+
+From tinyG: [18:49:51] [di1fn] input function          2 [0=none,1=limit,2=interlock,3=shutdown]
+
+From tinyG: [18:49:51] tinyg [mm] ok> 
+
+From tinyG: [18:49:51] tinyg [mm] ok> 
+
+From tinyG: [18:49:51] posz:-7.182,vel:800.00,stat:5
+
+From tinyG: [18:49:52] posz:-4.506
+
+From tinyG: [18:49:52] posz:-1.809
+
+From tinyG: [18:49:52] posz:0.000,posa:-29.892,vel:503.18
+
+From tinyG: [18:49:52] posa:-15.032,vel:349.30
+
+From tinyG: [18:49:52] posa:-15.000,vel:0.00,stat:3
+
+Out > [18:49:52] g90 g0 a-10
+
+Out > [18:49:52] g90 g0 a-15
+
+From tinyG: [18:49:52] tinyg [mm] ok> 
+
+From tinyG: [18:49:52] tinyg [mm] ok> 
+
+From tinyG: [18:49:53] posa:-11.115,vel:2609.07,stat:5
+
+From tinyG: [18:49:53] posa:-15.000,vel:0.00,stat:3
+
+Out > [18:49:53] g91 g1 a30 f250
+
+Out > [18:49:53] g90 g0 z-5
+
+From tinyG: [18:49:53] tinyg [mm] ok> 
+
+From tinyG: [18:49:53] tinyg [mm] ok> 
+
+From tinyG: [18:49:53] posa:-14.209,vel:250.00,dist:1,momo:1,stat:5
+
+From tinyG: [18:49:53] posa:-13.365
+
+From tinyG: [18:49:54] posa:-12.528
+
+From tinyG: [18:49:54] posa:-11.697
+
+From tinyG: [18:49:54] posa:-10.859
+
+From tinyG: [18:49:54] posa:-10.015
+
+From tinyG: [18:49:54] posa:-9.178
+
+From tinyG: [18:49:55] posa:-8.347
+
+From tinyG: [18:49:55] posa:-7.509
+
+From tinyG: [18:49:55] posa:-6.678
+
+From tinyG: [18:49:55] posa:-5.841
+
+From tinyG: [18:49:55] posa:-5.010
+
+From tinyG: [18:49:56] posa:-4.173
+
+From tinyG: [18:49:56] posa:-3.341
+
+From tinyG: [18:49:56] posa:-2.504
+
+From tinyG: [18:49:56] posa:-1.673
+
+From tinyG: [18:49:56] posa:-0.836
+
+From tinyG: [18:49:57] posa:-0.026,vel:34.79,stat:6
+
+From tinyG: [18:49:57] [di1fn] input function          0 [0=none,1=limit,2=interlock,3=shutdown]
+
+From tinyG: [18:49:57] tinyg [mm] ok> 
+
+From tinyG: [18:49:57] A position:         -0.026 deg
+
+From tinyG: [18:49:57] tinyg [mm] ok> 
+
+Out > [18:49:57] g90 g0 z1
+
+Out > [18:49:57] g90 g0 z0
+
+From tinyG: [18:49:57] tinyg [mm] ok> 
+
+From tinyG: [18:49:57] tinyg [mm] ok> 
+
+From tinyG: [18:49:57] posz:0.022,vel:121.22,dist:0,momo:0,stat:5
+
+From tinyG: [18:49:57] posz:0.935,vel:182.63
+
+From tinyG: [18:49:57] posz:0.000,vel:0.00,stat:3
+
+Out > [18:49:57] EOF
+
+Out > [18:49:57] 
+

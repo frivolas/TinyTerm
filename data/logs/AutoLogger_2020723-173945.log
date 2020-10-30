@@ -1,0 +1,216 @@
+[17:39:45] Starting Log file for session: 2020723-173945
+
+From tinyG: [17:39:47] {"r":{"fv":0.98,"fb":86.03,"hp":3,"hv":0,"id":"0213-0215-0515","msg":"SYSTEM READY"},"f":[1,0,1]}
+
+From tinyG: [17:39:48] {"r":{"fv":0.98,"fb":86.03,"hp":3,"hv":0,"id":"0213-0215-0515","msg":"SYSTEM READY"},"f":[1,0,1]}
+
+Out > [17:39:52] G28.2 Z0 X0
+
+Out > [17:39:52] G90
+
+From tinyG: [17:39:52] {"sr":{"line":0,"posx":0.000,"posy":0.000,"posz":-1.455,"posa":0.000,"feed":799.99,"vel":799.99,"unit":1,"coor":0,"dist":1,"admo":1,"frmo":1,"momo":1,"stat":9}}
+
+From tinyG: [17:39:52] {"sr":{"posz":-4.790}}
+
+From tinyG: [17:39:53] {"sr":{"posz":-8.125}}
+
+From tinyG: [17:39:53] {"sr":{"posz":-10.000,"vel":0.00}}
+
+From tinyG: [17:39:53] {"sr":{"posz":-7.864,"vel":799.99}}
+
+From tinyG: [17:39:53] {"sr":{"posz":-4.505}}
+
+From tinyG: [17:39:54] {"sr":{"posz":-1.165}}
+
+From tinyG: [17:39:54] {"sr":{"posz":2.174}}
+
+From tinyG: [17:39:54] {"sr":{"posz":5.514}}
+
+From tinyG: [17:39:54] {"sr":{"posz":8.854}}
+
+From tinyG: [17:39:55] {"sr":{"posz":12.193}}
+
+From tinyG: [17:39:55] {"sr":{"posz":15.513}}
+
+From tinyG: [17:39:55] {"sr":{"posz":18.873}}
+
+From tinyG: [17:39:55] {"sr":{"posz":22.212}}
+
+From tinyG: [17:39:56] {"sr":{"posz":25.552}}
+
+From tinyG: [17:39:56] {"sr":{"posz":28.892}}
+
+From tinyG: [17:39:56] {"sr":{"posz":32.232}}
+
+From tinyG: [17:39:56] {"sr":{"posz":35.571}}
+
+From tinyG: [17:39:57] {"sr":{"posz":38.910}}
+
+From tinyG: [17:39:57] {"sr":{"posz":42.250}}
+
+From tinyG: [17:39:57] {"sr":{"posz":45.589}}
+
+From tinyG: [17:39:57] {"sr":{"posz":48.929}}
+
+From tinyG: [17:39:58] {"sr":{"posz":52.248}}
+
+From tinyG: [17:39:58] {"sr":{"posz":55.608}}
+
+From tinyG: [17:39:58] {"sr":{"posz":58.947}}
+
+From tinyG: [17:39:58] {"sr":{"posz":62.287}}
+
+From tinyG: [17:39:59] {"sr":{"posz":65.626}}
+
+From tinyG: [17:39:59] {"sr":{"posz":68.965}}
+
+From tinyG: [17:39:59] {"sr":{"posz":72.285}}
+
+From tinyG: [17:39:59] {"sr":{"posz":75.644}}
+
+From tinyG: [17:40:00] {"sr":{"posz":78.984}}
+
+From tinyG: [17:40:00] {"sr":{"posz":82.323}}
+
+From tinyG: [17:40:00] {"sr":{"posz":85.663}}
+
+From tinyG: [17:40:00] {"sr":{"posz":89.002}}
+
+From tinyG: [17:40:01] {"sr":{"posz":92.342}}
+
+From tinyG: [17:40:01] {"sr":{"posz":94.989,"vel":63.44}}
+
+From tinyG: [17:40:01] {"sr":{"posz":94.121,"vel":781.17}}
+
+From tinyG: [17:40:01] {"sr":{"posz":90.789,"vel":799.99}}
+
+From tinyG: [17:40:02] {"sr":{"posz":87.455}}
+
+From tinyG: [17:40:02] {"sr":{"posz":85.002,"vel":18.82}}
+
+From tinyG: [17:40:02] {"sr":{"posz":85.234,"feed":100.00,"vel":100.00}}
+
+From tinyG: [17:40:02] {"sr":{"posz":85.654}}
+
+From tinyG: [17:40:03] {"sr":{"posz":86.070}}
+
+From tinyG: [17:40:03] {"sr":{"posz":86.490}}
+
+From tinyG: [17:40:03] {"sr":{"posz":86.908}}
+
+From tinyG: [17:40:03] {"sr":{"posz":87.326}}
+
+From tinyG: [17:40:04] {"sr":{"posz":87.744}}
+
+From tinyG: [17:40:04] {"sr":{"posz":88.162}}
+
+From tinyG: [17:40:04] {"sr":{"posz":88.580}}
+
+From tinyG: [17:40:04] {"sr":{"posz":88.998}}
+
+From tinyG: [17:40:05] {"sr":{"posz":89.415}}
+
+From tinyG: [17:40:05] {"sr":{"posz":89.833}}
+
+From tinyG: [17:40:05] {"sr":{"posz":90.251}}
+
+From tinyG: [17:40:05] {"sr":{"posz":90.667}}
+
+From tinyG: [17:40:06] {"sr":{"posz":91.087}}
+
+From tinyG: [17:40:06] {"sr":{"posz":91.505}}
+
+From tinyG: [17:40:06] {"sr":{"posz":91.923}}
+
+From tinyG: [17:40:06] {"sr":{"posz":92.341}}
+
+From tinyG: [17:40:07] {"sr":{"posz":92.759}}
+
+From tinyG: [17:40:07] {"sr":{"posz":93.177}}
+
+From tinyG: [17:40:07] {"sr":{"posz":93.595}}
+
+From tinyG: [17:40:07] {"sr":{"posz":94.012}}
+
+From tinyG: [17:40:08] {"sr":{"posz":94.430}}
+
+From tinyG: [17:40:08] {"sr":{"posz":94.848}}
+
+From tinyG: [17:40:08] {"sr":{"posz":94.929,"feed":799.99,"vel":211.33}}
+
+From tinyG: [17:40:08] {"sr":{"posz":93.002,"vel":16.94}}
+
+From tinyG: [17:40:09] {"sr":{"posx":-7.320,"posz":0.000,"feed":3000.00,"vel":3000.00}}
+
+From tinyG: [17:40:09] {"sr":{"posx":-19.844}}
+
+From tinyG: [17:40:09] {"sr":{"posx":-32.368}}
+
+From tinyG: [17:40:09] {"sr":{"posx":-44.892}}
+
+From tinyG: [17:40:10] {"sr":{"posx":-57.341}}
+
+From tinyG: [17:40:10] {"sr":{"posx":-69.939}}
+
+From tinyG: [17:40:10] {"sr":{"posx":-82.463}}
+
+From tinyG: [17:40:10] {"sr":{"posx":-94.986}}
+
+From tinyG: [17:40:11] {"sr":{"posx":-107.509}}
+
+From tinyG: [17:40:11] {"sr":{"posx":-120.032}}
+
+From tinyG: [17:40:11] {"sr":{"posx":-132.556}}
+
+From tinyG: [17:40:11] {"sr":{"posx":-145.080}}
+
+From tinyG: [17:40:12] {"sr":{"posx":-157.605}}
+
+From tinyG: [17:40:12] {"sr":{"posx":-170.129}}
+
+From tinyG: [17:40:12] {"sr":{"posx":-182.579}}
+
+From tinyG: [17:40:12] {"sr":{"posx":-195.178}}
+
+From tinyG: [17:40:13] {"sr":{"posx":-207.703}}
+
+From tinyG: [17:40:13] {"sr":{"posx":-220.227}}
+
+From tinyG: [17:40:13] {"sr":{"posx":-232.752}}
+
+From tinyG: [17:40:13] {"sr":{"posx":-245.276}}
+
+From tinyG: [17:40:14] {"sr":{"posx":-257.800}}
+
+From tinyG: [17:40:14] {"sr":{"posx":-270.322}}
+
+From tinyG: [17:40:14] {"sr":{"posx":-282.844}}
+
+From tinyG: [17:40:14] {"sr":{"posx":-295.366}}
+
+From tinyG: [17:40:15] {"sr":{"posx":-307.813}}
+
+From tinyG: [17:40:15] {"sr":{"posx":-320.410}}
+
+From tinyG: [17:40:15] {"sr":{"posx":-332.932}}
+
+From tinyG: [17:40:15] {"sr":{"posx":-345.454}}
+
+From tinyG: [17:40:18] {"sr":{"posx":-357.976}}
+
+From tinyG: [17:40:18] {"sr":{"posx":-370.498}}
+
+From tinyG: [17:40:18] {"sr":{"posx":-383.020}}
+
+From tinyG: [17:40:18] {"sr":{"posx":-395.542}}
+
+From tinyG: [17:40:18] {"sr":{"posx":-408.064}}
+
+From tinyG: [17:40:18] {"sr":{"posx":-420.511}}
+
+From tinyG: [17:40:18] {"sr":{"posx":-433.108}}
+
+From tinyG: [17:40:18] {"sr":{"posx":-439.656,"vel":2006.49}}
+
+From tinyG: [17:40:18] {"sr":{"posx":-427.230,"vel":3000.00}}
+

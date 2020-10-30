@@ -1,0 +1,16 @@
+[16:54:31] Starting Log file for session: 202076-165431
+
+From tinyG: [16:54:33] {"r":{"fv":0.98,"fb":86.03,"hp":3,"hv":0,"id":"0213-0215-0515","msg":"SYSTEM READY"},"f":[1,0,1]}
+
+Sent to TinyG: [16:54:40] G28.3 X0
+
+From tinyG: [16:54:40] {"r":{},"f":[1,0,9]}
+
+From tinyG: [16:54:40] {"sr":{"line":0,"posx":0.000,"posy":0.000,"posz":0.000,"posa":0.000,"feed":0.00,"vel":0.00,"unit":1,"coor":1,"dist":0,"admo":1,"frmo":1,"momo":4,"stat":1}}
+
+Sent to TinyG: [16:54:47] G28.3 Z0
+
+From tinyG: [16:54:47] {"r":{},"f":[1,0,9]}
+
+From tinyG: [16:55:04] {"r":{},"f":[1,0,2]}
+

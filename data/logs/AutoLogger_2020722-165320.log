@@ -1,0 +1,12 @@
+[16:53:20] Starting Log file for session: 2020722-165320
+
+From tinyG: [16:53:22] {r:{fv:0.98,fb:86.03,hp:3,hv:0,id:"0213-0215-0515",msg:"SYSTEM READY"},f:[1,0,1]}
+
+From tinyG: [16:53:22] tinyg [mm] ok> 
+
+Sent to TinyG: [16:53:29] g90 g0 a0
+
+From tinyG: [16:53:29] tinyg [mm] ok> 
+
+From tinyG: [16:53:29] line:0,posx:0.000,posy:0.000,posz:-12.000,posa:0.000,feed:500.00,vel:0.00,unit:1,coor:0,dist:0,admo:1,frmo:1,momo:0,stat:3
+

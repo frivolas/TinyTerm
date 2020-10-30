@@ -1,0 +1,52 @@
+[15:12:06] Starting Log file for session: 20201029-15126
+
+From tinyG: [15:12:08] {"r":{"fv":0.98,"fb":86.03,"hp":3,"hv":0,"id":"0213-0215-0515","msg":"SYSTEM READY"},"f":[1,0,1]}
+
+From tinyG: [15:12:08] tinyg [mm] ok> 
+
+From tinyG: [15:12:08] [ej]  enable json mode            0 [0=text,1=JSON]
+
+From tinyG: [15:12:08] tinyg [mm] ok> 
+
+Out > [15:12:13] g28.2a0
+
+From tinyG: [15:12:13] tinyg [mm] ok> 
+
+From tinyG: [15:12:13] posa:-5.646,feed:2000.00,vel:2000.00,coor:0,dist:1,momo:1,stat:9
+
+From tinyG: [15:12:13] posa:-10.000,vel:0.03
+
+From tinyG: [15:12:13] posa:-4.325,vel:2000.00
+
+From tinyG: [15:12:14] posa:1.249,vel:0.03
+
+From tinyG: [15:12:14] vel:0.00
+
+From tinyG: [15:12:14] posa:-4.397,vel:2000.00
+
+From tinyG: [15:12:14] posa:-8.751,vel:0.03
+
+From tinyG: [15:12:14] posa:-7.804,feed:300.00,vel:300.00
+
+From tinyG: [15:12:14] posa:-6.799
+
+From tinyG: [15:12:15] posa:-5.794
+
+From tinyG: [15:12:15] posa:-4.797
+
+From tinyG: [15:12:15] posa:-3.792
+
+From tinyG: [15:12:15] posa:-2.795
+
+From tinyG: [15:12:15] posa:-1.790
+
+From tinyG: [15:12:16] posa:-0.793
+
+From tinyG: [15:12:16] posa:0.000,feed:250.00,vel:0.00,coor:1,dist:0,momo:4,stat:3
+
+Out > [15:15:15] g28.2a0
+
+Out > [15:15:15] $di1fn=0
+
+Out > [15:15:15] g90 g0 a30
+

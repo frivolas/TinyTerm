@@ -1,0 +1,9 @@
+[17:09:27] Starting Log file for session: 20201013-17927
+
+[17:09:17] Terminal cleared and ready...
+[17:09:21] > g28.3 z-10
+[17:09:21] < tinyg [mm] ok> 
+[17:09:25] > g28.3 z-15
+[17:09:25] < tinyg [mm] ok> 
+
+

@@ -1,0 +1,9 @@
+[13:42:16] Starting Log file for session: 2020724-134216
+
+[13:42:06] Terminal cleared and ready...
+[13:42:13] > $di1fn=0
+[13:42:13] TinyG Command received 
+[13:42:13] < [di1fn] input function          0 [0=none,1=limit,2=interlock,3=shutdown]
+[13:42:13] < tinyg [mm] ok> 
+
+

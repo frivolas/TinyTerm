@@ -1,0 +1,140 @@
+[16:43:29] Starting Log file for session: 2020724-164329
+
+From tinyG: [16:43:30] {r:{fv:0.98,fb:86.03,hp:3,hv:0,id:"0213-0215-0515",msg:"SYSTEM READY"},f:[1,0,1]}
+
+From tinyG: [16:43:30] tinyg [mm] ok> 
+
+From tinyG: [16:43:30] [ej]  enable json mode            0 [0=text,1=JSON]
+
+From tinyG: [16:43:30] tinyg [mm] ok> 
+
+Out > [16:43:33] G90 G0 Z-12
+
+Out > [16:43:33] G28.2 A0
+
+From tinyG: [16:43:33] tinyg [mm] ok> 
+
+From tinyG: [16:43:33] tinyg [mm] ok> 
+
+From tinyG: [16:43:33] posz:-11.293,vel:2083.77,stat:9
+
+From tinyG: [16:43:33] {er:{fb:86.03,st:94,msg:"Planner assertion failure - zero length line in calculate trapezoid"}}
+
+From tinyG: [16:43:33] {er:{fb:86.03,st:94,msg:"Planner assertion failure - zero length move in exec_aline"}}
+
+Out > [16:43:33] G91 G0 A30
+
+Out > [16:43:36] $di1fn=2
+
+Out > [16:43:36] G91 G0 A1
+
+From tinyG: [16:43:36] posz:-12.000,posa:-6.845,feed:5000.00,vel:5000.00,dist:1,momo:1
+
+From tinyG: [16:43:36] posa:-20.000,vel:0.01
+
+From tinyG: [16:43:36] posa:-3.253,vel:5000.00
+
+From tinyG: [16:43:36] posa:3.700,vel:2706.53
+
+From tinyG: [16:43:36] posa:-15.233,vel:1499.04
+
+From tinyG: [16:43:36] posa:-14.296,feed:500.00,vel:500.00
+
+From tinyG: [16:43:36] posa:-12.209
+
+From tinyG: [16:43:36] posa:-10.122
+
+From tinyG: [16:43:36] posa:-8.036
+
+From tinyG: [16:43:36] posa:-5.949
+
+From tinyG: [16:43:36] posa:-3.862
+
+From tinyG: [16:43:36] posa:-1.775
+
+From tinyG: [16:43:36] tinyg [mm] ok> 
+
+From tinyG: [16:43:36] {er:{fb:86.03,st:9,msg:"File not open - write_persistent"}}
+
+From tinyG: [16:43:36] [di1fn] input function          2 [0=none,1=limit,2=interlock,3=shutdown]
+
+From tinyG: [16:43:36] tinyg [mm] ok> 
+
+From tinyG: [16:43:36] tinyg [mm] ok> 
+
+Out > [16:43:36] $di1ac=2
+
+Out > [16:43:37] G91 G1 A-30 F250
+
+From tinyG: [16:43:37] {er:{fb:86.03,st:9,msg:"File not open - write_persistent"}}
+
+From tinyG: [16:43:37] [di1ac] input action            2 [0=none,1=stop,2=halt,3=stop_steps,4=panic,5=reset]
+
+From tinyG: [16:43:37] tinyg [mm] ok> 
+
+From tinyG: [16:43:37] tinyg [mm] ok> 
+
+From tinyG: [16:43:37] posa:0.000,vel:0.00,stat:5
+
+From tinyG: [16:43:37] posa:28.059,feed:250.00,vel:3814.62,momo:0
+
+From tinyG: [16:43:37] posa:30.396,vel:250.00,momo:1
+
+From tinyG: [16:43:37] posa:29.346
+
+From tinyG: [16:43:38] posa:28.302
+
+From tinyG: [16:43:38] posa:27.259
+
+From tinyG: [16:43:38] posa:26.215
+
+From tinyG: [16:43:38] posa:25.171
+
+From tinyG: [16:43:39] posa:24.127
+
+From tinyG: [16:43:39] posa:23.083
+
+From tinyG: [16:43:39] posa:22.039
+
+From tinyG: [16:43:39] posa:20.996
+
+From tinyG: [16:43:40] posa:19.952
+
+From tinyG: [16:43:40] posa:18.908
+
+From tinyG: [16:43:40] posa:17.864
+
+From tinyG: [16:43:40] posa:16.820
+
+From tinyG: [16:43:41] posa:15.777
+
+From tinyG: [16:43:41] posa:14.733
+
+From tinyG: [16:43:41] posa:13.689
+
+From tinyG: [16:43:41] posa:12.646
+
+From tinyG: [16:43:42] posa:11.701
+
+From tinyG: [16:43:42] posa:10.657
+
+From tinyG: [16:43:42] posa:9.614
+
+From tinyG: [16:43:42] posa:8.570
+
+From tinyG: [16:43:43] posa:7.527
+
+From tinyG: [16:43:43] posa:6.483
+
+From tinyG: [16:43:43] posa:5.440
+
+From tinyG: [16:43:43] posa:4.403
+
+From tinyG: [16:43:44] posa:3.353
+
+From tinyG: [16:43:44] posa:2.309
+
+From tinyG: [16:43:44] posa:1.266
+
+From tinyG: [16:43:44] posa:1.000,vel:0.00,stat:3
+

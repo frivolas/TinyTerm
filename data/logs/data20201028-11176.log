@@ -1,0 +1,9 @@
+[11:17:06] Starting Log file for session: 20201028-11176
+
+[11:16:58] Terminal cleared and ready...
+[11:17:01] > $di1ac=1
+[11:17:01] TinyG Command received 
+[11:17:01] < [di1ac] input action            1 [0=none,1=stop,2=halt,3=stop_steps,4=panic,5=reset]
+[11:17:01] < tinyg [mm] ok> 
+
+

@@ -1,0 +1,1007 @@
+[16:55:14] Starting Log file for session: 202076-165514
+
+From tinyG: [16:55:16] {"r":{"fv":0.98,"fb":86.03,"hp":3,"hv":0,"id":"0213-0215-0515","msg":"SYSTEM READY"},"f":[1,0,1]}
+
+Sent to TinyG: [16:55:23] $$
+
+From tinyG: [16:55:23] [fb]  firmware build             86.03
+
+From tinyG: [16:55:23] [fv]  firmware version            0.98
+
+From tinyG: [16:55:23] [cv]  configuration version       7.00
+
+From tinyG: [16:55:23] [hp]  hardware platform           3.00
+
+From tinyG: [16:55:23] [hv]  hardware version            0.00
+
+From tinyG: [16:55:23] [id]  TinyG ID       0213-0215-0515
+
+From tinyG: [16:55:23] [ja]  junction aggression         0.25
+
+From tinyG: [16:55:23] [ct]  chordal tolerance           0.0100 mm
+
+From tinyG: [16:55:23] [sl]  soft limit enable           0 [0=disable,1=enable]
+
+From tinyG: [16:55:23] [lim] limit switch enable         1 [0=disable,1=enable]
+
+From tinyG: [16:55:23] [saf] safety interlock enable     1 [0=disable,1=enable]
+
+From tinyG: [16:55:23] [mt]  motor idle timeout          2.00 seconds
+
+From tinyG: [16:55:23] [spep] spindle enable polarity    1 [0=active_low,1=active_high]
+
+From tinyG: [16:55:23] [spdp] spindle direction polarity 0 [0=CW_low,1=CW_high]
+
+From tinyG: [16:55:23] [spph] spindle pause on hold      1 [0=no,1=pause_on_hold]
+
+From tinyG: [16:55:23] [spdw] spindle dwell time         1.0 seconds
+
+From tinyG: [16:55:23] [cofp] coolant flood polarity     1 [0=low is ON,1=high is ON]
+
+From tinyG: [16:55:23] [comp] coolant mist polarity      1 [0=low is ON,1=high is ON]
+
+From tinyG: [16:55:23] [coph] coolant pause on hold      0 [0=no,1=pause_on_hold]
+
+From tinyG: [16:55:23] [tv]  text verbosity              1 [0=silent,1=verbose]
+
+From tinyG: [16:55:23] [ej]  enable json mode            0 [0=text,1=JSON]
+
+From tinyG: [16:55:23] [jv]  json verbosity              2 [0=silent,1=footer,2=messages,3=configs,4=linenum,5=verbose]
+
+From tinyG: [16:55:23] [js]  json serialize style        1 [0=relaxed,1=strict]
+
+From tinyG: [16:55:23] [qv]  queue report verbosity      0 [0=off,1=single,2=triple]
+
+From tinyG: [16:55:23] [sv]  status report verbosity     1 [0=off,1=filtered,2=verbose]
+
+From tinyG: [16:55:23] [si]  status interval           250 ms
+
+From tinyG: [16:55:23] [gpl] default gcode plane         0 [0=G17,1=G18,2=G19]
+
+From tinyG: [16:55:23] [gun] default gcode units mode    1 [0=G20,1=G21]
+
+From tinyG: [16:55:23] [gco] default gcode coord system  1 [1-6 (G54-G59)]
+
+From tinyG: [16:55:23] [gpa] default gcode path control  2 [0=G61,1=G61.1,2=G64]
+
+From tinyG: [16:55:23] [gdi] default gcode distance mode 0 [0=G90,1=G91]
+
+From tinyG: [16:55:23] [1ma] m1 map to axis              0 [0=X,1=Y,2=Z...]
+
+From tinyG: [16:55:23] [1sa] m1 step angle               1.800 deg
+
+From tinyG: [16:55:23] [1tr] m1 travel per revolution   40.0000 mm
+
+From tinyG: [16:55:23] [1mi] m1 microsteps               8 [1,2,4,8,16,32]
+
+From tinyG: [16:55:23] [1po] m1 polarity                 0 [0=normal,1=reverse]
+
+From tinyG: [16:55:23] [1pm] m1 power management         2 [0=disabled,1=always on,2=in cycle,3=when moving]
+
+From tinyG: [16:55:23] [1pl] m1 motor power level        0.375 [0.000=minimum, 1.000=maximum]
+
+From tinyG: [16:55:23] [2ma] m2 map to axis              1 [0=X,1=Y,2=Z...]
+
+From tinyG: [16:55:23] [2sa] m2 step angle               1.800 deg
+
+From tinyG: [16:55:23] [2tr] m2 travel per revolution   40.0000 mm
+
+From tinyG: [16:55:23] [2mi] m2 microsteps               8 [1,2,4,8,16,32]
+
+From tinyG: [16:55:23] [2po] m2 polarity                 0 [0=normal,1=reverse]
+
+From tinyG: [16:55:23] [2pm] m2 power management         2 [0=disabled,1=always on,2=in cycle,3=when moving]
+
+From tinyG: [16:55:23] [2pl] m2 motor power level        0.375 [0.000=minimum, 1.000=maximum]
+
+From tinyG: [16:55:23] [3ma] m3 map to axis              1 [0=X,1=Y,2=Z...]
+
+From tinyG: [16:55:23] [3sa] m3 step angle               1.800 deg
+
+From tinyG: [16:55:23] [3tr] m3 travel per revolution   40.0000 mm
+
+From tinyG: [16:55:23] [3mi] m3 microsteps               8 [1,2,4,8,16,32]
+
+From tinyG: [16:55:23] [3po] m3 polarity                 1 [0=normal,1=reverse]
+
+From tinyG: [16:55:23] [3pm] m3 power management         2 [0=disabled,1=always on,2=in cycle,3=when moving]
+
+From tinyG: [16:55:23] [3pl] m3 motor power level        0.375 [0.000=minimum, 1.000=maximum]
+
+From tinyG: [16:55:23] [4ma] m4 map to axis              2 [0=X,1=Y,2=Z...]
+
+From tinyG: [16:55:23] [4sa] m4 step angle               1.800 deg
+
+From tinyG: [16:55:23] [4tr] m4 travel per revolution    1.2500 mm
+
+From tinyG: [16:55:23] [4mi] m4 microsteps               8 [1,2,4,8,16,32]
+
+From tinyG: [16:55:23] [4po] m4 polarity                 0 [0=normal,1=reverse]
+
+From tinyG: [16:55:23] [4pm] m4 power management         2 [0=disabled,1=always on,2=in cycle,3=when moving]
+
+From tinyG: [16:55:23] [4pl] m4 motor power level        0.750 [0.000=minimum, 1.000=maximum]
+
+From tinyG: [16:55:23] [5ma] m5 map to axis              4 [0=X,1=Y,2=Z...]
+
+From tinyG: [16:55:23] [5sa] m5 step angle               1.800 deg
+
+From tinyG: [16:55:23] [5tr] m5 travel per revolution  360.0000 mm
+
+From tinyG: [16:55:23] [5mi] m5 microsteps               8 [1,2,4,8,16,32]
+
+From tinyG: [16:55:23] [5po] m5 polarity                 0 [0=normal,1=reverse]
+
+From tinyG: [16:55:23] [5pm] m5 power management         2 [0=disabled,1=always on,2=in cycle,3=when moving]
+
+From tinyG: [16:55:23] [5pl] m5 motor power level        0.000 [0.000=minimum, 1.000=maximum]
+
+From tinyG: [16:55:23] [6ma] m6 map to axis              5 [0=X,1=Y,2=Z...]
+
+From tinyG: [16:55:23] [6sa] m6 step angle               1.800 deg
+
+From tinyG: [16:55:23] [6tr] m6 travel per revolution  360.0000 mm
+
+From tinyG: [16:55:23] [6mi] m6 microsteps               8 [1,2,4,8,16,32]
+
+From tinyG: [16:55:23] [6po] m6 polarity                 0 [0=normal,1=reverse]
+
+From tinyG: [16:55:23] [6pm] m6 power management         2 [0=disabled,1=always on,2=in cycle,3=when moving]
+
+From tinyG: [16:55:23] [6pl] m6 motor power level        0.000 [0.000=minimum, 1.000=maximum]
+
+From tinyG: [16:55:23] [xam] x axis mode                 1 [standard]
+
+From tinyG: [16:55:23] [xvm] x velocity maximum      50000 mm/min
+
+From tinyG: [16:55:23] [xfr] x feedrate maximum      50000 mm/min
+
+From tinyG: [16:55:23] [xtn] x travel minimum            0.000 mm
+
+From tinyG: [16:55:23] [xtm] x travel maximum          420.000 mm
+
+From tinyG: [16:55:23] [xjm] x jerk maximum          10000 mm/min^3 * 1 million
+
+From tinyG: [16:55:23] [xjh] x jerk homing           20000 mm/min^3 * 1 million
+
+From tinyG: [16:55:23] [xjd] x junction deviation        0.0000 mm (larger is faster)
+
+From tinyG: [16:55:23] [xhi] x homing input              1 [input 1-N or 0 to disable homing this axis]
+
+From tinyG: [16:55:23] [xhd] x homing direction          0 [0=search-to-negative, 1=search-to-positive]
+
+From tinyG: [16:55:23] [xsv] x search velocity        3000 mm/min
+
+From tinyG: [16:55:23] [xlv] x latch velocity       100.00 mm/min
+
+From tinyG: [16:55:23] [xlb] x latch backoff            20.000 mm
+
+From tinyG: [16:55:23] [xzb] x zero backoff              3.000 mm
+
+From tinyG: [16:55:23] [yam] y axis mode                 1 [standard]
+
+From tinyG: [16:55:23] [yvm] y velocity maximum      50000 mm/min
+
+From tinyG: [16:55:23] [yfr] y feedrate maximum      50000 mm/min
+
+From tinyG: [16:55:23] [ytn] y travel minimum            0.000 mm
+
+From tinyG: [16:55:23] [ytm] y travel maximum          420.000 mm
+
+From tinyG: [16:55:23] [yjm] y jerk maximum          10000 mm/min^3 * 1 million
+
+From tinyG: [16:55:23] [yjh] y jerk homing           20000 mm/min^3 * 1 million
+
+From tinyG: [16:55:23] [yjd] y junction deviation        0.0000 mm (larger is faster)
+
+From tinyG: [16:55:23] [yhi] y homing input              3 [input 1-N or 0 to disable homing this axis]
+
+From tinyG: [16:55:23] [yhd] y homing direction          0 [0=search-to-negative, 1=search-to-positive]
+
+From tinyG: [16:55:23] [ysv] y search velocity        3000 mm/min
+
+From tinyG: [16:55:23] [ylv] y latch velocity       100.00 mm/min
+
+From tinyG: [16:55:23] [ylb] y latch backoff            20.000 mm
+
+From tinyG: [16:55:23] [yzb] y zero backoff              3.000 mm
+
+From tinyG: [16:55:23] [zam] z axis mode                 1 [standard]
+
+From tinyG: [16:55:23] [zvm] z velocity maximum       1200 mm/min
+
+From tinyG: [16:55:23] [zfr] z feedrate maximum       1200 mm/min
+
+From tinyG: [16:55:23] [ztn] z travel minimum          -95.000 mm
+
+From tinyG: [16:55:23] [ztm] z travel maximum            0.000 mm
+
+From tinyG: [16:55:23] [zjm] z jerk maximum            500 mm/min^3 * 1 million
+
+From tinyG: [16:55:23] [zjh] z jerk homing             500 mm/min^3 * 1 million
+
+From tinyG: [16:55:23] [zjd] z junction deviation        0.0000 mm (larger is faster)
+
+From tinyG: [16:55:23] [zhi] z homing input              6 [input 1-N or 0 to disable homing this axis]
+
+From tinyG: [16:55:23] [zhd] z homing direction          1 [0=search-to-negative, 1=search-to-positive]
+
+From tinyG: [16:55:23] [zsv] z search velocity         800 mm/min
+
+From tinyG: [16:55:23] [zlv] z latch velocity       100.00 mm/min
+
+From tinyG: [16:55:23] [zlb] z latch backoff            10.000 mm
+
+From tinyG: [16:55:23] [zzb] z zero backoff              2.000 mm
+
+From tinyG: [16:55:23] [aam] a axis mode                 1 [standard]
+
+From tinyG: [16:55:23] [avm] a velocity maximum      60000 deg/min
+
+From tinyG: [16:55:23] [afr] a feedrate maximum      48000 deg/min
+
+From tinyG: [16:55:23] [atn] a travel minimum           -1.000 deg
+
+From tinyG: [16:55:23] [atm] a travel maximum           -1.000 deg
+
+From tinyG: [16:55:23] [ajm] a jerk maximum          24000 deg/min^3 * 1 million
+
+From tinyG: [16:55:23] [ajh] a jerk homing           24000 deg/min^3 * 1 million
+
+From tinyG: [16:55:23] [ajd] a junction deviation        0.0000 deg (larger is faster)
+
+From tinyG: [16:55:23] [ara] a radius value              1.0000 deg
+
+From tinyG: [16:55:23] [ahi] a homing input              0 [input 1-N or 0 to disable homing this axis]
+
+From tinyG: [16:55:23] [ahd] a homing direction          0 [0=search-to-negative, 1=search-to-positive]
+
+From tinyG: [16:55:23] [asv] a search velocity        6000 deg/min
+
+From tinyG: [16:55:23] [alv] a latch velocity      1000.00 deg/min
+
+From tinyG: [16:55:23] [alb] a latch backoff             5.000 deg
+
+From tinyG: [16:55:23] [azb] a zero backoff              2.000 deg
+
+From tinyG: [16:55:23] [bam] b axis mode                 0 [disabled]
+
+From tinyG: [16:55:23] [bvm] b velocity maximum       3600 deg/min
+
+From tinyG: [16:55:23] [bfr] b feedrate maximum       3600 deg/min
+
+From tinyG: [16:55:23] [btn] b travel minimum           -1.000 deg
+
+From tinyG: [16:55:23] [btm] b travel maximum           -1.000 deg
+
+From tinyG: [16:55:23] [bjm] b jerk maximum             20 deg/min^3 * 1 million
+
+From tinyG: [16:55:23] [bjh] b jerk homing              20 deg/min^3 * 1 million
+
+From tinyG: [16:55:23] [bjd] b junction deviation        0.0000 deg (larger is faster)
+
+From tinyG: [16:55:23] [bra] b radius value              1.0000 deg
+
+From tinyG: [16:55:23] [bhi] b homing input              0 [input 1-N or 0 to disable homing this axis]
+
+From tinyG: [16:55:23] [bhd] b homing direction          0 [0=search-to-negative, 1=search-to-positive]
+
+From tinyG: [16:55:23] [bsv] b search velocity        6000 deg/min
+
+From tinyG: [16:55:23] [blv] b latch velocity      1000.00 deg/min
+
+From tinyG: [16:55:23] [blb] b latch backoff             5.000 deg
+
+From tinyG: [16:55:23] [bzb] b zero backoff              2.000 deg
+
+From tinyG: [16:55:23] [cam] c axis mode                 0 [disabled]
+
+From tinyG: [16:55:23] [cvm] c velocity maximum       3600 deg/min
+
+From tinyG: [16:55:23] [cfr] c feedrate maximum       3600 deg/min
+
+From tinyG: [16:55:23] [ctn] c travel minimum           -1.000 deg
+
+From tinyG: [16:55:23] [ctm] c travel maximum           -1.000 deg
+
+From tinyG: [16:55:23] [cjm] c jerk maximum             20 deg/min^3 * 1 million
+
+From tinyG: [16:55:23] [cjh] c jerk homing              20 deg/min^3 * 1 million
+
+From tinyG: [16:55:23] [cjd] c junction deviation        0.0000 deg (larger is faster)
+
+From tinyG: [16:55:23] [cra] c radius value              1.0000 deg
+
+From tinyG: [16:55:23] [chi] c homing input              0 [input 1-N or 0 to disable homing this axis]
+
+From tinyG: [16:55:23] [chd] c homing direction          0 [0=search-to-negative, 1=search-to-positive]
+
+From tinyG: [16:55:23] [csv] c search velocity        6000 deg/min
+
+From tinyG: [16:55:23] [clv] c latch velocity      1000.00 deg/min
+
+From tinyG: [16:55:23] [clb] c latch backoff             5.000 deg
+
+From tinyG: [16:55:23] ] c zero backoff              2.000 deg
+
+From tinyG: [16:55:23] [p1frq] pwm frequency               100 Hz
+
+From tinyG: [16:55:23] [p1csl] pwm cw speed lo            7900 RPM
+
+From tinyG: [16:55:23] [p1csh] pwm cw speed hi           12800 RPM
+
+From tinyG: [16:55:23] [p1cpl] pwm cw phase lo           0.130 [0..1]
+
+From tinyG: [16:55:23] [p1cph] pwm cw phase hi           0.170 [0..1]
+
+From tinyG: [16:55:23] [p1wsl] pwm ccw speed lo              0 RPM
+
+From tinyG: [16:55:23] [p1wsh] pwm ccw speed hi              0 RPM
+
+From tinyG: [16:55:23] [p1wpl] pwm ccw phase lo          0.100 [0..1]
+
+From tinyG: [16:55:23] [p1wph] pwm ccw phase hi          0.100 [0..1]
+
+From tinyG: [16:55:23] [p1pof] pwm phase off             0.100 [0..1]
+
+From tinyG: [16:55:23] [chd] c homing direction          0 [0=search-to-negative, 1=search-to-positive]
+
+From tinyG: [16:55:23] [csv] c search velocity        6000 deg/min
+
+From tinyG: [16:55:23] [clv] c latch velocity      1000.00 deg/min
+
+From tinyG: [16:55:23] [clb] c latch backoff             5.000 deg
+
+From tinyG: [16:55:23] [czb] c zero backoff              2.000 deg
+
+From tinyG: [16:55:23] [g54x] g54 x offset               0.000 mm
+
+From tinyG: [16:55:23] [g54y] g54 y offset               0.000 mm
+
+From tinyG: [16:55:23] [g54z] g54 z offset               0.000 mm
+
+From tinyG: [16:55:23] [g54a] g54 a offset               0.000 deg
+
+From tinyG: [16:55:23] [g54b] g54 b offset               0.000 deg
+
+From tinyG: [16:55:23] g54c] g54 c offset               0.000 deg
+
+From tinyG: [16:55:23] [g55x] g55 x offset               0.000 mm
+
+From tinyG: [16:55:23] [g55y] g55 y offset               0.000 mm
+
+From tinyG: [16:55:23] [g55z] g55 z offset               0.000 mm
+
+From tinyG: [16:55:23] [g55a] g55 a offset               0.000 deg
+
+From tinyG: [16:55:23] [g55b] g55 b offset               0.000 deg
+
+From tinyG: [16:55:23] [g55c] g55 c offset               0.000 deg
+
+From tinyG: [16:55:23] [g56x] g56 x offset               0.000 mm
+
+From tinyG: [16:55:23] [g56y] g56 y offset               0.000 mm
+
+From tinyG: [16:55:23] [g56z] g56 z offset               0.000 mm
+
+From tinyG: [16:55:23] [g56a] g56 a offset               0.000 deg
+
+From tinyG: [16:55:23] [g56b] g56 b offset               0.000 deg
+
+From tinyG: [16:55:23] [g56c] g56 c offset               0.000 deg
+
+From tinyG: [16:55:23] [g57x] g57 x offset               0.000 mm
+
+From tinyG: [16:55:23] [g57y] g57 y offset               0.000 mm
+
+From tinyG: [16:55:23] [g57z] g57 z offset               0.000 mm
+
+From tinyG: [16:55:23] [g57a] g57 a offset               0.000 deg
+
+From tinyG: [16:55:23] [g57b] g57 b offset               0.000 deg
+
+From tinyG: [16:55:23] [g57c] g57 c offset               0.000 deg
+
+From tinyG: [16:55:23] [g58x] g58 x offset               0.000 mm
+
+From tinyG: [16:55:23] [g58y] g58 y offset               0.000 mm
+
+From tinyG: [16:55:23] [g58z] g58 z offset               0.000 mm
+
+From tinyG: [16:55:23] [g58a] g58 a offset               0.000 deg
+
+From tinyG: [16:55:23] [g58b] g58 b offset               0.000 deg
+
+From tinyG: [16:55:23] [g58c] g58 c offset               0.000 deg
+
+From tinyG: [16:55:23] [g59x] g59 x offset               0.000 mm
+
+From tinyG: [16:55:23] [g59y] g59 y offset               0.000 mm
+
+From tinyG: [16:55:23] [g59z] g59 z offset               0.000 mm
+
+From tinyG: [16:55:23] [g59a] g59 a offset               0.000 deg
+
+From tinyG: [16:55:23] [g59b] g59 b offset               0.000 deg
+
+From tinyG: [16:55:23] [g59c] g59 c offset               0.000 deg
+
+From tinyG: [16:55:23] [g92x] g92 x offset               0.000 mm
+
+From tinyG: [16:55:23] [g92y] g92 y offset               0.000 mm
+
+From tinyG: [16:55:23] [g92z] g92 z offset               0.000 mm
+
+From tinyG: [16:55:23] [g92a] g92 a offset               0.000 deg
+
+From tinyG: [16:55:23] [g92b] g92 b offset               0.000 deg
+
+From tinyG: [16:55:23] [g92c] g92 c offset               0.000 deg
+
+From tinyG: [16:55:23] [g28x] g28 x position             0.000 mm
+
+From tinyG: [16:55:23] [g28y] g28 y position             0.000 mm
+
+From tinyG: [16:55:23] [g28z] g28 z position             0.000 mm
+
+From tinyG: [16:55:23] [g28a] g28 a position             0.000 deg
+
+From tinyG: [16:55:23] [g28b] g28 b position             0.000 deg
+
+From tinyG: [16:55:23] [g28c] g28 c position             0.000 deg
+
+From tinyG: [16:55:23] [g30x] g30 x position             0.000 mm
+
+From tinyG: [16:55:23] [g30y] g30 y position             0.000 mm
+
+From tinyG: [16:55:23] [g30z] g30 z position             0.000 mm
+
+From tinyG: [16:55:23] [g30a] g30 a position             0.000 deg
+
+From tinyG: [16:55:23] [g30b] g30 b position             0.000 deg
+
+From tinyG: [16:55:23] [g30c] g30 c position             0.000 deg
+
+From tinyG: [16:55:23] tinyg [mm] ok> 
+
+Sent to TinyG: [16:55:28] G91 G0 X1
+
+From tinyG: [16:55:28] tinyg [mm] ok> 
+
+From tinyG: [16:55:28] posx:1.000,dist:1,momo:0,stat:3
+
+Sent to TinyG: [16:55:32] G91 G0 X10
+
+From tinyG: [16:55:32] tinyg [mm] ok> 
+
+From tinyG: [16:55:32] posx:11.000,stat:3
+
+Sent to TinyG: [16:55:37] G91 G0 X100
+
+From tinyG: [16:55:37] tinyg [mm] ok> 
+
+From tinyG: [16:55:37] posx:69.376,vel:25753.59,stat:5
+
+From tinyG: [16:55:37] posx:111.000,vel:0.00,stat:3
+
+From tinyG: [16:55:47] {"r":{"tinygmo":null},"f":[1,100,26]}
+
+From tinyG: [16:55:47] {"r":{"baud":null},"f":[1,100,11]}
+
+From tinyG: [16:55:47] {r:{js:0},f:[1,0,9]}
+
+From tinyG: [16:55:47] {r:{gpa:0},f:[1,0,10]}
+
+From tinyG: [16:55:47] {r:{gun:1},f:[1,0,10]}
+
+From tinyG: [16:55:47] {r:{ja:0.00},f:[1,0,9]}
+
+From tinyG: [16:55:47] {r:{si:250},f:[1,0,11]}
+
+From tinyG: [16:55:47] {r:{jv:5},f:[1,0,9]}
+
+From tinyG: [16:55:47] {r:{mt:0},f:[1,0,11]}
+
+From tinyG: [16:55:47] {r:{st:null},f:[1,100,9]}
+
+From tinyG: [16:55:47] {r:{motorma:null},f:[1,100,20]}
+
+From tinyG: [16:55:47] {r:{1ma:4},f:[1,0,10]}
+
+From tinyG: [16:55:47] {r:{2ma:0},f:[1,0,10]}
+
+From tinyG: [16:55:47] {r:{3ma:2},f:[1,0,10]}
+
+From tinyG: [16:55:47] {r:{4ma:3},f:[1,0,10]}
+
+From tinyG: [16:55:47] {r:{polarit:null},f:[1,100,18]}
+
+From tinyG: [16:55:47] {r:{1po:0},f:[1,0,10]}
+
+From tinyG: [16:55:47] {r:{2po:0},f:[1,0,10]}
+
+From tinyG: [16:55:47] {r:{3po:0},f:[1,0,10]}
+
+From tinyG: [16:55:47] {r:{4po:0},f:[1,0,10]}
+
+From tinyG: [16:55:47] {r:{trvalue:null},f:[1,100,16]}
+
+From tinyG: [16:55:47] {r:{1tr:60.0000},f:[1,0,11]}
+
+From tinyG: [16:55:47] {r:{2tr:4.5000},f:[1,0,12]}
+
+From tinyG: [16:55:47] {r:{3tr:8.0000},f:[1,0,10]}
+
+From tinyG: [16:55:47] {r:{4tr:60.0000},f:[1,0,11]}
+
+From tinyG: [16:55:47] {r:{powerse:null},f:[1,100,21]}
+
+From tinyG: [16:55:47] {r:{1pl:1.000},f:[1,0,10]}
+
+From tinyG: [16:55:47] {r:{2pl:1.000},f:[1,0,10]}
+
+From tinyG: [16:55:47] {r:{3pl:1.000},f:[1,0,10]}
+
+From tinyG: [16:55:47] {r:{4pl:1.000},f:[1,0,10]}
+
+From tinyG: [16:55:47] {r:{1pm:2},f:[1,0,10]}
+
+From tinyG: [16:55:47] {r:{2pm:2},f:[1,0,10]}
+
+From tinyG: [16:55:47] {r:{3pm:2},f:[1,0,10]}
+
+From tinyG: [16:55:47] {r:{4pm:2},f:[1,0,10]}
+
+From tinyG: [16:55:47] {r:{motorse:null},f:[1,100,21]}
+
+From tinyG: [16:55:47] {r:{1mi:8},f:[1,0,10]}
+
+From tinyG: [16:55:47] {r:{2mi:8},f:[1,0,10]}
+
+From tinyG: [16:55:47] {r:{3mi:10,msg:"*** WARNING *** Setting non-standard microstep value"},f:[1,0,11]}
+
+From tinyG: [16:55:47] {r:{4mi:10,msg:"*** WARNING *** Setting non-standard microstep value"},f:[1,0,11]}
+
+From tinyG: [16:55:47] {r:{1sa:1.800},f:[1,0,12]}
+
+From tinyG: [16:55:47] {r:{2sa:1.800},f:[1,0,12]}
+
+From tinyG: [16:55:47] {r:{3sa:1.800},f:[1,0,12]}
+
+From tinyG: [16:55:47] {r:{4sa:1.800},f:[1,0,12]}
+
+From tinyG: [16:55:47] {r:{axesset:null},f:[1,100,20]}
+
+From tinyG: [16:55:47] {r:{xam:1},f:[1,0,10]}
+
+From tinyG: [16:55:47] {r:{xvm:1000},f:[1,0,13]}
+
+From tinyG: [16:55:47] {r:{xjm:5000},f:[1,0,13]}
+
+From tinyG: [16:55:47] {r:{xfr:1000},f:[1,0,13]}
+
+From tinyG: [16:55:47] {r:{yam:0},f:[1,0,10]}
+
+From tinyG: [16:55:47] {r:{yvm:0},f:[1,0,10]}
+
+From tinyG: [16:55:47] {r:{yjm:0},f:[1,0,10]}
+
+From tinyG: [16:55:47] {r:{yfr:0},f:[1,0,10]}
+
+From tinyG: [16:55:47] {r:{zam:1},f:[1,0,10]}
+
+From tinyG: [16:55:47] {r:{zvm:1000},f:[1,0,13]}
+
+From tinyG: [16:55:47] {r:{zjm:5000},f:[1,0,13]}
+
+From tinyG: [16:55:47] {r:{zfr:1000},f:[1,0,13]}
+
+From tinyG: [16:55:47] {r:{aam:1},f:[1,0,10]}
+
+From tinyG: [16:55:47] {r:{avm:10000},f:[1,0,14]}
+
+From tinyG: [16:55:47] {r:{ajm:5000},f:[1,0,13]}
+
+From tinyG: [16:55:47] {r:{afr:10000},f:[1,0,14]}
+
+From tinyG: [16:55:47] {r:{bam:1},f:[1,0,10]}
+
+From tinyG: [16:55:47] {r:{bvm:10000},f:[1,0,14]}
+
+From tinyG: [16:55:47] {r:{bjm:5000},f:[1,0,13]}
+
+From tinyG: [16:55:47] {r:{bfr:10000},f:[1,0,14]}
+
+From tinyG: [16:55:47] {r:{homings:null},f:[1,100,31]}
+
+From tinyG: [16:55:47] {r:{sl:1},f:[1,0,9]}
+
+From tinyG: [16:55:47] {r:{di1mo:-1},f:[1,0,13]}
+
+From tinyG: [16:55:47] {r:{di1ac:0},f:[1,0,12]}
+
+From tinyG: [16:55:47] {r:{di1fn:0},f:[1,0,12]}
+
+From tinyG: [16:55:47] {r:{di2mo:-1},f:[1,0,13]}
+
+From tinyG: [16:55:47] {r:{di2ac:0},f:[1,0,12]}
+
+From tinyG: [16:55:47] {r:{di2fn:0},f:[1,0,12]}
+
+From tinyG: [16:55:47] {r:{di3mo:-1},f:[1,0,13]}
+
+From tinyG: [16:55:47] {r:{di3ac:0},f:[1,0,12]}
+
+From tinyG: [16:55:47] {r:{di3fn:0},f:[1,0,12]}
+
+From tinyG: [16:55:47] {r:{di4mo:-1},f:[1,0,13]}
+
+From tinyG: [16:55:47] {r:{di4ac:0},f:[1,0,12]}
+
+From tinyG: [16:55:47] {r:{di4fn:0},f:[1,0,12]}
+
+From tinyG: [16:55:47] {r:{di5mo:-1},f:[1,0,13]}
+
+From tinyG: [16:55:47] {r:{di5ac:0},f:[1,0,12]}
+
+From tinyG: [16:55:47] {r:{di5fn:0},f:[1,0,12]}
+
+From tinyG: [16:55:47] {r:{di6mo:-1},f:[1,0,13]}
+
+From tinyG: [16:55:47] {r:{di6ac:0},f:[1,0,12]}
+
+From tinyG: [16:55:47] {r:{di6fn:0},f:[1,0,12]}
+
+From tinyG: [16:55:47] {r:{di7mo:-1},f:[1,0,13]}
+
+From tinyG: [16:55:47] {r:{di7ac:0},f:[1,0,12]}
+
+From tinyG: [16:55:47] {r:{di7fn:0},f:[1,0,12]}
+
+From tinyG: [16:55:47] {r:{di8mo:-1},f:[1,0,13]}
+
+From tinyG: [16:55:47] {r:{di8ac:0},f:[1,0,12]}
+
+From tinyG: [16:55:47] {r:{di8fn:0},f:[1,0,12]}
+
+From tinyG: [16:55:47] {r:{di9mo:-1},f:[1,0,13]}
+
+From tinyG: [16:55:47] {r:{di9ac:0},f:[1,0,12]}
+
+From tinyG: [16:55:47] {r:{di9fn:0},f:[1,0,12]}
+
+From tinyG: [16:55:47] {r:{asv:2000},f:[1,0,13]}
+
+From tinyG: [16:55:47] {r:{alv:500.00},f:[1,0,12]}
+
+From tinyG: [16:55:47] {r:{alb:20.000},f:[1,0,11]}
+
+From tinyG: [16:55:47] {r:{azb:180.000},f:[1,0,12]}
+
+From tinyG: [16:55:47] {r:{atn:-180.000},f:[1,0,13]}
+
+From tinyG: [16:55:47] {r:{atm:180.000},f:[1,0,12]}
+
+From tinyG: [16:55:47] {r:{ztn:-10.000},f:[1,0,12]}
+
+From tinyG: [16:55:47] {r:{ztm:0.000},f:[1,0,10]}
+
+From tinyG: [16:55:47] {sr:{stat:3}}
+
+Sent to TinyG: [16:55:53] 
+
+Sent to TinyG: [16:55:53] G91 G0 X-5
+
+From tinyG: [16:55:53] {r:{gc:"G91G0X-5"},f:[1,0,11]}
+
+From tinyG: [16:55:53] {sr:{posx:108.152,vel:1000.00,stat:5}}
+
+From tinyG: [16:55:53] {sr:{posx:106.000,vel:0.00,stat:3}}
+
+Sent to TinyG: [16:55:53] G90 G0 A10
+
+Sent to TinyG: [16:55:53] G90 G0 A-10
+
+From tinyG: [16:55:53] {r:{gc:"G90G0A10"},f:[1,0,11]}
+
+From tinyG: [16:55:53] {r:{gc:"G90G0A-10"},f:[1,0,12]}
+
+From tinyG: [16:55:54] {sr:{posa:9.191,vel:2303.27,dist:0,stat:5}}
+
+From tinyG: [16:55:54] {sr:{posa:-1.227,vel:7011.19}}
+
+From tinyG: [16:55:54] {sr:{posa:-10.000,vel:0.00,stat:3}}
+
+Sent to TinyG: [16:55:54] G91 G0 B90 X-10
+
+Sent to TinyG: [16:55:54] G90 G0 Z-5 A20
+
+From tinyG: [16:55:54] {r:{gc:"G91G0B90X-10"},f:[1,0,16]}
+
+From tinyG: [16:55:54] {r:{gc:"G90G0Z-5A20"},f:[1,0,15]}
+
+From tinyG: [16:55:54] {sr:{posx:104.239,vel:9055.38,dist:1,stat:5}}
+
+From tinyG: [16:55:55] {sr:{posx:100.079}}
+
+From tinyG: [16:55:55] {sr:{posx:96.210,vel:4133.40}}
+
+From tinyG: [16:55:55] {sr:{posx:96.000,posz:-1.366,posa:-1.804,vel:6082.76,dist:0}}
+
+From tinyG: [16:55:55] {sr:{posz:-4.963,posa:19.779,vel:1045.78}}
+
+From tinyG: [16:55:56] {sr:{posz:-5.000,posa:20.000,vel:0.00,stat:3}}
+
+Sent to TinyG: [16:55:56] G90 G0 Z0
+
+Sent to TinyG: [16:55:56] G90 G0 A-10
+
+From tinyG: [16:55:56] {r:{gc:"G90G0Z0"},f:[1,0,10]}
+
+From tinyG: [16:55:56] {r:{gc:"G90G0A-10"},f:[1,0,12]}
+
+From tinyG: [16:55:56] {sr:{posz:-2.177,vel:1000.00,stat:5}}
+
+From tinyG: [16:55:56] {sr:{posz:0.000,posa:18.332,vel:3686.40}}
+
+From tinyG: [16:55:56] {sr:{posa:-9.730,vel:1167.68}}
+
+From tinyG: [16:55:57] {sr:{posa:-10.000,vel:0.00,stat:3}}
+
+Sent to TinyG: [16:55:57] G90 G0 A10
+
+Sent to TinyG: [16:55:57] (RETRACT)
+
+From tinyG: [16:55:57] {r:{gc:"G90G0A10"},f:[1,0,11]}
+
+From tinyG: [16:55:57] {r:{gc:""},f:[1,0,10]}
+
+From tinyG: [16:55:57] {sr:{posa:3.639,vel:6716.97,stat:5}}
+
+From tinyG: [16:55:57] {sr:{posa:10.000,vel:0.00,stat:3}}
+
+Sent to TinyG: [16:55:57] ;G91 G0 X100
+
+Sent to TinyG: [16:55:57] null
+From tinyG: [16:55:57] {r:{gc:""},f:[1,0,13]}
+
+From tinyG: [16:55:57] {r:{gc:"NULL"},f:[1,102,5]}
+
+From tinyG: [16:55:58] {sr:{stat:3}}
+
+Sent to TinyG: [16:56:12] 
+
+Sent to TinyG: [16:56:12] G91 G0 X-5
+
+From tinyG: [16:56:12] {r:{gc:"G91G0X-5"},f:[1,0,11]}
+
+From tinyG: [16:56:13] {sr:{posx:93.152,vel:1000.00,dist:1,stat:5}}
+
+From tinyG: [16:56:13] {sr:{posx:91.000,vel:0.00,stat:3}}
+
+Sent to TinyG: [16:56:13] G90 G0 A10
+
+Sent to TinyG: [16:56:13] G90 G0 A-10
+
+From tinyG: [16:56:13] {r:{gc:"G90G0A10"},f:[1,0,11]}
+
+From tinyG: [16:56:13] {r:{gc:"G90G0A-10"},f:[1,0,12]}
+
+From tinyG: [16:56:13] {sr:{line:0,posx:91.000,posy:0.000,posz:0.000,posa:-3.132,feed:0.00,vel:6823.98,unit:1,coor:1,dist:0,admo:1,frmo:1,momo:0,stat:5}}
+
+From tinyG: [16:56:13] {sr:{posa:-10.000,dist:0,stat:3}}
+
+Sent to TinyG: [16:56:13] G91 G0 B90 X-10
+
+Sent to TinyG: [16:56:13] G90 G0 Z5 A20
+
+From tinyG: [16:56:13] {r:{gc:"G91G0B90X-10"},f:[1,0,16]}
+
+From tinyG: [16:56:14] {er:{fb:86.03,st:226,msg:"Soft limit - Z max - soft_limits"}}
+
+From tinyG: [16:56:14] {r:{gc:"G90G0Z5A20"},f:[1,226,14]}
+
+From tinyG: [16:56:14] {sr:{stat:2}}
+
+From tinyG: [16:56:46] {r:{tinygmo:null},f:[1,100,26]}
+
+From tinyG: [16:56:46] {r:{baud:null},f:[1,100,11]}
+
+From tinyG: [16:56:46] {r:{js:0},f:[1,204,9]}
+
+From tinyG: [16:56:46] {r:{gpa:0},f:[1,204,10]}
+
+From tinyG: [16:56:46] {r:{gun:1},f:[1,204,10]}
+
+From tinyG: [16:56:46] {r:{ja:0},f:[1,204,9]}
+
+From tinyG: [16:56:46] {r:{si:250},f:[1,204,11]}
+
+From tinyG: [16:56:46] {r:{jv:5},f:[1,204,9]}
+
+From tinyG: [16:56:46] {r:{mt:0},f:[1,204,11]}
+
+From tinyG: [16:56:46] {r:{st:null},f:[1,100,9]}
+
+From tinyG: [16:56:46] {r:{motorma:null},f:[1,100,20]}
+
+From tinyG: [16:56:46] {r:{1ma:4},f:[1,204,10]}
+
+From tinyG: [16:56:46] {r:{2ma:0},f:[1,204,10]}
+
+From tinyG: [16:56:46] {r:{3ma:2},f:[1,204,10]}
+
+From tinyG: [16:56:46] {r:{4ma:3},f:[1,204,10]}
+
+From tinyG: [16:56:46] {r:{polarit:null},f:[1,100,18]}
+
+From tinyG: [16:56:46] {r:{1po:0},f:[1,204,10]}
+
+From tinyG: [16:56:46] {r:{2po:0},f:[1,204,10]}
+
+From tinyG: [16:56:46] {r:{3po:0},f:[1,204,10]}
+
+From tinyG: [16:56:46] {r:{4po:0},f:[1,204,10]}
+
+From tinyG: [16:56:46] {r:{trvalue:null},f:[1,100,16]}
+
+From tinyG: [16:56:46] {r:{1tr:60},f:[1,204,11]}
+
+From tinyG: [16:56:46] {r:{2tr:4},f:[1,204,12]}
+
+From tinyG: [16:56:46] {r:{3tr:8},f:[1,204,10]}
+
+From tinyG: [16:56:46] {r:{4tr:60},f:[1,204,11]}
+
+From tinyG: [16:56:46] {r:{powerse:null},f:[1,100,21]}
+
+From tinyG: [16:56:46] {r:{1pl:1},f:[1,204,10]}
+
+From tinyG: [16:56:46] {r:{2pl:1},f:[1,204,10]}
+
+From tinyG: [16:56:46] {r:{3pl:1},f:[1,204,10]}
+
+From tinyG: [16:56:46] {r:{4pl:1},f:[1,204,10]}
+
+From tinyG: [16:56:46] {r:{1pm:2},f:[1,204,10]}
+
+From tinyG: [16:56:46] {r:{2pm:2},f:[1,204,10]}
+
+From tinyG: [16:56:46] {r:{3pm:2},f:[1,204,10]}
+
+From tinyG: [16:56:46] {r:{4pm:2},f:[1,204,10]}
+
+From tinyG: [16:56:46] {r:{motorse:null},f:[1,100,21]}
+
+From tinyG: [16:56:46] {r:{1mi:8},f:[1,204,10]}
+
+From tinyG: [16:56:46] {r:{2mi:8},f:[1,204,10]}
+
+From tinyG: [16:56:46] {r:{3mi:10},f:[1,204,11]}
+
+From tinyG: [16:56:46] {r:{4mi:10},f:[1,204,11]}
+
+From tinyG: [16:56:46] {r:{1sa:2},f:[1,204,12]}
+
+From tinyG: [16:56:46] {r:{2sa:2},f:[1,204,12]}
+
+From tinyG: [16:56:46] {r:{3sa:2},f:[1,204,12]}
+
+From tinyG: [16:56:46] {r:{4sa:2},f:[1,204,12]}
+
+From tinyG: [16:56:46] {r:{axesset:null},f:[1,100,20]}
+
+From tinyG: [16:56:46] {r:{xam:1},f:[1,204,10]}
+
+From tinyG: [16:56:46] {r:{xvm:1000},f:[1,204,13]}
+
+From tinyG: [16:56:46] {r:{xjm:5000},f:[1,204,13]}
+
+From tinyG: [16:56:46] {r:{xfr:1000},f:[1,204,13]}
+
+From tinyG: [16:56:46] {r:{yam:0},f:[1,204,10]}
+
+From tinyG: [16:56:46] {r:{yvm:0},f:[1,204,10]}
+
+From tinyG: [16:56:46] {r:{yjm:0},f:[1,204,10]}
+
+From tinyG: [16:56:46] {r:{yfr:0},f:[1,204,10]}
+
+From tinyG: [16:56:46] {r:{zam:1},f:[1,204,10]}
+
+From tinyG: [16:56:46] {r:{zvm:1000},f:[1,204,13]}
+
+From tinyG: [16:56:46] {r:{zjm:5000},f:[1,204,13]}
+
+From tinyG: [16:56:46] {r:{zfr:1000},f:[1,204,13]}
+
+From tinyG: [16:56:46] {r:{aam:1},f:[1,204,10]}
+
+From tinyG: [16:56:46] {r:{avm:10000},f:[1,204,14]}
+
+From tinyG: [16:56:46] {r:{ajm:5000},f:[1,204,13]}
+
+From tinyG: [16:56:46] {r:{afr:10000},f:[1,204,14]}
+
+From tinyG: [16:56:46] {r:{bam:1},f:[1,204,10]}
+
+From tinyG: [16:56:46] {r:{bvm:10000},f:[1,204,14]}
+
+From tinyG: [16:56:46] {r:{bjm:5000},f:[1,204,13]}
+
+From tinyG: [16:56:46] {r:{bfr:10000},f:[1,204,14]}
+
+From tinyG: [16:56:46] {r:{homings:null},f:[1,100,31]}
+
+From tinyG: [16:56:46] {r:{sl:1},f:[1,204,9]}
+
+From tinyG: [16:56:46] {r:{di1mo:-1},f:[1,204,13]}
+
+From tinyG: [16:56:46] {r:{di1ac:0},f:[1,204,12]}
+
+From tinyG: [16:56:46] {r:{di1fn:0},f:[1,204,12]}
+
+From tinyG: [16:56:46] {r:{di2mo:-1},f:[1,204,13]}
+
+From tinyG: [16:56:46] {r:{di2ac:0},f:[1,204,12]}
+
+From tinyG: [16:56:46] {r:{di2fn:0},f:[1,204,12]}
+
+From tinyG: [16:56:46] {r:{di3mo:-1},f:[1,204,13]}
+
+From tinyG: [16:56:46] {r:{di3ac:0},f:[1,204,12]}
+
+From tinyG: [16:56:46] {r:{di3fn:0},f:[1,204,12]}
+
+From tinyG: [16:56:46] {r:{di4mo:-1},f:[1,204,13]}
+
+From tinyG: [16:56:46] {r:{di4ac:0},f:[1,204,12]}
+
+From tinyG: [16:56:46] {r:{di4fn:0},f:[1,204,12]}
+
+From tinyG: [16:56:46] {r:{di5mo:-1},f:[1,204,13]}
+
+From tinyG: [16:56:46] {r:{di5ac:0},f:[1,204,12]}
+
+From tinyG: [16:56:46] {r:{di5fn:0},f:[1,204,12]}
+
+From tinyG: [16:56:46] {r:{di6mo:-1},f:[1,204,13]}
+
+From tinyG: [16:56:46] {r:{di6ac:0},f:[1,204,12]}
+
+From tinyG: [16:56:46] {r:{di6fn:0},f:[1,204,12]}
+
+From tinyG: [16:56:46] {r:{di7mo:-1},f:[1,204,13]}
+
+From tinyG: [16:56:46] {r:{di7ac:0},f:[1,204,12]}
+
+From tinyG: [16:56:46] {r:{di7fn:0},f:[1,204,12]}
+
+From tinyG: [16:56:46] {r:{di8mo:-1},f:[1,204,13]}
+
+From tinyG: [16:56:46] {r:{di8ac:0},f:[1,204,12]}
+
+From tinyG: [16:56:46] {r:{di8fn:0},f:[1,204,12]}
+
+From tinyG: [16:56:46] {r:{di9mo:-1},f:[1,204,13]}
+
+From tinyG: [16:56:46] {r:{di9ac:0},f:[1,204,12]}
+
+From tinyG: [16:56:46] {r:{di9fn:0},f:[1,204,12]}
+
+From tinyG: [16:56:46] {r:{asv:2000},f:[1,204,13]}
+
+From tinyG: [16:56:46] {r:{alv:500},f:[1,204,12]}
+
+From tinyG: [16:56:46] {r:{alb:20},f:[1,204,11]}
+
+From tinyG: [16:56:46] {r:{azb:180},f:[1,204,12]}
+
+From tinyG: [16:56:46] {r:{atn:-180},f:[1,204,13]}
+
+From tinyG: [16:56:46] {r:{atm:180},f:[1,204,12]}
+
+From tinyG: [16:56:46] {r:{ztn:-10},f:[1,204,12]}
+
+From tinyG: [16:56:46] {r:{ztm:0},f:[1,204,10]}
+

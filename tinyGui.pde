@@ -5,7 +5,7 @@ void startGUI() {
 
   // Define the size of the text area
   taw = width - (2*x) - bw - pad;
-  tah = height - y-(3*pad)-tfh;
+  tah = height - y-(3*pad)-(2*tfh);
 
   // Add a textArea to capture the incoming serial
   myTerminal = cp5.addTextarea("serialText")
@@ -74,7 +74,7 @@ void startGUI() {
     .setPosition(x+taw+pad, y+ 4*sbh + 4*pad)
     .setSize(bw/3, tfh/2)
     .setColorForeground(color(10, 10, 50))
-    .setColorActive(color(0,0,0))
+    .setColorActive(color(0, 0, 0))
     .getCaptionLabel().align(ControlP5.LEFT, ControlP5.CENTER)
     ;
 
@@ -98,16 +98,16 @@ void startGUI() {
     .setPosition(x+taw+2*pad+(2*bw/3), y+ 4*sbh + 4*pad)
     .setSize(bw/2, tfh/2)
     .setColorForeground(color(0, 0, 0))
-    .setColorActive(color(0,0,0))
+    .setColorActive(color(0, 0, 0))
     .getCaptionLabel().align(ControlP5.LEFT, ControlP5.CENTER)
     ;
 
   cp5.addTextlabel("counter")
     .setPosition(x+taw+2*pad+bw/4, y+tah-tah/4)
-    .setSize(bw,tfh)
+    .setSize(bw, tfh)
     .setColorValue(0xffffffff)
-    .setColorActive(color(50,50,50))
-    .setColorForeground(color(50,50,50))
+    .setColorActive(color(50, 50, 50))
+    .setColorForeground(color(50, 50, 50))
     .setFont(createFont("Arial", 40))
     ;
 
@@ -133,6 +133,14 @@ void startGUI() {
     .getCaptionLabel().align(ControlP5.CENTER, ControlP5.CENTER)
     ;
 
+  checkbox = cp5.addCheckBox("checkbox")
+    .setPosition(x, y + tah + 2* pad + tfh)     // up and to the left)
+    .setSize(40, 40)
+    .setItemsPerRow(1)
+    .addItem("Debug Mode", 255)
+    .setColorActive(color(255, 120, 0))
+    ;
+
   serialPortsList = cp5.addScrollableList("serialports")
     .setPosition(x+taw+pad, y+(3*sbh)+(3*pad))
     .setSize(bw, 50)
@@ -153,6 +161,7 @@ void guiHide() {
   cp5.get(Textfield.class, "numTimes").hide();                    // hide the text field
   cp5.get(Bang.class, "times").hide();                    // hide the text field
   cp5.get(Textlabel.class, "counter").hide();
+  checkbox.hide();
 }
 
 void guiShow() {
@@ -169,4 +178,5 @@ void guiShow() {
   cp5.get(Textfield.class, "numTimes").show();                    // hide the text field
   cp5.get(Bang.class, "times").show();                    // hide the text field
   cp5.get(Textlabel.class, "counter").show();
+  checkbox.show();
 }

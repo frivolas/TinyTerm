@@ -1,0 +1,240 @@
+[19:28:18] Starting Log file for session: 2020724-192818
+
+From tinyG: [19:28:21] {r:{fv:0.98,fb:86.03,hp:3,hv:0,id:"0213-0215-0515",msg:"SYSTEM READY"},f:[1,0,1]}
+
+From tinyG: [19:28:21] tinyg [mm] ok> 
+
+From tinyG: [19:28:21] [ej]  enable json mode            0 [0=text,1=JSON]
+
+From tinyG: [19:28:21] tinyg [mm] ok> 
+
+Out > [19:28:23] G90 G0 Z-12
+
+Out > [19:28:23] G28.2 A0
+
+From tinyG: [19:28:23] tinyg [mm] ok> 
+
+From tinyG: [19:28:23] tinyg [mm] ok> 
+
+From tinyG: [19:28:23] line:0,posx:0.000,posy:0.000,posz:-12.000,posa:-2.768,feed:5000.00,vel:5000.00,unit:1,coor:0,dist:1,admo:1,frmo:1,momo:1,stat:9
+
+Out > [19:28:23] G91 G0 A30
+
+From tinyG: [19:28:23] posa:-9.538,feed:5000.00,vel:2979.14,dist:1,momo:1,stat:9
+
+From tinyG: [19:28:24] posa:4.641,vel:0.00
+
+From tinyG: [19:28:24] posa:-12.107,vel:4943.52
+
+From tinyG: [19:28:24] posa:-14.587,feed:500.00,vel:500.00
+
+From tinyG: [19:28:24] posa:-12.500
+
+From tinyG: [19:28:25] posa:-10.414
+
+From tinyG: [19:28:25] posa:-8.327
+
+From tinyG: [19:28:25] posa:-6.240
+
+From tinyG: [19:28:25] posa:-4.153
+
+From tinyG: [19:28:26] posa:-2.079
+
+From tinyG: [19:28:26] posa:-0.010,vel:228.72
+
+From tinyG: [19:28:26] tinyg [mm] ok> 
+
+From tinyG: [19:28:26] posa:20.138,feed:250.00,vel:11172.53,momo:0,stat:5
+
+From tinyG: [19:28:26] posa:30.000,vel:0.00,stat:3
+
+Out > [19:28:26] $di1fn=2
+
+Out > [19:28:26] G91 G0 A1
+
+Out > [19:28:26] G91 G1 A-30 F250
+
+From tinyG: [19:28:26] [di1fn] input function          2 [0=none,1=limit,2=interlock,3=shutdown]
+
+From tinyG: [19:28:26] tinyg [mm] ok> 
+
+From tinyG: [19:28:26] tinyg [mm] ok> 
+
+From tinyG: [19:28:26] tinyg [mm] ok> 
+
+From tinyG: [19:28:27] posa:30.415,vel:250.00,momo:1,stat:5
+
+From tinyG: [19:28:27] posa:29.371
+
+From tinyG: [19:28:27] posa:28.334
+
+From tinyG: [19:28:27] posa:27.284
+
+From tinyG: [19:28:28] posa:26.240
+
+From tinyG: [19:28:28] posa:25.196
+
+From tinyG: [19:28:28] posa:24.152
+
+From tinyG: [19:28:28] posa:23.108
+
+From tinyG: [19:28:29] posa:22.064
+
+From tinyG: [19:28:29] posa:21.021
+
+From tinyG: [19:28:29] posa:19.977
+
+From tinyG: [19:28:29] posa:19.048,vel:0.00,stat:6
+
+From tinyG: [19:28:30] tinyg [mm] ok> 
+
+From tinyG: [19:28:30] stat:3
+
+From tinyG: [19:28:30] [di1fn] input function          0 [0=none,1=limit,2=interlock,3=shutdown]
+
+From tinyG: [19:28:30] tinyg [mm] ok> 
+
+Out > [19:28:30] $posa
+
+From tinyG: [19:28:30] A position:         19.048 deg
+
+From tinyG: [19:28:30] tinyg [mm] ok> 
+
+Out > [19:28:30] G91 G0 A0
+
+Out > [19:28:30] G90 G0 A9.524
+
+From tinyG: [19:28:30] tinyg [mm] ok> 
+
+From tinyG: [19:28:30] tinyg [mm] ok> 
+
+From tinyG: [19:28:30] line:0,posx:0.000,posy:0.000,posz:-12.000,posa:9.527,feed:250.00,vel:76.75,unit:1,coor:0,dist:0,admo:1,frmo:1,momo:0,stat:5
+
+Out > [19:28:30] G28.3 A0
+
+From tinyG: [19:28:30] tinyg [mm] ok> 
+
+From tinyG: [19:28:30] posa:0.000,dist:0,momo:0,stat:3
+
+Out > [19:28:30] G90 G0 Z0 A20
+
+From tinyG: [19:28:30] tinyg [mm] ok> 
+
+From tinyG: [19:28:30] posz:-0.707,posa:18.822,vel:4050.12,stat:5
+
+From tinyG: [19:28:31] posz:0.000,posa:20.000,vel:0.00,stat:3
+
+Out > [19:28:36] $posa
+
+From tinyG: [19:28:36] A position:         20.000 deg
+
+From tinyG: [19:28:36] tinyg [mm] ok> 
+
+Out > [19:28:36] G91 G0 A0
+
+Out > [19:28:36] G90 G0 A9.524
+10.0
+
+From tinyG: [19:28:36] tinyg [mm] ok> 
+
+From tinyG: [19:28:36] tinyg [mm] ok> 
+
+From tinyG: [19:28:36] tinyg [mm] err[101]: Malformed command: 10.0 
+
+From tinyG: [19:28:36] line:0,posx:0.000,posy:0.000,posz:0.000,posa:9.545,feed:250.00,vel:270.24,unit:1,coor:0,dist:0,admo:1,frmo:1,momo:0,stat:5
+
+Out > [19:28:36] G28.3 A0
+
+From tinyG: [19:28:36] tinyg [mm] ok> 
+
+From tinyG: [19:28:36] posa:0.000,stat:3
+
+Out > [19:28:36] G90 G0 Z0 A20
+
+From tinyG: [19:28:36] tinyg [mm] ok> 
+
+From tinyG: [19:28:36] posa:19.977,vel:277.85,stat:5
+
+From tinyG: [19:28:37] posa:20.000,vel:0.00,stat:3
+
+Out > [19:29:07] g91 g0 a0
+
+From tinyG: [19:29:07] tinyg [mm] ok> 
+
+From tinyG: [19:29:07] line:0,posx:0.000,posy:0.000,posz:0.000,posa:20.000,feed:250.00,vel:0.00,unit:1,coor:0,dist:1,admo:1,frmo:1,momo:0,stat:3
+
+Out > [19:29:10] $posa
+
+From tinyG: [19:29:10] A position:         20.000 deg
+
+From tinyG: [19:29:10] tinyg [mm] ok> 
+
+Out > [19:29:10] G91 G0 A0
+
+Out > [19:29:10] G90 G0 A9.524
+10.0
+10.0
+
+From tinyG: [19:29:10] tinyg [mm] ok> 
+
+From tinyG: [19:29:10] tinyg [mm] ok> 
+
+From tinyG: [19:29:10] tinyg [mm] err[101]: Malformed command: 10.0 
+
+From tinyG: [19:29:10] tinyg [mm] err[101]: Malformed command: 10.0 
+
+From tinyG: [19:29:10] line:0,posx:0.000,posy:0.000,posz:0.000,posa:9.545,feed:250.00,vel:270.24,unit:1,coor:0,dist:0,admo:1,frmo:1,momo:0,stat:5
+
+Out > [19:29:10] G28.3 A0
+
+From tinyG: [19:29:10] tinyg [mm] ok> 
+
+From tinyG: [19:29:10] posa:0.000,stat:3
+
+Out > [19:29:10] G90 G0 Z0 A20
+
+From tinyG: [19:29:10] tinyg [mm] ok> 
+
+From tinyG: [19:29:11] posa:19.977,vel:277.85,stat:5
+
+From tinyG: [19:29:11] posa:20.000,vel:0.00,stat:3
+
+Out > [19:29:15] $posa
+
+From tinyG: [19:29:15] A position:         20.000 deg
+
+From tinyG: [19:29:15] tinyg [mm] ok> 
+
+Out > [19:29:15] G91 G0 A0
+
+Out > [19:29:15] G90 G0 A9.524
+10.0
+10.0
+10.0
+
+From tinyG: [19:29:15] tinyg [mm] ok> 
+
+From tinyG: [19:29:15] tinyg [mm] ok> 
+
+From tinyG: [19:29:15] tinyg [mm] err[101]: Malformed command: 10.0 
+
+From tinyG: [19:29:15] tinyg [mm] err[101]: Malformed command: 10.0 
+
+From tinyG: [19:29:15] tinyg [mm] err[101]: Malformed command: 10.0 
+
+From tinyG: [19:29:15] line:0,posx:0.000,posy:0.000,posz:0.000,posa:9.545,feed:250.00,vel:270.24,unit:1,coor:0,dist:0,admo:1,frmo:1,momo:0,stat:5
+
+Out > [19:29:15] G28.3 A0
+
+From tinyG: [19:29:15] tinyg [mm] ok> 
+
+From tinyG: [19:29:15] posa:0.000,stat:3
+
+Out > [19:29:15] G90 G0 Z0 A20
+
+From tinyG: [19:29:15] tinyg [mm] ok> 
+
+From tinyG: [19:29:16] posa:19.977,vel:277.85,stat:5
+
+From tinyG: [19:29:16] posa:20.000,vel:0.00,stat:3
+

@@ -6,10 +6,14 @@ import java.io.*;
 FileWriter fw;
 //BufferWruter bbw;
 
+
+
 boolean debug = false;
 float smartPinWireAngle = 0;
 float previousAngle = 0;
 float previousFeed = 0;
+
+
 
 void logic()
 {
@@ -37,15 +41,28 @@ void logic()
     reportEvent("Resuming script: " + theGCode);
   } 
 
+
   //println("Is Q empty? :" + dataQueue.isEmpty() + "Buffer size:" +  tinyGBuffer);
   while (tinyGBuffer < 2 && dataQueue.size() > 0 && canSend)
   {
+    println("Q size: " + dataQueue.size());
+    println("Q peek: " + dataQueue.peek());
+
     if (dataQueue.peek().indexOf('(') >= 0 || dataQueue.peek().indexOf(';') >= 0) {
       // This is a comment. Print on terminal but don't send to tinyG (tinyG doesn't send responses to comments)
       print("Removing a comment: ");
       reportEvent("||" + dataQueue.peek());
       dataQueue.remove();
-    } 
+    } else if (dataQueue.peek().toLowerCase().indexOf("recorda") >= 0) {
+      dataQueue.remove();
+      // we want to record the A pos into a log file of sorts
+      reportEvent(">> TESTING >> Will record posA... \n");
+      isTesting = true;
+    } else if (dataQueue.peek().toLowerCase().indexOf("cls") >= 0) {
+      // Just clear the terminal so it doesn't hog memory
+      dataQueue.remove();
+      myTerminal.clear();
+    }
     //println("can I send? " + canSend); //debug
     sendDataFromQ();
   }//end while
@@ -54,27 +71,37 @@ void logic()
 
 
 
+
+
 void sendDataFromQ()
 {
-  if (dataQueue.peek().toLowerCase().indexOf("eof")> -1) {
-      println("////////////////////////////////////////////////////");
-      reportEvent("Reached end of file\n");
-      println("\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\");
-      dataQueue.remove();
+  if (dataQueue.peek().toLowerCase().indexOf("eof") > -1) {
+    logger.println("Out > " + theTime() + dataQueue.peek());
+    logger.flush();
+    //delay(10);
+    println("***********");
+    println("GOT EOF HERE: " + dataQueue.peek());
+    reportEvent("Reached end of file\n");
+    reportEvent("Loops Done: " + loopsLeft + "\n");
+    cp5.get(Textlabel.class, "counter").setText(str(loopsLeft));
+    canAddToQ=true;
+    delay(50);
+    reportEvent("Can Add again \n");
+    println("-----------");
+    dataQueue.remove();
+    dataQueue.addFirst("!%~\n");
 
-      if ((repeatLoops-loopsLeft)>0) {
-        loopsLeft++;
-        reportEvent("Sending the file " + (repeatLoops-loopsLeft) + " more times!!!\n");
-        cp5.get(Textlabel.class, "counter").setText(str(loopsLeft));
-      } else {
-        reportEvent("Done sending the file.\n");
-        dataQueue.addFirst("!%~");
-      }
-    }// if eof
-  
+
+    if ((repeatLoops-loopsLeft)>0) {
+      reportEvent("Sending the file " + (repeatLoops-loopsLeft) + " more times!!!\n");
+    } else {
+      reportEvent("Done looping the file.\n");
+    }
+  }// if eof
+
   try {
     myPort.write(dataQueue.peek());
-    if (dataQueue.peek().indexOf("$di1fn=0")>0) {
+    if (dataQueue.peek().indexOf("$di1fn=0")>-1) {
       statusInterlock=false;
       reportEvent("Removing interlock");
     }
@@ -108,15 +135,6 @@ void sendDataFromQ()
 // If it's a JSON, treat it accordingly, if it's not, treat it as text and
 // dump it.
 void dumpFile(String theFile) {
-  // get how many times we need to repeat the dump
-  if (cp5.get(Textfield.class, "numTimes").getText().equals("")) {
-    repeatLoops = 1;
-  } else {
-    repeatLoops = int(cp5.get(Textfield.class, "numTimes").getText());
-  }
-  loopsLeft = 0;
-  cp5.get(Textlabel.class, "counter").setText(str(loopsLeft));
-
   reportEvent("Loading File... \n");
   String theLCFile = theFile.toLowerCase(); // so there's no confustion between JSON and json
 
@@ -150,27 +168,39 @@ void dumpFile(String theFile) {
     // If it's not the init file, then let's just dump whatever is in the file.
     // if it's a JSON but not the init, it will be dumped and the tinyG might complain
     // Rando files will be sent repeatLoops number of times.
+    if (debug) println("repeat loops: " + repeatLoops);
+    if (debug) println("Can Add to Q: " + canAddToQ);
+    if (debug) println("Im supposed to be here");
+    
     String fileLines[] = loadStrings(theFile);
     reportEvent("Adding " + fileLines.length + " lines to the queue... \n");
-    reportEvent("Sending the file " + repeatLoops + " time(s)... \n");
 
-    for (int n=0; n<repeatLoops; n++) {
-      // send the file the number of times the user has indicated in the text field (default 1)
-      for (int i=0; i<fileLines.length; i++) {
-        if (fileLines[i].equals("")) {
-          println("Empty line, skip");
-        } else if(fileLines[i].indexOf('(')>=0){
-          println("Comment line, skip");
-        } else {
-          dataQueue.add(fileLines[i] + "\n");
-          delay(1);
+    int eofCounter = 0;
+    for (int i=0; i<fileLines.length; i++) {
+      if (fileLines[i].equals("")) {
+        if (debug) println("Empty line, skip");
+      } else if (fileLines[i].indexOf('(')>=0) {
+        if (debug) println("Comment line, skip");
+      } else if (fileLines[i].toLowerCase().equals("eof")) {
+        eofCounter++;
+        dataQueue.add(fileLines[i] + "\n");
+        println("Got EOF");
+      } else {
+        if (debug) println("Adding line " + i + " to the Q");
+        if (i == fileLines.length && eofCounter == 0) { // we went through the whole thing but didn't find an EOF
+          println("Adding EOF cuz didn't find it");
+          dataQueue.add("EOF\n");
         }
-        //reportEvent(fileLines[i] + "\n");                 // Put the line on the terminal
+        dataQueue.add(fileLines[i] + "\n");
+        delay(1);
       }
-      reportEvent("File added to the queue. \n");
-      reportEvent("Sending the file " + (repeatLoops-n) + " more times...\n");
-    }//end for repeats
-  }
+      //reportEvent(fileLines[i] + "\n");                 // Put the line on the terminal
+    }//end FOR
+    reportEvent("File added to the queue. \n");
+    canAddToQ = false;
+    loopsLeft++;
+    if (debug) println("Loops left: " + loopsLeft);
+  }//end else
 }//end func
 
 
@@ -198,6 +228,7 @@ void compensateAngle() {
 }
 
 
+
 // Handy function to publish events both on the terminal
 // and on the serial console. This will save us some lines
 // of code
@@ -208,6 +239,43 @@ void reportEvent(String theEvent) {
   println(theEvent);
 }
 
+String thePath() {
+  //String fileName = dataPath("") + theDate() + ".csv";
+  String fileName = dataPath("") + "HomingTest_1" + ".csv";
+  return fileName;
+}
+
+
+
+
+void aPosToFile(String filename, float thePosA) {
+  File f = new File(dataPath(filename));
+  if (!f.exists()) {
+    createFile(f);
+  }
+  try {
+    PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(f, true)));
+    out.println(thePosA);
+    out.close();
+    reportEvent("Recorded PosA... \n");
+    canAddToQ = true;
+  }
+  catch (IOException e) {
+    e.printStackTrace();
+  }
+}
+
+
+void createFile(File f) {
+  File parentDir = f.getParentFile();
+  try {
+    parentDir.mkdirs(); 
+    f.createNewFile();
+  }
+  catch(Exception e) {
+    e.printStackTrace();
+  }
+}    
 
 
 
@@ -268,4 +336,24 @@ void reportEvent(String theEvent) {
  break;
  }//end switch
  }//end if measure
+ */
+
+
+/*
+     
+ for (int n=0; n<repeatLoops; n++) {
+ // send the file the number of times the user has indicated in the text field (default 1)
+ for (int i=0; i<fileLines.length; i++) {
+ if (fileLines[i].equals("")) {
+ println("Empty line, skip");
+ } else if (fileLines[i].indexOf('(')>=0) {
+ println("Comment line, skip");
+ } else {
+ dataQueue.add(fileLines[i] + "\n");
+ delay(1);
+ }
+ //reportEvent(fileLines[i] + "\n");                 // Put the line on the terminal
+ }
+ reportEvent("File added to the queue. \n");
+ reportEvent("Sending the file " + (repeatLoops-n) + " more times...\n");
  */

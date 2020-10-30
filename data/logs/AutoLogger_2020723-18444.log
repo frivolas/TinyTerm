@@ -1,0 +1,12 @@
+[18:44:04] Starting Log file for session: 2020723-18444
+
+From tinyG: [18:44:05] {r:{fv:0.98,fb:86.03,hp:3,hv:0,id:"0213-0215-0515",msg:"SYSTEM READY"},f:[1,0,1]}
+
+Out > [18:44:16] g91 g0 a10
+
+From tinyG: [18:44:16] {r:{gc:"G91G0A10"},f:[1,0,11]}
+
+From tinyG: [18:44:16] {sr:{posa:29.997,vel:76.25,dist:1,stat:5}}
+
+From tinyG: [18:44:16] {sr:{posa:30.000,vel:0.00,stat:3}}
+

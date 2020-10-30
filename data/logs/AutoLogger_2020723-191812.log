@@ -1,0 +1,82 @@
+[19:18:12] Starting Log file for session: 2020723-191812
+
+From tinyG: [19:18:13] {r:{fv:0.98,fb:86.03,hp:3,hv:0,id:"0213-0215-0515",msg:"SYSTEM READY"},f:[1,0,1]}
+
+From tinyG: [19:18:13] tinyg [mm] ok> 
+
+From tinyG: [19:18:20] {"r":{"fv":0.98,"fb":86.03,"hp":3,"hv":0,"id":"0213-0215-0515","msg":"SYSTEM READY"},"f":[1,0,1]}
+
+Out > [19:18:23] G28.2 Z0 X0
+
+Out > [19:18:23] G90 G0 Z-12
+
+From tinyG: [19:18:23] {"sr":{"line":0,"posx":0.000,"posy":0.000,"posz":-1.455,"posa":0.000,"feed":799.99,"vel":799.99,"unit":1,"coor":0,"dist":1,"admo":1,"frmo":1,"momo":1,"stat":9}}
+
+From tinyG: [19:18:23] {"sr":{"posz":-4.790}}
+
+From tinyG: [19:18:23] {"sr":{"posz":-8.125}}
+
+From tinyG: [19:18:24] {"er":{"fb":86.03,"st":203,"msg":"Limit hit [$clear to reset, $lim=0 to override] - input 1"}}
+
+From tinyG: [19:18:24] {"er":{"fb":86.03,"st":94,"msg":"Planner assertion failure - zero length line in calculate trapezoid"}}
+
+From tinyG: [19:18:24] {"er":{"fb":86.03,"st":94,"msg":"Planner assertion failure - zero length move in exec_aline"}}
+
+From tinyG: [19:18:24] {"sr":{"posz":-10.000,"vel":0.00,"stat":2}}
+
+From tinyG: [19:18:24] {"sr":{"posz":-7.864,"vel":799.99}}
+
+From tinyG: [19:18:24] {"sr":{"posz":-4.505}}
+
+From tinyG: [19:18:24] {"sr":{"posz":-1.165}}
+
+From tinyG: [19:18:25] {"sr":{"posz":0.990,"vel":0.07}}
+
+From tinyG: [19:18:25] {"sr":{"posz":-0.385,"vel":799.99}}
+
+From tinyG: [19:18:25] {"sr":{"posz":-3.720}}
+
+From tinyG: [19:18:25] {"sr":{"posz":-7.075}}
+
+From tinyG: [19:18:26] {"sr":{"posz":-9.010,"vel":0.00}}
+
+From tinyG: [19:18:26] {"sr":{"posz":-8.643,"feed":100.00,"vel":100.00}}
+
+From tinyG: [19:18:26] {"sr":{"posz":-8.226}}
+
+From tinyG: [19:18:26] {"sr":{"posz":-7.809}}
+
+From tinyG: [19:18:27] {"sr":{"posz":-7.391}}
+
+From tinyG: [19:18:27] {"sr":{"posz":-6.974}}
+
+From tinyG: [19:18:27] {"sr":{"posz":-6.556}}
+
+From tinyG: [19:18:27] {"sr":{"posz":-6.139}}
+
+From tinyG: [19:18:28] {"sr":{"posz":-5.721}}
+
+From tinyG: [19:18:28] {"sr":{"posz":-5.306}}
+
+From tinyG: [19:18:28] {"sr":{"posz":-4.887}}
+
+From tinyG: [19:18:28] {"sr":{"posz":-4.469}}
+
+From tinyG: [19:18:29] {"sr":{"posz":-4.052}}
+
+From tinyG: [19:18:29] {"sr":{"posz":-3.634}}
+
+From tinyG: [19:18:29] {"sr":{"posz":-3.217}}
+
+From tinyG: [19:18:30] {"sr":{"posz":-2.799}}
+
+From tinyG: [19:18:30] {"sr":{"posz":-2.382}}
+
+From tinyG: [19:18:30] {"sr":{"posz":-1.965}}
+
+From tinyG: [19:18:30] {"sr":{"posz":-1.547}}
+
+From tinyG: [19:18:31] {"sr":{"posz":-1.130}}
+
+From tinyG: [19:18:31] {"sr":{"posz":-0.715}}
+

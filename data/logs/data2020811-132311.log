@@ -1,0 +1,82 @@
+[13:23:11] Starting Log file for session: 2020811-132311
+
+[13:20:25] Terminal ready... 
+[13:20:25] Log file started 
+[13:20:25] Please choose a Serial port to connect to... 
+[13:20:27] Connected to Serial on port COM6
+[13:20:27] < {"r":{"fv":0.98,"fb":86.03,"hp":3,"hv":0,"id":"0213-0215-0515","msg":"SYSTEM READY"},"f":[1,0,1]}
+[13:20:27] < [ej]  enable json mode            0 [0=text,1=JSON]
+[13:20:27] < tinyg [mm] ok> 
+[13:21:43] Loading file...
+[13:21:55] File to load: C:\Users\Oscar\Desktop\New Text Document.txt
+[13:21:55] Loading File... 
+[13:21:55] Adding 51 lines to the queue... 
+[13:21:55] Sending the file 1 time(s)... 
+[13:21:55] > g91 g1 z-5 f500
+[13:21:55] > g90 g1 g0 
+[13:21:55] < tinyg [mm] ok> 
+[13:21:55] < tinyg [mm] ok> 
+[13:21:56] File added to the queue. 
+[13:21:56] Sending the file 1 more times...
+[13:21:56] < posz:-1.489,feed:500.00,vel:500.00,dist:1,stat:5
+[13:21:56] < posz:-3.149
+[13:21:56] < posz:-4.835,vel:499.47
+[13:21:56] < posz:-5.000,vel:0.00,dist:0,momo:0,stat:3
+[13:21:56] Machine is homed. 
+[13:21:56] > g90 g0 a20
+[13:21:56] > g90 g0 a0
+[13:21:56] < tinyg [mm] ok> 
+[13:21:56] < tinyg [mm] ok> 
+[13:21:57] < posa:17.841,vel:4542.30,stat:5
+[13:21:57] < posa:8.300,vel:8529.51
+[13:21:57] < posa:0.000,vel:0.00,stat:3
+[13:21:57] Machine is homed. 
+[13:21:57] > g91 g1 z-5 f500
+[13:21:57] > g90 g1 g0 
+[13:21:57] < tinyg [mm] ok> 
+[13:21:57] < tinyg [mm] ok> 
+[13:21:57] < posz:-6.489,vel:500.00,dist:1,momo:1,stat:5
+[13:21:58] < posz:-8.149
+[13:21:58] < posz:-9.835,vel:499.47
+[13:21:58] < posz:-10.000,vel:0.00,dist:0,momo:0,stat:3
+[13:21:58] Machine is homed. 
+[13:21:58] > g90 g0 a20
+[13:21:58] > g90 g0 a0
+[13:21:58] < tinyg [mm] ok> 
+[13:21:58] < tinyg [mm] ok> 
+[13:21:58] < posa:17.841,vel:4542.30,stat:5
+[13:21:58] < posa:8.300,vel:8529.51
+[13:21:59] < posa:0.000,vel:0.00,stat:3
+[13:21:59] Machine is homed. 
+[13:21:59] > g91 g1 z-5 f500
+[13:21:59] > g90 g1 g0 
+[13:21:59] < {"er":{"fb":86.03,"st":225,"msg":"Soft limit - Z min - soft_limits"}}
+[13:21:59] < tinyg [mm] err[225]: Soft limit - Z min: g91 g1 z-5 f500 
+[13:21:59] < tinyg [mm] err[204]: Command rejected by ALARM [$clear to reset]: g90 g1 g0  
+[13:22:43] Halt and flush: !%
+[13:22:43] < tinyg [mm] ok> 
+[13:22:46] Resuming script: ~
+[13:22:46] > ~
+[13:22:48] > $clear
+[13:22:48] TinyG Command received 
+[13:22:48] < tinyg [mm] ok> 
+[13:22:51] Re-Dumping file C:\Users\Oscar\Desktop\New Text Document.txt ...
+[13:22:51] Loading File... 
+[13:22:51] Adding 28 lines to the queue... 
+[13:22:51] Sending the file 1 time(s)... 
+[13:22:51] File added to the queue. 
+[13:22:51] Sending the file 1 more times...
+[13:22:51] > g28.3z0
+[13:22:51] < tinyg [mm] ok> 
+[13:22:59] Resuming script: ~
+[13:23:05] Halt and flush: !%
+[13:23:05] < tinyg [mm] ok> 
+[13:23:07] Halt and flush: %
+[13:23:07] < tinyg [mm] ok> 
+[13:23:08] Feedhold!!
+[13:23:08] Send '~' to resume... !
+[13:23:09] Resuming script: ~
+[13:23:09] > !
+[13:23:09] > ~
+
+

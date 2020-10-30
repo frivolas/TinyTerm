@@ -1,0 +1,13 @@
+[12:55:26] Starting Log file for session: 2020811-125526
+
+[12:55:18] Terminal cleared and ready...
+[12:55:22] > $2ma=2
+[12:55:22] TinyG Command received 
+[12:55:22] < [2ma] m2 map to axis              2 [0=X,1=Y,2=Z...]
+[12:55:22] < tinyg [mm] ok> 
+[12:55:25] > $2tr=1
+[12:55:25] TinyG Command received 
+[12:55:25] < [2tr] m2 travel per revolution    1.0000 mm
+[12:55:25] < tinyg [mm] ok> 
+
+

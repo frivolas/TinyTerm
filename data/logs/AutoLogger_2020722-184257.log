@@ -1,0 +1,280 @@
+[18:42:57] Starting Log file for session: 2020722-184257
+
+From tinyG: [18:42:59] {r:{fv:0.98,fb:86.03,hp:3,hv:0,id:"0213-0215-0515",msg:"SYSTEM READY"},f:[1,0,1]}
+
+From tinyG: [18:42:59] tinyg [mm] ok> 
+
+From tinyG: [18:43:12] tinyg [mm] ok> 
+
+Out > [18:43:15] ~
+
+From tinyG: [18:43:27] {"r":{"fv":0.98,"fb":86.03,"hp":3,"hv":0,"id":"0213-0215-0515","msg":"SYSTEM READY"},"f":[1,0,1]}
+
+From tinyG: [18:43:37] {"r":{"tinygmo":null},"f":[1,100,26]}
+
+From tinyG: [18:43:37] {"r":{"baud":null},"f":[1,100,11]}
+
+From tinyG: [18:43:37] {r:{js:0},f:[1,0,9]}
+
+From tinyG: [18:43:37] {r:{gpa:0},f:[1,0,10]}
+
+From tinyG: [18:43:37] {r:{gun:1},f:[1,0,10]}
+
+From tinyG: [18:43:37] {r:{ja:0.00},f:[1,0,9]}
+
+From tinyG: [18:43:37] {r:{si:250},f:[1,0,11]}
+
+From tinyG: [18:43:37] {r:{jv:5},f:[1,0,9]}
+
+From tinyG: [18:43:37] {r:{mt:0},f:[1,0,11]}
+
+From tinyG: [18:43:37] {r:{st:null},f:[1,100,9]}
+
+From tinyG: [18:43:37] {r:{motorma:null},f:[1,100,20]}
+
+From tinyG: [18:43:37] {r:{1ma:5},f:[1,0,10]}
+
+From tinyG: [18:43:37] {r:{2ma:0},f:[1,0,10]}
+
+From tinyG: [18:43:37] {r:{3ma:2},f:[1,0,10]}
+
+From tinyG: [18:43:37] {r:{4ma:3},f:[1,0,10]}
+
+From tinyG: [18:43:37] {r:{polarit:null},f:[1,100,18]}
+
+From tinyG: [18:43:37] {r:{1po:1},f:[1,0,10]}
+
+From tinyG: [18:43:37] {r:{2po:0},f:[1,0,10]}
+
+From tinyG: [18:43:37] {r:{3po:1},f:[1,0,10]}
+
+From tinyG: [18:43:37] {r:{4po:0},f:[1,0,10]}
+
+From tinyG: [18:43:37] {r:{trvalue:null},f:[1,100,16]}
+
+From tinyG: [18:43:37] {r:{1tr:60.0000},f:[1,0,11]}
+
+From tinyG: [18:43:37] {r:{2tr:6.3500},f:[1,0,13]}
+
+From tinyG: [18:43:37] {r:{3tr:5.0000},f:[1,0,10]}
+
+From tinyG: [18:43:37] {r:{4tr:60.0000},f:[1,0,11]}
+
+From tinyG: [18:43:37] {r:{powerse:null},f:[1,100,21]}
+
+From tinyG: [18:43:37] {r:{1pl:1.000},f:[1,0,10]}
+
+From tinyG: [18:43:37] {r:{2pl:1.000},f:[1,0,10]}
+
+From tinyG: [18:43:37] {r:{3pl:0.000},f:[1,0,10]}
+
+From tinyG: [18:43:37] {r:{4pl:0.000},f:[1,0,10]}
+
+From tinyG: [18:43:37] {r:{1pm:2},f:[1,0,10]}
+
+From tinyG: [18:43:37] {r:{2pm:2},f:[1,0,10]}
+
+From tinyG: [18:43:37] {r:{3pm:2},f:[1,0,10]}
+
+From tinyG: [18:43:37] {r:{4pm:2},f:[1,0,10]}
+
+From tinyG: [18:43:37] {r:{motorse:null},f:[1,100,21]}
+
+From tinyG: [18:43:37] {r:{1mi:16},f:[1,0,11]}
+
+From tinyG: [18:43:37] {r:{2mi:32},f:[1,0,11]}
+
+From tinyG: [18:43:37] {r:{3mi:10,msg:"*** WARNING *** Setting non-standard microstep value"},f:[1,0,11]}
+
+From tinyG: [18:43:37] {r:{4mi:10,msg:"*** WARNING *** Setting non-standard microstep value"},f:[1,0,11]}
+
+From tinyG: [18:43:37] {r:{1sa:1.800},f:[1,0,12]}
+
+From tinyG: [18:43:37] {r:{2sa:1.800},f:[1,0,12]}
+
+From tinyG: [18:43:37] {r:{3sa:1.800},f:[1,0,12]}
+
+From tinyG: [18:43:37] {r:{4sa:1.800},f:[1,0,12]}
+
+From tinyG: [18:43:37] {r:{axesset:null},f:[1,100,20]}
+
+From tinyG: [18:43:37] {r:{xam:1},f:[1,0,10]}
+
+From tinyG: [18:43:37] {r:{xvm:1500},f:[1,0,13]}
+
+From tinyG: [18:43:37] {r:{xjm:5000},f:[1,0,13]}
+
+From tinyG: [18:43:37] {r:{xfr:5000},f:[1,0,13]}
+
+From tinyG: [18:43:37] {r:{xtn:-500.000},f:[1,0,13]}
+
+From tinyG: [18:43:37] {r:{xtm:0.000},f:[1,0,10]}
+
+From tinyG: [18:43:37] {r:{yam:0},f:[1,0,10]}
+
+From tinyG: [18:43:37] {r:{yvm:0},f:[1,0,10]}
+
+From tinyG: [18:43:37] {r:{yjm:0},f:[1,0,10]}
+
+From tinyG: [18:43:37] {r:{yfr:0},f:[1,0,10]}
+
+From tinyG: [18:43:37] {r:{zam:1},f:[1,0,10]}
+
+From tinyG: [18:43:37] {r:{zvm:3750},f:[1,0,13]}
+
+From tinyG: [18:43:37] {r:{zjm:5000},f:[1,0,13]}
+
+From tinyG: [18:43:37] {r:{zfr:3750},f:[1,0,13]}
+
+From tinyG: [18:43:37] {r:{ztn:-100.000},f:[1,0,13]}
+
+From tinyG: [18:43:37] {r:{ztm:2.000},f:[1,0,10]}
+
+From tinyG: [18:43:37] {r:{aam:1},f:[1,0,10]}
+
+From tinyG: [18:43:37] {r:{avm:20000},f:[1,0,14]}
+
+From tinyG: [18:43:37] {r:{ajm:10000},f:[1,0,14]}
+
+From tinyG: [18:43:37] {r:{afr:15000},f:[1,0,14]}
+
+From tinyG: [18:43:37] {r:{atn:-3600.000},f:[1,0,14]}
+
+From tinyG: [18:43:37] {r:{atm:3600.000},f:[1,0,13]}
+
+From tinyG: [18:43:37] {r:{cam:1},f:[1,0,10]}
+
+From tinyG: [18:43:37] {r:{cvm:10000},f:[1,0,14]}
+
+From tinyG: [18:43:37] {r:{cjm:5000},f:[1,0,13]}
+
+From tinyG: [18:43:37] {r:{cfr:10000},f:[1,0,14]}
+
+From tinyG: [18:43:37] {r:{ctn:-3600.000},f:[1,0,14]}
+
+From tinyG: [18:43:37] {r:{ctm:3600.000},f:[1,0,13]}
+
+From tinyG: [18:43:37] {r:{limitsw:null},f:[1,100,21]}
+
+From tinyG: [18:43:37] {r:{sl:1},f:[1,0,9]}
+
+From tinyG: [18:43:37] {r:{xsn:null},f:[1,100,10]}
+
+From tinyG: [18:43:37] {r:{ahi:1},f:[1,0,10]}
+
+From tinyG: [18:43:37] {r:{di1mo:1},f:[1,0,12]}
+
+From tinyG: [18:43:37] {r:{di1ac:0},f:[1,0,12]}
+
+From tinyG: [18:43:37] {r:{di1fn:0},f:[1,0,12]}
+
+From tinyG: [18:43:37] {r:{xsx:null},f:[1,100,10]}
+
+From tinyG: [18:43:37] {r:{xhi:2},f:[1,0,10]}
+
+From tinyG: [18:43:37] {r:{di2mo:0},f:[1,0,12]}
+
+From tinyG: [18:43:37] {r:{di2ac:0},f:[1,0,12]}
+
+From tinyG: [18:43:37] {r:{di2fn:0},f:[1,0,12]}
+
+From tinyG: [18:43:37] {r:{ysn:null},f:[1,100,10]}
+
+From tinyG: [18:43:37] {r:{yhi:0},f:[1,0,10]}
+
+From tinyG: [18:43:37] {r:{di3mo:-1},f:[1,0,13]}
+
+From tinyG: [18:43:37] {r:{di3ac:0},f:[1,0,12]}
+
+From tinyG: [18:43:37] {r:{di3fn:0},f:[1,0,12]}
+
+From tinyG: [18:43:37] {r:{ysx:null},f:[1,100,10]}
+
+From tinyG: [18:43:37] {r:{di4mo:-1},f:[1,0,13]}
+
+From tinyG: [18:43:37] {r:{di4ac:0},f:[1,0,12]}
+
+From tinyG: [18:43:37] {r:{di4fn:0},f:[1,0,12]}
+
+From tinyG: [18:43:37] {r:{zsn:null},f:[1,100,10]}
+
+From tinyG: [18:43:37] {r:{zhi:5},f:[1,0,10]}
+
+From tinyG: [18:43:37] {r:{di5mo:0},f:[1,0,12]}
+
+From tinyG: [18:43:37] {r:{di5ac:0},f:[1,0,12]}
+
+From tinyG: [18:43:37] {r:{di5fn:0},f:[1,0,12]}
+
+From tinyG: [18:43:37] {r:{zsx:null},f:[1,100,10]}
+
+From tinyG: [18:43:37] {r:{di6mo:-1},f:[1,0,13]}
+
+From tinyG: [18:43:37] {r:{di6ac:0},f:[1,0,12]}
+
+From tinyG: [18:43:37] {r:{di6fn:0},f:[1,0,12]}
+
+From tinyG: [18:43:37] {r:{asn:null},f:[1,100,10]}
+
+From tinyG: [18:43:37] {r:{di7mo:-1},f:[1,0,13]}
+
+From tinyG: [18:43:37] {r:{di7ac:0},f:[1,0,12]}
+
+From tinyG: [18:43:37] {r:{di7fn:0},f:[1,0,12]}
+
+From tinyG: [18:43:37] {r:{asx:null},f:[1,100,10]}
+
+From tinyG: [18:43:37] {r:{di8mo:-1},f:[1,0,13]}
+
+From tinyG: [18:43:37] {r:{di8ac:0},f:[1,0,12]}
+
+From tinyG: [18:43:37] {r:{di8fn:0},f:[1,0,12]}
+
+From tinyG: [18:43:37] {r:{di9mo:-1},f:[1,0,13]}
+
+From tinyG: [18:43:37] {r:{di9ac:0},f:[1,0,12]}
+
+From tinyG: [18:43:37] {r:{di9fn:0},f:[1,0,12]}
+
+From tinyG: [18:43:37] {r:{homingc:null},f:[1,100,20]}
+
+From tinyG: [18:43:37] {r:{st:null},f:[1,100,9]}
+
+From tinyG: [18:43:37] {r:{xhd:1},f:[1,0,10]}
+
+From tinyG: [18:43:37] {r:{xsv:1000},f:[1,0,13]}
+
+From tinyG: [18:43:37] {r:{xlv:100.00},f:[1,0,12]}
+
+From tinyG: [18:43:37] {r:{xlb:5.000},f:[1,0,10]}
+
+From tinyG: [18:43:37] {r:{xzb:2.000},f:[1,0,10]}
+
+From tinyG: [18:43:37] {r:{xjh:10000},f:[1,0,14]}
+
+From tinyG: [18:43:37] {r:{zhd:0},f:[1,0,10]}
+
+From tinyG: [18:43:37] {r:{zsv:1000},f:[1,0,13]}
+
+From tinyG: [18:43:37] {r:{zlv:100.00},f:[1,0,12]}
+
+From tinyG: [18:43:37] {r:{zlb:5.000},f:[1,0,10]}
+
+From tinyG: [18:43:37] {r:{zzb:50.305},f:[1,0,15]}
+
+From tinyG: [18:43:37] {r:{zjh:10000},f:[1,0,14]}
+
+From tinyG: [18:43:37] {r:{ahd:1},f:[1,0,10]}
+
+From tinyG: [18:43:37] {r:{asv:2000},f:[1,0,13]}
+
+From tinyG: [18:43:37] {r:{alv:500.00},f:[1,0,12]}
+
+From tinyG: [18:43:37] {r:{alb:20.000},f:[1,0,11]}
+
+From tinyG: [18:43:37] {r:{azb:0.000},f:[1,0,10]}
+
+From tinyG: [18:43:37] {r:{ajh:10000},f:[1,0,14]}
+
+From tinyG: [18:43:37] {sr:{line:0,posx:0.000,posy:0.000,posz:0.000,posa:0.000,feed:0.00,vel:0.00,unit:1,coor:1,dist:0,admo:1,frmo:1,momo:4,stat:1}}
+

@@ -1,0 +1,45 @@
+[17:09:17] Starting Log file for session: 20201013-17917
+
+[17:08:17] Terminal cleared and ready...
+[17:08:20] > g28.3 z-10
+[17:08:20] < tinyg [mm] ok> 
+[17:08:30] Halt and flush: !%
+[17:08:30] < tinyg [mm] ok> 
+[17:08:37] > g91 g1 z10 f500
+[17:08:37] < tinyg [mm] ok> 
+[17:08:38] < posz:-8.511,feed:500.00,vel:500.00,dist:1,momo:1,stat:5
+[17:08:38] < posz:-6.849
+[17:08:38] < posz:-5.162
+[17:08:38] < posz:-3.488
+[17:08:38] < posz:-1.827
+[17:08:39] < posz:-0.153,vel:497.68
+[17:08:39] < posz:0.000,vel:0.00,stat:3
+[17:08:39] Machine is homed. 
+[17:08:42] > g28.3 z-10
+[17:08:42] < tinyg [mm] ok> 
+[17:08:48] > g91 g1 z10 f500
+[17:08:48] < tinyg [mm] ok> 
+[17:08:48] < posz:-8.511,vel:500.00,stat:5
+[17:08:48] < posz:-6.849
+[17:08:48] < posz:-5.162
+[17:08:48] < posz:-3.488
+[17:08:49] < posz:-1.827
+[17:08:49] < posz:-0.153,vel:497.68
+[17:08:49] < posz:0.000,vel:0.00,stat:3
+[17:08:49] Machine is homed. 
+[17:09:00] > g91 g1 z10 f100
+[17:09:00] < {"er":{"fb":86.03,"st":226,"msg":"Soft limit - Z max - soft_limits"}}
+[17:09:00] < tinyg [mm] err[226]: Soft limit - Z max: g91 g1 z10 f100 
+[17:09:02] ESC pressed, do you want to exit Y/N? 
+[17:09:05] N: OK clearing textfield. 
+[17:09:05] > n
+[17:09:05] < tinyg [mm] err[204]: Command rejected by ALARM [$clear to reset]: n 
+[17:09:11] Halt and flush: !%
+[17:09:11] < tinyg [mm] ok> 
+[17:09:14] > $clear
+[17:09:14] TinyG Command received 
+[17:09:14] < tinyg [mm] ok> 
+[17:09:16] Halt and flush: !%
+[17:09:16] < tinyg [mm] ok> 
+
+

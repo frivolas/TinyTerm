@@ -1,0 +1,24 @@
+[21:26:25] Starting Log file for session: 2020724-212625
+
+From tinyG: [21:26:26] {r:{fv:0.98,fb:86.03,hp:3,hv:0,id:"0213-0215-0515",msg:"SYSTEM READY"},f:[1,0,1]}
+
+From tinyG: [21:26:26] tinyg [mm] ok> 
+
+From tinyG: [21:26:26] [ej]  enable json mode            0 [0=text,1=JSON]
+
+From tinyG: [21:26:26] tinyg [mm] ok> 
+
+Out > [21:26:29] (DESCRIPTION: bumped coil)
+
+Out > [21:26:29] 
+
+From tinyG: [21:26:29] tinyg [mm] ok> 
+
+From tinyG: [21:26:38] tinyg [mm] ok> 
+
+Out > [21:26:54] (DESCRIPTION: bumped coil)
+
+Out > [21:26:54] 
+
+From tinyG: [21:26:54] tinyg [mm] ok> 
+

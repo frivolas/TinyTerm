@@ -1,0 +1,14 @@
+[13:12:52] Starting Log file for session: 20201030-131252
+
+From tinyG: [13:12:52] {"r":{"fv":0.98,"fb":86.03,"hp":3,"hv":0,"id":"0213-0215-0515","msg":"SYSTEM READY"},"f":[1,0,1]}
+
+From tinyG: [13:12:52] tinyg [mm] ok> 
+
+From tinyG: [13:12:52] [ej]  enable json mode            0 [0=text,1=JSON]
+
+From tinyG: [13:12:52] tinyg [mm] ok> 
+
+Out > [13:13:04] g28.2a0
+
+Out > [13:13:04] $di1fn=0
+

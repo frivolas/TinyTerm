@@ -1,0 +1,546 @@
+[17:46:58] Starting Log file for session: 2020723-174658
+
+From tinyG: [17:47:00] {r:{fv:0.98,fb:86.03,hp:3,hv:0,id:"0213-0215-0515",msg:"SYSTEM READY"},f:[1,0,1]}
+
+From tinyG: [17:47:00] tinyg [mm] ok> 
+
+Out > [17:47:08] G28.2 Z0 X0
+
+Out > [17:47:08] G90
+
+From tinyG: [17:47:09] posz:-15.805,feed:1000.00,vel:1000.00,stat:9
+
+From tinyG: [17:47:09] posz:-19.979
+
+From tinyG: [17:47:09] posz:-24.179
+
+From tinyG: [17:47:09] posz:-28.353
+
+From tinyG: [17:47:10] posz:-32.528
+
+From tinyG: [17:47:10] posz:-36.703
+
+From tinyG: [17:47:10] posz:-40.852
+
+From tinyG: [17:47:10] posz:-45.052
+
+From tinyG: [17:47:11] posz:-49.227
+
+From tinyG: [17:47:11] posz:-49.753
+
+From tinyG: [17:47:11] posz:-45.766,vel:171.72
+
+From tinyG: [17:47:11] posz:-46.053,feed:100.00,vel:100.00
+
+From tinyG: [17:47:12] posz:-46.473
+
+From tinyG: [17:47:12] posz:-46.890
+
+From tinyG: [17:47:12] posz:-47.308
+
+From tinyG: [17:47:12] posz:-47.725
+
+From tinyG: [17:47:13] posz:-48.142
+
+From tinyG: [17:47:13] posz:-48.559
+
+From tinyG: [17:47:13] posz:-48.977
+
+From tinyG: [17:47:13] posz:-49.394
+
+From tinyG: [17:47:14] posz:-49.811
+
+From tinyG: [17:47:14] posz:-50.228
+
+From tinyG: [17:47:14] posz:-48.413,feed:1000.00,vel:1000.00
+
+From tinyG: [17:47:14] posz:-44.214
+
+From tinyG: [17:47:15] posz:-40.039
+
+From tinyG: [17:47:15] posz:-35.864
+
+From tinyG: [17:47:15] posz:-31.690
+
+From tinyG: [17:47:15] posz:-27.540
+
+From tinyG: [17:47:16] posz:-23.340
+
+From tinyG: [17:47:16] posz:-19.166
+
+From tinyG: [17:47:16] posz:-14.991
+
+From tinyG: [17:47:16] posx:1.630,posz:0.000
+
+From tinyG: [17:47:17] posx:0.658
+
+From tinyG: [17:47:17] posx:-2.590,vel:0.04
+
+From tinyG: [17:47:17] posx:-2.183,feed:100.00,vel:100.00
+
+From tinyG: [17:47:17] posx:-1.766
+
+From tinyG: [17:47:18] posx:-1.349
+
+From tinyG: [17:47:18] posx:-0.931
+
+From tinyG: [17:47:18] posx:-0.514
+
+From tinyG: [17:47:18] posx:-0.099
+
+From tinyG: [17:47:19] posx:0.321
+
+From tinyG: [17:47:19] posx:0.738
+
+From tinyG: [17:47:19] posx:1.156
+
+From tinyG: [17:47:19] posx:1.573
+
+From tinyG: [17:47:20] posx:1.988,vel:99.88
+
+From tinyG: [17:47:20] tinyg [mm] ok> 
+
+From tinyG: [17:47:20] posx:0.000,feed:500.00,vel:0.00,dist:0,momo:4,stat:3
+
+Out > [17:47:20] G0 Z-12
+
+Out > [17:47:20] G28.2 A0
+
+From tinyG: [17:47:20] tinyg [mm] ok> 
+
+From tinyG: [17:47:20] tinyg [mm] ok> 
+
+From tinyG: [17:47:20] posz:-11.293,vel:2083.77,momo:0,stat:9
+
+From tinyG: [17:47:21] posz:-12.000,posa:21.596,feed:2000.00,vel:2000.00,dist:1,momo:1
+
+From tinyG: [17:47:21] posa:29.946
+
+From tinyG: [17:47:21] posa:38.296
+
+From tinyG: [17:47:21] posa:46.646
+
+From tinyG: [17:47:22] posa:54.946
+
+From tinyG: [17:47:22] posa:63.346
+
+From tinyG: [17:47:22] posa:71.696
+
+From tinyG: [17:47:22] posa:80.047
+
+From tinyG: [17:47:23] posa:88.397
+
+From tinyG: [17:47:23] posa:96.748
+
+From tinyG: [17:47:23] posa:105.098
+
+From tinyG: [17:47:23] posa:113.449
+
+From tinyG: [17:47:24] posa:121.799
+
+From tinyG: [17:47:24] posa:130.150
+
+From tinyG: [17:47:24] posa:138.500
+
+From tinyG: [17:47:24] posa:146.851
+
+From tinyG: [17:47:25] posa:155.201
+
+From tinyG: [17:47:25] posa:163.552
+
+From tinyG: [17:47:25] posa:171.902
+
+From tinyG: [17:47:25] posa:180.253
+
+From tinyG: [17:47:26] posa:188.603
+
+From tinyG: [17:47:26] posa:196.904
+
+From tinyG: [17:47:26] posa:205.304
+
+From tinyG: [17:47:26] posa:213.655
+
+From tinyG: [17:47:27] posa:222.005
+
+From tinyG: [17:47:27] posa:230.356
+
+From tinyG: [17:47:27] posa:238.706
+
+From tinyG: [17:47:27] posa:247.057
+
+From tinyG: [17:47:28] posa:255.407
+
+From tinyG: [17:47:28] posa:263.755
+
+From tinyG: [17:47:28] posa:272.103
+
+From tinyG: [17:47:28] posa:280.451
+
+From tinyG: [17:47:29] posa:288.749
+
+From tinyG: [17:47:29] posa:297.147
+
+From tinyG: [17:47:29] posa:305.495
+
+From tinyG: [17:47:29] posa:313.843
+
+From tinyG: [17:47:30] posa:322.191
+
+From tinyG: [17:47:30] posa:330.539
+
+From tinyG: [17:47:30] posa:338.887
+
+From tinyG: [17:47:30] posa:347.235
+
+From tinyG: [17:47:31] posa:355.583
+
+From tinyG: [17:47:31] posa:363.931
+
+From tinyG: [17:47:31] posa:372.279
+
+From tinyG: [17:47:31] posa:380.577
+
+From tinyG: [17:47:32] posa:388.975
+
+From tinyG: [17:47:32] posa:397.323
+
+From tinyG: [17:47:32] posa:405.671
+
+From tinyG: [17:47:32] posa:414.019
+
+From tinyG: [17:47:33] posa:422.367
+
+From tinyG: [17:47:33] posa:430.715
+
+From tinyG: [17:47:33] posa:439.063
+
+From tinyG: [17:47:33] posa:447.411
+
+From tinyG: [17:47:34] posa:455.758
+
+From tinyG: [17:47:34] posa:464.106
+
+From tinyG: [17:47:34] posa:472.454
+
+From tinyG: [17:47:34] posa:480.802
+
+From tinyG: [17:47:35] posa:489.150
+
+From tinyG: [17:47:35] posa:497.498
+
+From tinyG: [17:47:35] posa:505.846
+
+From tinyG: [17:47:35] posa:514.194
+
+From tinyG: [17:47:36] posa:522.542
+
+From tinyG: [17:47:36] posa:530.890
+
+From tinyG: [17:47:36] posa:539.238
+
+From tinyG: [17:47:36] posa:547.586
+
+From tinyG: [17:47:37] posa:555.934
+
+From tinyG: [17:47:37] posa:564.282
+
+From tinyG: [17:47:37] posa:572.630
+
+From tinyG: [17:47:37] posa:580.978
+
+From tinyG: [17:47:38] posa:589.326
+
+From tinyG: [17:47:38] posa:597.674
+
+From tinyG: [17:47:38] posa:606.022
+
+From tinyG: [17:47:38] posa:614.320
+
+From tinyG: [17:47:39] posa:622.718
+
+From tinyG: [17:47:39] posa:631.066
+
+From tinyG: [17:47:39] posa:639.414
+
+From tinyG: [17:47:39] posa:647.762
+
+From tinyG: [17:47:40] posa:656.110
+
+From tinyG: [17:47:40] posa:664.458
+
+From tinyG: [17:47:40] posa:672.805
+
+From tinyG: [17:47:40] posa:681.153
+
+From tinyG: [17:47:41] posa:689.501
+
+From tinyG: [17:47:41] posa:697.849
+
+From tinyG: [17:47:41] posa:706.147
+
+From tinyG: [17:47:41] posa:714.545
+
+From tinyG: [17:47:42] posa:722.893
+
+From tinyG: [17:47:42] posa:731.241
+
+From tinyG: [17:47:42] posa:739.589
+
+From tinyG: [17:47:42] posa:747.937
+
+From tinyG: [17:47:43] posa:756.285
+
+From tinyG: [17:47:43] posa:764.633
+
+From tinyG: [17:47:43] posa:772.981
+
+From tinyG: [17:47:43] posa:781.329
+
+From tinyG: [17:47:44] posa:789.677
+
+From tinyG: [17:47:44] posa:797.975
+
+From tinyG: [17:47:44] posa:806.373
+
+From tinyG: [17:47:44] posa:814.721
+
+From tinyG: [17:47:45] posa:823.069
+
+From tinyG: [17:47:45] posa:831.417
+
+From tinyG: [17:47:45] posa:839.765
+
+From tinyG: [17:47:45] posa:848.113
+
+From tinyG: [17:47:46] posa:856.461
+
+From tinyG: [17:47:46] posa:864.809
+
+From tinyG: [17:47:46] posa:873.157
+
+From tinyG: [17:47:46] posa:881.505
+
+From tinyG: [17:47:47] posa:889.852
+
+From tinyG: [17:47:47] posa:898.200
+
+From tinyG: [17:47:47] posa:906.548
+
+From tinyG: [17:47:47] posa:914.896
+
+From tinyG: [17:47:48] posa:923.244
+
+From tinyG: [17:47:48] posa:931.592
+
+From tinyG: [17:47:48] posa:939.940
+
+From tinyG: [17:47:48] posa:948.288
+
+From tinyG: [17:47:49] posa:956.636
+
+From tinyG: [17:47:49] posa:964.984
+
+From tinyG: [17:47:49] posa:973.332
+
+From tinyG: [17:47:49] posa:981.680
+
+From tinyG: [17:47:50] posa:990.028
+
+From tinyG: [17:47:50] posa:998.376
+
+From tinyG: [17:47:50] posa:1006.724
+
+From tinyG: [17:47:50] posa:1015.072
+
+From tinyG: [17:47:51] posa:1023.420
+
+From tinyG: [17:47:51] posa:1031.727
+
+From tinyG: [17:47:51] posa:1040.135
+
+From tinyG: [17:47:51] posa:1048.494
+
+From tinyG: [17:47:52] posa:1056.852
+
+From tinyG: [17:47:52] posa:1065.210
+
+From tinyG: [17:47:52] posa:1073.568
+
+From tinyG: [17:47:52] posa:1081.926
+
+From tinyG: [17:47:53] posa:1090.284
+
+From tinyG: [17:47:53] posa:1098.643
+
+From tinyG: [17:47:53] posa:1107.001
+
+From tinyG: [17:47:53] posa:1115.359
+
+From tinyG: [17:47:54] posa:1123.667
+
+From tinyG: [17:47:54] posa:1132.075
+
+From tinyG: [17:47:54] posa:1140.433
+
+From tinyG: [17:47:54] posa:1148.792
+
+From tinyG: [17:47:55] posa:1157.150
+
+From tinyG: [17:47:55] posa:1165.508
+
+From tinyG: [17:47:55] posa:1173.866
+
+From tinyG: [17:47:55] posa:1182.224
+
+From tinyG: [17:47:56] posa:1190.582
+
+From tinyG: [17:47:56] posa:1198.940
+
+From tinyG: [17:47:56] posa:1207.299
+
+From tinyG: [17:47:56] posa:1215.607
+
+From tinyG: [17:47:57] posa:1224.015
+
+From tinyG: [17:47:57] posa:1232.373
+
+From tinyG: [17:47:57] posa:1240.731
+
+From tinyG: [17:47:57] posa:1249.089
+
+From tinyG: [17:47:58] posa:1257.448
+
+From tinyG: [17:47:58] posa:1265.806
+
+From tinyG: [17:47:58] posa:1274.164
+
+From tinyG: [17:47:58] posa:1282.522
+
+From tinyG: [17:47:59] posa:1290.880
+
+From tinyG: [17:47:59] posa:1299.238
+
+From tinyG: [17:47:59] posa:1307.596
+
+From tinyG: [17:47:59] posa:1315.955
+
+From tinyG: [17:48:00] posa:1324.313
+
+From tinyG: [17:48:00] posa:1332.671
+
+From tinyG: [17:48:00] posa:1341.029
+
+From tinyG: [17:48:00] posa:1349.387
+
+From tinyG: [17:48:01] posa:1357.695
+
+From tinyG: [17:48:01] posa:1366.104
+
+From tinyG: [17:48:01] posa:1374.462
+
+From tinyG: [17:48:01] posa:1382.820
+
+From tinyG: [17:48:02] posa:1391.178
+
+From tinyG: [17:48:02] posa:1399.536
+
+From tinyG: [17:48:02] posa:1407.894
+
+From tinyG: [17:48:02] posa:1416.252
+
+From tinyG: [17:48:03] posa:1424.611
+
+From tinyG: [17:48:03] posa:1432.969
+
+From tinyG: [17:48:03] posa:1441.327
+
+From tinyG: [17:48:03] posa:1449.635
+
+From tinyG: [17:48:04] posa:1458.043
+
+From tinyG: [17:48:04] posa:1466.401
+
+From tinyG: [17:48:04] posa:1474.760
+
+From tinyG: [17:48:04] posa:1483.118
+
+From tinyG: [17:48:05] posa:1491.476
+
+From tinyG: [17:48:05] posa:1499.834
+
+From tinyG: [17:48:05] posa:1508.192
+
+From tinyG: [17:48:05] posa:1516.550
+
+From tinyG: [17:48:06] posa:1524.908
+
+From tinyG: [17:48:06] posa:1533.267
+
+From tinyG: [17:48:06] posa:1541.575
+
+From tinyG: [17:48:06] posa:1549.983
+
+From tinyG: [17:48:07] posa:1558.341
+
+From tinyG: [17:48:07] posa:1566.699
+
+From tinyG: [17:48:07] posa:1575.057
+
+From tinyG: [17:48:07] posa:1583.416
+
+From tinyG: [17:48:08] posa:1591.724
+
+From tinyG: [17:48:08] posa:1600.132
+
+From tinyG: [17:48:08] posa:1608.490
+
+From tinyG: [17:48:08] posa:1616.848
+
+From tinyG: [17:48:09] posa:1625.206
+
+From tinyG: [17:48:09] posa:1633.514
+
+From tinyG: [17:48:09] posa:1641.923
+
+From tinyG: [17:48:09] posa:1650.281
+
+From tinyG: [17:48:10] posa:1658.639
+
+From tinyG: [17:48:10] posa:1666.997
+
+From tinyG: [17:48:10] posa:1675.355
+
+From tinyG: [17:48:10] posa:1683.663
+
+From tinyG: [17:48:11] posa:1692.072
+
+From tinyG: [17:48:11] posa:1700.430
+
+From tinyG: [17:48:11] posa:1708.788
+
+From tinyG: [17:48:11] posa:1717.146
+
+From tinyG: [17:48:12] posa:1725.504
+
+From tinyG: [17:48:12] posa:1733.862
+
+From tinyG: [17:48:12] posa:1742.220
+
+From tinyG: [17:48:12] posa:1750.579
+
+From tinyG: [17:48:13] posa:1758.937
+
+From tinyG: [17:48:13] posa:1767.295
+
+From tinyG: [17:48:13] posa:1775.653
+
+From tinyG: [17:48:13] posa:1784.011
+
+From tinyG: [17:48:14] posa:1792.369
+
+From tinyG: [17:48:14] posa:1800.728
+
+From tinyG: [17:48:14] posa:1809.086
+
+From tinyG: [17:48:14] posa:1817.444
+

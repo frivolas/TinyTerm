@@ -1,0 +1,16 @@
+[17:46:59] Starting Log file for session: 2020722-174659
+
+[17:46:51] Terminal ready... 
+[17:46:51] Log file started 
+[17:46:51] Please choose a Serial port to connect to... 
+[17:46:54] Connected to Serial on port COM6
+[17:46:54] {r:{fv:0.98,fb:86.03,hp:3,hv:0,id:"0213-0215-0515",msg:"SYSTEM READY"},f:[1,0,1]}
+[17:46:54] tinyg [mm] ok> 
+[17:46:57] OUT > $ej:0
+
+
+[17:46:57] [ej]  enable json mode            0 [0=text,1=JSON]
+[17:46:57] tinyg [mm] ok> 
+[17:46:58] Preparing to quit...
+
+

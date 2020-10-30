@@ -1,0 +1,29 @@
+[13:17:07] Starting Log file for session: 2020724-13177
+
+[13:16:29] Terminal ready... 
+[13:16:29] Log file started 
+[13:16:29] Please choose a Serial port to connect to... 
+[13:16:31] Connected to Serial on port COM6
+[13:16:31] < {r:{fv:0.98,fb:86.03,hp:3,hv:0,id:"0213-0215-0515",msg:"SYSTEM READY"},f:[1,0,1]}
+[13:16:31] < tinyg [mm] ok> 
+[13:16:37] > $di1fn
+[13:16:37] < [di1fn] input function          2 [0=none,1=limit,2=interlock,3=shutdown]
+[13:16:37] < tinyg [mm] ok> 
+[13:16:42] > %~
+[13:16:42] < tinyg [mm] ok> 
+[13:16:47] Halt and flush: %
+[13:16:47] < tinyg [mm] ok> 
+[13:16:48] Resuming script: ~
+[13:16:48] > ~
+[13:16:52] > $di1fn=0
+[13:16:52] < [di1fn] input function          0 [0=none,1=limit,2=interlock,3=shutdown]
+[13:16:52] < tinyg [mm] ok> 
+[13:17:00] Halt and flush: %
+[13:17:00] < tinyg [mm] ok> 
+[13:17:02] Resuming script: ~
+[13:17:02] > ~
+[13:17:06] > $di1ac=0
+[13:17:06] < [di1ac] input action            0 [0=none,1=stop,2=halt,3=stop_steps,4=panic,5=reset]
+[13:17:06] < tinyg [mm] ok> 
+
+

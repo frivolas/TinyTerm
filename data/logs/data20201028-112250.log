@@ -1,0 +1,87 @@
+[11:22:50] Starting Log file for session: 20201028-112250
+
+[11:22:09] Terminal cleared and ready...
+[11:22:10] Re-Dumping file C:\Users\Oscar\Desktop\M5.2 QA scripts\homingFlagTest.cnc ...
+[11:22:10] Loading File... 
+[11:22:10] Adding 7 lines to the queue... 
+[11:22:10] Sending the file 1 time(s)... 
+[11:22:10] File added to the queue. 
+[11:22:10] Sending the file 1 more times...
+[11:22:10] > g90 g0 a-10
+[11:22:10] > g91 g1 a30 f250
+[11:22:10] < tinyg [mm] ok> 
+[11:22:10] < tinyg [mm] ok> 
+[11:22:11] < posa:-10.052,vel:321.75,stat:5
+[11:22:11] < posa:-9.213,vel:250.00,dist:1,momo:1
+[11:22:11] < posa:-8.375
+[11:22:11] < posa:-7.544
+[11:22:11] < posa:-6.707
+[11:22:12] < posa:-5.875
+[11:22:12] < posa:-5.038
+[11:22:12] < posa:-4.207
+[11:22:12] < posa:-3.369
+[11:22:12] < posa:-2.538
+[11:22:13] < posa:-1.695
+[11:22:13] < posa:-0.857
+[11:22:13] < posa:-0.072,vel:0.07,stat:6
+[11:22:13] Interlock hit. Stop. Flush queue...
+[11:22:13] < vel:0.00
+[11:22:13] < stat:3
+[11:22:13] Machine is homed. 
+[11:22:17] > $posa
+[11:22:17] TinyG Command received 
+[11:22:17] < A position:         -0.072 deg
+[11:22:17] < tinyg [mm] ok> 
+[11:22:24] Re-Dumping file C:\Users\Oscar\Desktop\M5.2 QA scripts\homingFlagTest.cnc ...
+[11:22:24] Loading File... 
+[11:22:24] Adding 7 lines to the queue... 
+[11:22:24] Sending the file 1 time(s)... 
+[11:22:24] File added to the queue. 
+[11:22:24] Sending the file 1 more times...
+[11:22:24] > g90 g0 a-10
+[11:22:24] > g91 g1 a30 f250
+[11:22:24] < tinyg [mm] ok> 
+[11:22:24] < tinyg [mm] ok> 
+[11:22:24] < posa:-9.947,vel:324.24,dist:0,momo:0,stat:5
+[11:22:25] < posa:-9.219,vel:250.00,dist:1,momo:1
+[11:22:25] < posa:-8.375
+[11:22:25] < posa:-7.538
+[11:22:25] < posa:-6.707
+[11:22:25] < posa:-5.869
+[11:22:26] < posa:-5.025
+[11:22:26] < posa:-4.188
+[11:22:26] < posa:-3.357
+[11:22:26] < posa:-2.519
+[11:22:26] < posa:-1.688
+[11:22:27] < posa:-0.851
+[11:22:27] < posa:-0.017,vel:139.61,stat:6
+[11:22:27] Interlock hit. Stop. Flush queue...
+[11:22:27] < tinyg [mm] ok> 
+[11:22:27] < posa:0.725,vel:250.00,stat:5
+[11:22:27] < posa:1.569
+[11:22:27] < posa:2.406
+[11:22:28] < posa:3.237
+[11:22:28] < posa:4.074
+[11:22:28] < posa:4.918
+[11:22:28] < posa:5.755
+[11:22:28] < posa:6.586
+[11:22:29] < posa:7.424
+[11:22:29] < posa:8.267
+[11:22:29] < posa:9.105
+[11:22:29] < posa:9.936
+[11:22:29] < posa:10.773
+[11:22:30] < posa:11.604
+[11:22:30] < posa:12.441
+[11:22:30] < posa:13.272
+[11:22:30] < posa:14.110
+[11:22:30] < posa:14.941
+[11:22:31] < posa:15.778
+[11:22:31] < posa:16.609
+[11:22:31] < posa:17.446
+[11:22:31] < posa:18.277
+[11:22:31] < posa:19.115
+[11:22:32] < posa:19.946
+[11:22:32] < posa:20.000,vel:0.00,stat:3
+[11:22:32] Machine is homed. 
+
+

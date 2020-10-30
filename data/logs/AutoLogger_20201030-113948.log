@@ -1,0 +1,384 @@
+[11:39:48] Starting Log file for session: 20201030-113948
+
+From tinyG: [11:39:49] {"r":{"fv":0.98,"fb":86.03,"hp":3,"hv":0,"id":"0213-0215-0515","msg":"SYSTEM READY"},"f":[1,0,1]}
+
+From tinyG: [11:39:49] tinyg [mm] ok> 
+
+From tinyG: [11:39:49] [ej]  enable json mode            0 [0=text,1=JSON]
+
+From tinyG: [11:39:49] tinyg [mm] ok> 
+
+From tinyG: [11:39:53] stat:3
+
+From tinyG: [11:39:53] stat:3
+
+From tinyG: [11:39:53] stat:3
+
+From tinyG: [11:39:53] stat:3
+
+From tinyG: [11:39:53] stat:3
+
+From tinyG: [11:39:54] stat:3
+
+From tinyG: [11:39:54] stat:3
+
+From tinyG: [11:39:54] stat:3
+
+From tinyG: [11:39:54] stat:3
+
+From tinyG: [11:39:55] stat:3
+
+From tinyG: [11:39:55] stat:3
+
+From tinyG: [11:39:55] stat:3
+
+From tinyG: [11:39:56] stat:3
+
+Out > [11:40:03] g28.2a0
+
+Out > [11:40:03] $di1fn=0
+
+Out > [11:40:06] g90 g0 a30
+
+From tinyG: [11:40:06] tinyg [mm] ok> 
+
+From tinyG: [11:40:06] posa:-2.733,feed:2000.00,vel:2000.00,coor:0,dist:1,momo:1,stat:9
+
+From tinyG: [11:40:06] posa:-9.382,vel:1849.48
+
+From tinyG: [11:40:06] posa:-9.532,feed:300.00,vel:300.00
+
+From tinyG: [11:40:06] posa:-8.527
+
+From tinyG: [11:40:06] posa:-7.522
+
+From tinyG: [11:40:06] posa:-6.525
+
+From tinyG: [11:40:06] posa:-5.520
+
+From tinyG: [11:40:06] posa:-4.508
+
+From tinyG: [11:40:06] posa:-3.503
+
+From tinyG: [11:40:06] posa:-2.506
+
+From tinyG: [11:40:06] posa:-1.501
+
+From tinyG: [11:40:06] posa:-0.489
+
+From tinyG: [11:40:06] {"er":{"fb":86.03,"st":94,"msg":"Planner assertion failure - zero length line in calculate trapezoid"}}
+
+From tinyG: [11:40:06] {"er":{"fb":86.03,"st":94,"msg":"Planner assertion failure - zero length move in exec_aline"}}
+
+From tinyG: [11:40:06] [di1fn] input function          0 [0=none,1=limit,2=interlock,3=shutdown]
+
+From tinyG: [11:40:06] tinyg [mm] ok> 
+
+From tinyG: [11:40:06] tinyg [mm] ok> 
+
+Out > [11:40:06] g90 g0 a-20 z-9
+
+From tinyG: [11:40:06] tinyg [mm] ok> 
+
+From tinyG: [11:40:06] posa:0.045,feed:250.00,vel:375.15,coor:1,dist:0,momo:0,stat:5
+
+Out > [11:40:06] g90 g0 a30
+
+From tinyG: [11:40:06] tinyg [mm] ok> 
+
+From tinyG: [11:40:06] posa:24.911,vel:7839.63
+
+From tinyG: [11:40:06] posz:-0.907,posa:24.962,vel:4515.61
+
+From tinyG: [11:40:06] posz:-3.564,posa:10.198,vel:4515.87
+
+From tinyG: [11:40:07] posz:-6.242,posa:-4.678
+
+From tinyG: [11:40:07] posz:-8.810,posa:-18.946,vel:2793.57
+
+From tinyG: [11:40:07] posz:-9.000,posa:-10.457,vel:9892.87
+
+From tinyG: [11:40:07] posa:23.088,vel:9330.00
+
+From tinyG: [11:40:07] posa:30.000,vel:0.00,stat:3
+
+Out > [11:40:07] g90 g0 z0
+
+Out > [11:40:07] g90 g0 a-30
+
+From tinyG: [11:40:07] tinyg [mm] ok> 
+
+From tinyG: [11:40:07] tinyg [mm] ok> 
+
+From tinyG: [11:40:08] posz:-7.182,vel:800.00,stat:5
+
+From tinyG: [11:40:08] posz:-4.506
+
+From tinyG: [11:40:08] posz:-1.809
+
+From tinyG: [11:40:08] posz:0.000,posa:29.897,vel:465.80
+
+From tinyG: [11:40:08] posa:4.423,vel:10000.00
+
+From tinyG: [11:40:09] posa:-27.660,vel:5769.70
+
+From tinyG: [11:40:09] posa:-30.000,vel:0.00,stat:3
+
+Out > [11:40:09] g90 g0 a20 z-9
+
+Out > [11:40:09] g90 g0 a-30
+
+From tinyG: [11:40:09] tinyg [mm] ok> 
+
+From tinyG: [11:40:09] tinyg [mm] ok> 
+
+From tinyG: [11:40:09] posz:-1.819,posa:-19.896,vel:4515.87,stat:5
+
+From tinyG: [11:40:09] posz:-4.496,posa:-5.020
+
+From tinyG: [11:40:10] posz:-7.154,posa:9.745
+
+From tinyG: [11:40:10] posz:-9.000,posa:19.658,vel:1190.04
+
+From tinyG: [11:40:10] posa:-6.261,vel:10000.00
+
+From tinyG: [11:40:10] posa:-29.994,vel:107.13
+
+From tinyG: [11:40:10] posa:-30.000,vel:0.00,stat:3
+
+Out > [11:40:10] g90 g0 z0
+
+Out > [11:40:10] $di1fn=2
+
+Out > [11:40:10] g90 g0 a-15
+
+From tinyG: [11:40:10] tinyg [mm] ok> 
+
+From tinyG: [11:40:10] {"er":{"fb":86.03,"st":9,"msg":"File not open - write_persistent"}}
+
+From tinyG: [11:40:10] [di1fn] input function          2 [0=none,1=limit,2=interlock,3=shutdown]
+
+From tinyG: [11:40:10] tinyg [mm] ok> 
+
+From tinyG: [11:40:10] tinyg [mm] ok> 
+
+From tinyG: [11:40:11] posz:-7.182,vel:800.00,stat:5
+
+From tinyG: [11:40:11] posz:-4.506
+
+From tinyG: [11:40:11] posz:-1.809
+
+From tinyG: [11:40:11] posz:0.000,posa:-29.892,vel:503.18
+
+From tinyG: [11:40:11] posa:-15.032,vel:349.30
+
+From tinyG: [11:40:12] posa:-15.000,vel:0.00,stat:3
+
+Out > [11:40:12] g90 g0 a-10
+
+Out > [11:40:12] g90 g0 a-15
+
+From tinyG: [11:40:12] tinyg [mm] ok> 
+
+From tinyG: [11:40:12] tinyg [mm] ok> 
+
+From tinyG: [11:40:12] posa:-11.115,vel:2609.07,stat:5
+
+From tinyG: [11:40:12] posa:-15.000,vel:0.00,stat:3
+
+Out > [11:40:12] g91 g1 a30 f250
+
+Out > [11:40:12] g90 g0 z-5
+
+From tinyG: [11:40:12] tinyg [mm] ok> 
+
+From tinyG: [11:40:12] tinyg [mm] ok> 
+
+From tinyG: [11:40:12] posa:-14.209,vel:250.00,dist:1,momo:1,stat:5
+
+From tinyG: [11:40:13] posa:-13.365
+
+From tinyG: [11:40:13] posa:-12.528
+
+From tinyG: [11:40:13] posa:-11.697
+
+From tinyG: [11:40:13] posa:-10.859
+
+From tinyG: [11:40:13] posa:-10.015
+
+From tinyG: [11:40:14] posa:-9.178
+
+From tinyG: [11:40:14] posa:-8.347
+
+From tinyG: [11:40:14] posa:-7.509
+
+From tinyG: [11:40:14] posa:-6.678
+
+From tinyG: [11:40:14] posa:-5.841
+
+From tinyG: [11:40:15] posa:-5.010
+
+From tinyG: [11:40:15] posa:-4.173
+
+From tinyG: [11:40:15] posa:-3.329
+
+From tinyG: [11:40:15] posa:-2.492
+
+From tinyG: [11:40:15] posa:-1.660
+
+From tinyG: [11:40:16] posa:-0.823
+
+From tinyG: [11:40:16] posa:-0.004,vel:82.07,stat:6
+
+From tinyG: [11:40:16] tinyg [mm] ok> 
+
+From tinyG: [11:40:16] [di1fn] input function          0 [0=none,1=limit,2=interlock,3=shutdown]
+
+From tinyG: [11:40:16] tinyg [mm] ok> 
+
+From tinyG: [11:40:16] A position:         -0.001 deg
+
+From tinyG: [11:40:16] tinyg [mm] ok> 
+
+Out > [11:40:16] g90 g0 z1
+
+Out > [11:40:16] g90 g0 z0
+
+From tinyG: [11:40:16] tinyg [mm] ok> 
+
+From tinyG: [11:40:16] tinyg [mm] ok> 
+
+From tinyG: [11:40:16] posz:0.008,posa:-0.001,vel:61.24,dist:0,momo:0,stat:5
+
+From tinyG: [11:40:16] posz:0.959,vel:134.77
+
+From tinyG: [11:40:16] posz:0.000,vel:0.00,stat:3
+
+Out > [11:40:16] EOF
+
+Out > [11:40:16] !%
+
+From tinyG: [11:40:16] tinyg [mm] ok> 
+
+From tinyG: [11:41:37] stat:3
+
+From tinyG: [11:41:38] stat:3
+
+From tinyG: [11:41:40] stat:3
+
+From tinyG: [11:41:42] stat:3
+
+From tinyG: [11:41:43] stat:3
+
+From tinyG: [11:41:45] stat:3
+
+From tinyG: [11:41:46] stat:3
+
+From tinyG: [11:41:48] stat:3
+
+From tinyG: [11:41:49] stat:3
+
+From tinyG: [11:41:52] stat:3
+
+From tinyG: [11:41:53] stat:3
+
+From tinyG: [11:41:55] stat:3
+
+From tinyG: [11:41:56] stat:3
+
+From tinyG: [11:41:57] stat:3
+
+From tinyG: [11:41:59] stat:3
+
+From tinyG: [11:42:00] stat:3
+
+From tinyG: [11:42:01] stat:3
+
+From tinyG: [11:42:03] stat:3
+
+From tinyG: [11:42:04] stat:3
+
+From tinyG: [11:42:06] stat:3
+
+From tinyG: [11:42:07] stat:3
+
+From tinyG: [11:42:07] stat:3
+
+From tinyG: [11:42:09] stat:3
+
+From tinyG: [11:42:09] stat:3
+
+From tinyG: [11:42:10] stat:3
+
+From tinyG: [11:42:11] stat:3
+
+From tinyG: [11:42:12] stat:3
+
+From tinyG: [11:42:14] stat:3
+
+From tinyG: [11:42:14] stat:3
+
+From tinyG: [11:42:15] stat:3
+
+From tinyG: [11:42:17] stat:3
+
+From tinyG: [11:42:18] stat:3
+
+From tinyG: [11:42:19] stat:3
+
+From tinyG: [11:42:20] stat:3
+
+From tinyG: [11:42:20] stat:3
+
+From tinyG: [11:42:22] stat:3
+
+From tinyG: [11:42:22] stat:3
+
+From tinyG: [11:42:23] stat:3
+
+From tinyG: [11:42:23] stat:3
+
+From tinyG: [11:42:24] stat:3
+
+From tinyG: [11:42:25] stat:3
+
+From tinyG: [11:42:26] stat:3
+
+From tinyG: [11:42:26] stat:3
+
+From tinyG: [11:42:27] stat:3
+
+From tinyG: [11:42:29] stat:3
+
+From tinyG: [11:42:31] stat:3
+
+From tinyG: [11:42:31] stat:3
+
+From tinyG: [11:42:32] stat:3
+
+From tinyG: [11:42:33] stat:3
+
+From tinyG: [11:42:33] stat:3
+
+From tinyG: [11:42:34] stat:3
+
+From tinyG: [11:42:35] stat:3
+
+From tinyG: [11:42:36] stat:3
+
+From tinyG: [11:42:37] stat:3
+
+From tinyG: [11:42:38] stat:3
+
+From tinyG: [11:42:38] stat:3
+
+From tinyG: [11:42:39] stat:3
+
+From tinyG: [11:42:39] stat:3
+
+From tinyG: [11:42:40] stat:3
+
+From tinyG: [11:42:40] stat:3
+
+From tinyG: [11:42:40] stat:3
+

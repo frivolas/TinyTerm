@@ -1,0 +1,44 @@
+[15:01:56] Starting Log file for session: 2020724-15156
+
+From tinyG: [15:01:58] {r:{fv:0.98,fb:86.03,hp:3,hv:0,id:"0213-0215-0515",msg:"SYSTEM READY"},f:[1,0,1]}
+
+From tinyG: [15:01:58] tinyg [mm] ok> 
+
+From tinyG: [15:01:58] {r:{:1},f:[1,0,6]}
+
+From tinyG: [15:01:58] tinyg [mm] ok> 
+
+Out > [15:02:02] G28.2 X0
+
+From tinyG: [15:02:02] {r:{gc:"G28.2X0"},f:[1,0,9]}
+
+From tinyG: [15:02:02] {sr:{posx:2.410,feed:1000.00,momo:1,stat:9}}
+
+From tinyG: [15:02:03] {sr:{posx:-1.387,vel:1000.00}}
+
+From tinyG: [15:02:03] {sr:{posx:-2.428,feed:100.00,vel:100.00}}
+
+From tinyG: [15:02:03] {sr:{posx:-2.011}}
+
+From tinyG: [15:02:04] {sr:{posx:-1.593}}
+
+From tinyG: [15:02:04] {sr:{posx:-1.176}}
+
+From tinyG: [15:02:04] {sr:{posx:-0.761}}
+
+From tinyG: [15:02:04] {sr:{posx:-0.341}}
+
+From tinyG: [15:02:05] {sr:{posx:0.076}}
+
+From tinyG: [15:02:05] {sr:{posx:0.493}}
+
+From tinyG: [15:02:05] {sr:{posx:0.911}}
+
+From tinyG: [15:02:05] {sr:{posx:1.326}}
+
+From tinyG: [15:02:06] {sr:{posx:1.746}}
+
+From tinyG: [15:02:06] {sr:{posx:1.742,feed:1000.00,vel:957.96}}
+
+From tinyG: [15:02:06] {sr:{posx:0.000,feed:250.00,vel:0.00,momo:4,stat:3}}
+

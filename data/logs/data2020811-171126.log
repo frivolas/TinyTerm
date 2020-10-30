@@ -1,0 +1,124 @@
+[17:11:26] Starting Log file for session: 2020811-171126
+
+[17:08:46] Terminal cleared and ready...
+[17:08:49] > g28.3 z0
+[17:08:49] < tinyg [mm] ok> 
+[17:09:05] Halt and flush: !%
+[17:09:05] < tinyg [mm] ok> 
+[17:09:06] Resuming script: ~
+[17:09:06] > ~
+[17:09:09] > g90 g0 z-12
+[17:09:09] < tinyg [mm] ok> 
+[17:09:09] < posz:-1.906,vel:650.00,dist:0,momo:0,stat:5
+[17:09:09] < posz:-4.083
+[17:09:10] < posz:-6.244
+[17:09:10] < posz:-8.421
+[17:09:10] < posz:-10.614
+[17:09:10] < posz:-12.000,vel:0.00,stat:3
+[17:09:10] Machine is homed. 
+[17:09:20] > g90 g1 z0 f500
+[17:09:20] < tinyg [mm] ok> 
+[17:09:21] < posz:-10.511,vel:500.00,momo:1,stat:5
+[17:09:21] < posz:-8.849
+[17:09:21] < posz:-7.187
+[17:09:21] < posz:-5.513
+[17:09:21] < posz:-3.851
+[17:09:22] < posz:-2.177
+[17:09:22] < posz:-0.490
+[17:09:22] < posz:0.000,vel:0.00,stat:3
+[17:09:22] Machine is homed. 
+[17:09:25] > g90 g0 z-12
+[17:09:25] < tinyg [mm] ok> 
+[17:09:25] < posz:-1.906,vel:650.00,momo:0,stat:5
+[17:09:25] < posz:-4.083
+[17:09:26] < posz:-6.244
+[17:09:26] < posz:-8.421
+[17:09:26] < posz:-10.614
+[17:09:26] < posz:-12.000,vel:0.00,stat:3
+[17:09:26] Machine is homed. 
+[17:09:28] > g90 g1 z0 f550
+[17:09:28] < tinyg [mm] ok> 
+[17:09:29] < posz:-10.365,feed:550.00,vel:550.00,momo:1,stat:5
+[17:09:29] < posz:-8.523
+[17:09:29] < posz:-6.694
+[17:09:29] < posz:-4.852
+[17:09:29] < posz:-3.024
+[17:09:30] < posz:-1.182
+[17:09:30] < posz:0.000,vel:0.00,stat:3
+[17:09:30] Machine is homed. 
+[17:09:35] Loading file...
+[17:10:20] File to load: C:\Users\Oscar\Desktop\New Text Document.txt
+[17:10:20] Loading File... 
+[17:10:20] Adding 8 lines to the queue... 
+[17:10:20] Sending the file 1 time(s)... 
+[17:10:20] > g28.3z0
+[17:10:20] > g91 g0 z-9 
+[17:10:20] < tinyg [mm] ok> 
+[17:10:20] File added to the queue. 
+[17:10:20] Sending the file 1 more times...
+[17:10:20] < tinyg [mm] ok> 
+[17:10:21] < posz:-1.904,vel:650.00,dist:1,momo:0,stat:5
+[17:10:21] < posz:-4.078
+[17:10:21] < posz:-6.236
+[17:10:21] < posz:-8.410
+[17:10:21] < posz:-9.000,vel:0.00,stat:3
+[17:10:21] Machine is homed. 
+[17:10:21] > g90 g1 z0 f600
+[17:10:21] > g90 g0 a20
+[17:10:21] < tinyg [mm] ok> 
+[17:10:21] < tinyg [mm] ok> 
+[17:10:22] < posz:-7.237,feed:600.00,vel:600.00,dist:0,momo:1,stat:5
+[17:10:22] < posz:-5.244
+[17:10:22] < posz:-3.221
+[17:10:22] < posz:-1.214
+[17:10:22] < posz:-0.000,posa:3.291,vel:6154.28,momo:0
+[17:10:23] < posa:20.000,vel:0.00,stat:3
+[17:10:23] Machine is homed. 
+[17:10:23] > g90 g0 a0
+[17:10:23] < tinyg [mm] ok> 
+[17:10:23] < posa:1.732,vel:4788.46,stat:5
+[17:10:23] < posa:0.000,vel:0.00,stat:3
+[17:10:23] Machine is homed. 
+[17:10:34] > g28.3 z-9
+[17:10:34] < tinyg [mm] ok> 
+[17:10:43] Re-Dumping file C:\Users\Oscar\Desktop\New Text Document.txt ...
+[17:10:43] Loading File... 
+[17:10:43] Adding 8 lines to the queue... 
+[17:10:43] Sending the file 1 time(s)... 
+[17:10:43] File added to the queue. 
+[17:10:43] Sending the file 1 more times...
+[17:10:43] > g28.3z0
+[17:10:43] < tinyg [mm] ok> 
+[17:10:49] Re-Dumping file C:\Users\Oscar\Desktop\New Text Document.txt ...
+[17:10:49] Loading File... 
+[17:10:49] Adding 8 lines to the queue... 
+[17:10:49] Sending the file 1 time(s)... 
+[17:10:49] File added to the queue. 
+[17:10:49] Sending the file 1 more times...
+[17:10:54] Resuming script: ~
+[17:10:55] Halt and flush: !%
+[17:10:56] < nyg [mm] ok> 
+[17:10:56] Resuming script: ~
+[17:10:56] > ~
+[17:10:59] Halt and flush: !%
+[17:10:59] < tinyg [mm] ok> 
+[17:11:00] Halt and flush: %
+[17:11:00] < tinyg [mm] ok> 
+[17:11:02] Resuming script: ~
+[17:11:02] > ~
+[17:11:03] Re-Dumping file C:\Users\Oscar\Desktop\New Text Document.txt ...
+[17:11:03] Loading File... 
+[17:11:03] Adding 8 lines to the queue... 
+[17:11:03] Sending the file 1 time(s)... 
+[17:11:03] File added to the queue. 
+[17:11:03] Sending the file 1 more times...
+[17:11:03] > g28.3z0
+[17:11:03] < tinyg [mm] ok> 
+[17:11:19] Halt and flush: !%
+[17:11:19] < tinyg [mm] ok> 
+[17:11:20] Resuming script: ~
+[17:11:20] > ~
+[17:11:24] > g28.3z-9
+[17:11:25] < tinyg [mm] ok> 
+
+

@@ -1,0 +1,16 @@
+[12:09:54] Starting Log file for session: 20201030-12954
+
+From tinyG: [12:09:55] {"r":{"fv":0.98,"fb":86.03,"hp":3,"hv":0,"id":"0213-0215-0515","msg":"SYSTEM READY"},"f":[1,0,1]}
+
+From tinyG: [12:09:55] tinyg [mm] ok> 
+
+From tinyG: [12:09:55] {"er":{"fb":86.03,"st":9,"msg":"File not open - write_persistent"}}
+
+From tinyG: [12:09:55] [ej]  enable json mode            0 [0=text,1=JSON]
+
+From tinyG: [12:09:55] tinyg [mm] ok> 
+
+Out > [12:09:58] g28.2a0
+
+Out > [12:09:58] $di1fn=0
+

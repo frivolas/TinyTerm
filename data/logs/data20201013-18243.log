@@ -1,0 +1,25 @@
+[18:02:43] Starting Log file for session: 20201013-18243
+
+[18:02:09] Terminal cleared and ready...
+[18:02:16] > g91 g0 z-1
+[18:02:16] < tinyg [mm] ok> 
+[18:02:16] < posz:-1.000,momo:0,stat:3
+[18:02:16] Machine is homed. 
+[18:02:21] > g91 g0 z-10
+[18:02:21] < tinyg [mm] ok> 
+[18:02:22] < posz:-3.440,vel:850.00,stat:5
+[18:02:22] < posz:-6.287
+[18:02:22] < posz:-9.134
+[18:02:22] < posz:-11.000,vel:0.00,stat:3
+[18:02:22] Machine is homed. 
+[18:02:25] > g91 g0 z-10
+[18:02:25] < {"er":{"fb":86.03,"st":225,"msg":"Soft limit - Z min - soft_limits"}}
+[18:02:25] < tinyg [mm] err[225]: Soft limit - Z min: g91 g0 z-10 
+[18:02:39] > $cleaer
+[18:02:39] TinyG Command received 
+[18:02:39] < tinyg [mm] err[100]: Unrecognized command or config name: $cleaer 
+[18:02:42] > $clear
+[18:02:42] TinyG Command received 
+[18:02:42] < tinyg [mm] ok> 
+
+

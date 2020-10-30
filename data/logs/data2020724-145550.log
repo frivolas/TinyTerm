@@ -1,0 +1,14 @@
+[14:55:50] Starting Log file for session: 2020724-145550
+
+[14:55:45] Terminal ready... 
+[14:55:45] Log file started 
+[14:55:45] Please choose a Serial port to connect to... 
+[14:55:47] Connected to Serial on port COM6
+[14:55:47] < {r:{fv:0.98,fb:86.03,hp:3,hv:0,id:"0213-0215-0515",msg:"SYSTEM READY"},f:[1,0,1]}
+[14:55:48] > $ej:0
+
+[14:55:48] TinyG Command received 
+[14:55:48] < [ej]  enable json mode            0 [0=text,1=JSON]
+[14:55:48] < tinyg [mm] ok> 
+
+

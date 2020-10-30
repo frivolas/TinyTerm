@@ -1,0 +1,12 @@
+[19:11:35] Starting Log file for session: 2020723-191135
+
+From tinyG: [19:11:36] {r:{fv:0.98,fb:86.03,hp:3,hv:0,id:"0213-0215-0515",msg:"SYSTEM READY"},f:[1,0,1]}
+
+From tinyG: [19:11:36] tinyg [mm] ok> 
+
+Out > [19:11:40] $di1fn
+
+From tinyG: [19:11:40] [di1fn] input function          0 [0=none,1=limit,2=interlock,3=shutdown]
+
+From tinyG: [19:11:40] tinyg [mm] ok> 
+

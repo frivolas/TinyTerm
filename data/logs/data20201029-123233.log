@@ -1,0 +1,189 @@
+[12:32:33] Starting Log file for session: 20201029-123233
+
+[12:25:05] Terminal ready... 
+[12:25:05] Log file started 
+[12:25:05] Please choose a Serial port to connect to... 
+[12:25:08] Connected to Serial on port COM6
+[12:25:08] < {"r":{"fv":0.98,"fb":86.03,"hp":3,"hv":0,"id":"0213-0215-0515","msg":"SYSTEM READY"},"f":[1,0,1]}
+[12:25:08] < tinyg [mm] ok> 
+[12:25:08] < [ej]  enable json mode            0 [0=text,1=JSON]
+[12:25:08] < tinyg [mm] ok> 
+[12:25:11] Loading file...
+[12:25:14] File to load: C:\Users\Oscar\Desktop\M5.2 QA scripts\homingFlagTest.cnc
+[12:25:14] Loading File... 
+[12:25:14] Adding 8 lines to the queue... 
+[12:25:14] > !%
+[12:25:14] > $di1fn=2
+[12:25:14] TinyG Command received 
+[12:25:14] > g90 g0 a-25
+[12:25:14] < tinyg [mm] ok> 
+[12:25:14] < [di1fn] input function          2 [0=none,1=limit,2=interlock,3=shutdown]
+[12:25:14] < tinyg [mm] ok> 
+[12:25:14] < tinyg [mm] ok> 
+[12:25:14] File added to the queue. 
+[12:25:14] < posa:-21.026,vel:7559.61,dist:0,momo:0,stat:5
+[12:25:14] < posa:-25.000,vel:0.00,stat:3
+[12:25:14] Machine is homed. 
+[12:25:14] > g90 g0 a-20
+[12:25:14] > g90 g0 a-25
+[12:25:14] < tinyg [mm] ok> 
+[12:25:14] < tinyg [mm] ok> 
+[12:25:15] < posa:-21.115,vel:2609.07,stat:5
+[12:25:15] < posa:-25.000,vel:0.00,stat:3
+[12:25:15] Machine is homed. 
+[12:25:15] > g91 g1 a30 f250
+[12:25:15] Reached end of file
+[12:25:15] Sending the file 0 more times!!!
+[12:25:15] Loading File... 
+[12:25:15] Adding 8 lines to the queue... 
+[12:25:15] File added to the queue. 
+[12:25:15] > !%
+[12:25:15] < tinyg [mm] ok> 
+[12:25:23] Loading file...
+[12:25:25] No file selected
+[12:25:26] Re-Dumping file C:\Users\Oscar\Desktop\M5.2 QA scripts\homingFlagTest.cnc ...
+[12:25:26] Sending the file 1 time(s)... 
+[12:25:26] Loading File... 
+[12:25:26] Adding 8 lines to the queue... 
+[12:25:26] File added to the queue. 
+[12:25:54] Halt and flush: !%
+[12:25:54] Resuming script: ~
+[12:25:54] > ~
+[12:25:59] > $posa
+[12:25:59] TinyG Command received 
+[12:25:59] < A position:        -25.000 deg
+[12:25:59] < A position:        -25.000 deg
+[12:25:59] Recorded PosA... 
+[12:25:59] < tinyg [mm] ok> 
+[12:27:12] > g28.2a0
+[12:27:12] < tinyg [mm] ok> 
+[12:27:12] < coor:0,dist:1,momo:1,stat:9
+[12:27:13] < posa:-19.326,feed:2000.00,vel:2000.00
+[12:27:13] < posa:-12.676
+[12:27:13] < posa:-5.976
+[12:27:13] < posa:0.644,vel:1698.01
+[12:27:13] < posa:5.223,vel:2000.00
+[12:27:14] < posa:11.873
+[12:27:14] < posa:18.523
+[12:27:14] < posa:25.223
+[12:27:14] < posa:31.873
+[12:27:14] < posa:38.573
+[12:27:15] < posa:45.223
+[12:27:15] < posa:51.923
+[12:27:15] < posa:58.573
+[12:27:15] < posa:65.323
+[12:27:15] < posa:72.023
+[12:27:16] < posa:78.673
+[12:27:16] < posa:85.374
+[12:27:16] < posa:92.124
+[12:27:16] < posa:98.825
+[12:27:17] < posa:105.475
+[12:27:17] < posa:112.175
+[12:27:17] < posa:118.926
+[12:27:17] < posa:125.626
+[12:27:17] < posa:132.277
+[12:27:18] < posa:138.977
+[12:27:18] < posa:145.728
+[12:27:18] < posa:152.428
+[12:27:18] < posa:159.078
+[12:27:18] < posa:165.779
+[12:27:19] < posa:172.529
+[12:27:19] < posa:179.230
+[12:27:19] < posa:185.880
+[12:27:19] < posa:192.580
+[12:27:19] < posa:199.231
+[12:27:20] < posa:205.931
+[12:27:20] < posa:212.582
+[12:27:20] < posa:219.282
+[12:27:20] < posa:225.932
+[12:27:20] < posa:232.633
+[12:27:21] < posa:239.283
+[12:27:21] < posa:245.984
+[12:27:21] < posa:252.634
+[12:27:21] < posa:259.333
+[12:27:21] < posa:265.982
+[12:27:22] < posa:272.680
+[12:27:22] < posa:279.329
+[12:27:22] < posa:286.027
+[12:27:22] < posa:292.675
+[12:27:22] < posa:299.374
+[12:27:23] < posa:306.022
+[12:27:23] < posa:312.720
+[12:27:23] < posa:319.369
+[12:27:23] < posa:326.067
+[12:27:23] < posa:332.716
+[12:27:24] < posa:339.464
+[12:27:24] < posa:346.162
+[12:27:24] < posa:352.811
+[12:27:24] < posa:359.509
+[12:27:24] < posa:359.810
+[12:27:25] < posa:353.103
+[12:27:25] < posa:351.304,feed:300.00,vel:300.00
+[12:27:25] < posa:352.310
+[12:27:25] < posa:353.308
+[12:27:25] < posa:354.314
+[12:27:26] < posa:355.312
+[12:27:26] < posa:356.318
+[12:27:26] < posa:357.317
+[12:27:26] < posa:358.323
+[12:27:26] < posa:359.321
+[12:27:27] < posa:0.000,feed:250.00,vel:0.00,coor:1,dist:0,momo:4,stat:3
+[12:27:27] Machine is homed. 
+[12:27:30] Re-Dumping file C:\Users\Oscar\Desktop\M5.2 QA scripts\homingFlagTest.cnc ...
+[12:27:30] Sending the file 1 time(s)... 
+[12:27:30] Loading File... 
+[12:27:30] Adding 8 lines to the queue... 
+[12:27:30] File added to the queue. 
+[12:27:30] > !%
+[12:27:30] > $di1fn=2
+[12:27:30] TinyG Command received 
+[12:27:30] > g90 g0 a-25
+[12:27:30] < tinyg [mm] ok> 
+[12:27:30] < [di1fn] input function          2 [0=none,1=limit,2=interlock,3=shutdown]
+[12:27:30] < tinyg [mm] ok> 
+[12:27:30] < tinyg [mm] ok> 
+[12:27:30] < posa:-21.026,vel:7559.61,momo:0,stat:5
+[12:27:30] < posa:-25.000,vel:0.00,stat:3
+[12:27:30] Machine is homed. 
+[12:27:30] > g90 g0 a-20
+[12:27:30] > g90 g0 a-25
+[12:27:30] < tinyg [mm] ok> 
+[12:27:30] < tinyg [mm] ok> 
+[12:27:31] < posa:-21.115,vel:2609.07,stat:5
+[12:27:31] < posa:-25.000,vel:0.00,stat:3
+[12:27:31] Machine is homed. 
+[12:27:31] > g91 g1 a30 f250
+[12:27:31] Reached end of file
+[12:27:31] Sending the file 0 more times!!!
+[12:27:31] Loading File... 
+[12:27:31] Adding 8 lines to the queue... 
+[12:27:31] File added to the queue. 
+[12:27:31] > !%
+[12:27:31] < tinyg [mm] ok> 
+[12:32:00] Re-Dumping file C:\Users\Oscar\Desktop\M5.2 QA scripts\homingFlagTest.cnc ...
+[12:32:00] Sending the file 1 time(s)... 
+[12:32:00] Loading File... 
+[12:32:00] Adding 8 lines to the queue... 
+[12:32:00] File added to the queue. 
+[12:32:07] Re-Dumping file C:\Users\Oscar\Desktop\M5.2 QA scripts\homingFlagTest.cnc ...
+[12:32:07] Sending the file 2 time(s)... 
+[12:32:07] Loading File... 
+[12:32:07] Adding 8 lines to the queue... 
+[12:32:07] File added to the queue. 
+[12:32:10] Resuming script: ~
+[12:32:14] Halt and flush: !%
+[12:32:15] Resuming script: ~
+[12:32:15] > ~
+[12:32:20] Re-Dumping file C:\Users\Oscar\Desktop\M5.2 QA scripts\homingFlagTest.cnc ...
+[12:32:20] Sending the file 2 time(s)... 
+[12:32:20] Loading File... 
+[12:32:20] Adding 8 lines to the queue... 
+[12:32:20] File added to the queue. 
+[12:32:20] > !%
+[12:32:29] Re-Dumping file C:\Users\Oscar\Desktop\M5.2 QA scripts\homingFlagTest.cnc ...
+[12:32:29] Sending the file 1 time(s)... 
+[12:32:29] Loading File... 
+[12:32:29] Adding 8 lines to the queue... 
+[12:32:29] File added to the queue. 
+
+

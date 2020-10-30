@@ -1,0 +1,17 @@
+[17:50:13] Starting Log file for session: 2020722-175013
+
+From tinyG: [17:50:16] {r:{fv:0.98,fb:86.03,hp:3,hv:0,id:"0213-0215-0515",msg:"SYSTEM READY"},f:[1,0,1]}
+
+From tinyG: [17:50:16] tinyg [mm] ok> 
+
+Sent to TinyG: [17:50:18] $ej:0
+
+
+From tinyG: [17:50:18] [ej]  enable json mode            0 [0=text,1=JSON]
+
+From tinyG: [17:50:18] tinyg [mm] ok> 
+
+Sent to TinyG: [17:50:21] quit
+
+From tinyG: [17:50:21] tinyg [mm] err[102]: Bad number format: quit 
+

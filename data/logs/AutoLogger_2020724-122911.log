@@ -1,0 +1,882 @@
+[12:29:11] Starting Log file for session: 2020724-122911
+
+From tinyG: [12:29:12] {r:{fv:0.98,fb:86.03,hp:3,hv:0,id:"0213-0215-0515",msg:"SYSTEM READY"},f:[1,0,1]}
+
+From tinyG: [12:29:12] tinyg [mm] ok> 
+
+Out > [12:29:16] G28.2 Z0 X0
+
+Out > [12:29:16] G90 G0 Z-12
+
+From tinyG: [12:29:16] tinyg [mm] ok> 
+
+From tinyG: [12:29:16] posz:-15.805,feed:1000.00,vel:1000.00,stat:9
+
+From tinyG: [12:29:16] posz:-19.979
+
+From tinyG: [12:29:17] posz:-24.179
+
+From tinyG: [12:29:17] posz:-28.353
+
+From tinyG: [12:29:17] posz:-32.528
+
+From tinyG: [12:29:17] posz:-36.703
+
+From tinyG: [12:29:18] posz:-40.852
+
+From tinyG: [12:29:18] posz:-45.052
+
+From tinyG: [12:29:18] posz:-49.227
+
+From tinyG: [12:29:18] posz:-49.753
+
+From tinyG: [12:29:19] posz:-45.766,vel:171.72
+
+From tinyG: [12:29:19] posz:-46.053,feed:100.00,vel:100.00
+
+From tinyG: [12:29:19] posz:-46.473
+
+From tinyG: [12:29:19] posz:-46.890
+
+From tinyG: [12:29:20] posz:-47.308
+
+From tinyG: [12:29:20] posz:-47.725
+
+From tinyG: [12:29:20] posz:-48.142
+
+From tinyG: [12:29:20] posz:-48.559
+
+From tinyG: [12:29:21] posz:-48.974
+
+From tinyG: [12:29:21] posz:-49.394
+
+From tinyG: [12:29:21] posz:-49.811
+
+From tinyG: [12:29:21] posz:-50.228
+
+From tinyG: [12:29:22] posz:-48.303,feed:1000.00,vel:1000.00
+
+From tinyG: [12:29:22] posz:-44.104
+
+From tinyG: [12:29:22] posz:-39.929
+
+From tinyG: [12:29:22] posz:-35.754
+
+From tinyG: [12:29:23] posz:-31.580
+
+From tinyG: [12:29:23] posz:-27.430
+
+From tinyG: [12:29:23] posz:-23.230
+
+From tinyG: [12:29:23] posz:-19.056
+
+From tinyG: [12:29:24] posz:-14.881
+
+From tinyG: [12:29:24] posz:-10.707
+
+From tinyG: [12:29:24] posz:-6.532
+
+From tinyG: [12:29:24] posz:-2.357
+
+From tinyG: [12:29:25] posx:0.190,posz:0.000,vel:869.34
+
+From tinyG: [12:29:25] posx:2.103,vel:987.94
+
+From tinyG: [12:29:25] posx:-2.061,vel:1000.00
+
+From tinyG: [12:29:25] posx:-2.363,feed:100.00,vel:100.00
+
+From tinyG: [12:29:26] posx:-1.946
+
+From tinyG: [12:29:26] posx:-1.528
+
+From tinyG: [12:29:26] posx:-1.111
+
+From tinyG: [12:29:26] posx:-0.696
+
+From tinyG: [12:29:27] posx:-0.276
+
+From tinyG: [12:29:27] posx:0.141
+
+From tinyG: [12:29:27] posx:0.558
+
+From tinyG: [12:29:27] posx:0.976
+
+From tinyG: [12:29:28] posx:1.391
+
+From tinyG: [12:29:28] posx:1.810
+
+From tinyG: [12:29:28] posx:1.099,feed:1000.00,vel:1000.00
+
+From tinyG: [12:29:28] tinyg [mm] ok> 
+
+From tinyG: [12:29:28] posx:0.000,posz:-2.885,feed:500.00,vel:3672.46,dist:0,momo:0,stat:5
+
+From tinyG: [12:29:29] posz:-12.000,vel:0.00,stat:3
+
+Out > [12:29:29] G28.2 A0
+
+Out > [12:29:29] G91 G0 A30
+
+From tinyG: [12:29:29] tinyg [mm] ok> 
+
+From tinyG: [12:29:29] posa:-7.307,feed:2000.00,vel:2000.00,dist:1,momo:1,stat:9
+
+From tinyG: [12:29:29] posa:-15.635
+
+From tinyG: [12:29:29] posa:-19.792,vel:1087.08
+
+From tinyG: [12:29:30] posa:-11.576,vel:2000.00
+
+From tinyG: [12:29:30] posa:-3.226
+
+From tinyG: [12:29:30] posa:1.093,vel:912.92
+
+From tinyG: [12:29:30] posa:-7.056,vel:2000.00
+
+From tinyG: [12:29:31] posa:-15.433
+
+From tinyG: [12:29:31] posa:-18.342,feed:500.00,vel:500.00
+
+From tinyG: [12:29:31] posa:-16.242
+
+From tinyG: [12:29:31] posa:-14.155
+
+From tinyG: [12:29:32] posa:-12.069
+
+From tinyG: [12:29:32] posa:-9.982
+
+From tinyG: [12:29:32] posa:-7.895
+
+From tinyG: [12:29:32] posa:-5.808
+
+From tinyG: [12:29:33] posa:-3.721
+
+From tinyG: [12:29:33] posa:-1.634
+
+From tinyG: [12:29:33] tinyg [mm] ok> 
+
+From tinyG: [12:29:33] posa:0.000,vel:0.00,stat:5
+
+From tinyG: [12:29:33] posa:29.019,vel:3470.70,momo:0
+
+From tinyG: [12:29:34] posa:30.000,vel:0.00,stat:3
+
+Out > [12:29:34] $di1fn=2
+
+Out > [12:29:34] G91 G1 A-30 F500
+
+From tinyG: [12:29:34] [di1fn] input function          2 [0=none,1=limit,2=interlock,3=shutdown]
+
+From tinyG: [12:29:34] tinyg [mm] ok> 
+
+From tinyG: [12:29:34] tinyg [mm] ok> 
+
+From tinyG: [12:29:34] posa:28.041,vel:500.00,momo:1,stat:5
+
+From tinyG: [12:29:34] posa:25.942
+
+From tinyG: [12:29:35] posa:23.855
+
+From tinyG: [12:29:35] posa:21.768
+
+From tinyG: [12:29:35] posa:19.681
+
+From tinyG: [12:29:35] posa:17.594
+
+From tinyG: [12:29:36] posa:15.507
+
+From tinyG: [12:29:36] posa:13.432
+
+From tinyG: [12:29:36] posa:12.286,vel:0.00,stat:6
+
+From tinyG: [12:29:38] posa:10.328,vel:500.00,stat:5
+
+From tinyG: [12:29:38] posa:8.242
+
+From tinyG: [12:29:39] posa:6.155
+
+From tinyG: [12:29:39] posa:4.069
+
+From tinyG: [12:29:39] posa:1.983
+
+From tinyG: [12:29:39] posa:0.000,vel:15.63
+
+From tinyG: [12:29:40] vel:0.00,stat:3
+
+Out > [12:30:22] $di1fn
+
+From tinyG: [12:30:22] [di1fn] input function          2 [0=none,1=limit,2=interlock,3=shutdown]
+
+From tinyG: [12:30:22] tinyg [mm] ok> 
+
+Out > [12:30:31] $di1fn=0
+
+From tinyG: [12:30:31] [di1fn] input function          0 [0=none,1=limit,2=interlock,3=shutdown]
+
+From tinyG: [12:30:31] tinyg [mm] ok> 
+
+From tinyG: [12:30:33] tinyg [mm] ok> 
+
+Out > [12:30:44] g91 g0 a50
+
+Out > [12:30:44] ~
+
+From tinyG: [12:30:44] tinyg [mm] ok> 
+
+From tinyG: [12:30:45] posa:41.917,vel:12163.26,momo:0,stat:5
+
+From tinyG: [12:30:45] posa:50.000,vel:0.00,stat:3
+
+Out > [12:30:50] $di1fn=2
+
+From tinyG: [12:30:50] [di1fn] input function          2 [0=none,1=limit,2=interlock,3=shutdown]
+
+From tinyG: [12:30:50] tinyg [mm] ok> 
+
+Out > [12:30:59] g91 g1 a-50 f500
+
+From tinyG: [12:30:59] tinyg [mm] ok> 
+
+From tinyG: [12:30:59] posa:48.041,vel:500.00,momo:1,stat:5
+
+From tinyG: [12:30:59] posa:45.942
+
+From tinyG: [12:30:59] posa:43.855
+
+From tinyG: [12:31:00] posa:41.768
+
+From tinyG: [12:31:00] posa:39.681
+
+From tinyG: [12:31:00] posa:37.594
+
+From tinyG: [12:31:00] posa:35.507
+
+From tinyG: [12:31:01] posa:33.420
+
+From tinyG: [12:31:01] posa:31.333
+
+From tinyG: [12:31:01] posa:29.245
+
+From tinyG: [12:31:01] posa:27.158
+
+From tinyG: [12:31:02] posa:25.071
+
+From tinyG: [12:31:02] posa:22.983
+
+From tinyG: [12:31:02] posa:20.896
+
+From tinyG: [12:31:02] posa:18.809
+
+From tinyG: [12:31:03] posa:16.721
+
+From tinyG: [12:31:03] posa:14.634
+
+From tinyG: [12:31:03] posa:12.547
+
+From tinyG: [12:31:03] posa:12.288,vel:0.00,stat:6
+
+From tinyG: [12:31:09] posa:10.329,vel:500.00,stat:5
+
+From tinyG: [12:31:10] posa:8.243
+
+From tinyG: [12:31:10] posa:6.169
+
+From tinyG: [12:31:10] posa:4.070
+
+From tinyG: [12:31:10] posa:1.983
+
+From tinyG: [12:31:11] posa:0.000,vel:15.63
+
+From tinyG: [12:31:11] vel:0.00,stat:3
+
+Out > [12:32:30] #
+
+From tinyG: [12:32:30] tinyg [mm] ok> 
+
+From tinyG: [12:32:32] tinyg [mm] ok> 
+
+Out > [12:32:33] ~
+
+Out > [12:32:37] G28.2 Z0 X0
+
+From tinyG: [12:32:37] tinyg [mm] ok> 
+
+From tinyG: [12:32:38] posz:-15.805,feed:1000.00,vel:1000.00,stat:9
+
+From tinyG: [12:32:38] posz:-19.979
+
+From tinyG: [12:32:38] posz:-24.179
+
+From tinyG: [12:32:38] posz:-28.353
+
+From tinyG: [12:32:39] posz:-32.528
+
+From tinyG: [12:32:39] posz:-36.703
+
+From tinyG: [12:32:39] posz:-40.852
+
+From tinyG: [12:32:39] posz:-45.052
+
+From tinyG: [12:32:40] posz:-49.227
+
+From tinyG: [12:32:40] posz:-49.753
+
+From tinyG: [12:32:40] posz:-45.766,vel:171.72
+
+From tinyG: [12:32:40] posz:-46.053,feed:100.00,vel:100.00
+
+From tinyG: [12:32:41] posz:-46.473
+
+From tinyG: [12:32:41] posz:-46.890
+
+From tinyG: [12:32:41] posz:-47.308
+
+From tinyG: [12:32:41] posz:-47.725
+
+From tinyG: [12:32:42] posz:-48.142
+
+From tinyG: [12:32:42] posz:-48.559
+
+From tinyG: [12:32:42] posz:-48.977
+
+From tinyG: [12:32:42] posz:-49.394
+
+From tinyG: [12:32:43] posz:-49.811
+
+From tinyG: [12:32:43] posz:-50.228
+
+From tinyG: [12:32:43] posz:-48.111,feed:1000.00,vel:1000.00
+
+From tinyG: [12:32:43] posz:-43.936
+
+From tinyG: [12:32:44] posz:-39.761
+
+From tinyG: [12:32:44] posz:-35.587
+
+From tinyG: [12:32:44] posz:-31.412
+
+From tinyG: [12:32:44] posz:-27.263
+
+From tinyG: [12:32:45] posz:-23.063
+
+From tinyG: [12:32:45] posz:-18.888
+
+From tinyG: [12:32:45] posz:-14.714
+
+From tinyG: [12:32:45] posx:0.009,posz:0.000,vel:130.66
+
+From tinyG: [12:32:46] posx:2.367,vel:380.37
+
+From tinyG: [12:32:46] posx:-1.736,vel:1000.00
+
+From tinyG: [12:32:46] posx:-2.393,feed:100.00,vel:100.00
+
+From tinyG: [12:32:46] posx:-1.976
+
+From tinyG: [12:32:47] posx:-1.558
+
+From tinyG: [12:32:47] posx:-1.141
+
+From tinyG: [12:32:47] posx:-0.726
+
+From tinyG: [12:32:47] posx:-0.306
+
+From tinyG: [12:32:48] posx:0.111
+
+From tinyG: [12:32:48] posx:0.528
+
+From tinyG: [12:32:48] posx:0.946
+
+From tinyG: [12:32:48] posx:1.361
+
+From tinyG: [12:32:49] posx:1.780
+
+From tinyG: [12:32:49] posx:1.397,feed:1000.00,vel:1000.00
+
+From tinyG: [12:32:49] posx:0.000,feed:500.00,vel:0.00,momo:4,stat:3
+
+Out > [12:32:49] G90 G0 Z-12
+
+Out > [12:32:49] G28.2 A0
+
+From tinyG: [12:32:49] tinyg [mm] ok> 
+
+From tinyG: [12:32:49] tinyg [mm] ok> 
+
+From tinyG: [12:32:50] posz:-11.293,vel:2083.77,dist:0,momo:0,stat:9
+
+From tinyG: [12:32:50] posz:-12.000,posa:3.375,feed:2000.00,vel:2000.00,dist:1,momo:1
+
+From tinyG: [12:32:50] posa:11.724
+
+From tinyG: [12:32:50] posa:20.074
+
+From tinyG: [12:32:51] posa:28.424
+
+From tinyG: [12:32:51] posa:36.724
+
+From tinyG: [12:32:51] posa:45.124
+
+From tinyG: [12:32:51] posa:53.474
+
+From tinyG: [12:32:52] posa:61.824
+
+From tinyG: [12:32:52] posa:70.174
+
+From tinyG: [12:32:52] posa:78.525
+
+From tinyG: [12:32:52] posa:86.875
+
+From tinyG: [12:32:53] posa:95.226
+
+From tinyG: [12:32:53] posa:103.576
+
+From tinyG: [12:32:53] posa:111.927
+
+From tinyG: [12:32:53] posa:120.277
+
+From tinyG: [12:32:54] posa:128.628
+
+From tinyG: [12:32:54] posa:136.978
+
+From tinyG: [12:32:54] posa:145.329
+
+From tinyG: [12:32:54] posa:153.679
+
+From tinyG: [12:32:55] posa:162.030
+
+From tinyG: [12:32:55] posa:170.380
+
+From tinyG: [12:32:55] posa:178.681
+
+From tinyG: [12:32:55] posa:187.081
+
+From tinyG: [12:32:56] posa:195.432
+
+From tinyG: [12:32:56] posa:201.357,vel:0.00
+
+From tinyG: [12:32:56] posa:194.049,vel:2000.00
+
+From tinyG: [12:32:56] posa:185.721
+
+From tinyG: [12:32:57] posa:181.503,feed:500.00,vel:500.00
+
+From tinyG: [12:32:57] posa:183.590
+
+From tinyG: [12:32:57] posa:185.677
+
+From tinyG: [12:32:57] posa:187.764
+
+From tinyG: [12:32:58] posa:0.000,feed:1000.00,vel:0.00,momo:4,stat:3
+
+From tinyG: [12:32:58] tinyg [mm] ok> 
+
+Out > [12:32:59] ~
+
+Out > [12:33:04] $di1fn
+
+From tinyG: [12:33:04] [di1fn] input function          2 [0=none,1=limit,2=interlock,3=shutdown]
+
+From tinyG: [12:33:04] tinyg [mm] ok> 
+
+From tinyG: [12:33:19] tinyg [mm] ok> 
+
+From tinyG: [12:33:20] tinyg [mm] ok> 
+
+Out > [12:33:21] ~
+
+Out > [12:33:25] $di1fn=0
+
+From tinyG: [12:33:25] [di1fn] input function          0 [0=none,1=limit,2=interlock,3=shutdown]
+
+From tinyG: [12:33:25] tinyg [mm] ok> 
+
+From tinyG: [12:33:51] tinyg [mm] ok> 
+
+Out > [12:33:52] ~
+
+Out > [12:33:55] $di1ac
+
+From tinyG: [12:33:55] [di1ac] input action            0 [0=none,1=stop,2=halt,3=stop_steps,4=panic,5=reset]
+
+From tinyG: [12:33:55] tinyg [mm] ok> 
+
+From tinyG: [12:34:02] tinyg [mm] ok> 
+
+Out > [12:34:03] ~
+
+Out > [12:34:05] G28.2 Z0 X0
+
+From tinyG: [12:34:05] tinyg [mm] ok> 
+
+From tinyG: [12:34:06] posz:-15.805,vel:1000.00,momo:1,stat:9
+
+From tinyG: [12:34:06] posz:-19.979
+
+From tinyG: [12:34:06] posz:-24.179
+
+From tinyG: [12:34:06] posz:-28.353
+
+From tinyG: [12:34:07] posz:-32.528
+
+From tinyG: [12:34:07] posz:-36.703
+
+From tinyG: [12:34:07] posz:-38.228
+
+From tinyG: [12:34:07] posz:-34.063,vel:998.95
+
+From tinyG: [12:34:08] posz:-33.979,feed:100.00,vel:100.00
+
+From tinyG: [12:34:08] posz:-34.397
+
+From tinyG: [12:34:08] posz:-34.814
+
+From tinyG: [12:34:08] posz:-35.231
+
+From tinyG: [12:34:09] posz:-35.648
+
+From tinyG: [12:34:09] posz:-36.066
+
+From tinyG: [12:34:09] posz:-36.483
+
+From tinyG: [12:34:09] posz:-36.900
+
+From tinyG: [12:34:10] posz:-37.318
+
+From tinyG: [12:34:10] sz:-37.732
+
+From tinyG: [12:34:10] posz:-38.152
+
+From tinyG: [12:34:10] posz:-36.804,feed:1000.00,vel:1000.00
+
+From tinyG: [12:34:11] posz:-32.630
+
+From tinyG: [12:34:11] posz:-28.455
+
+From tinyG: [12:34:11] posz:-24.280
+
+From tinyG: [12:34:11] posz:-20.106
+
+From tinyG: [12:34:12] posz:-15.956
+
+From tinyG: [12:34:12] posz:-11.756
+
+From tinyG: [12:34:12] posz:-7.582
+
+From tinyG: [12:34:12] posz:-3.407
+
+From tinyG: [12:34:13] posz:0.767
+
+From tinyG: [12:34:13] posz:4.917
+
+From tinyG: [12:34:13] posz:9.117
+
+From tinyG: [12:34:13] posz:0.000,vel:0.04
+
+From tinyG: [12:34:14] posx:2.408,vel:42.04
+
+From tinyG: [12:34:14] posx:-1.512,vel:1000.00
+
+From tinyG: [12:34:14] posx:-2.418,feed:100.00,vel:100.00
+
+From tinyG: [12:34:14] posx:-2.001
+
+From tinyG: [12:34:15] posx:-1.583
+
+From tinyG: [12:34:15] posx:-1.166
+
+From tinyG: [12:34:15] posx:-0.751
+
+From tinyG: [12:34:15] posx:-0.331
+
+From tinyG: [12:34:16] posx:0.086
+
+From tinyG: [12:34:16] posx:0.503
+
+From tinyG: [12:34:16] posx:0.921
+
+From tinyG: [12:34:16] posx:1.336
+
+From tinyG: [12:34:17] posx:1.755
+
+From tinyG: [12:34:17] posx:1.672,feed:1000.00,vel:995.37
+
+From tinyG: [12:34:17] posx:0.000,vel:0.00,momo:4,stat:3
+
+Out > [12:34:17] G90 G0 Z-12
+
+Out > [12:34:17] G28.2 A0
+
+From tinyG: [12:34:17] tinyg [mm] ok> 
+
+From tinyG: [12:34:17] tinyg [mm] ok> 
+
+From tinyG: [12:34:18] posz:-11.293,vel:2083.77,dist:0,momo:0,stat:9
+
+From tinyG: [12:34:18] {er:{fb:86.03,st:94,msg:"Planner assertion failure - zero length line in calculate trapezoid"}}
+
+From tinyG: [12:34:18] {er:{fb:86.03,st:94,msg:"Planner assertion failure - zero length move in exec_aline"}}
+
+From tinyG: [12:34:18] posz:-12.000,posa:3.325,feed:2000.00,vel:2000.00,dist:1,momo:1
+
+From tinyG: [12:34:18] posa:11.674
+
+From tinyG: [12:34:18] posa:20.024
+
+From tinyG: [12:34:19] posa:27.597,vel:54.37
+
+From tinyG: [12:34:19] posa:22.386,vel:2000.00
+
+From tinyG: [12:34:19] posa:14.059
+
+From tinyG: [12:34:19] posa:7.599,vel:0.03
+
+From tinyG: [12:34:20] posa:9.558,feed:500.00,vel:500.00
+
+From tinyG: [12:34:20] posa:11.657
+
+From tinyG: [12:34:22] posa:13.744
+
+From tinyG: [12:34:22] posa:15.831
+
+From tinyG: [12:34:22] posa:17.918
+
+From tinyG: [12:34:22] posa:20.005
+
+From tinyG: [12:34:22] posa:22.092
+
+From tinyG: [12:34:22] posa:24.166
+
+From tinyG: [12:34:22] posa:26.265
+
+From tinyG: [12:34:22] tinyg [mm] ok> 
+
+From tinyG: [12:34:22] tinyg [mm] ok> 
+
+From tinyG: [12:34:22] tinyg [mm] ok> 
+
+From tinyG: [12:34:22] posa:0.000,feed:1000.00,vel:0.00,momo:4,stat:3
+
+From tinyG: [12:34:22] tinyg [mm] ok> 
+
+From tinyG: [12:34:24] tinyg [mm] ok> 
+
+From tinyG: [12:34:25] tinyg [mm] ok> 
+
+Out > [12:34:35] g91 g0 a90
+
+Out > [12:34:35] ~
+
+From tinyG: [12:34:35] tinyg [mm] ok> 
+
+From tinyG: [12:34:36] posa:50.142,vel:20000.00,momo:0,stat:5
+
+From tinyG: [12:34:36] posa:90.000,vel:0.00,stat:3
+
+Out > [12:34:40] G28.2 Z0 X0
+
+Out > [12:34:40] G90 G0 Z-12
+
+From tinyG: [12:34:40] tinyg [mm] ok> 
+
+From tinyG: [12:34:40] posz:-15.805,vel:1000.00,momo:1,stat:9
+
+From tinyG: [12:34:40] posz:-20.004
+
+From tinyG: [12:34:41] posz:-24.179
+
+From tinyG: [12:34:41] posz:-28.353
+
+From tinyG: [12:34:41] posz:-32.528
+
+From tinyG: [12:34:41] posz:-36.703
+
+From tinyG: [12:34:42] posz:-40.852
+
+From tinyG: [12:34:42] posz:-45.052
+
+From tinyG: [12:34:42] posz:-49.227
+
+From tinyG: [12:34:42] posz:-49.553
+
+From tinyG: [12:34:43] posz:-45.657,vel:42.04
+
+From tinyG: [12:34:43] posz:-45.963,feed:100.00,vel:100.00
+
+From tinyG: [12:34:43] posz:-46.383
+
+From tinyG: [12:34:43] posz:-46.800
+
+From tinyG: [12:34:44] posz:-47.218
+
+From tinyG: [12:34:44] posz:-47.635
+
+From tinyG: [12:34:44] posz:-48.052
+
+From tinyG: [12:34:44] posz:-48.469
+
+From tinyG: [12:34:45] posz:-48.887
+
+From tinyG: [12:34:45] posz:-49.304
+
+From tinyG: [12:34:45] posz:-49.721
+
+From tinyG: [12:34:45] posz:-50.138
+
+From tinyG: [12:34:46] posz:-48.158,feed:1000.00,vel:1000.00
+
+From tinyG: [12:34:46] posz:-43.959
+
+From tinyG: [12:34:46] posz:-39.784
+
+From tinyG: [12:34:46] posz:-35.609
+
+From tinyG: [12:34:47] posz:-31.435
+
+From tinyG: [12:34:47] posz:-27.285
+
+From tinyG: [12:34:47] posz:-23.085
+
+From tinyG: [12:34:47] posz:-18.911
+
+From tinyG: [12:34:48] posz:-14.736
+
+From tinyG: [12:34:48] posz:-10.562
+
+From tinyG: [12:34:48] posz:-6.387
+
+From tinyG: [12:34:48] posz:-2.212
+
+From tinyG: [12:34:49] posx:0.235,posz:0.000,vel:934.38
+
+From tinyG: [12:34:49] posx:2.054,vel:998.95
+
+From tinyG: [12:34:49] posx:-2.111,vel:1000.00
+
+From tinyG: [12:34:49] posx:-2.358,feed:100.00,vel:100.00
+
+From tinyG: [12:34:50] posx:-1.941
+
+From tinyG: [12:34:50] posx:-1.523
+
+From tinyG: [12:34:50] posx:-1.106
+
+From tinyG: [12:34:50] posx:-0.691
+
+From tinyG: [12:34:51] posx:-0.271
+
+From tinyG: [12:34:51] posx:0.146
+
+From tinyG: [12:34:51] posx:0.563
+
+From tinyG: [12:34:51] posx:0.981
+
+From tinyG: [12:34:52] posx:1.396
+
+From tinyG: [12:34:52] posx:1.815
+
+From tinyG: [12:34:52] posx:1.022,feed:1000.00,vel:1000.00
+
+From tinyG: [12:34:52] tinyg [mm] ok> 
+
+From tinyG: [12:34:52] posx:0.000,posz:-3.160,vel:3726.76,dist:0,momo:0,stat:5
+
+From tinyG: [12:34:53] posz:-12.000,vel:0.00,stat:3
+
+Out > [12:34:53] G28.2 A0
+
+Out > [12:34:53] G91 G0 A30
+
+From tinyG: [12:34:53] tinyg [mm] ok> 
+
+From tinyG: [12:34:53] posa:97.325,feed:2000.00,vel:2000.00,dist:1,momo:1,stat:9
+
+From tinyG: [12:34:53] posa:105.675
+
+From tinyG: [12:34:53] posa:113.976
+
+From tinyG: [12:34:54] posa:122.376
+
+From tinyG: [12:34:54] posa:130.727
+
+From tinyG: [12:34:54] posa:139.077
+
+From tinyG: [12:34:54] posa:144.249,vel:54.37
+
+From tinyG: [12:34:55] posa:136.595,vel:2000.00
+
+From tinyG: [12:34:55] posa:128.268
+
+From tinyG: [12:34:55] posa:124.487,feed:500.00,vel:500.00
+
+From tinyG: [12:34:55] posa:126.586
+
+From tinyG: [12:34:56] posa:128.673
+
+From tinyG: [12:34:56] posa:130.760
+
+From tinyG: [12:34:56] posa:132.847
+
+From tinyG: [12:34:56] posa:134.934
+
+From tinyG: [12:34:57] posa:137.021
+
+From tinyG: [12:34:57] posa:139.108
+
+From tinyG: [12:34:57] posa:141.195
+
+From tinyG: [12:34:57] posa:143.141,vel:0.06
+
+From tinyG: [12:34:57] feed:2000.00,vel:0.00
+
+From tinyG: [12:34:57] tinyg [mm] ok> 
+
+From tinyG: [12:34:57] posa:0.000,feed:500.00,stat:5
+
+From tinyG: [12:34:58] posa:29.019,feed:1000.00,vel:3470.70,momo:0
+
+From tinyG: [12:34:58] posa:30.000,vel:0.00,stat:3
+
+Out > [12:34:58] $di1fn=2
+
+Out > [12:34:58] G91 G1 A-30 F500
+
+From tinyG: [12:34:58] [di1fn] input function          2 [0=none,1=limit,2=interlock,3=shutdown]
+
+From tinyG: [12:34:58] tinyg [mm] ok> 
+
+From tinyG: [12:34:58] tinyg [mm] ok> 
+
+From tinyG: [12:34:58] posa:28.041,feed:500.00,vel:500.00,momo:1,stat:5
+
+From tinyG: [12:34:59] posa:25.942
+
+From tinyG: [12:34:59] posa:23.855
+
+From tinyG: [12:34:59] posa:21.768
+
+From tinyG: [12:34:59] posa:19.681
+
+From tinyG: [12:35:00] posa:17.594
+
+From tinyG: [12:35:00] posa:15.507
+
+From tinyG: [12:35:00] posa:13.420
+
+From tinyG: [12:35:00] posa:12.661,vel:0.00,stat:6
+
+From tinyG: [12:35:03] posa:10.702,vel:500.00,stat:5
+
+From tinyG: [12:35:03] posa:8.616
+
+From tinyG: [12:35:03] posa:6.530
+
+From tinyG: [12:35:03] posa:4.444
+
+From tinyG: [12:35:04] posa:2.358
+
+From tinyG: [12:35:04] posa:0.272
+
+From tinyG: [12:35:04] posa:0.000,vel:0.00,stat:3
+

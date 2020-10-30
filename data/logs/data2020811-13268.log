@@ -1,0 +1,921 @@
+[13:26:08] Starting Log file for session: 2020811-13268
+
+[13:23:58] Terminal cleared and ready...
+[13:24:04] > g91 g0 z-1
+[13:24:04] < tinyg [mm] ok> 
+[13:24:05] < posz:-1.000,dist:1,momo:0,stat:3
+[13:24:05] Machine is homed. 
+[13:24:09] > g90 g0 z0
+[13:24:09] < tinyg [mm] ok> 
+[13:24:09] < posz:0.000,dist:0,stat:3
+[13:24:09] Machine is homed. 
+[13:24:13] Loading file...
+[13:24:16] File to load: C:\Users\Oscar\Desktop\New Text Document.txt
+[13:24:16] Loading File... 
+[13:24:16] Adding 28 lines to the queue... 
+[13:24:16] Sending the file 1 time(s)... 
+[13:24:16] > g28.3z0
+[13:24:16] > g91 g1 z-5 f500
+[13:24:16] < tinyg [mm] ok> 
+[13:24:16] < tinyg [mm] ok> 
+[13:24:16] File added to the queue. 
+[13:24:16] Sending the file 1 more times...
+[13:24:17] < posz:-1.901,feed:500.00,vel:500.00,dist:1,momo:1,stat:5
+[13:24:17] < posz:-3.998
+[13:24:17] < posz:-5.000,vel:0.00,stat:3
+[13:24:17] Machine is homed. 
+[13:24:17] > g90 g1 z0 
+[13:24:17] > g90 g0 a20
+[13:24:17] < tinyg [mm] ok> 
+[13:24:17] < tinyg [mm] ok> 
+[13:24:17] < posz:-3.099,vel:500.00,dist:0,stat:5
+[13:24:18] < posz:-1.014
+[13:24:18] < posz:0.000,posa:5.490,vel:8056.09,momo:0
+[13:24:18] < posa:20.000,vel:0.00,stat:3
+[13:24:18] Machine is homed. 
+[13:24:18] > g90 g0 a0
+[13:24:18] > g91 g1 z-5 f500
+[13:24:18] < tinyg [mm] ok> 
+[13:24:18] < tinyg [mm] ok> 
+[13:24:19] < posa:0.023,vel:277.85,stat:5
+[13:24:19] < posz:-1.738,posa:0.000,vel:500.00,dist:1,momo:1
+[13:24:19] < posz:-3.824
+[13:24:19] < posz:-5.000,vel:0.00,stat:3
+[13:24:19] Machine is homed. 
+[13:24:19] > g90 g1 z0 
+[13:24:19] > g90 g0 a20
+[13:24:19] < tinyg [mm] ok> 
+[13:24:19] < tinyg [mm] ok> 
+[13:24:20] < posz:-3.099,vel:500.00,dist:0,stat:5
+[13:24:20] < posz:-1.014
+[13:24:20] < posz:0.000,posa:5.490,vel:8056.09,momo:0
+[13:24:20] < posa:20.000,vel:0.00,stat:3
+[13:24:20] Machine is homed. 
+[13:24:20] > g90 g0 a0
+[13:24:20] > g91 g1 z-5 f500
+[13:24:20] < tinyg [mm] ok> 
+[13:24:20] < tinyg [mm] ok> 
+[13:24:21] < posa:0.023,vel:277.85,stat:5
+[13:24:21] < posz:-1.738,posa:0.000,vel:500.00,dist:1,momo:1
+[13:24:21] < posz:-3.824
+[13:24:21] < posz:-5.000,vel:0.00,stat:3
+[13:24:21] Machine is homed. 
+[13:24:21] > g90 g1 z0 
+[13:24:21] > g90 g0 a20
+[13:24:21] < tinyg [mm] ok> 
+[13:24:22] < tinyg [mm] ok> 
+[13:24:22] < posz:-3.099,vel:500.00,dist:0,stat:5
+[13:24:22] < posz:-1.014
+[13:24:22] < posz:0.000,posa:5.490,vel:8056.09,momo:0
+[13:24:23] < posa:20.000,vel:0.00,stat:3
+[13:24:23] Machine is homed. 
+[13:24:23] > g90 g0 a0
+[13:24:23] > g91 g1 z-5 f500
+[13:24:23] < tinyg [mm] ok> 
+[13:24:23] < tinyg [mm] ok> 
+[13:24:23] < posa:0.023,vel:277.85,stat:5
+[13:24:23] < posz:-1.738,posa:0.000,vel:500.00,dist:1,momo:1
+[13:24:23] < posz:-3.824
+[13:24:24] < posz:-5.000,vel:0.00,stat:3
+[13:24:24] Machine is homed. 
+[13:24:24] > g90 g1 z0 
+[13:24:24] > g90 g0 a20
+[13:24:24] < tinyg [mm] ok> 
+[13:24:24] < tinyg [mm] ok> 
+[13:24:24] < posz:-3.099,vel:500.00,dist:0,stat:5
+[13:24:24] < posz:-1.014
+[13:24:24] < posz:0.000,posa:5.490,vel:8056.09,momo:0
+[13:24:25] < posa:20.000,vel:0.00,stat:3
+[13:24:25] Machine is homed. 
+[13:24:25] > g90 g0 a0
+[13:24:25] > g91 g1 z-5 f500
+[13:24:25] < tinyg [mm] ok> 
+[13:24:25] < tinyg [mm] ok> 
+[13:24:25] < posa:0.023,vel:277.85,stat:5
+[13:24:25] < posz:-1.738,posa:0.000,vel:500.00,dist:1,momo:1
+[13:24:26] < posz:-3.824
+[13:24:26] < posz:-5.000,vel:0.00,stat:3
+[13:24:26] Machine is homed. 
+[13:24:26] > g90 g1 z0 
+[13:24:26] > g90 g0 a20
+[13:24:26] < tinyg [mm] ok> 
+[13:24:26] < tinyg [mm] ok> 
+[13:24:26] < posz:-3.099,vel:500.00,dist:0,stat:5
+[13:24:26] < posz:-1.014
+[13:24:27] < posz:0.000,posa:5.490,vel:8056.09,momo:0
+[13:24:27] < posa:20.000,vel:0.00,stat:3
+[13:24:27] Machine is homed. 
+[13:24:27] > g90 g0 a0
+[13:24:27] < tinyg [mm] ok> 
+[13:24:27] < posa:0.023,vel:277.85,stat:5
+[13:24:27] < posa:0.000,vel:0.00,stat:3
+[13:24:27] Machine is homed. 
+[13:24:30] Re-Dumping file C:\Users\Oscar\Desktop\New Text Document.txt ...
+[13:24:30] Loading File... 
+[13:24:30] Adding 28 lines to the queue... 
+[13:24:30] Sending the file 10 time(s)... 
+[13:24:30] File added to the queue. 
+[13:24:30] Sending the file 10 more times...
+[13:24:30] File added to the queue. 
+[13:24:30] Sending the file 9 more times...
+[13:24:30] File added to the queue. 
+[13:24:30] Sending the file 8 more times...
+[13:24:30] File added to the queue. 
+[13:24:30] Sending the file 7 more times...
+[13:24:30] File added to the queue. 
+[13:24:30] Sending the file 6 more times...
+[13:24:30] File added to the queue. 
+[13:24:30] Sending the file 5 more times...
+[13:24:30] File added to the queue. 
+[13:24:30] Sending the file 4 more times...
+[13:24:30] File added to the queue. 
+[13:24:30] Sending the file 3 more times...
+[13:24:30] File added to the queue. 
+[13:24:30] Sending the file 2 more times...
+[13:24:30] File added to the queue. 
+[13:24:30] Sending the file 1 more times...
+[13:24:30] > g28.3z0
+[13:24:30] > g91 g1 z-5 f500
+[13:24:30] < tinyg [mm] ok> 
+[13:24:30] < tinyg [mm] ok> 
+[13:24:31] < posz:-1.901,vel:500.00,dist:1,momo:1,stat:5
+[13:24:31] < posz:-3.998
+[13:24:31] < posz:-5.000,vel:0.00,stat:3
+[13:24:31] Machine is homed. 
+[13:24:31] > g90 g1 z0 
+[13:24:31] > g90 g0 a20
+[13:24:31] < tinyg [mm] ok> 
+[13:24:31] < tinyg [mm] ok> 
+[13:24:32] < posz:-3.099,vel:500.00,dist:0,stat:5
+[13:24:32] < posz:-1.014
+[13:24:32] < posz:0.000,posa:5.490,vel:8056.09,momo:0
+[13:24:32] < posa:20.000,vel:0.00,stat:3
+[13:24:32] Machine is homed. 
+[13:24:32] > g90 g0 a0
+[13:24:32] > g91 g1 z-5 f500
+[13:24:32] < tinyg [mm] ok> 
+[13:24:32] < tinyg [mm] ok> 
+[13:24:33] < posa:0.023,vel:277.85,stat:5
+[13:24:33] < posz:-1.738,posa:0.000,vel:500.00,dist:1,momo:1
+[13:24:33] < posz:-3.824
+[13:24:33] < posz:-5.000,vel:0.00,stat:3
+[13:24:33] Machine is homed. 
+[13:24:33] > g90 g1 z0 
+[13:24:33] > g90 g0 a20
+[13:24:33] < tinyg [mm] ok> 
+[13:24:33] < tinyg [mm] ok> 
+[13:24:34] < posz:-3.099,vel:500.00,dist:0,stat:5
+[13:24:34] < posz:-1.014
+[13:24:34] < posz:0.000,posa:5.490,vel:8056.09,momo:0
+[13:24:34] < posa:20.000,vel:0.00,stat:3
+[13:24:34] Machine is homed. 
+[13:24:34] > g90 g0 a0
+[13:24:34] > g91 g1 z-5 f500
+[13:24:34] < tinyg [mm] ok> 
+[13:24:34] < tinyg [mm] ok> 
+[13:24:35] < posa:0.023,vel:277.85,stat:5
+[13:24:35] < posz:-1.738,posa:0.000,vel:500.00,dist:1,momo:1
+[13:24:35] < posz:-3.824
+[13:24:36] < posz:-5.000,vel:0.00,stat:3
+[13:24:36] Machine is homed. 
+[13:24:36] > g90 g1 z0 
+[13:24:36] > g90 g0 a20
+[13:24:36] < tinyg [mm] ok> 
+[13:24:36] < tinyg [mm] ok> 
+[13:24:36] < posz:-3.099,vel:500.00,dist:0,stat:5
+[13:24:36] < posz:-1.027
+[13:24:36] < posz:0.000,posa:5.490,vel:8056.09,momo:0
+[13:24:37] < posa:20.000,vel:0.00,stat:3
+[13:24:37] Machine is homed. 
+[13:24:37] > g90 g0 a0
+[13:24:37] > g91 g1 z-5 f500
+[13:24:37] < tinyg [mm] ok> 
+[13:24:37] < tinyg [mm] ok> 
+[13:24:37] < posa:0.023,vel:277.85,stat:5
+[13:24:37] < posz:-1.738,posa:0.000,vel:500.00,dist:1,momo:1
+[13:24:37] < posz:-3.824
+[13:24:38] < posz:-5.000,vel:0.00,stat:3
+[13:24:38] Machine is homed. 
+[13:24:38] > g90 g1 z0 
+[13:24:38] > g90 g0 a20
+[13:24:38] < tinyg [mm] ok> 
+[13:24:38] < tinyg [mm] ok> 
+[13:24:38] < posz:-3.099,vel:500.00,dist:0,stat:5
+[13:24:38] < posz:-1.014
+[13:24:39] < posz:0.000,posa:5.490,vel:8056.09,momo:0
+[13:24:39] < posa:20.000,vel:0.00,stat:3
+[13:24:39] Machine is homed. 
+[13:24:39] > g90 g0 a0
+[13:24:39] > g91 g1 z-5 f500
+[13:24:39] < tinyg [mm] ok> 
+[13:24:39] < tinyg [mm] ok> 
+[13:24:39] < posa:0.023,vel:277.85,stat:5
+[13:24:39] < posz:-1.738,posa:0.000,vel:500.00,dist:1,momo:1
+[13:24:40] < posz:-3.824
+[13:24:40] < posz:-5.000,vel:0.00,stat:3
+[13:24:40] Machine is homed. 
+[13:24:40] > g90 g1 z0 
+[13:24:40] > g90 g0 a20
+[13:24:40] < tinyg [mm] ok> 
+[13:24:40] < tinyg [mm] ok> 
+[13:24:40] < posz:-3.099,vel:500.00,dist:0,stat:5
+[13:24:40] < posz:-1.014
+[13:24:41] < posz:0.000,posa:5.490,vel:8056.09,momo:0
+[13:24:41] < posa:20.000,vel:0.00,stat:3
+[13:24:41] Machine is homed. 
+[13:24:41] > g90 g0 a0
+[13:24:41] > g28.3z0
+[13:24:41] < tinyg [mm] ok> 
+[13:24:41] < tinyg [mm] ok> 
+[13:24:41] < posa:0.023,vel:277.85,stat:5
+[13:24:42] < posa:0.000,vel:0.00,stat:3
+[13:24:42] Machine is homed. 
+[13:24:42] > g91 g1 z-5 f500
+[13:24:42] > g90 g1 z0 
+[13:24:42] < tinyg [mm] ok> 
+[13:24:42] < tinyg [mm] ok> 
+[13:24:42] < posz:-1.901,vel:500.00,dist:1,momo:1,stat:5
+[13:24:42] < posz:-3.986
+[13:24:42] < posz:-4.311,dist:0
+[13:24:43] < posz:-2.225
+[13:24:43] < posz:-0.141,vel:493.97
+[13:24:43] < posz:0.000,vel:0.00,stat:3
+[13:24:43] Machine is homed. 
+[13:24:43] > g90 g0 a20
+[13:24:43] > g90 g0 a0
+[13:24:43] < tinyg [mm] ok> 
+[13:24:43] < tinyg [mm] ok> 
+[13:24:43] < posa:19.977,vel:277.85,momo:0,stat:5
+[13:24:44] < posa:0.339,vel:1738.73
+[13:24:44] < posa:0.000,vel:0.00,stat:3
+[13:24:44] Machine is homed. 
+[13:24:44] > g91 g1 z-5 f500
+[13:24:44] > g90 g1 z0 
+[13:24:44] < tinyg [mm] ok> 
+[13:24:44] < tinyg [mm] ok> 
+[13:24:44] < posz:-1.901,vel:500.00,dist:1,momo:1,stat:5
+[13:24:45] < posz:-3.986
+[13:24:45] < posz:-4.311,dist:0
+[13:24:45] < posz:-2.225
+[13:24:45] < posz:-0.141,vel:493.97
+[13:24:46] < posz:0.000,vel:0.00,stat:3
+[13:24:46] Machine is homed. 
+[13:24:46] > g90 g0 a20
+[13:24:46] > g90 g0 a0
+[13:24:46] < tinyg [mm] ok> 
+[13:24:46] < tinyg [mm] ok> 
+[13:24:46] < posa:19.977,vel:277.85,momo:0,stat:5
+[13:24:46] < posa:0.263,vel:1468.86
+[13:24:46] < posa:0.000,vel:0.00,stat:3
+[13:24:46] Machine is homed. 
+[13:24:46] > g91 g1 z-5 f500
+[13:24:46] > g90 g1 z0 
+[13:24:46] < tinyg [mm] ok> 
+[13:24:46] < tinyg [mm] ok> 
+[13:24:47] < posz:-1.901,vel:500.00,dist:1,momo:1,stat:5
+[13:24:47] < posz:-3.998
+[13:24:47] < posz:-4.298,dist:0
+[13:24:47] < posz:-2.213
+[13:24:48] < posz:-0.141,vel:487.84
+[13:24:48] < posz:0.000,vel:0.00,stat:3
+[13:24:48] Machine is homed. 
+[13:24:48] > g90 g0 a20
+[13:24:48] > g90 g0 a0
+[13:24:48] < tinyg [mm] ok> 
+[13:24:48] < tinyg [mm] ok> 
+[13:24:48] < posa:19.977,vel:277.85,momo:0,stat:5
+[13:24:49] < posa:0.339,vel:1738.73
+[13:24:49] < posa:0.000,vel:0.00,stat:3
+[13:24:49] Machine is homed. 
+[13:24:49] > g91 g1 z-5 f500
+[13:24:49] > g90 g1 z0 
+[13:24:49] < tinyg [mm] ok> 
+[13:24:49] < tinyg [mm] ok> 
+[13:24:49] < posz:-1.901,vel:500.00,dist:1,momo:1,stat:5
+[13:24:49] < posz:-3.986
+[13:24:50] < posz:-4.311,dist:0
+[13:24:50] < posz:-2.225
+[13:24:50] < posz:-0.141,vel:493.97
+[13:24:50] < posz:0.000,vel:0.00,stat:3
+[13:24:50] Machine is homed. 
+[13:24:50] > g90 g0 a20
+[13:24:50] > g90 g0 a0
+[13:24:50] < tinyg [mm] ok> 
+[13:24:50] < tinyg [mm] ok> 
+[13:24:51] < posa:19.977,vel:277.85,momo:0,stat:5
+[13:24:51] < posa:0.339,vel:1738.73
+[13:24:51] < posa:0.000,vel:0.00,stat:3
+[13:24:51] Machine is homed. 
+[13:24:51] > g91 g1 z-5 f500
+[13:24:51] > g90 g1 z0 
+[13:24:51] < tinyg [mm] ok> 
+[13:24:51] < tinyg [mm] ok> 
+[13:24:52] < posz:-1.901,vel:500.00,dist:1,momo:1,stat:5
+[13:24:52] < posz:-3.986
+[13:24:52] < posz:-4.311,dist:0
+[13:24:52] < posz:-2.225
+[13:24:53] < posz:-0.141,vel:493.97
+[13:24:53] < posz:0.000,vel:0.00,stat:3
+[13:24:53] Machine is homed. 
+[13:24:53] > g90 g0 a20
+[13:24:53] > g90 g0 a0
+[13:24:53] < tinyg [mm] ok> 
+[13:24:53] < tinyg [mm] ok> 
+[13:24:53] < posa:19.977,vel:277.85,momo:0,stat:5
+[13:24:53] < posa:0.339,vel:1738.73
+[13:24:54] < posa:0.000,vel:0.00,stat:3
+[13:24:54] Machine is homed. 
+[13:24:54] > g28.3z0
+[13:24:54] > g91 g1 z-5 f500
+[13:24:54] < tinyg [mm] ok> 
+[13:24:54] < tinyg [mm] ok> 
+[13:24:54] < posz:-1.901,vel:500.00,dist:1,momo:1,stat:5
+[13:24:54] < posz:-3.998
+[13:24:54] < posz:-5.000,vel:0.00,stat:3
+[13:24:54] Machine is homed. 
+[13:24:54] > g90 g1 z0 
+[13:24:54] > g90 g0 a20
+[13:24:54] < tinyg [mm] ok> 
+[13:24:54] < tinyg [mm] ok> 
+[13:24:55] < posz:-3.099,vel:500.00,dist:0,stat:5
+[13:24:55] < posz:-1.014
+[13:24:55] < posz:0.000,posa:5.490,vel:8056.09,momo:0
+[13:24:56] < posa:20.000,vel:0.00,stat:3
+[13:24:56] Machine is homed. 
+[13:24:56] > g90 g0 a0
+[13:24:56] > g91 g1 z-5 f500
+[13:24:56] < tinyg [mm] ok> 
+[13:24:56] < tinyg [mm] ok> 
+[13:24:56] < posa:0.023,vel:277.85,stat:5
+[13:24:56] < posz:-1.738,posa:0.000,vel:500.00,dist:1,momo:1
+[13:24:56] < posz:-3.824
+[13:24:57] < posz:-5.000,vel:0.00,stat:3
+[13:24:57] Machine is homed. 
+[13:24:57] > g90 g1 z0 
+[13:24:57] > g90 g0 a20
+[13:24:57] < tinyg [mm] ok> 
+[13:24:57] < tinyg [mm] ok> 
+[13:24:57] < posz:-3.099,vel:500.00,dist:0,stat:5
+[13:24:57] < posz:-1.014
+[13:24:57] < posz:0.000,posa:5.490,vel:8056.09,momo:0
+[13:24:58] < posa:20.000,vel:0.00,stat:3
+[13:24:58] Machine is homed. 
+[13:24:58] > g90 g0 a0
+[13:24:58] > g91 g1 z-5 f500
+[13:24:58] < tinyg [mm] ok> 
+[13:24:58] < tinyg [mm] ok> 
+[13:24:58] < posa:0.023,vel:277.85,stat:5
+[13:24:58] < posz:-1.738,posa:0.000,vel:500.00,dist:1,momo:1
+[13:24:59] < posz:-3.824
+[13:24:59] < posz:-5.000,vel:0.00,stat:3
+[13:24:59] Machine is homed. 
+[13:24:59] > g90 g1 z0 
+[13:24:59] > g90 g0 a20
+[13:24:59] < tinyg [mm] ok> 
+[13:24:59] < tinyg [mm] ok> 
+[13:24:59] < posz:-3.099,vel:500.00,dist:0,stat:5
+[13:24:59] < posz:-1.014
+[13:25:00] < posz:0.000,posa:5.490,vel:8056.09,momo:0
+[13:25:00] < posa:20.000,vel:0.00,stat:3
+[13:25:00] Machine is homed. 
+[13:25:00] > g90 g0 a0
+[13:25:00] > g91 g1 z-5 f500
+[13:25:00] < tinyg [mm] ok> 
+[13:25:00] < tinyg [mm] ok> 
+[13:25:00] < posa:0.023,vel:277.85,stat:5
+[13:25:00] < posz:-1.738,posa:0.000,vel:500.00,dist:1,momo:1
+[13:25:01] < posz:-3.824
+[13:25:01] < posz:-5.000,vel:0.00,stat:3
+[13:25:01] Machine is homed. 
+[13:25:01] > g90 g1 z0 
+[13:25:01] > g90 g0 a20
+[13:25:01] < tinyg [mm] ok> 
+[13:25:01] < tinyg [mm] ok> 
+[13:25:01] < posz:-3.099,vel:500.00,dist:0,stat:5
+[13:25:02] < posz:-1.014
+[13:25:02] < posz:0.000,posa:5.490,vel:8056.09,momo:0
+[13:25:02] < posa:20.000,vel:0.00,stat:3
+[13:25:02] Machine is homed. 
+[13:25:02] > g90 g0 a0
+[13:25:02] > g91 g1 z-5 f500
+[13:25:02] < tinyg [mm] ok> 
+[13:25:02] < tinyg [mm] ok> 
+[13:25:02] < posa:0.023,vel:277.85,stat:5
+[13:25:03] < posz:-1.738,posa:0.000,vel:500.00,dist:1,momo:1
+[13:25:03] < posz:-3.824
+[13:25:03] < posz:-5.000,vel:0.00,stat:3
+[13:25:03] Machine is homed. 
+[13:25:03] > g90 g1 z0 
+[13:25:03] > g90 g0 a20
+[13:25:03] < tinyg [mm] ok> 
+[13:25:03] < tinyg [mm] ok> 
+[13:25:03] < posz:-3.099,vel:500.00,dist:0,stat:5
+[13:25:04] < posz:-1.027
+[13:25:04] < posz:0.000,posa:5.490,vel:8056.09,momo:0
+[13:25:04] < posa:20.000,vel:0.00,stat:3
+[13:25:04] Machine is homed. 
+[13:25:04] > g90 g0 a0
+[13:25:04] > g28.3z0
+[13:25:04] < tinyg [mm] ok> 
+[13:25:04] < tinyg [mm] ok> 
+[13:25:05] < posa:0.023,vel:277.85,stat:5
+[13:25:05] < posa:0.000,vel:0.00,stat:3
+[13:25:05] Machine is homed. 
+[13:25:05] > g91 g1 z-5 f500
+[13:25:05] > g90 g1 z0 
+[13:25:05] < tinyg [mm] ok> 
+[13:25:05] < tinyg [mm] ok> 
+[13:25:05] < posz:-1.901,vel:500.00,dist:1,momo:1,stat:5
+[13:25:05] < posz:-3.986
+[13:25:06] < posz:-4.311,dist:0
+[13:25:06] < posz:-2.225
+[13:25:06] < posz:-0.141,vel:493.97
+[13:25:06] < posz:0.000,vel:0.00,stat:3
+[13:25:06] Machine is homed. 
+[13:25:06] > g90 g0 a20
+[13:25:06] > g90 g0 a0
+[13:25:06] < tinyg [mm] ok> 
+[13:25:06] < tinyg [mm] ok> 
+[13:25:07] < posa:19.977,vel:277.85,momo:0,stat:5
+[13:25:07] < posa:0.339,vel:1738.73
+[13:25:07] < posa:0.000,vel:0.00,stat:3
+[13:25:07] Machine is homed. 
+[13:25:07] > g91 g1 z-5 f500
+[13:25:07] > g90 g1 z0 
+[13:25:07] < tinyg [mm] ok> 
+[13:25:07] < tinyg [mm] ok> 
+[13:25:08] < posz:-1.901,vel:500.00,dist:1,momo:1,stat:5
+[13:25:08] < posz:-3.986
+[13:25:08] < posz:-4.311,dist:0
+[13:25:08] < posz:-2.225
+[13:25:09] < posz:-0.141,vel:493.97
+[13:25:09] < posz:0.000,vel:0.00,stat:3
+[13:25:09] Machine is homed. 
+[13:25:09] > g90 g0 a20
+[13:25:09] > g90 g0 a0
+[13:25:09] < tinyg [mm] ok> 
+[13:25:09] < tinyg [mm] ok> 
+[13:25:09] < posa:19.977,vel:277.85,momo:0,stat:5
+[13:25:09] < posa:0.339,vel:1738.73
+[13:25:10] < posa:0.000,vel:0.00,stat:3
+[13:25:10] Machine is homed. 
+[13:25:10] > g91 g1 z-5 f500
+[13:25:10] > g90 g1 z0 
+[13:25:10] < tinyg [mm] ok> 
+[13:25:10] < tinyg [mm] ok> 
+[13:25:10] < posz:-1.901,vel:500.00,dist:1,momo:1,stat:5
+[13:25:10] < posz:-3.986
+[13:25:10] < posz:-4.311,dist:0
+[13:25:11] < posz:-2.225
+[13:25:11] < posz:-0.141,vel:493.97
+[13:25:11] < posz:0.000,vel:0.00,stat:3
+[13:25:11] Machine is homed. 
+[13:25:11] > g90 g0 a20
+[13:25:11] > g90 g0 a0
+[13:25:11] < tinyg [mm] ok> 
+[13:25:11] < tinyg [mm] ok> 
+[13:25:12] < posa:19.977,vel:277.85,momo:0,stat:5
+[13:25:12] < posa:0.339,vel:1738.73
+[13:25:12] < posa:0.000,vel:0.00,stat:3
+[13:25:12] Machine is homed. 
+[13:25:12] > g91 g1 z-5 f500
+[13:25:12] > g90 g1 z0 
+[13:25:12] < tinyg [mm] ok> 
+[13:25:12] < tinyg [mm] ok> 
+[13:25:12] < posz:-1.901,vel:500.00,dist:1,momo:1,stat:5
+[13:25:13] < posz:-3.986
+[13:25:13] < posz:-4.311,dist:0
+[13:25:13] < posz:-2.225
+[13:25:13] < posz:-0.141,vel:493.97
+[13:25:14] < posz:0.000,vel:0.00,stat:3
+[13:25:14] Machine is homed. 
+[13:25:14] > g90 g0 a20
+[13:25:14] > g90 g0 a0
+[13:25:14] < tinyg [mm] ok> 
+[13:25:14] < tinyg [mm] ok> 
+[13:25:14] < posa:19.977,vel:277.85,momo:0,stat:5
+[13:25:14] < posa:0.339,vel:1738.73
+[13:25:14] < posa:0.000,vel:0.00,stat:3
+[13:25:14] Machine is homed. 
+[13:25:14] > g91 g1 z-5 f500
+[13:25:14] > g90 g1 z0 
+[13:25:14] < tinyg [mm] ok> 
+[13:25:14] < tinyg [mm] ok> 
+[13:25:15] < posz:-1.901,vel:500.00,dist:1,momo:1,stat:5
+[13:25:15] < posz:-3.986
+[13:25:15] < posz:-4.311,dist:0
+[13:25:16] < posz:-2.225
+[13:25:16] < posz:-0.141,vel:493.97
+[13:25:16] < posz:0.000,vel:0.00,stat:3
+[13:25:16] Machine is homed. 
+[13:25:16] > g90 g0 a20
+[13:25:16] > g90 g0 a0
+[13:25:16] < tinyg [mm] ok> 
+[13:25:16] < tinyg [mm] ok> 
+[13:25:16] < posa:19.977,vel:277.85,momo:0,stat:5
+[13:25:17] < posa:0.339,vel:1738.73
+[13:25:17] < posa:0.000,vel:0.00,stat:3
+[13:25:17] Machine is homed. 
+[13:25:17] > g28.3z0
+[13:25:17] > g91 g1 z-5 f500
+[13:25:17] < tinyg [mm] ok> 
+[13:25:17] < tinyg [mm] ok> 
+[13:25:17] < posz:-1.901,vel:500.00,dist:1,momo:1,stat:5
+[13:25:17] < posz:-3.998
+[13:25:18] < posz:-5.000,vel:0.00,stat:3
+[13:25:18] Machine is homed. 
+[13:25:18] > g90 g1 z0 
+[13:25:18] > g90 g0 a20
+[13:25:18] < tinyg [mm] ok> 
+[13:25:18] < tinyg [mm] ok> 
+[13:25:18] < posz:-3.099,vel:500.00,dist:0,stat:5
+[13:25:18] < posz:-1.014
+[13:25:19] < posz:0.000,posa:5.490,vel:8056.09,momo:0
+[13:25:19] < posa:20.000,vel:0.00,stat:3
+[13:25:19] Machine is homed. 
+[13:25:19] > g90 g0 a0
+[13:25:19] > g91 g1 z-5 f500
+[13:25:19] < tinyg [mm] ok> 
+[13:25:19] < tinyg [mm] ok> 
+[13:25:19] < posa:0.023,vel:277.85,stat:5
+[13:25:19] < posz:-1.738,posa:0.000,vel:500.00,dist:1,momo:1
+[13:25:20] < posz:-3.824
+[13:25:20] < posz:-5.000,vel:0.00,stat:3
+[13:25:20] Machine is homed. 
+[13:25:20] > g90 g1 z0 
+[13:25:20] > g90 g0 a20
+[13:25:20] < tinyg [mm] ok> 
+[13:25:20] < tinyg [mm] ok> 
+[13:25:20] < posz:-3.099,vel:500.00,dist:0,stat:5
+[13:25:20] < posz:-1.014
+[13:25:21] < posz:0.000,posa:5.490,vel:8056.09,momo:0
+[13:25:21] < posa:20.000,vel:0.00,stat:3
+[13:25:21] Machine is homed. 
+[13:25:21] > g90 g0 a0
+[13:25:21] > g91 g1 z-5 f500
+[13:25:21] < tinyg [mm] ok> 
+[13:25:21] < tinyg [mm] ok> 
+[13:25:21] < posa:0.023,vel:277.85,stat:5
+[13:25:22] < posz:-1.738,posa:0.000,vel:500.00,dist:1,momo:1
+[13:25:22] < posz:-3.824
+[13:25:22] < posz:-5.000,vel:0.00,stat:3
+[13:25:22] Machine is homed. 
+[13:25:22] > g90 g1 z0 
+[13:25:22] > g90 g0 a20
+[13:25:22] < tinyg [mm] ok> 
+[13:25:22] < tinyg [mm] ok> 
+[13:25:22] < posz:-3.099,vel:500.00,dist:0,stat:5
+[13:25:23] < posz:-1.014
+[13:25:23] < posz:0.000,posa:5.490,vel:8056.09,momo:0
+[13:25:23] < posa:20.000,vel:0.00,stat:3
+[13:25:23] Machine is homed. 
+[13:25:23] > g90 g0 a0
+[13:25:23] > g91 g1 z-5 f500
+[13:25:23] < tinyg [mm] ok> 
+[13:25:23] < tinyg [mm] ok> 
+[13:25:23] < posa:0.023,vel:277.85,stat:5
+[13:25:24] < posz:-1.738,posa:0.000,vel:500.00,dist:1,momo:1
+[13:25:24] < posz:-3.824
+[13:25:24] < posz:-5.000,vel:0.00,stat:3
+[13:25:24] Machine is homed. 
+[13:25:24] > g90 g1 z0 
+[13:25:24] > g90 g0 a20
+[13:25:24] < tinyg [mm] ok> 
+[13:25:24] < tinyg [mm] ok> 
+[13:25:25] < posz:-3.099,vel:500.00,dist:0,stat:5
+[13:25:25] < posz:-1.014
+[13:25:25] < posz:0.000,posa:5.490,vel:8056.09,momo:0
+[13:25:25] < posa:20.000,vel:0.00,stat:3
+[13:25:25] Machine is homed. 
+[13:25:25] > g90 g0 a0
+[13:25:25] > g91 g1 z-5 f500
+[13:25:25] < tinyg [mm] ok> 
+[13:25:25] < tinyg [mm] ok> 
+[13:25:26] < posa:0.023,vel:277.85,stat:5
+[13:25:26] < posz:-1.738,posa:0.000,vel:500.00,dist:1,momo:1
+[13:25:26] < posz:-3.824
+[13:25:26] < posz:-5.000,vel:0.00,stat:3
+[13:25:26] Machine is homed. 
+[13:25:26] > g90 g1 z0 
+[13:25:26] > g90 g0 a20
+[13:25:26] < tinyg [mm] ok> 
+[13:25:26] < tinyg [mm] ok> 
+[13:25:27] < posz:-3.099,vel:500.00,dist:0,stat:5
+[13:25:27] < posz:-1.014
+[13:25:27] < posz:0.000,posa:5.490,vel:8056.09,momo:0
+[13:25:27] < posa:20.000,vel:0.00,stat:3
+[13:25:27] Machine is homed. 
+[13:25:27] > g90 g0 a0
+[13:25:27] > g28.3z0
+[13:25:27] < tinyg [mm] ok> 
+[13:25:27] < tinyg [mm] ok> 
+[13:25:28] < posa:0.023,vel:277.85,stat:5
+[13:25:28] < posa:0.000,vel:0.00,stat:3
+[13:25:28] Machine is homed. 
+[13:25:28] > g91 g1 z-5 f500
+[13:25:28] > g90 g1 z0 
+[13:25:28] < tinyg [mm] ok> 
+[13:25:28] < tinyg [mm] ok> 
+[13:25:28] < posz:-1.901,vel:500.00,dist:1,momo:1,stat:5
+[13:25:29] < posz:-3.986
+[13:25:29] < posz:-4.311,dist:0
+[13:25:29] < posz:-2.225
+[13:25:29] < posz:-0.141,vel:493.97
+[13:25:30] < posz:0.000,vel:0.00,stat:3
+[13:25:30] Machine is homed. 
+[13:25:30] > g90 g0 a20
+[13:25:30] > g90 g0 a0
+[13:25:30] < tinyg [mm] ok> 
+[13:25:30] < tinyg [mm] ok> 
+[13:25:30] < posa:19.977,vel:277.85,momo:0,stat:5
+[13:25:30] < posa:0.263,vel:1468.86
+[13:25:30] < posa:0.000,vel:0.00,stat:3
+[13:25:30] Machine is homed. 
+[13:25:30] > g91 g1 z-5 f500
+[13:25:30] > g90 g1 z0 
+[13:25:30] < tinyg [mm] ok> 
+[13:25:30] < tinyg [mm] ok> 
+[13:25:31] < posz:-1.901,vel:500.00,dist:1,momo:1,stat:5
+[13:25:31] < posz:-3.998
+[13:25:31] < posz:-4.298,dist:0
+[13:25:32] < posz:-2.213
+[13:25:32] < posz:-0.141,vel:493.97
+[13:25:32] < posz:0.000,vel:0.00,stat:3
+[13:25:32] Machine is homed. 
+[13:25:32] > g90 g0 a20
+[13:25:32] > g90 g0 a0
+[13:25:32] < tinyg [mm] ok> 
+[13:25:32] < tinyg [mm] ok> 
+[13:25:32] < posa:19.977,vel:277.85,momo:0,stat:5
+[13:25:33] < posa:0.339,vel:1738.73
+[13:25:33] < posa:0.000,vel:0.00,stat:3
+[13:25:33] Machine is homed. 
+[13:25:33] > g91 g1 z-5 f500
+[13:25:33] > g90 g1 z0 
+[13:25:33] < tinyg [mm] ok> 
+[13:25:33] < tinyg [mm] ok> 
+[13:25:33] < posz:-1.901,vel:500.00,dist:1,momo:1,stat:5
+[13:25:33] < posz:-3.986
+[13:25:34] < posz:-4.311,dist:0
+[13:25:34] < posz:-2.225
+[13:25:34] < posz:-0.141,vel:493.97
+[13:25:34] < posz:0.000,vel:0.00,stat:3
+[13:25:34] Machine is homed. 
+[13:25:34] > g90 g0 a20
+[13:25:34] > g90 g0 a0
+[13:25:34] < tinyg [mm] ok> 
+[13:25:34] < tinyg [mm] ok> 
+[13:25:35] < posa:19.977,vel:277.85,momo:0,stat:5
+[13:25:35] < posa:0.339,vel:1738.73
+[13:25:35] < posa:0.000,vel:0.00,stat:3
+[13:25:35] Machine is homed. 
+[13:25:35] > g91 g1 z-5 f500
+[13:25:35] > g90 g1 z0 
+[13:25:35] < tinyg [mm] ok> 
+[13:25:35] < tinyg [mm] ok> 
+[13:25:36] < posz:-1.901,vel:500.00,dist:1,momo:1,stat:5
+[13:25:36] < posz:-3.986
+[13:25:36] < posz:-4.311,dist:0
+[13:25:36] < posz:-2.225
+[13:25:37] < posz:-0.141,vel:493.97
+[13:25:37] < posz:0.000,vel:0.00,stat:3
+[13:25:37] Machine is homed. 
+[13:25:37] > g90 g0 a20
+[13:25:37] > g90 g0 a0
+[13:25:37] < tinyg [mm] ok> 
+[13:25:37] < tinyg [mm] ok> 
+[13:25:37] < posa:19.977,vel:277.85,momo:0,stat:5
+[13:25:37] < posa:0.263,vel:1468.86
+[13:25:38] < posa:0.000,vel:0.00,stat:3
+[13:25:38] Machine is homed. 
+[13:25:38] > g91 g1 z-5 f500
+[13:25:38] > g90 g1 z0 
+[13:25:38] < tinyg [mm] ok> 
+[13:25:38] < tinyg [mm] ok> 
+[13:25:38] < posz:-1.901,vel:500.00,dist:1,momo:1,stat:5
+[13:25:38] < posz:-3.986
+[13:25:39] < posz:-4.311,dist:0
+[13:25:39] < posz:-2.225
+[13:25:39] < posz:-0.141,vel:493.97
+[13:25:39] < posz:0.000,vel:0.00,stat:3
+[13:25:39] Machine is homed. 
+[13:25:39] > g90 g0 a20
+[13:25:39] > g90 g0 a0
+[13:25:39] < tinyg [mm] ok> 
+[13:25:39] < tinyg [mm] ok> 
+[13:25:40] < posa:19.977,vel:277.85,momo:0,stat:5
+[13:25:40] < posa:0.339,vel:1738.73
+[13:25:40] < posa:0.000,vel:0.00,stat:3
+[13:25:40] Machine is homed. 
+[13:25:40] > g28.3z0
+[13:25:40] > g91 g1 z-5 f500
+[13:25:40] < tinyg [mm] ok> 
+[13:25:40] < tinyg [mm] ok> 
+[13:25:40] < posz:-1.901,vel:500.00,dist:1,momo:1,stat:5
+[13:25:41] < posz:-3.998
+[13:25:41] < posz:-5.000,vel:0.00,stat:3
+[13:25:41] Machine is homed. 
+[13:25:41] > g90 g1 z0 
+[13:25:41] > g90 g0 a20
+[13:25:41] < tinyg [mm] ok> 
+[13:25:41] < tinyg [mm] ok> 
+[13:25:41] < posz:-3.099,vel:500.00,dist:0,stat:5
+[13:25:42] < posz:-1.014
+[13:25:42] < posz:0.000,posa:5.490,vel:8056.09,momo:0
+[13:25:42] < posa:20.000,vel:0.00,stat:3
+[13:25:42] Machine is homed. 
+[13:25:42] > g90 g0 a0
+[13:25:42] > g91 g1 z-5 f500
+[13:25:42] < tinyg [mm] ok> 
+[13:25:42] < tinyg [mm] ok> 
+[13:25:42] < posa:0.023,vel:277.85,stat:5
+[13:25:43] < posz:-1.738,posa:0.000,vel:500.00,dist:1,momo:1
+[13:25:43] < posz:-3.824
+[13:25:43] < posz:-5.000,vel:0.00,stat:3
+[13:25:43] Machine is homed. 
+[13:25:43] > g90 g1 z0 
+[13:25:43] > g90 g0 a20
+[13:25:43] < tinyg [mm] ok> 
+[13:25:43] < tinyg [mm] ok> 
+[13:25:43] < posz:-3.099,vel:500.00,dist:0,stat:5
+[13:25:44] < posz:-1.014
+[13:25:44] < posz:0.000,posa:5.490,vel:8056.09,momo:0
+[13:25:44] < posa:20.000,vel:0.00,stat:3
+[13:25:44] Machine is homed. 
+[13:25:44] > g90 g0 a0
+[13:25:44] > g91 g1 z-5 f500
+[13:25:44] < tinyg [mm] ok> 
+[13:25:44] < tinyg [mm] ok> 
+[13:25:45] < posa:0.023,vel:277.85,stat:5
+[13:25:45] < posz:-1.738,posa:0.000,vel:500.00,dist:1,momo:1
+[13:25:45] < posz:-3.824
+[13:25:45] < posz:-5.000,vel:0.00,stat:3
+[13:25:45] Machine is homed. 
+[13:25:45] > g90 g1 z0 
+[13:25:45] > g90 g0 a20
+[13:25:45] < tinyg [mm] ok> 
+[13:25:45] < tinyg [mm] ok> 
+[13:25:46] < posz:-3.099,vel:500.00,dist:0,stat:5
+[13:25:46] < posz:-1.014
+[13:25:46] < posz:0.000,posa:5.490,vel:8056.09,momo:0
+[13:25:46] < posa:20.000,vel:0.00,stat:3
+[13:25:46] Machine is homed. 
+[13:25:46] > g90 g0 a0
+[13:25:46] > g91 g1 z-5 f500
+[13:25:46] < tinyg [mm] ok> 
+[13:25:46] < tinyg [mm] ok> 
+[13:25:47] < posa:0.023,vel:277.85,stat:5
+[13:25:47] < posz:-1.738,posa:0.000,vel:500.00,dist:1,momo:1
+[13:25:47] < posz:-3.824
+[13:25:47] < posz:-5.000,vel:0.00,stat:3
+[13:25:47] Machine is homed. 
+[13:25:47] > g90 g1 z0 
+[13:25:47] > g90 g0 a20
+[13:25:47] < tinyg [mm] ok> 
+[13:25:47] < tinyg [mm] ok> 
+[13:25:48] < posz:-3.099,vel:500.00,dist:0,stat:5
+[13:25:48] < posz:-1.014
+[13:25:48] < posz:0.000,posa:5.490,vel:8056.09,momo:0
+[13:25:49] < posa:20.000,vel:0.00,stat:3
+[13:25:49] Machine is homed. 
+[13:25:49] > g90 g0 a0
+[13:25:49] > g91 g1 z-5 f500
+[13:25:49] < tinyg [mm] ok> 
+[13:25:49] < tinyg [mm] ok> 
+[13:25:49] < posa:0.023,vel:277.85,stat:5
+[13:25:49] < posz:-1.738,posa:0.000,vel:500.00,dist:1,momo:1
+[13:25:49] < posz:-3.824
+[13:25:50] < posz:-5.000,vel:0.00,stat:3
+[13:25:50] Machine is homed. 
+[13:25:50] > g90 g1 z0 
+[13:25:50] > g90 g0 a20
+[13:25:50] < tinyg [mm] ok> 
+[13:25:50] < tinyg [mm] ok> 
+[13:25:50] < posz:-3.099,vel:500.00,dist:0,stat:5
+[13:25:50] < posz:-1.014
+[13:25:50] < posz:0.000,posa:5.490,vel:8056.09,momo:0
+[13:25:51] < posa:20.000,vel:0.00,stat:3
+[13:25:51] Machine is homed. 
+[13:25:51] > g90 g0 a0
+[13:25:51] > g28.3z0
+[13:25:51] < tinyg [mm] ok> 
+[13:25:51] < nyg [mm] ok> 
+[13:25:51] < posa:0.023,vel:277.85,stat:5
+[13:25:51] < posa:0.000,vel:0.00,stat:3
+[13:25:51] Machine is homed. 
+[13:25:51] > g91 g1 z-5 f500
+[13:25:51] > g90 g1 z0 
+[13:25:51] < tinyg [mm] ok> 
+[13:25:51] < tinyg [mm] ok> 
+[13:25:52] < posz:-1.901,vel:500.00,dist:1,momo:1,stat:5
+[13:25:52] < posz:-3.986
+[13:25:52] < posz:-4.311,dist:0
+[13:25:52] < posz:-2.225
+[13:25:53] < posz:-0.141,vel:493.97
+[13:25:53] < posz:0.000,vel:0.00,stat:3
+[13:25:53] Machine is homed. 
+[13:25:53] > g90 g0 a20
+[13:25:53] > g90 g0 a0
+[13:25:53] < tinyg [mm] ok> 
+[13:25:53] < tinyg [mm] ok> 
+[13:25:53] < posa:19.977,vel:277.85,momo:0,stat:5
+[13:25:53] < posa:0.339,vel:1738.73
+[13:25:54] < posa:0.000,vel:0.00,stat:3
+[13:25:54] Machine is homed. 
+[13:25:54] > g91 g1 z-5 f500
+[13:25:54] > g90 g1 z0 
+[13:25:54] < tinyg [mm] ok> 
+[13:25:54] < tinyg [mm] ok> 
+[13:25:54] < posz:-1.901,vel:500.00,dist:1,momo:1,stat:5
+[13:25:54] < posz:-3.986
+[13:25:55] < posz:-4.311,dist:0
+[13:25:55] < posz:-2.225
+[13:25:55] < posz:-0.141,vel:493.97
+[13:25:55] < posz:0.000,vel:0.00,stat:3
+[13:25:55] Machine is homed. 
+[13:25:55] > g90 g0 a20
+[13:25:55] > g90 g0 a0
+[13:25:55] < tinyg [mm] ok> 
+[13:25:55] < tinyg [mm] ok> 
+[13:25:56] < posa:19.977,vel:277.85,momo:0,stat:5
+[13:25:56] < posa:0.339,vel:1738.73
+[13:25:56] < posa:0.000,vel:0.00,stat:3
+[13:25:56] Machine is homed. 
+[13:25:56] > g91 g1 z-5 f500
+[13:25:56] > g90 g1 z0 
+[13:25:56] < tinyg [mm] ok> 
+[13:25:56] < tinyg [mm] ok> 
+[13:25:56] < posz:-1.901,vel:500.00,dist:1,momo:1,stat:5
+[13:25:57] < posz:-3.986
+[13:25:57] < posz:-4.311,dist:0
+[13:25:57] < posz:-2.225
+[13:25:57] < posz:-0.141,vel:493.97
+[13:25:58] < posz:0.000,vel:0.00,stat:3
+[13:25:58] Machine is homed. 
+[13:25:58] > g90 g0 a20
+[13:25:58] > g90 g0 a0
+[13:25:58] < tinyg [mm] ok> 
+[13:25:58] < tinyg [mm] ok> 
+[13:25:58] < posa:19.977,vel:277.85,momo:0,stat:5
+[13:25:58] < posa:0.263,vel:1468.86
+[13:25:59] < posa:0.000,vel:0.00,stat:3
+[13:25:59] Machine is homed. 
+[13:25:59] > g91 g1 z-5 f500
+[13:25:59] > g90 g1 z0 
+[13:25:59] < tinyg [mm] ok> 
+[13:25:59] < tinyg [mm] ok> 
+[13:25:59] < posz:-1.901,vel:500.00,dist:1,momo:1,stat:5
+[13:25:59] < posz:-3.986
+[13:25:59] < posz:-4.311,dist:0
+[13:26:00] < posz:-2.225
+[13:26:00] < posz:-0.141,vel:493.97
+[13:26:00] < posz:0.000,vel:0.00,stat:3
+[13:26:00] Machine is homed. 
+[13:26:00] > g90 g0 a20
+[13:26:00] > g90 g0 a0
+[13:26:00] < tinyg [mm] ok> 
+[13:26:00] < tinyg [mm] ok> 
+[13:26:00] < posa:19.977,vel:277.85,momo:0,stat:5
+[13:26:01] < posa:0.263,vel:1468.86
+[13:26:01] < posa:0.000,vel:0.00,stat:3
+[13:26:01] Machine is homed. 
+[13:26:01] > g91 g1 z-5 f500
+[13:26:01] > g90 g1 z0 
+[13:26:01] < tinyg [mm] ok> 
+[13:26:01] < tinyg [mm] ok> 
+[13:26:01] < posz:-1.901,vel:500.00,dist:1,momo:1,stat:5
+[13:26:02] < posz:-3.986
+[13:26:02] < posz:-4.311,dist:0
+[13:26:02] < posz:-2.225
+[13:26:02] < posz:-0.141,vel:493.97
+[13:26:03] < posz:0.000,vel:0.00,stat:3
+[13:26:03] Machine is homed. 
+[13:26:03] > g90 g0 a20
+[13:26:03] > g90 g0 a0
+[13:26:03] < tinyg [mm] ok> 
+[13:26:03] < tinyg [mm] ok> 
+[13:26:03] < posa:19.977,vel:277.85,momo:0,stat:5
+[13:26:03] < posa:0.263,vel:1468.86
+[13:26:03] < posa:0.000,vel:0.00,stat:3
+[13:26:03] Machine is homed. 
+[13:26:03] > g28.3z0
+[13:26:03] > g91 g1 z-5 f500
+[13:26:03] < tinyg [mm] ok> 
+[13:26:03] < tinyg [mm] ok> 
+[13:26:04] < posz:-1.901,vel:500.00,dist:1,momo:1,stat:5
+[13:26:04] < posz:-3.998
+[13:26:04] < posz:-5.000,vel:0.00,stat:3
+[13:26:04] Machine is homed. 
+[13:26:04] > g90 g1 z0 
+[13:26:04] > g90 g0 a20
+[13:26:04] < tinyg [mm] ok> 
+[13:26:04] < tinyg [mm] ok> 
+[13:26:05] < posz:-3.099,vel:500.00,dist:0,stat:5
+[13:26:05] < posz:-1.027
+[13:26:05] Halt and flush: !%
+[13:26:05] < posz:0.000,posa:2.256,vel:469.47,momo:0,stat:6
+[13:26:05] Interlock hit. Stop. Flush queue...
+[13:26:05] < posa:2.301,vel:0.00,stat:3
+[13:26:05] Machine is homed. 
+
+
