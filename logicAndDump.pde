@@ -171,7 +171,7 @@ void dumpFile(String theFile) {
     if (debug) println("repeat loops: " + repeatLoops);
     if (debug) println("Can Add to Q: " + canAddToQ);
     if (debug) println("Im supposed to be here");
-    
+
     String fileLines[] = loadStrings(theFile);
     reportEvent("Adding " + fileLines.length + " lines to the queue... \n");
 
@@ -196,11 +196,12 @@ void dumpFile(String theFile) {
       }
       //reportEvent(fileLines[i] + "\n");                 // Put the line on the terminal
     }//end FOR
-    reportEvent("File added to the queue. \n");
-    canAddToQ = false;
-    loopsLeft++;
-    if (debug) println("Loops left: " + loopsLeft);
   }//end else
+  canAddToQ = false;
+  loopsLeft++;
+  reportEvent("File added to the queue. \n");
+  if (debug) println("Can't add anything to the q now");
+  if (debug) println("Loops left: " + loopsLeft);
 }//end func
 
 
@@ -258,11 +259,11 @@ void aPosToFile(String filename, float thePosA) {
     out.println(thePosA);
     out.close();
     reportEvent("Recorded PosA... \n");
-    canAddToQ = true;
   }
   catch (IOException e) {
     e.printStackTrace();
   }
+  canAddToQ = true;
 }
 
 

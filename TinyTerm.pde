@@ -186,7 +186,6 @@ void setup() {
 
   statCodes = new StringList();
   tinyGStatus(statCodes);
-
   theSaveFile = thePath();
 }
 
